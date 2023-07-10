@@ -2,8 +2,6 @@
 
 namespace App\Providers;
 
-use App\Models\Tariff;
-use App\Models\UserRequisite;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
@@ -25,9 +23,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Schema::defaultStringLength(191);
-
-        $tariffs = new Tariff();
-        \view()->share('tariffs', $tariffs);
 
         Paginator::useBootstrap();
 

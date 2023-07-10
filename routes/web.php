@@ -1,7 +1,5 @@
 <?php
 
-use App\Models\Tariff;
-use App\Models\UserRequisite;
 use Illuminate\Support\Facades\Route;
 
 /*

@@ -9,7 +9,7 @@
 
 @section('content')
     <div class="whitebox-listing head-links">
-        <div onclick="location.href='functions/client_create.php';" class="colorbox33">
+        <div onclick="location.href='/functions/client_create';" class="colorbox33">
             <div class="whiteboxiconbox">
                 <i class="fas fa-user-plus" aria-hidden="true"></i>
             </div>
@@ -19,7 +19,7 @@
 
         <div class="boxseparator1procent"></div>
 
-        <div onclick="location.href='functions/client_search.php?baza=on';" class="colorbox33">
+        <div onclick="location.href='/functions/client_search?baza=on';" class="colorbox33">
             <div class="whiteboxiconbox">
                 <i class="fas fa-search" aria-hidden="true"></i>
             </div>
@@ -29,7 +29,7 @@
 
         <div class="boxseparator1procent"></div>
 
-        <div onclick="location.href='functions/document_search.php';" class="colorbox33">
+        <div onclick="location.href='/functions/document_search';" class="colorbox33">
             <div class="whiteboxiconbox">
                 <i class="far fa-file" aria-hidden="true"></i>
             </div>
@@ -52,11 +52,10 @@
     ])
 @endsection
 
-@section('css_js')
-    <script src="{{asset('js/css.js')}}"></script>
+@section('layout_js')
     <script>
         $(document).ready(() => {
-            CSS.colorbox33()
+            layout.colorbox33()
         })
     </script>
 @endsection

@@ -1,4 +1,4 @@
-CSS = {
+layout = {
 
     colorbox33: function()
     {
@@ -7,6 +7,13 @@ CSS = {
             let container = $('.head-links')
             $('.colorbox33', container).css('height', 'calc(' + $(container).height() + 'px - 1)')
         }
+    },
+
+    headerLewy: function()
+    {
+        $('#header #header-lewy').click(() => {
+            window.location.href = '/'
+        })
     }
 
 }

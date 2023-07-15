@@ -46,8 +46,8 @@
     <div id="header-lewy" class="d-flex align-items-center">
         <img src="/userfiles/userphoto/default.jpg" style="width:54px;height:54px;border:3px solid #ffffff;border-radius:60px;">
         <div id="header-lewy-dane" class="d-flex flex-column">
-            <p style="font-size:18px;font-weight:300;line-height:20px;"><a href="/index.php" style="color:white;text-decoration: none">Zalogowany jako:</a></p>
-            <p style="font-size:26px;font-weight:600;line-height:28px;"><a href="/index.php" style="color:white;text-decoration: none">Test Test</a></p>
+            <p style="font-size:18px;font-weight:300;line-height:20px;"><a style="color:white;text-decoration: none">Zalogowany jako:</a></p>
+            <p style="font-size:26px;font-weight:600;line-height:28px;"><a style="color:white;text-decoration: none">Test Test</a></p>
         </div>
     </div>
 

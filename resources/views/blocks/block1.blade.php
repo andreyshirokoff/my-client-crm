@@ -12,6 +12,8 @@
         </div>
     </div>
     <div class="boxinbox {{$block1_content_class}}" style="background: {{$background}}">
-        @include($block1_content)
+        @if(view()->exists($block1_content))
+            @include($block1_content)
+        @endif
     </div>
 </div>

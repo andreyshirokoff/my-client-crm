@@ -26,7 +26,21 @@ h3 {
 h6, .h6{
     color:#000;
 }
-.btn .fas, .btn .fa {
+.btn1 {
+    background-color: var(--motyw01_dodatkowy);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background-color 0.3s ease 0s;
+}
+.btn1:hover{
+    background-color: var(--motyw01_dodatkowy_hover);
+}
+.btn1 .fas, .btn1 .fa {
     margin-right: 8px;
     color: white;
 }
@@ -127,15 +141,17 @@ input[type="radio"] {
     background-color: #ffffff;
     margin-top: 10px;
 }
-.btn {
-    background-color: var(--motyw01_dodatkowy);
-    color: white;
-    padding: 15px 35px;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 500;
+.listing-actionbar .btn1{
+    color:white;
+}
+
+.boxinbox-inside {
+    border-radius: 20px 20px 20px 20px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
 }
 
 
@@ -288,14 +304,28 @@ input[type="radio"] {
     .block1_nowosci_w_beautycheck .listing-element__width15{
         margin-right: 60px;
     }
+    .block1_znajdz_klienta .input-cont{
+        flex-direction: column!important;
+    }
+    .block1_znajdz_klienta .input-cont div{
+        width: 100% !important;
+    }
+    .block1_znajdz_klienta .input-cont div:not(:first-child)
+    {
+        margin-top: 10px;
+    }
 }
 @media(max-width: 868px)
 {
-    .block1_twoje_ostatnie_5_zabiegow .listing-titlebar{
+    .block1_twoje_ostatnie_5_zabiegow .listing-titlebar,
+    .block1_wyniki .listing-titlebar{
         flex-direction: column;
     }
     .block1_twoje_ostatnie_5_zabiegow .listing-titlebar div{
         width: 100% !important;
+    }
+    .block1_wyniki .listing-titlebar div:last-child{
+        justify-content: flex-start!important;
     }
 }
 @media(max-width: 798px)

@@ -97,6 +97,6 @@
     <input type="hidden" name="sms_quantity" value="10">
 
     <div class="listing-actionbar">
-        <button type="submit" class="btn" style="margin-left:10px;width:200px;"><i class="fas fa-check-circle" aria-hidden="true"></i> Zarejestruj</button>
+        <button type="submit" class="btn1" style="margin-left:10px;width:200px;"><i class="fas fa-check-circle" aria-hidden="true"></i> Zarejestruj</button>
     </div>
 </form>

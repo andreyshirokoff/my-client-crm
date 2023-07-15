@@ -22,5 +22,6 @@
 <script src="https://kit.fontawesome.com/3c6f321247.js" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/b675a8d36a.js" crossorigin="anonymous"></script>
 <script src="{{asset('js/script.js')}}"></script>
+@yield('css_js')
 </body>
 </html>

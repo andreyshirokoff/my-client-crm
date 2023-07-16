@@ -25,12 +25,12 @@
     </div>
     <!-- Wrzucenie footera -->
     <!--Beauty plany start -->
-    <script src="/functions/beautyplans/lib/jquery-3.6.2.min.js"></script>
+{{--    <script src="/functions/beautyplans/lib/jquery-3.6.2.min.js"></script>--}}
     <!--script to deal with ajax-->
     <script src="/functions/beautyplans/assets/js/beautyplans.js"></script>
     <!--additional css-->
-    <link rel="stylesheet" href="/functions/beautyplans/assets/css/beautyplans.css">
-    <script src="/lib/select2/js/select2.min.js"></script>
+{{--    <link rel="stylesheet" href="/functions/beautyplans/assets/css/beautyplans.css">--}}
+{{--    <script src="/lib/select2/js/select2.min.js"></script>--}}
     <script>
         $(document).ready(function() {
             $('.area_choose.select2').select2();

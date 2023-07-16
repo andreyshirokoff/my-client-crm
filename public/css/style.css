@@ -357,6 +357,15 @@ input[type="radio"] {
     .head-links .colorbox33{
         width: 300px;
     }
+
+    /*blocks*/
+    .block1_znajdz_dokument .input-cont{
+        flex-direction: column!important;
+    }
+    .block1_znajdz_dokument .input-cont__item{
+        width: 100%!important;
+    }
+
 }
 
 @media(min-width: 576px){

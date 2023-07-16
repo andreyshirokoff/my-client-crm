@@ -39,6 +39,13 @@ input[type="checkbox"] {
     margin-bottom: 20px;
     margin-right: 15px;
 }
+input[type="radio"] {
+    -ms-transform: scale(2);
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    margin-bottom: 20px;
+    margin-right: 15px;
+}
 .btn1 {
     background-color: var(--motyw01_dodatkowy);
     color: white;
@@ -57,6 +64,14 @@ input[type="checkbox"] {
     margin-right: 8px;
     color: white;
 }
+.header-prawy__desktop_btn *,
+.header-prawy__desktop_btn i{
+    transition: color 0.3s ease 0s;
+}
+/*.header-prawy__desktop_btn *:hover,*/
+/*.header-prawy__desktop_btn i:hover{*/
+/*    color: #e2dede;*/
+/*}*/
 
 .block1_dobaj_klienta .listing-element div:first-child{
     margin-right: 50px;
@@ -203,7 +218,66 @@ input[type="radio"] {
 .iconround i{
     color:white;
 }
+.bottom-buttons{
+    gap:20px;
+}
+.listing-titlebar-centered {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    border-radius: 20px 20px 0px 0px;
+    background-color: #ffffff;
+}
+/*.listing-titlebar-centered div:nth-child(2n) {*/
+/*    order: 1;*/
+/*}*/
+.iconbutton-document {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background-color: var(--motyw01_dodatkowy);
+    padding: 12px;
+    font-size: 23px;
+    border-radius: 10px;
+    border-width: 0px;
+    margin-right: 5px;
+    width: 40px;
+    height: 40px;
+}
+.listing-element-ending {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+    border-radius: 0px 0px 20px 20px;
+    background-color: #ffffff;
+    border-top: 1px solid #dddddd;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgb(221, 221, 221);
+}
+.formularz {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border: 1px solid #a5a5a5;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-top: 10px;
+}
 
+.pokazformula-item{
+    display: none;
+}
+.pokazformula-item.active{
+display: block;
+}
 
 
 
@@ -226,6 +300,7 @@ input[type="radio"] {
 
 #header-lewy-dane{
     padding-left: 15px;
+    cursor: pointer;
 }
 
 #header-prawy__desktop{
@@ -414,6 +489,9 @@ input[type="radio"] {
         flex-direction: column;
         gap: 20px;
     }
+    .element-header{
+        flex-direction: column;
+    }
     /*.block3_ogolna_karta_klienta .listing-element .btns{*/
     /*    height: 57px;*/
     /*    width: 500px!important;*/
@@ -570,6 +648,12 @@ input[type="radio"] {
     .block3_produkty .listing-titlebar{
         flex-direction: column;
         gap: 20px;
+    }
+
+    .bottom-buttons{
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
     }
 }
 @media(max-width: 400px){

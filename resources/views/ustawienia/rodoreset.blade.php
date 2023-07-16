@@ -1,5 +1,5 @@
-
 @extends('layout.app')
+
 
 
 @section('content')
@@ -10,4 +10,10 @@
             'block3_3_content_class' => 'block3_2_rodoreset',
         ])
     </div>
+@endsection
+
+@section('layout_js')
+    <script>
+        layout.canvasElement()
+    </script>
 @endsection

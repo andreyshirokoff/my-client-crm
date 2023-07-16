@@ -90,6 +90,28 @@ layout = {
         {
             $(container).css('width', $('.canvas-element').width() + 'px')
         }
+    },
+
+    headerHover: function()
+    {
+        $('.header-prawy__desktop_btn').hover((e) => {
+            let item = $(e.target).is('.header-prawy__desktop_btn') ? $(e.target) : $(e.target).closest('.header-prawy__desktop_btn')
+            $('span', item).css('color', '#e2dede')
+            $('i', item).css('color', '#e2dede')
+        }, (e) => {
+            let item = $(e.target).is('.header-prawy__desktop_btn') ? $(e.target) : $(e.target).closest('.header-prawy__desktop_btn')
+            $('span', item).css('color', 'white')
+            $('i', item).css('color', 'white')
+        })
+
+        $('#header-lewy-dane').hover((e) => {
+            let item = $(e.target).is('#header-lewy-dane') ? $(e.target) : $(e.target).closest('#header-lewy-dane')
+            $('p a', item).css('transition', 'color 0.3s ease 0s')
+            $('p a', item).css('color', '#e2dede')
+        }, (e) => {
+            let item = $(e.target).is('#header-lewy-dane') ? $(e.target) : $(e.target).closest('#header-lewy-dane')
+            $('p a', item).css('color', 'white')
+        })
     }
 
 }

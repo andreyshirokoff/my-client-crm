@@ -15,13 +15,17 @@ script = {
                 if($('.navbar-mobile').hasClass('active')) $('body').css('overflow', 'hidden')
                 else $('body').css('overflow', 'auto')
             }
-            if($(e.target).is('#close-burger'))
+            if($(e.target).is('.pokazformula-btn'))
             {
-                $('.navbar-mobile').removeClass('active')
-                $('.navbar-mobile__body').removeClass('active')
-                if($('.navbar-mobile').hasClass('active')) $('body').css('overflow', 'hidden')
-                else $('body').css('overflow', 'auto')
+                $('.pokazformula-item').each((i, item) => {
+                    $(item).removeClass('active')
+                })
+                let identify = $(e.target).attr('data-click')
+                $(identify).addClass('active')
             }
+
+            //pokazFormula
+
         })
     }
 }

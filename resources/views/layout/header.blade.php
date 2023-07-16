@@ -53,7 +53,7 @@
 
     <div id="header-prawy__desktop">
 
-        <div class="d-flex">
+        <div class="d-flex header-prawy__desktop_btn">
             <a href="{{url('/')}}" style="color:white">
                 <span class="icon">
                     <i class="fas fa-home" aria-hidden="true"></i>
@@ -63,13 +63,13 @@
                 <a href="{{url('/')}}" style="text-decoration:none;color:white"><span style="font-size:18px;font-weight:300;">Strona Główna</span></a>
             </div>
         </div>
-        <div class="d-flex">
+        <div class="d-flex header-prawy__desktop_btn">
             <a href="{{url('/ustawienia')}}" style="color:white"><span class="icon"><i class="fas fa-cog" aria-hidden="true"></i></span></a>
             <div style="padding-left:15px;padding-right:15px;" class="d-flex align-items-center">
                 <a href="{{url('/ustawienia')}}" style="text-decoration:none;color:white"><span style="font-size:18px;font-weight:300;">Ustawienia</span></a>
             </div>
         </div>
-        <div class="d-flex">
+        <div class="d-flex header-prawy__desktop_btn">
             <a href="/wyloguj.php" style="color:white"><span class="icon"><i class="fas fa-sign-out-alt" aria-hidden="true"></i></span></a>
             <div style="padding-left:15px;" class="d-flex align-items-center">
                 <a href="/wyloguj.php" style="text-decoration:none;color:white"><span style="font-size:18px;font-weight:300;"> Wyloguj się </span></a>

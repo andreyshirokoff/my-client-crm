@@ -52,4 +52,12 @@ Route::get('/functions/usrsignature', function () {
 Route::get('/functions/usrpin', function () {
     return view('ustawienia.usrpin');
 });
+Route::get('/functions/rodoreset', function () {
+    return view('ustawienia.rodoreset');
+});
+
+Route::get('/functions/document_kartaklienta_edit', function () {
+    return view('ustawienia.document_kartaklienta_edit');
+});
+
 

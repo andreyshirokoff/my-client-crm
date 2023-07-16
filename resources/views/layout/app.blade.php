@@ -27,6 +27,7 @@
 <script>
     $(document).ready(() => {
         layout.headerLewy()
+        layout.headerHover()
         script.clickBtn()
     })
 </script>

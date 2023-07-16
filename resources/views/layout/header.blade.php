@@ -1,7 +1,7 @@
 <div class="navbar-mobile">
     <div class="navbar-mobile__body d-flex flex-column">
         <div class="navbar-mobile__header navbar-mobile__block d-flex justify-content-end align-items-center">
-            <i class="fa-solid fa-xmark" style="font-size: 30px;"></i>
+            <i class="fa-solid fa-xmark" id="close-burger" style="font-size: 30px;"></i>
         </div>
         <div class="navbar-mobile__content navbar-mobile__block mt-5">
             <div class="d-flex">

@@ -11,16 +11,44 @@ layout = {
 
     bottomButtons: function ()
     {
+        $(window).resize(() => {
 
-        if($(window).width() < 400)
-        {
+            if ($(window).width() < 500) {
+                console.log($(window).width())
+                let container = $('.block3_twoje_konto')
+                let as = $('.link1', container)
+                $(as).each((i, a) => {
+                    $(a).css('width', $(window).width() + 'px')
+                    $('button', a).css('width', 'calc(' + $(window).width() + 'px - 150px)')
+                })
 
-            let container = document.querySelector('.block3_twoje_konto')
-            let as = container.querySelectorAll('a')
-            as.forEach((a) => {
-                a.style.width = container.clientWidth + 'px!important'
+            }
+            else
+            {
+                let container = document.querySelector('.block3_twoje_konto')
+                let as = container.querySelectorAll('.link1')
+                as.forEach((a) => {
+                    a.style.width = 'inherit'
+                })
+            }
+        })
+        if ($(window).width() < 500) {
+            console.log($(window).width())
+            let container = $('.block3_twoje_konto')
+            let as = $('.link1', container)
+            $(as).each((i, a) => {
+                $(a).css('width', $(window).width() + 'px')
+                $('button', a).css('width', 'calc(' + $(window).width() + 'px - 150px)')
             })
 
+        }
+        else
+        {
+            let container = document.querySelector('.block3_twoje_konto')
+            let as = container.querySelectorAll('.link1')
+            as.forEach((a) => {
+                a.style.width = 'inherit'
+            })
         }
     },
 
@@ -41,6 +69,12 @@ layout = {
                 $(container).css('width', $(window).width() + 'px')
             }
         })
+        let container = $('#login-box')
+        if($(window).width() <= 1152)
+        {
+            console.log($(window).width())
+            $(container).css('width', $(window).width() + 'px')
+        }
 
     }
 

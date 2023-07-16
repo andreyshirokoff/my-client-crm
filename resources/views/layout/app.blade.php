@@ -27,6 +27,7 @@
 <script>
     $(document).ready(() => {
         layout.headerLewy()
+        script.clickBtn()
     })
 </script>
 @yield('layout_js')

@@ -39,4 +39,17 @@ Route::get('/ustawienia', function () {
     return view('ustawienia');
 });
 
+//ustawienia
+Route::get('/functions/usrimage', function () {
+    return view('ustawienia.usrimage');
+});
+Route::get('/functions/editaccount', function () {
+    return view('ustawienia.editaccount');
+});
+Route::get('/functions/usrsignature', function () {
+    return view('ustawienia.usrsignature');
+});
+Route::get('/functions/usrpin', function () {
+    return view('ustawienia.usrpin');
+});
 

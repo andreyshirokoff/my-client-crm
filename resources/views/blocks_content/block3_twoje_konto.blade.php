@@ -43,7 +43,7 @@
 </div>
 
 <div class="listing-actionbar flex-wrap bottom-buttons" style="gap:10px">
-    <a href="/functions/usrimage.php" class="link1" style="display: block"><button type="button" class="btn1" style=""><i class="fas fa-camera" aria-hidden="true"></i> Zmień zdjęcie</button></a>
+    <a href="{{url('functions/usrimage')}}" class="link1" style="display: block"><button type="button" class="btn1" style=""><i class="fas fa-camera" aria-hidden="true"></i> Zmień zdjęcie</button></a>
     <a href="/functions/editaccount.php" class="link1" style="display: block"><button type="button" class="btn1" style=""><i class="fas fa-edit" aria-hidden="true"></i> Edytuj dane</button></a>
     <a href="/functions/usrsignature.php" class="link1" style="display: block"><button type="button" class="btn1" style=""><i class="fas fa-pen" aria-hidden="true"></i> Dodaj/edytuj podpis</button></a>
     <a href="/functions/usrpin.php" class="link1" style="display: block"><button type="button" class="btn1" style=""><i class="fas fa-lock" aria-hidden="true"></i> Ustaw pin</button></a>

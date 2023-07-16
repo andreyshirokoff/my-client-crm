@@ -65,17 +65,31 @@ layout = {
             let container = $('#login-box')
             if($(window).width() <= 1152)
             {
-                console.log($(window).width())
                 $(container).css('width', $(window).width() + 'px')
             }
         })
         let container = $('#login-box')
         if($(window).width() <= 1152)
         {
-            console.log($(window).width())
             $(container).css('width', $(window).width() + 'px')
         }
 
+    },
+
+    canvasElement: function()
+    {
+        $(window).resize(() => {
+            let container = $('#signature-pad')
+            if($(window).width() <= 1001)
+            {
+                $(container).css('width', $('.canvas-element').width() + 'px')
+            }
+        })
+        let container = $('#signature-pad')
+        if($(window).width() <= 1001)
+        {
+            $(container).css('width', $('.canvas-element').width() + 'px')
+        }
     }
 
 }

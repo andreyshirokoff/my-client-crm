@@ -118,11 +118,11 @@
 
                 <button type="submit" value="Zaloguj" class="btn-login">Zaloguj</button>
                 <div style="width:100%;display:flex;flex-direction:row;align-items:center;justify-content:flex-start; margin: 10px 0px;gap: 10px;">
-                    <label class="switch">
+                    <label class="switch" style="flex: 0 0 75px">
                         <input type="checkbox" name="rememberme">
                         <span class="slider round"></span>
                     </label>
-                    <p style="width:90%;margin-left:5px;">Zapamiętaj mnie i pozwalaj na szybkie logowanie</p>
+                    <p style="">Zapamiętaj mnie i pozwalaj na szybkie logowanie</p>
                 </div>
             </form>
 

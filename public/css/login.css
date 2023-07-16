@@ -127,6 +127,7 @@ p {
     z-index: 1;
 }
 
+
 @media(max-width: 576px){
     .login__title{
         font-size: 25px!important;

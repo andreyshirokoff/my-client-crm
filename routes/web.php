@@ -30,6 +30,9 @@ Route::get('/functions/client_search', function () {
 Route::get('/functions/document_search', function () {
     return view('document_search');
 });
+Route::get('/functions/news_view', function () {
+    return view('news_view');
+});
 
 //settings
 Route::get('/ustawienia', function () {

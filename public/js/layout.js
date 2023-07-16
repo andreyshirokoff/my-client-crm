@@ -11,6 +11,7 @@ layout = {
 
     bottomButtons: function ()
     {
+
         if($(window).width() < 400)
         {
 
@@ -32,12 +33,15 @@ layout = {
 
     loginForm: function()
     {
-        let container = $('#login-box')
-        if($(window).width() < parseInt($(container).css('width')))
-        {
+        $(window).resize(() => {
+            let container = $('#login-box')
+            if($(window).width() <= 1152)
+            {
+                console.log($(window).width())
+                $(container).css('width', $(window).width() + 'px')
+            }
+        })
 
-            $(container).css('width', $(window).width() + 'px')
-        }
     }
 
 }

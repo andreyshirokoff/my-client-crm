@@ -28,5 +28,9 @@ Route::get('/functions/document_search', function () {
     return view('document_search');
 });
 
+//settings
+Route::get('/ustawienia', function () {
+    return view('ustawienia');
+});
 
 

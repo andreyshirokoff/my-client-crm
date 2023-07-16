@@ -26,6 +26,16 @@ h3 {
 h6, .h6{
     color:#000;
 }
+.mar{
+    height: 10px;
+}
+input[type="checkbox"] {
+    -ms-transform: scale(2);
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    margin-bottom: 20px;
+    margin-right: 15px;
+}
 .btn1 {
     background-color: var(--motyw01_dodatkowy);
     color: white;
@@ -153,6 +163,25 @@ input[type="radio"] {
     justify-content: flex-start;
     padding: 20px;
 }
+.box-content {
+    padding: 20px;
+}
+.btn-glow {
+    background-color: var(--motyw01_dodatkowy);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    animation-name: button-glowing;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+
+
 
 
 
@@ -314,12 +343,52 @@ input[type="radio"] {
     {
         margin-top: 10px;
     }
+
+    .block3_twoje_konto .boxinbox-inside__body{
+        flex-direction: column!important;
+        height: inherit!important;
+    }
+    .block3_twoje_konto .boxinbox-inside__item{
+        width: 100% !important;
+    }
+    .block3_ustawienia_salonu_i_rodo .row-with-input{
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    .block3_ustawienia_salonu_i_rodo .row-with-input .input-in{
+        width: 100% !important;
+    }
+    .block3_ustawienia_salonu_i_rodo .row-with-input .input-in.check{
+        align-items: flex-start!important;
+        justify-content: flex-start!important;
+    }
+    .block3_ogolna_karta_klienta .listing-element{
+        flex-direction: column;
+        gap: 20px;
+    }
+    /*.block3_ogolna_karta_klienta .listing-element .btns{*/
+    /*    height: 57px;*/
+    /*    width: 500px!important;*/
+    /*    justify-content: center!important;*/
+    /*}*/
+
 }
 @media(max-width: 868px)
 {
     .block1_twoje_ostatnie_5_zabiegow .listing-titlebar,
-    .block1_wyniki .listing-titlebar{
-        flex-direction: column;
+    .block1_wyniki .listing-titlebar,
+    .block3_pakiet_sms_i_historia .pac-body,
+    .block3_pakiet_sms_i_historia .pac-body-2{
+        flex-direction: column!important;
+    }
+    .block3_pakiet_sms_i_historia .pac-body-2{
+        gap:20px;
+        align-items: flex-start!important;
+    }
+    .block3_pakiet_sms_i_historia .pac-body-2 div:not(:first-child)
+    {
+        margin-left:0!important;
     }
     .block1_twoje_ostatnie_5_zabiegow .listing-titlebar div{
         width: 100% !important;
@@ -359,11 +428,29 @@ input[type="radio"] {
     }
 
     /*blocks*/
-    .block1_znajdz_dokument .input-cont{
+    .block1_znajdz_dokument .input-cont,
+    .block3_karty_zabiegowe_i_zabiegi .btns{
         flex-direction: column!important;
     }
     .block1_znajdz_dokument .input-cont__item{
         width: 100%!important;
+    }
+
+    .block3_ustawienia_salonu_i_rodo .btns{
+        justify-content: center;
+    }
+
+    .block3_export_dokumentov_do_pdf .listing-element{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .block3_export_dokumentov_do_pdf .listing-element div:not(:last-child)
+    {
+        width: 100% !important;
+        padding-left:0px!important;
+    }
+    .block3_export_dokumentov_do_pdf .listing-element div:last-child{
+        justify-content: center!important;
     }
 
 }
@@ -403,4 +490,11 @@ input[type="radio"] {
     .block1_dobaj_klienta .listing-element{
         flex-direction: column;
     }
+    .block3_produkty .listing-titlebar{
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+@media(max-width: 400px){
+
 }

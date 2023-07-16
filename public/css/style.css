@@ -9,6 +9,9 @@ html,body{
     color:white;
     font-size: 18px;
 }
+*, ::after, ::before {
+    box-sizing: border-box;
+}
 p{
     margin-bottom: 0!important;
 }

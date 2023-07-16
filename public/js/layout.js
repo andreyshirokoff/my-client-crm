@@ -28,6 +28,16 @@ layout = {
         $('#header #header-lewy').click(() => {
             window.location.href = '/'
         })
+    },
+
+    loginForm: function()
+    {
+        let container = $('#login-box')
+        if($(window).width() < parseInt($(container).css('width')))
+        {
+
+            $(container).css('width', $(window).width() + 'px')
+        }
     }
 
 }

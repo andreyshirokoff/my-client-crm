@@ -57,7 +57,7 @@
         </form></div>
 
     <div class="listing-actionbar bottom-buttons">
-        <a href="../ustawienia.php"><button type="button" class="btn1"><i class="fas fa-chevron-left" aria-hidden="true"></i> Anuluj</button></a>
+        <a href="{{url('ustawienia')}}"><button type="button" class="btn1"><i class="fas fa-chevron-left" aria-hidden="true"></i> Anuluj</button></a>
         <button type="submit" class="btn1" style="margin-left:10px;"><i class="fas fa-plus-circle" aria-hidden="true"></i> Importuj zabieg</button>
 
     </div>

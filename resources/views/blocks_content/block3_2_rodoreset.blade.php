@@ -15,7 +15,7 @@
     <div class="listing-actionbar bottom-buttons">
 
         <button onclick="location.href='rodoreset_do.php'" class="btn1" style=""><i class="fas fa-check-circle" aria-hidden="true"></i> Wykonaj</button>
-        <button onclick="location.href='../ustawienia.php';" class="btn1" style=""><i class="fas fa-times" aria-hidden="true"></i> Anuluj</button>
+        <button onclick="location.href='{{url('ustawienia')}}';" class="btn1" style=""><i class="fas fa-times" aria-hidden="true"></i> Anuluj</button>
     </div>
 
 

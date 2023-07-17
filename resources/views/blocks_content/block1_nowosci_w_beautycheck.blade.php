@@ -17,7 +17,7 @@
     </div>
     <div style="width:10%;display:flex;flex-direction:row;" class="listing-element__width10">
         <div class="iconbutton">
-            <i class="far fa-eye" onclick="location.href='/functions/news_view.php?id=13';" aria-hidden="true"></i>
+            <i class="far fa-eye" onclick="location.href='{{url('functions/news_view')}}?id=13';" aria-hidden="true"></i>
         </div>
     </div>
 </div>
@@ -31,7 +31,7 @@
     </div>
     <div style="width:10%;display:flex;flex-direction:row;" class="listing-element__width10">
         <div class="iconbutton">
-            <i class="far fa-eye" onclick="location.href='/functions/news_view.php?id=12';" aria-hidden="true"></i>
+            <i class="far fa-eye" onclick="location.href='{{url('functions/news_view')}}?id=12';" aria-hidden="true"></i>
         </div>
     </div>
 </div>
@@ -45,7 +45,7 @@
     </div>
     <div style="width:10%;display:flex;flex-direction:row;" class="listing-element__width10">
         <div class="iconbutton">
-            <i class="far fa-eye" onclick="location.href='/functions/news_view.php?id=11';" aria-hidden="true"></i>
+            <i class="far fa-eye" onclick="location.href='{{url('functions/news_view')}}?id=11';" aria-hidden="true"></i>
         </div>
     </div>
 </div>
@@ -59,7 +59,7 @@
     </div>
     <div style="width:10%;display:flex;flex-direction:row;" class="listing-element__width10">
         <div class="iconbutton">
-            <i class="far fa-eye" onclick="location.href='/functions/news_view.php?id=10';" aria-hidden="true"></i>
+            <i class="far fa-eye" onclick="location.href='{{url('functions/news_view')}}?id=10';" aria-hidden="true"></i>
         </div>
     </div>
 </div>
@@ -73,7 +73,7 @@
     </div>
     <div style="width:10%;display:flex;flex-direction:row;" class="listing-element__width10">
         <div class="iconbutton">
-            <i class="far fa-eye" onclick="location.href='/functions/news_view.php?id=9';" aria-hidden="true"></i>
+            <i class="far fa-eye" onclick="location.href='{{url('functions/news_view')}}?id=9';" aria-hidden="true"></i>
         </div>
     </div>
 </div>

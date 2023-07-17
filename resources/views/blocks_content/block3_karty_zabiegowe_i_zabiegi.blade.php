@@ -18,7 +18,7 @@
 
 
 <div class="listing-actionbar btns" style="gap: 15px;">
-    <button type="button" style="" onclick="location.href='/functions/treatment_template.php'" class="btn1"><i class="fas fa-plus-circle" aria-hidden="true"></i> Wybierz z gotowych</button>
-    <button type="button" onclick="location.href='/functions/treatment_create.php'" class="btn1"><i class="fas fa-plus-circle" aria-hidden="true"></i> Dodaj zabieg</button>
+    <button type="button" style="" onclick="location.href='{{url('functions/treatment_template')}}'" class="btn1"><i class="fas fa-plus-circle" aria-hidden="true"></i> Wybierz z gotowych</button>
+    <button type="button" onclick="location.href='{{url('functions/treatment_create')}}'" class="btn1"><i class="fas fa-plus-circle" aria-hidden="true"></i> Dodaj zabieg</button>
 </div>
 

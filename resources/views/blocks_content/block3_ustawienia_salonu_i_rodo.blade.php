@@ -210,7 +210,7 @@
 
 
     <div class="listing-actionbar flex-wrap btns" style="gap:10px">
-        <button type="button" class="btn1" onclick="location.href='/functions/rodoreset.php'"><i class="fas fa-history" aria-hidden="true"></i> Resetuj RODO</button>
+        <button type="button" class="btn1" onclick="location.href='{{url('functions/rodoreset')}}'"><i class="fas fa-history" aria-hidden="true"></i> Resetuj RODO</button>
         <button type="submit" class="btn1" style=""><i class="fas fa-check-circle" aria-hidden="true"></i> Zapisz ustawienia</button>
     </div>
 </form>

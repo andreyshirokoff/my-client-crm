@@ -17,7 +17,7 @@
 <!-- Wczytanie zabiegów z bazy i ich listing -->
 <div class="listing-ending"></div>
 <div class="listing-actionbar">
-    <button type="button" onclick="location.href='/functions/product_create.php'" class="btn1"><i class="fas fa-plus-circle" aria-hidden="true"></i> Dodaj produkt</button>
+    <button type="button" onclick="location.href='{{url('functions/product_create')}}'" class="btn1"><i class="fas fa-plus-circle" aria-hidden="true"></i> Dodaj produkt</button>
 </div>
 
 

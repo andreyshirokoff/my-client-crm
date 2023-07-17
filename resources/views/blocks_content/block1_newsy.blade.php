@@ -44,7 +44,7 @@
 
 
 <div class="listing-actionbar">
-    <button onclick="location.href='/index.php';" class="btn1" style="margin-left:20px !important;"><i class="fas fa-chevron-left" aria-hidden="true"></i> Wróć</button>
+    <button onclick="location.href='{{url('/')}}';" class="btn1" style="margin-left:20px !important;"><i class="fas fa-chevron-left" aria-hidden="true"></i> Wróć</button>
 </div>
 
 

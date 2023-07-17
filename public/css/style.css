@@ -473,15 +473,15 @@ display: block;
     .block3_twoje_konto .boxinbox-inside__item{
         width: 100% !important;
     }
-    .block3_ustawienia_salonu_i_rodo .row-with-input{
+    .block3_ustawienia_salonu_i_rodo .row-with-input, .row-with-input{
         flex-direction: column;
         gap: 20px;
         align-items: flex-start;
     }
-    .block3_ustawienia_salonu_i_rodo .row-with-input .input-in{
+    .block3_ustawienia_salonu_i_rodo .row-with-input .input-in, .row-with-input .input-in{
         width: 100% !important;
     }
-    .block3_ustawienia_salonu_i_rodo .row-with-input .input-in.check{
+    .block3_ustawienia_salonu_i_rodo .row-with-input .input-in.check, .row-with-input .input-in.check{
         align-items: flex-start!important;
         justify-content: flex-start!important;
     }

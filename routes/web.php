@@ -59,5 +59,17 @@ Route::get('/functions/rodoreset', function () {
 Route::get('/functions/document_kartaklienta_edit', function () {
     return view('ustawienia.document_kartaklienta_edit');
 });
+Route::get('/functions/worker_create', function () {
+    return view('ustawienia.worker_create');
+});
+Route::get('/functions/treatment_template', function () {
+    return view('ustawienia.treatment_template');
+});
+Route::get('/functions/treatment_create', function () {
+    return view('ustawienia.treatment_create');
+});
+Route::get('/functions/product_create', function () {
+    return view('ustawienia.product_create');
+});
 
 

@@ -74,6 +74,38 @@
                     'block3_2_heading' => 'heading_block3_2_pytania',
                     'block3_doc_pytania_array' => $block3_doc_pytania_array
                 ])
+        @elseif($block3_3_content_class == 'block3_2_dodaj_pracownika')
+            @include('blocks.block3_2', [
+                    'block3_2_icon' => 'fas fa-user-friends',
+                    'block3_2_title' => 'Dodaj pracownika',
+                    'block3_3_content_class' => 'block3_2_dodaj_pracownika',
+                    'block3_2_content' => $block3_3_content_class,
+                    'block3_2_heading' => 'heading_block3_2_dodaj_pracownika',
+                ])
+        @elseif($block3_3_content_class == 'block3_2_dodaj_gotowe_zabiegi')
+            @include('blocks.block3_2', [
+                    'block3_2_icon' => 'fas fa-hand-holding-heart',
+                    'block3_2_title' => 'Dodaj gotowe zabiegi',
+                    'block3_3_content_class' => 'block3_2_dodaj_gotowe_zabiegi',
+                    'block3_2_content' => $block3_3_content_class,
+                    'block3_2_heading' => 'heading_block3_2_dodaj_gotowe_zabiegi',
+                ])
+        @elseif($block3_3_content_class == 'block3_2_dodaj_zabieg')
+            @include('blocks.block3_2', [
+                    'block3_2_icon' => 'fas fa-user-friends',
+                    'block3_2_title' => 'Dodaj zabieg',
+                    'block3_3_content_class' => 'block3_2_dodaj_zabieg',
+                    'block3_2_content' => $block3_3_content_class,
+                    'block3_2_heading' => 'heading_block3_2_dodaj_zabieg',
+                ])
+        @elseif($block3_3_content_class == 'block3_2_product_create')
+            @include('blocks.block3_2', [
+                    'block3_2_icon' => 'fas fa-user-friends',
+                    'block3_2_title' => 'Dodaj zabieg',
+                    'block3_3_content_class' => 'block3_2_product_create',
+                    'block3_2_content' => $block3_3_content_class,
+                    'block3_2_heading' => 'heading_block3_2_product_create',
+                ])
         @endif
     </div>
 </div>

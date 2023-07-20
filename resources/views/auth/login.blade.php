@@ -101,19 +101,29 @@
 
 
         <div class="loginform tab" id="loginform" style="display:block;">
-            <form action="functions/login.php" method="post" style="width: 100%;" autocomplete="off">
-
+            <form action="{{route('login')}}" method="post" style="width: 100%;" autocomplete="off">
+                @csrf
                 <div style="display:flex; flex-direction:row;margin:0px;padding:0px;justify-content:center;align-items:center;margin:10px 0px;">
                     <div class="loginfield-icon">
                         <i class="fas fa-envelope" aria-hidden="true"></i>
                     </div>
-                    <input type="text" name="mail" class="loginfield-field" placeholder="e-mail">
+                    <input type="text" name="email" class="loginfield-field" placeholder="e-mail">
+                    @error('email')
+                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                    @enderror
                 </div>
                 <div style="display:flex; flex-direction:row;margin:0px;padding:0px;justify-content:center;align-items:center;margin:10px 0px;">
                     <div class="loginfield-icon">
                         <i class="fas fa-key" aria-hidden="true"></i>
                     </div>
-                    <input type="password" name="haslo" class="loginfield-field" placeholder="hasło">
+                    <input type="password" name="name" class="loginfield-field" placeholder="hasło">
+                    @error('password')
+                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                    @enderror
                 </div>
 
                 <button type="submit" value="Zaloguj" class="btn-login">Zaloguj</button>

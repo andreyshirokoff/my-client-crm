@@ -49,43 +49,43 @@
             Jak wysłać kod?
         </div>
         <div style="width:60%;">
-            <div class="d-flex gap-3 align-items-center"><input type="radio" id="send_via_email" name="how_to_send" value="send_via_email" required="" disabled="">    <label for="send_via_email">Na podany adres e-mail</label><br></div>
-            <div class="d-flex gap-3 align-items-center mt-3"><input type="radio" id="send_via_sms" name="how_to_send" value="send_via_sms" required="" disabled="">    <label for="send_via_sms">Na podany nr telefonu (Masz 10 smsów w pakiecie)</label></div>
+            <div class="d-flex gap-3 align-items-center"><input type="radio" id="send_via_email" name="how_to_send" value="send_via_email" required="" style="">    <label for="send_via_email">Na podany adres e-mail</label><br></div>
+            <div class="d-flex gap-3 align-items-center mt-3"><input type="radio" id="send_via_sms" name="how_to_send" value="send_via_sms" required="" style="">    <label for="send_via_sms">Na podany nr telefonu (Masz 10 smsów w pakiecie)</label></div>
         </div>
     </div>
     <script>
-        if(document.getElementById("email").value==="") {
-            document.getElementById('send_via_email').disabled = true;
-            document.getElementById('send_via_email').checked=false;
-        } else {
-            document.getElementById('send_via_email').disabled = false;
-        }
-
-        if(document.getElementById("tel").value==="") {
-            document.getElementById('send_via_sms').disabled = true;
-            document.getElementById('send_via_sms').checked=false;
-        }
-
-
-        else {
-            document.getElementById('send_via_sms').disabled = false;           }
-
-        function success() {
-            if(document.getElementById("email").value==="") {
-                document.getElementById('send_via_email').disabled = true;
-                document.getElementById('send_via_email').checked=false;
-            } else {
-                document.getElementById('send_via_email').disabled = false;
-            }
-
-            if(document.getElementById("tel").value==="") {
-                document.getElementById('send_via_sms').disabled = true;
-                document.getElementById('send_via_sms').checked=false;
-            }
-            else {
-                document.getElementById('send_via_sms').disabled = false;            }
-
-        }
+        // if(document.getElementById("email").value==="") {
+        //     document.getElementById('send_via_email').disabled = true;
+        //     document.getElementById('send_via_email').checked=false;
+        // } else {
+        //     document.getElementById('send_via_email').disabled = false;
+        // }
+        //
+        // if(document.getElementById("tel").value==="") {
+        //     document.getElementById('send_via_sms').disabled = true;
+        //     document.getElementById('send_via_sms').checked=false;
+        // }
+        //
+        //
+        // else {
+        //     document.getElementById('send_via_sms').disabled = false;           }
+        //
+        // function success() {
+        //     if(document.getElementById("email").value==="") {
+        //         document.getElementById('send_via_email').disabled = true;
+        //         document.getElementById('send_via_email').checked=false;
+        //     } else {
+        //         document.getElementById('send_via_email').disabled = false;
+        //     }
+        //
+        //     if(document.getElementById("tel").value==="") {
+        //         document.getElementById('send_via_sms').disabled = true;
+        //         document.getElementById('send_via_sms').checked=false;
+        //     }
+        //     else {
+        //         document.getElementById('send_via_sms').disabled = false;            }
+        //
+        // }
     </script>
 
     <div class="listing-ending"></div>

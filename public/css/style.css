@@ -43,9 +43,12 @@ input[type="radio"] {
     -ms-transform: scale(2);
     -webkit-transform: scale(2);
     transform: scale(2);
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
     margin-right: 15px;
 }
+/*input[type="radio"]:checked{*/
+/*    background-color: blue;*/
+/*}*/
 .btn1 {
     background-color: var(--motyw01_dodatkowy);
     color: white;
@@ -156,13 +159,13 @@ input[type="radio"] {
     font-size: 18px;
 }
 
-input[type="radio"] {
-    -ms-transform: scale(2);
-    -webkit-transform: scale(2);
-    transform: scale(2);
-    /*margin-bottom: 20px;*/
-    /*margin-right: 15px;*/
-}
+/*input[type="radio"] {*/
+/*    -ms-transform: scale(2);*/
+/*    -webkit-transform: scale(2);*/
+/*    transform: scale(2);*/
+/*    !*margin-bottom: 20px;*!*/
+/*    !*margin-right: 15px;*!*/
+/*}*/
 
 .listing-actionbar {
     display: flex;

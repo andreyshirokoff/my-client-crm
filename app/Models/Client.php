@@ -5,18 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Role extends Model
+class Client extends Model
 {
     use HasFactory;
-    public $timestamps = false;
+
+    protected $table = 'clients';
 
     protected $fillable = [
         'id',
-        'name',
+        'group_id',
+        'firstname',
+        'lastname',
+        'email',
+        'phone',
+        'avatar',
+        'description',
     ];
-
-    public static function uriKey()
-    {
-        return 'roles';
-    }
 }

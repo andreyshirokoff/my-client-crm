@@ -15,13 +15,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 {{--    <script src="{{asset('js/cdn.jsdelivr.net_npm_select2@4.1.0-rc.0_dist_js_select2.min.js')}}"></script>--}}
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <title>Dev</title>
+    <title>{{env('PROJECT_NAME')}}</title>
+    @livewireStyles
 </head>
 <body>
 @include('layout.header')
+
 <div class="sitecontent">
     @yield('content')
 </div>
+
+@livewireScripts
 <script src="https://kit.fontawesome.com/3c6f321247.js" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/b675a8d36a.js" crossorigin="anonymous"></script>
 <script src="{{asset('js/script.js')}}"></script>

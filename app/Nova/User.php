@@ -2,21 +2,11 @@
 
 namespace App\Nova;
 
-use App\Models\Role;
-use Laravel\Nova\Fields\Boolean;
-use Laravel\Nova\Fields\DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rules;
-
-use Laravel\Nova\Fields\BelongsTo;
-use Laravel\Nova\Fields\File;
 use Laravel\Nova\Fields\Gravatar;
-use Laravel\Nova\Fields\HasOne;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Image;
-use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Password;
-use Laravel\Nova\Fields\Stack;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
@@ -56,9 +46,7 @@ class User extends Resource
         return [
             ID::make()->sortable(),
 
-//            Gravatar::make('Avatar', 'image')->maxWidth(50),
-
-            Image::make('Avatar', 'image')->maxWidth(50),
+            Gravatar::make()->maxWidth(50),
 
             Text::make('Name')
                 ->sortable()
@@ -70,26 +58,10 @@ class User extends Resource
                 ->creationRules('unique:users,email')
                 ->updateRules('unique:users,email,{{resourceId}}'),
 
-            DateTime::make('Weryfikacja adresu e-mail', 'email_verified_at')->sortable(),
-
-            BelongsTo::make('Role')
-                ->sortable()
-                ->displayUsing(function($role){
-                    return $role->name;
-                }),
-
             Password::make('Password')
                 ->onlyOnForms()
                 ->creationRules('required', Rules\Password::defaults())
                 ->updateRules('nullable', Rules\Password::defaults()),
-
-            Number::make('Ilość SMS-ów', 'sms_quantity')->sortable(),
-
-            DateTime::make('Data rejestracji', 'created_at')->sortable(),
-
-            Boolean::make('Czy telefon potwierdza', 'is_phone_confirm')->sortable(),
-
-//            File::make('Awatara', 'image')->disk('public'),
         ];
     }
 
@@ -136,8 +108,4 @@ class User extends Resource
     {
         return [];
     }
-
-
-
-
 }

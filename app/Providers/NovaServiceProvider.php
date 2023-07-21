@@ -79,8 +79,8 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     protected function gate()
     {
         Gate::define('viewNova', function ($user) {
-            return in_array($user->role_id, [
-                1,
+            return in_array($user->status, [
+                'active',
             ]);
         });
     }

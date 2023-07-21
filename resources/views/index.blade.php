@@ -1,12 +1,5 @@
 @extends('layout.app')
 
-{{--@section('block1_icon')--}}
-{{--    fas fa-hand-holding-heart--}}
-{{--@endsection--}}
-{{--@section('block1_title')--}}
-{{--    Twoje ostatnie 5 zabiegów:--}}
-{{--@endsection--}}
-
 @section('content')
     <div class="whitebox-listing head-links">
         <div onclick="location.href='/functions/client_create';" class="colorbox33">

@@ -15,8 +15,11 @@
             class="nsr-font-bold nsr-text-90 nsr-text-md nsr-w-full nsr-ml-3 nsr-flex"
           >
             {{ rowField.name }}
+            <span v-if="rowField.required" class="nsr-text-red-500 nsr-text-sm nsr-pl-1">
+              {{ __('*') }}
+            </span>
 
-            <!--  If field is nova-translatable, render seperate locale-tabs   -->
+            <!--  If field is nova-translatable, render separate locale-tabs   -->
             <nova-translatable-locale-tabs
               style="padding: 0"
               class="nsr-ml-auto"
@@ -108,6 +111,24 @@ export default {
   props: ['resourceName', 'resourceId', 'field'],
 
   methods: {
+    // Converts nested object to FormData
+    objectToFormData(obj, formData, namespace) {
+      formData = formData || new FormData();
+      let formKey;
+
+      for (const fieldName in obj) {
+        formKey = namespace + '[' + fieldName + ']';
+
+        if (typeof obj[fieldName] === 'object') {
+          this.objectToFormData(obj[fieldName], formData, formKey);
+        } else {
+          formData.append(formKey, obj[fieldName]);
+        }
+      }
+
+      return formData;
+    },
+
     fill(formData) {
       const ARR_REGEX = () => /\[\d+\]$/g;
 
@@ -156,7 +177,7 @@ export default {
         allValues.push(rowValues);
       }
 
-      formData.append(this.field.attribute, JSON.stringify(allValues));
+      this.objectToFormData(allValues, formData, this.field.attribute);
     },
 
     addRow() {
@@ -178,12 +199,11 @@ export default {
     repeatableValidation() {
       const fields = this.fields;
       const errors = this.errors.errors;
-      const repeaterAttr = this.field.attribute;
-      const safeRepeaterAttr = this.field.attribute.replace(/.{16}__/, '');
+      const safeRepeaterAttr = this.field.validationKey.replace(/.{16}__/, '');
       const erroredFieldLocales = {};
       const formattedKeyErrors = {};
 
-      // Find errored locales
+      // Find errored fields
       for (const field of fields) {
         const fieldAttr = field.originalAttribute;
 
@@ -198,16 +218,9 @@ export default {
           erroredFieldLocales[fieldAttr] = foundLocales;
         }
 
-        // Format field
+        // Parse error key name to match with field input name
         relatedErrors.forEach(errorKey => {
-          const rowIndex = errorKey.split('.')[1];
-          let uniqueKey = `${repeaterAttr}---${field.originalAttribute}---${rowIndex}`;
-
-          if (isTranslatable) {
-            const locale = errorKey.split('.').slice(-1)[0];
-            uniqueKey = `${uniqueKey}.${locale}`;
-          }
-
+          const uniqueKey = this.getValidationKey(field, errorKey, isTranslatable);
           formattedKeyErrors[uniqueKey] = errors[errorKey];
         });
       }
@@ -220,13 +233,13 @@ export default {
 
     canAddRows() {
       if (!this.currentField.canAddRows) return false;
-      if (!!this.currentField.maxRows) return this.rows.length < this.currentField.maxRows;
+      if (this.currentField.maxRows) return this.rows.length < this.currentField.maxRows;
       return true;
     },
 
     canDeleteRows() {
       if (!this.currentField.canDeleteRows) return false;
-      if (!!this.currentField.minRows) return this.rows.length > this.currentField.minRows;
+      if (this.currentField.minRows) return this.rows.length > this.currentField.minRows;
       return true;
     },
   },

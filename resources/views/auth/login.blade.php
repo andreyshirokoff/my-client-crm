@@ -118,7 +118,7 @@
                     <div class="loginfield-icon">
                         <i class="fas fa-key" aria-hidden="true"></i>
                     </div>
-                    <input type="password" name="name" class="loginfield-field" placeholder="hasło">
+                    <input type="password" name="password" class="loginfield-field" placeholder="hasło">
                     @error('password')
                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

@@ -20,22 +20,22 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
-})->middleware(['auth', 'verified']);
+})->middleware(['auth']);
 
 
 //functions
 Route::get('/functions/client_create', function () {
     return view('client_create');
-})->middleware(['auth', 'verified'])->middleware(['auth']);
+})->middleware(['auth']);
 Route::get('/functions/client_search', function () {
     return view('client_search');
-})->middleware(['auth', 'verified'])->middleware(['auth']);
+})->middleware(['auth']);
 Route::get('/functions/document_search', function () {
     return view('document_search');
-})->middleware(['auth', 'verified'])->middleware(['auth']);
+})->middleware(['auth']);
 Route::get('/functions/news_view', function () {
     return view('news_view');
-})->middleware(['auth', 'verified'])->middleware(['auth']);
+})->middleware(['auth']);
 
 //settings
 Route::get('/ustawienia', function () {

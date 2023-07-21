@@ -21,9 +21,9 @@
                 </div>
             </div>
             <div class="d-flex mt-5">
-                <a href="/wyloguj.php" style="color:white"><span class="icon"><i class="fas fa-sign-out-alt" aria-hidden="true"></i></span></a>
+                <a href="{{route('logout')}}" style="color:white"><span class="icon"><i class="fas fa-sign-out-alt" aria-hidden="true"></i></span></a>
                 <div style="padding-left:15px;" class="d-flex align-items-center">
-                    <a href="/wyloguj.php" style="text-decoration:none;color:white"><span style="font-size:20px;font-weight:300;"> Wyloguj się </span></a>
+                    <a href="{{route('logout')}}" style="text-decoration:none;color:white"><span style="font-size:20px;font-weight:300;"> Wyloguj się </span></a>
                 </div>
             </div>
         </div>
@@ -70,11 +70,12 @@
             </div>
         </div>
         <div class="d-flex header-prawy__desktop_btn">
-            <a href="/wyloguj.php" style="color:white"><span class="icon"><i class="fas fa-sign-out-alt" aria-hidden="true"></i></span></a>
+            <a href="{{route('logout')}}" style="color:white" onclick="event.preventDefault();document.querySelector('#logout-form').submit()"><span class="icon"><i class="fas fa-sign-out-alt" aria-hidden="true"></i></span></a>
             <div style="padding-left:15px;" class="d-flex align-items-center">
-                <a href="/wyloguj.php" style="text-decoration:none;color:white"><span style="font-size:18px;font-weight:300;"> Wyloguj się </span></a>
+                <a href="{{route('logout')}}" style="text-decoration:none;color:white"><span style="font-size:18px;font-weight:300;" onclick="event.preventDefault();document.querySelector('#logout-form').submit()"> Wyloguj się </span></a>
             </div>
         </div>
+        <form action="{{route('logout')}}" id="logout-form" method="POST" class="d-none">@csrf</form>
 
     </div>
 
@@ -85,7 +86,7 @@
         </div>
 
         <div class="d-flex">
-            <a href="/wyloguj.php" style="color:white"><span class="icon"><i class="fas fa-sign-out-alt" aria-hidden="true"></i></span></a>
+            <a href="{{route('logout')}}" style="color:white"><span class="icon"><i class="fas fa-sign-out-alt" aria-hidden="true"></i></span></a>
 
         </div>
 

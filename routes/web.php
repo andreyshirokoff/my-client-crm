@@ -19,9 +19,13 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::middleware('auth')->prefix('dashboard')->group(function (){
-    Route::get('/', [\App\Http\Controllers\DashboardPageController::class, 'index'])->name('dashboard');
-});
+//Route::middleware('auth')->prefix('dashboard')->group(function (){
+//    Route::get('/', [\App\Http\Controllers\DashboardPageController::class, 'index'])->name('dashboard');
+//});
+
+Route::get('/', function () {
+    return view('index');
+})->middleware(['auth']);
 
 
 //functions
@@ -75,5 +79,9 @@ Route::get('/functions/treatment_create', function () {
 Route::get('/functions/product_create', function () {
     return view('ustawienia.product_create');
 })->middleware(['auth']);
+
+
+//Route::post('/search-client', [\App\Http\Controllers\AjaxController::class, 'searchClient'])->name('search-client');
+Route::match(['get', 'post'], 'search-client', [\App\Http\Controllers\AjaxController::class, 'searchClient'])->name('search-client');
 
 

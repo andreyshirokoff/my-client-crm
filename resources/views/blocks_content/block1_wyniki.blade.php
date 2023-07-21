@@ -14,6 +14,20 @@
             <h6>Pokaż</h6>
         </div>
     </div>
+{{--    <div class="listing-element">--}}
+{{--        <div style="width:40%;">--}}
+{{--            <h6>Imię i Nazwisko</h6>--}}
+{{--        </div>--}}
+{{--        <div style="width:40%;">--}}
+{{--            <h6>E-Mail</h6>--}}
+{{--        </div>--}}
+{{--        <div style="width:10%;">--}}
+{{--            <h6>Tel</h6>--}}
+{{--        </div>--}}
+{{--        <div style="width:10%;display:flex;justify-content:flex-end;" class="width-10">--}}
+{{--            <h6>Pokaż</h6>--}}
+{{--        </div>--}}
+{{--    </div>--}}
 
 
     <!-- Wczytanie klientów z bazy i ich listing -->

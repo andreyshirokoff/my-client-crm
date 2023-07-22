@@ -27,7 +27,8 @@
 <div class="listing-actionbar">
     <div style="width:80%;">
     </div>
-    <button style="width:200px;" type="button" id="search-client-btn" class="btn1"><i class="fas fa-search" aria-hidden="true"></i> Szukaj</button>
+
+    <button style="width:200px;" type="button" id="search-client-btn" class="btn1"><i class="fas fa-search" aria-hidden="true" ></i> Szukaj</button>
 </div>
 
 

@@ -14,6 +14,30 @@
             <h6>Pokaż</h6>
         </div>
     </div>
+    <livewire:client-index>
+{{--    <div>--}}
+
+{{--            <div class="listing-element">--}}
+{{--                <div style="width:40%;">--}}
+{{--                    <h6>Имя</h6>--}}
+{{--                </div>--}}
+{{--                <div style="width:40%;">--}}
+{{--                    <h6>Имейл</h6>--}}
+{{--                </div>--}}
+{{--                <div style="width:10%;">--}}
+{{--                    <h6>Телефон</h6>--}}
+{{--                </div>--}}
+{{--                <div style="width:10%;display:flex;justify-content:flex-end;" class="width-10">--}}
+{{--                    <h6>Pokaż</h6>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+
+{{--        <div class="pagination-wrap mt-3"></div>--}}
+
+
+
+{{--    </div>--}}
+
 {{--    <div class="listing-element">--}}
 {{--        <div style="width:40%;">--}}
 {{--            <h6>Imię i Nazwisko</h6>--}}
@@ -32,19 +56,11 @@
 
     <!-- Wczytanie klientów z bazy i ich listing -->
 
-    <div class="pagination-wrap mt-3">
+{{--    <div class="pagination-wrap mt-3">--}}
 
-{{--        <nav aria-label="Page navigation example" >--}}
-{{--            <ul class="pagination" id="pag">--}}
-{{--                <li class="page-item" id="pag-prev"><a class="page-link" href="#">Previous</a></li>--}}
-{{--                <li class="page-item" id="pag-1"><a class="page-link" href="#">1</a></li>--}}
-{{--                <li class="page-item" id="pag-2"><a class="page-link" href="#">2</a></li>--}}
-{{--                <li class="page-item" id="pag-3"><a class="page-link" href="#">3</a></li>--}}
-{{--                <li class="page-item" id="pag-next"><a class="page-link" href="#">Next</a></li>--}}
-{{--            </ul>--}}
-{{--        </nav>--}}
 
-    </div>
+
+{{--    </div>--}}
     <!-- Wrzucenie footera -->
     <!--Beauty plany start -->
 {{--    <script src="/functions/beautyplans/lib/jquery-3.6.2.min.js"></script>--}}

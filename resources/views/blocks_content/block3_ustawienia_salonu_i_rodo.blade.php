@@ -52,21 +52,26 @@
         <div style="width:30%;" class="input-in">
             <select name="motyw" class="formularz">
                 <option value="">-- wybierz motyw --</option>
-                <option value="1" selected="">BeautyCheck</option>
-                <option value="2">Czarny</option>
-                <option value="3">Jasny brąz</option>
-                <option value="4">Srebrny</option>
-                <option value="5">Brzoskwiniowy</option>
-                <option value="6">Żółte złoto</option>
-                <option value="7">Granatowy</option>
-                <option value="8">Ciepły róż</option>
-                <option value="9">Kobaltowy</option>
-                <option value="10">Fiolet</option>
-                <option value="11">Lawendowy</option>
-                <option value="12">Red Lips</option>
-                <option value="13">Miętowy</option>
-                <option value="14">Złoty</option>
-                <option value="15">Butelkowy zielony</option>
+                @foreach(\App\Models\Theme::get() as $theme)
+
+                    <option value="{{$theme->id}}" selected="">{{$theme->name}}</option>
+{{--                        <option value="">-- wybierz motyw --</option>--}}
+{{--                    <option value="1" selected="">BeautyCheck</option>--}}
+{{--                    <option value="2">Czarny</option>--}}
+{{--                    <option value="3">Jasny brąz</option>--}}
+{{--                    <option value="4">Srebrny</option>--}}
+{{--                    <option value="5">Brzoskwiniowy</option>--}}
+{{--                    <option value="6">Żółte złoto</option>--}}
+{{--                    <option value="7">Granatowy</option>--}}
+{{--                    <option value="8">Ciepły róż</option>--}}
+{{--                    <option value="9">Kobaltowy</option>--}}
+{{--                    <option value="10">Fiolet</option>--}}
+{{--                    <option value="11">Lawendowy</option>--}}
+{{--                    <option value="12">Red Lips</option>--}}
+{{--                    <option value="13">Miętowy</option>--}}
+{{--                    <option value="14">Złoty</option>--}}
+{{--                    <option value="15">Butelkowy zielony</option>--}}
+                @endforeach
             </select>
         </div>
     </div>

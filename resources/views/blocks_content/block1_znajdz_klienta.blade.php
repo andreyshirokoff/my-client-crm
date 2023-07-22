@@ -1,6 +1,6 @@
 <div class="boxinbox-inside">
 
-    <form data-action="{{route('search-client')}}" data-token="{{csrf_token()}}" id="search-client-form">
+    <form data-action="{{route('search-client')}}" data-pag="{{route('search-client-count')}}" data-token="{{csrf_token()}}" id="search-client-form">
 
         <div id="searchbox-title" style="width:100%;">
             <b>Możesz wyszukać klienta po nazwisku, telefonie lub adresie email.</b>

@@ -32,9 +32,17 @@
 
     <!-- Wczytanie klientów z bazy i ich listing -->
 
-    <div class="pagination-wrap">
+    <div class="pagination-wrap mt-3">
 
-
+{{--        <nav aria-label="Page navigation example" >--}}
+{{--            <ul class="pagination" id="pag">--}}
+{{--                <li class="page-item" id="pag-prev"><a class="page-link" href="#">Previous</a></li>--}}
+{{--                <li class="page-item" id="pag-1"><a class="page-link" href="#">1</a></li>--}}
+{{--                <li class="page-item" id="pag-2"><a class="page-link" href="#">2</a></li>--}}
+{{--                <li class="page-item" id="pag-3"><a class="page-link" href="#">3</a></li>--}}
+{{--                <li class="page-item" id="pag-next"><a class="page-link" href="#">Next</a></li>--}}
+{{--            </ul>--}}
+{{--        </nav>--}}
 
     </div>
     <!-- Wrzucenie footera -->

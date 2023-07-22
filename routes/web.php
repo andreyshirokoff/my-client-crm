@@ -83,5 +83,6 @@ Route::get('/functions/product_create', function () {
 
 //Route::post('/search-client', [\App\Http\Controllers\AjaxController::class, 'searchClient'])->name('search-client');
 Route::match(['get', 'post'], 'search-client', [\App\Http\Controllers\AjaxController::class, 'searchClient'])->name('search-client');
+Route::match(['get', 'post'], 'search-client-count', [\App\Http\Controllers\AjaxController::class, 'searchClientCount'])->name('search-client-count');
 
 

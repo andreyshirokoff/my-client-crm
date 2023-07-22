@@ -12,7 +12,7 @@
     </div>
 @endsection
 
-@section('layout_js')
+@section('addit_js')
     <script>
         layout.canvasElement()
     </script>

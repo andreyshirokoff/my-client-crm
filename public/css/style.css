@@ -506,6 +506,7 @@ display: block;
 {
     .block1_twoje_ostatnie_5_zabiegow .listing-titlebar,
     .block1_wyniki .listing-titlebar,
+    .block1_wyniki .listing-element,
     .block3_pakiet_sms_i_historia .pac-body,
     .block3_pakiet_sms_i_historia .pac-body-2{
         flex-direction: column!important;
@@ -523,6 +524,12 @@ display: block;
     }
     .block1_wyniki .listing-titlebar div:last-child{
         justify-content: flex-start!important;
+    }
+    .block1_wyniki .listing-element{
+        align-items:flex-start;
+    }
+    .block1_wyniki .listing-element .width-10{
+        justify-content:flex-start!important;
     }
 }
 @media(max-width: 798px)

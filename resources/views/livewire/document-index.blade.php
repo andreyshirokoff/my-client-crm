@@ -1,5 +1,5 @@
 @extends('layout.app')
 
 @section('content')
-    <livewire:client-index>
+    <livewire:document-index>
 @endsection

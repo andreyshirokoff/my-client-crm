@@ -11,7 +11,7 @@
             <h3>{{$block1_title}}</h3>
         </div>
     </div>
-    <div class="boxinbox {{$block1_content_class}}" style="background: {{$background}}">
+    <div class="boxinbox {{$block1_content_class}}">
         @if(view()->exists($block1_content))
             @include($block1_content)
         @endif

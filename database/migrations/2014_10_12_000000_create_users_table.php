@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('xml_id')->nullable();
             $table->string('fullname')->nullable();
+            $table->string('avatar')->nullable();
+            $table->string('password');
             $table->string('password');
             $table->string('email')->unique();
 

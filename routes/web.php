@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/login', function () {
-//    return view('login');
-//});
+
 
 
 
@@ -26,6 +24,7 @@ Route::middleware('auth')->prefix('dashboard')->group(function (){
         Route::get('/news/{slug}', [\App\Http\Controllers\NewsPageController::class, 'index'])->name('news');
     }
 });
+
 
 
 //functions

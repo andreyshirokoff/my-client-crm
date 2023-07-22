@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Email;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Password;
+use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 
 class AdminsResource extends Resource
@@ -38,6 +39,11 @@ class AdminsResource extends Resource
                 ->onlyOnForms()
                  ->creationRules('required', 'string', 'min:8')
                 ->updateRules('nullable', 'string', 'min:8'),
+
+            Select::make('Статус пользователя', 'status')->options([
+                'active' => 'Активен',
+                'ban' => 'Забанен',
+            ])->default('active'),
         ];
     }
 

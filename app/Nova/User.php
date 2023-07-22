@@ -68,12 +68,12 @@ class User extends Resource
 
             Panel::make('Пользовательские параметры', [
                 Boolean::make('Главный пользователь', 'is_main'),
-                Select::make('Тип польхзователя', 'role')->options([
+                Select::make('Роль пользователя', 'role')->options([
                     'user' => 'Обычный пользователь',
                     'administrator' => 'Администратор',
                     'owner' => 'Владелец',
                 ])->default('user'),
-                Select::make('Статус пользователя', 'role')->options([
+                Select::make('Статус пользователя', 'status')->options([
                     'checked' => 'Проверка',
                     'active' => 'Активен',
                     'ban' => 'Забанен',

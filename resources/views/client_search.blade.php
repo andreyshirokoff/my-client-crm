@@ -20,3 +20,11 @@
 
     <livewire:client-index>
 @endsection
+
+@section('addit_js')
+    <script>
+        $(document).ready(() => {
+            script.phoneMask('#search-client-form #phone')
+        })
+    </script>
+@endsection

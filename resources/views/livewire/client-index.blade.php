@@ -30,7 +30,7 @@
                             <div class="boxseparator1procent"></div>
                             <div style="width:32%; display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-start;">
                                 Tel:<br>
-                                <input type="tel" name="tel" id="phone" class="formularz" value="" wire:model="phone">
+                                <input type="tel" name="tel" id="phone" class="formularz" value="" wire:model="phone" placeholder="+48 (___) ___-__-__">
                             </div>
                         </div>
                     </form>

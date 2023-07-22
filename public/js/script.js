@@ -238,6 +238,11 @@ script = {
         return emailPattern.test(email);
     },
 
+    phoneMask: function(element)
+    {
+        $(element).inputmask('+48 (999) 999-99-99')
+    },
+
     callToast: function (status, message)
     {
         const Toast = Swal.mixin({

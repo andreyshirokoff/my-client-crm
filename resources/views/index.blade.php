@@ -37,12 +37,36 @@
         'block1_content_class' => 'block1_twoje_ostatnie_5_zabiegow',
         'block1_content' => 'blocks_content.block1_twoje_ostatnie_5_zabiegow',
     ])
-    @include('blocks.block1', [
-        'block1_icon' => 'far fa-newspaper',
-        'block1_title' => 'Nowości w BeautyCheck:',
-        'block1_content_class' => 'block1_nowosci_w_beautycheck',
-        'block1_content' => 'blocks_content.block1_nowosci_w_beautycheck',
-    ])
+
+
+    <div class="boxinbox__body">
+        <div class="boxinbox-titlebar" style="margin-top:10px;">
+            <div class="icon">
+                <i class="far fa-newspaper" aria-hidden="true"></i>
+            </div>
+            <div style="margin-left:20px;">
+                <h3>Nowości w BeautyCheck:</h3>
+            </div>
+        </div>
+        <div class="boxinbox block1_nowosci_w_beautycheck">
+            @foreach($news as $newsItem)
+                <div class="listing-element">
+                    <div style="width:75%" class="listing-element__width75">
+                        <h6>{{$newsItem?->name}}</h6>
+                    </div>
+                    <div style="width:15%;" class="listing-element__width15">
+                        <h6>{{\Carbon\Carbon::parse($newsItem->created_at)->format('d.m.Y')}}</h6>
+                    </div>
+                    <div style="width:10%;display:flex;flex-direction:row;" class="listing-element__width10">
+                        <a href="{{route('news', ['slug' => $newsItem->slug])}}" class="iconbutton" style="text-decoration:none;">
+                            <i class="far fa-eye" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+
 @endsection
 
 @section('addit_js')

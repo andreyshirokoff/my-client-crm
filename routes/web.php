@@ -19,13 +19,13 @@ use Illuminate\Support\Facades\Route;
 
 
 
-//Route::middleware('auth')->prefix('dashboard')->group(function (){
-//    Route::get('/', [\App\Http\Controllers\DashboardPageController::class, 'index'])->name('dashboard');
-//});
+Route::middleware('auth')->prefix('dashboard')->group(function (){
+    Route::get('/', [\App\Http\Controllers\DashboardPageController::class, 'index'])->name('dashboard');
 
-Route::get('/', function () {
-    return view('index');
-})->middleware(['auth']);
+    if(Schema::hasTable('news')){
+        Route::get('/news/{slug}', [\App\Http\Controllers\NewsPageController::class, 'index'])->name('news');
+    }
+});
 
 
 //functions
@@ -37,9 +37,6 @@ Route::get('/functions/client_search', function () {
 })->middleware(['auth']);
 Route::get('/functions/document_search', function () {
     return view('document_search');
-})->middleware(['auth']);
-Route::get('/functions/news_view', function () {
-    return view('news_view');
 })->middleware(['auth']);
 
 //settings
@@ -79,10 +76,5 @@ Route::get('/functions/treatment_create', function () {
 Route::get('/functions/product_create', function () {
     return view('ustawienia.product_create');
 })->middleware(['auth']);
-
-
-//Route::post('/search-client', [\App\Http\Controllers\AjaxController::class, 'searchClient'])->name('search-client');
-Route::match(['get', 'post'], 'search-client', [\App\Http\Controllers\AjaxController::class, 'searchClient'])->name('search-client');
-Route::match(['get', 'post'], 'search-client-count', [\App\Http\Controllers\AjaxController::class, 'searchClientCount'])->name('search-client-count');
 
 

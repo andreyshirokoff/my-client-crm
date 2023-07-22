@@ -16,7 +16,7 @@
     </div>
 @endsection
 
-@section('layout_js')
+@section('addit_js')
     <script>
         $(document).ready(() => {
             layout.bottomButtons()

@@ -18,9 +18,14 @@ use Illuminate\Support\Facades\Route;
 //});
 
 
-Route::get('/', function () {
-    return view('index');
-})->middleware(['auth']);
+
+Route::middleware('auth')->prefix('dashboard')->group(function (){
+    Route::get('/', [\App\Http\Controllers\DashboardPageController::class, 'index'])->name('dashboard');
+
+    if(Schema::hasTable('news')){
+        Route::get('/news/{slug}', [\App\Http\Controllers\NewsPageController::class, 'index'])->name('news');
+    }
+});
 
 
 //functions
@@ -32,9 +37,6 @@ Route::get('/functions/client_search', function () {
 })->middleware(['auth']);
 Route::get('/functions/document_search', function () {
     return view('document_search');
-})->middleware(['auth']);
-Route::get('/functions/news_view', function () {
-    return view('news_view');
 })->middleware(['auth']);
 
 //settings

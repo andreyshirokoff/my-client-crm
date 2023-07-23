@@ -15,12 +15,12 @@ class EditAccountIndex extends Component
     protected $rules = [
         'name' => 'string|min:3|nullable',
         'lastName' => 'string|min:3|nullable',
-        //'phone' => 'string|min:10|nullable',
+        'phone' => 'string|min:10|nullable',
     ];
     protected $messages = [
         'name.string' => 'its not string',
         'lastName.string' => 'its not string',
-        //'phone.string' => 'its not string',
+        'phone.string' => 'its not string',
     ];
 
     public function render()

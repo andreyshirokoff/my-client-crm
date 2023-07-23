@@ -45,10 +45,10 @@ class YourAccountIndex extends Component
         $unixRemain = (int)$unixTimestamp - (int)$unixCurrent;
 
         $days = ceil($unixRemain / 86400);
-        if($days > 30)
-        {
-            $days = 30;
-        }
+//        if($days > 30)
+//        {
+//            $days = 30;
+//        }
         return strval($days).' dni';
     }
 }

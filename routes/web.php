@@ -21,22 +21,21 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth')->prefix('dashboard')->group(function (){
     Route::get('/', [\App\Http\Controllers\DashboardPageController::class, 'index'])->name('dashboard');
+
+    Route::get('/client-create', [\App\Http\Controllers\DashboardPageController::class, 'createClient'])->name('createClient');
+    Route::get('/client-search', [\App\Http\Controllers\DashboardPageController::class, 'searchClient'])->name('searchClient');
+    Route::get('/functions/document_search', [\App\Http\Controllers\DashboardPageController::class, 'documentSearch'])->name('documentSearch');
+
+
+    if(Schema::hasTable('news')){
+        Route::get('/news/{slug}', [\App\Http\Controllers\NewsPageController::class, 'index'])->name('news');
+    }
 });
 
 
 //functions
-Route::get('/functions/client_create', function () {
-    return view('client_create');
-})->middleware(['auth']);
-Route::get('/functions/client_search', function () {
-    return view('client_search');
-})->middleware(['auth']);
-Route::get('/functions/document_search', function () {
-    return view('document_search');
-})->middleware(['auth']);
-Route::get('/functions/news_view', function () {
-    return view('news_view');
-})->middleware(['auth']);
+
+
 
 //settings
 Route::get('/ustawienia', function () {
@@ -75,5 +74,4 @@ Route::get('/functions/treatment_create', function () {
 Route::get('/functions/product_create', function () {
     return view('ustawienia.product_create');
 })->middleware(['auth']);
-
 

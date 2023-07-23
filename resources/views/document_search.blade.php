@@ -19,3 +19,7 @@
     </div>
 @endsection
 
+@section('addit_js')
+    @livewireScripts
+@endsection
+

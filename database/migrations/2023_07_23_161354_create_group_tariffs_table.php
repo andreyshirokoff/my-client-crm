@@ -14,7 +14,7 @@ return new class extends Migration {
             $table->foreign('group_id')->references('id')->on('user_groups');
             $table->unsignedBigInteger('owner_id')->nullable();
             $table->foreign('owner_id')->references('id')->on('users');
-            $table->timestamp('active_to')->nullable();
+            $table->timestamp('active_to');
             $table->unsignedBigInteger('xml_id')->nullable();
             $table->string('sign_path')->nullable();
             $table->timestamps();

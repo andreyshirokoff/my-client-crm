@@ -5,7 +5,7 @@
             <img src="/userfiles/userphoto/default.jpg" style="width:100px; border: 3px solid #ffffff; border-radius: 500px;">
         </div>
         <div style="width: 40%;margin-left:10px;" class="boxinbox-inside__item">
-            Administrator<br>
+            {{$user->role}}<br>
             <h3>{{$user->fullname}}</h3>
         </div>
         <div style="width:45%; display: flex; flex-direction: column; justify-content:center;align-items:flex-start;" class="boxinbox-inside__item">

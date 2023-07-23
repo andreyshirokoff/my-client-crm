@@ -9,8 +9,8 @@ return new class extends Migration {
     {
         Schema::create('clients', function (Blueprint $table) {
             $table->id();
-            //$table->unsignedBigInteger('group_id');
-            $table->foreignIdFor(\App\Models\UserGroup::class, 'group_id');
+
+            //$table->foreignIdFor(\App\Models\UserGroup::class, 'group_id');
             $table->string('firstname')->nullable();
             $table->string('lastname')->nullable();
             $table->string('fullname')->nullable();

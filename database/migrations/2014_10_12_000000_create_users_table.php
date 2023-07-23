@@ -14,14 +14,16 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('xml_id')->nullable();
+            $table->string('name')->nullable();
+            $table->string('last_name')->nullable();
             $table->string('fullname')->nullable();
             $table->string('avatar')->nullable();
             $table->string('password');
-            $table->string('password');
             $table->string('email')->unique();
+            $table->string('phone')->unique();
 
             $table->boolean('is_main')->default(false);
-            $table->unsignedBigInteger('group_id');
+
             $table->enum('role', ['user', 'administrator', 'owner'])->default('user');
             $table->enum('status', ['checked', 'active', 'ban'])->default('active');
             $table->unsignedBigInteger('theme_id')->default(1);

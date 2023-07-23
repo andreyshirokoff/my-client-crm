@@ -72,27 +72,8 @@
                 </div>
                     <div>
                         @foreach($clients as $client)
-                            <div class="listing-element">
-                                <div style="width:40%;">
-                                    <h6>{{$client->fullname}}</h6>
-                                </div>
-                                <div style="width:40%;">
-                                    <h6>{{$client->email}}</h6>
-                                </div>
-                                <div style="width:10%;">
-                                    <h6>{{$client->phone}}</h6>
-                                </div>
-                                <div style="width:10%;display:flex;justify-content:flex-end;" class="width-10">
-                                    <h6>Pokaż</h6>
-                                </div>
-                            </div>
+                            <livewire:clients.small-list-item :id="$client->id" wire:key="{{$client->id}}" />
                         @endforeach
-
-                        <div class="pagination-wrap mt-3">
-{{--                            @if(count($clients) > 0)--}}
-{{--                                {{ $clients->links() }}--}}
-{{--                            @endif--}}
-                        </div>
                     </div>
             </div>
         </div>

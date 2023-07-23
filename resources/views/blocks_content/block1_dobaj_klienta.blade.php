@@ -3,7 +3,7 @@
     <div class="listing-titlebar" style="margin-top:10px;">
         <div style="width:100%">
             <h3>Wypełnij poniżesze dane by utworzyć nowego klienta.</h3><br>
-            <p style="padding-top:10px;">Uwaga: Konta klientów tworzone są globalnie, oznacza to, że na całą aplikację klient posiada jedno konto. Zapytaj klienta czy kiedykolwiek rejestrował się do aplikacji BeautyCheck.</p>
+            <p style="padding-top:10px;">Uwaga: Konta klientów tworzone są globalnie, oznacza to, że na całą aplikację klient posiada jedno konto. Zapytaj klienta czy kiedykolwiek rejestrował się do aplikacji MyClient.</p>
         </div>
     </div>
     <!-- Tu zaczyna się formularz z danymi -->

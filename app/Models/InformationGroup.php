@@ -15,5 +15,6 @@ class InformationGroup extends Model
         'user_id',
         'text',
         'is_archive',
+        'created_at',
     ];
 }

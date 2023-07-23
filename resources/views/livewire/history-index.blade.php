@@ -39,6 +39,24 @@
         </div>
     </div>
 </div>
+@foreach($infoGroup as $item)
+<div class="listing-element" style="margin-top:10px;flex-direction:column;">
+    <div style="display:flex;flex-direction:row;width:100%;" class="pac-body">
+        <div style="width:15%">
+            <h6>{{$item->date}}</h6>
+        </div>
+        <div style="width:15%">
+            <h6>{{$item->phone}}</h6>
+        </div>
+        <div style="width:15%">
+            <h6>{{$item->sms_count}}</h6>
+        </div>
+        <div style="width:55%">
+            <h6>{{$item->type}}</h6>
+        </div>
+    </div>
+</div>
+@endforeach
 
 
 <div class="listing-ending"></div>

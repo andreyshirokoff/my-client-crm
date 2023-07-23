@@ -13,6 +13,7 @@ return new class extends Migration {
             $table->foreign('group_id')->references('id')->on('user_groups');
             $table->enum('type', ['sms', 'email'])->nullable();
             $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->text('text')->nullable();
             $table->boolean('is_archive')->default(0);
             $table->timestamps();

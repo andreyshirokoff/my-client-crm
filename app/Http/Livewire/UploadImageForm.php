@@ -40,8 +40,7 @@ class UploadImageForm extends Component
         Auth::user()->update([
             'image' => $path,
         ]);
-        sleep(1);
-        return redirect()->to('/home');
+        return redirect(request()->header('Referer'));
     }
 
     public function render()

@@ -27,7 +27,6 @@ class UsrimageIndex extends Component
         Auth::user()->update([
             'avatar' => str_replace("storage/", "", $path),
         ]);
-        sleep(1);
-        return redirect()->to('/us');
+        return redirect(request()->header('Referer'));
     }
 }

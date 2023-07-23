@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('avatar')->nullable();
             $table->string('password');
             $table->string('email')->unique();
+            $table->string('phone')->unique();
 
             $table->boolean('is_main')->default(false);
             $table->unsignedBigInteger('group_id');

@@ -1,4 +1,4 @@
-<form action="editaccount-save.php" method="post">
+<form wire:submit.prevent="submitForm">
 
     <div class="listing-titlebar input-element" style="margin-top:10px;">
         <div style="width:40%">
@@ -34,14 +34,24 @@
             Nr. Telefonu
         </div>
         <div style="width:60%;">
-            <input type="tel" name="tel" class="formularz" pattern="^[0-9]{9}$" required="" value="" wire:model="phone" id="edit-account-phone-input">
+            <input type="tel"  name="tel" class="formularz" pattern="\+48 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" required="" placeholder="+48 (___) ___-__-__" wire:model="phone" id="edit-account-phone-input">
         </div>
     </div>
 
     <div class="listing-actionbar">
         <button type="submit" class="btn1"><i class="fas fa-check-circle" aria-hidden="true"></i> Ustaw zdjęcie</button>
     </div>
-
+    @section('addit_js')
+        <script>
+            $(document).ready(() => {
+                script.phoneMask('#edit-account-phone-input')
+                $('#edit-account-phone-input').on('input', function(event) {
+                    var phoneNumber = event.target.value;
+                    @this.set('phone', phone); // Обновляем свойство phoneNumber в компоненте Livewire
+                });
+            })
+        </script>
+    @endsection
 
 </form>
 

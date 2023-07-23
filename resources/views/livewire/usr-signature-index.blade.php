@@ -33,7 +33,7 @@
             <span style="font-size:18px;margin-bottom:15px;">W miarę możliwości wykorzystaj całą wielkość ramki.</span>
             <canvas id="signature-pad" class="signature-pad" style="border: 1px solid rgb(176, 176, 176); touch-action: none;" width="800" height="500">
             </canvas>
-            <input type="hidden" id="sign-value" wire:model="sign" value=''>
+            <input type="hidden" id="sign-value" wire:model="sign">
             <button class="btn1" style="margin-top:10px; color: white" type="button" onclick="signaturePad.clear()">Wyczyść podpis</button>
         </div>
         <!-- Skrypt tworzący z API ramke podpisu -->

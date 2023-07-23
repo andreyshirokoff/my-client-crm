@@ -1,7 +1,7 @@
 <livewire:edit-account-index/>
 @section('addit_js')
     <script>
-        script.mask
+        script.phoneMask('#edit-account-phone-input')
     </script>
 @endsection
 

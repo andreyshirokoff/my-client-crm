@@ -34,7 +34,7 @@
             Nr. Telefonu
         </div>
         <div style="width:60%;">
-            <input type="tel" name="tel" class="formularz" pattern="^[0-9]{9}$" required="" value="323232323">
+            <input type="tel" name="tel" class="formularz" pattern="^[0-9]{9}$" required="" value="" wire:model="phone" id="edit-account-phone-input">
         </div>
     </div>
 

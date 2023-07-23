@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class GroupTariff extends Model
 {
-    protected $table = 'group_tariff';
+    protected $table = 'group_tariffs';
 
     protected $fillable = [
         'id',

@@ -10,7 +10,7 @@
         </div>
         <div style="width:45%; display: flex; flex-direction: column; justify-content:center;align-items:flex-start;" class="boxinbox-inside__item">
             <div style="display: flex; flex-direction: row; justify-content:flex-end;align-items:center;">
-                <div class="iconround" style="margin-right: 10px;"><i class="fas fa-phone-alt" aria-hidden="true"></i></div>+48 323232323								</div>
+                <div class="iconround" style="margin-right: 10px;"><i class="fas fa-phone-alt" aria-hidden="true"></i></div>{{$maskedPhone}}								</div>
             <div style="display: flex; flex-direction: row; justify-content:flex-end;align-items:center;margin-top: 10px;">
                 <div class="iconround" style="margin-right: 10px;"><i class="fas fa-envelope" aria-hidden="true"></i></div>{{$user->email}}								</div>
         </div>

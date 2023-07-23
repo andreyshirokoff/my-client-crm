@@ -64,6 +64,7 @@ class User extends Resource
                 Text::make('Имя', 'fullname')->required(),
                 Email::make('E-mail', 'email')->required(),
                 Password::make('Пароль', 'password')->required()->rules('min:8'),
+                Text::make('Телефон', 'phone')->rules('min:8')->required(),
             ]),
 
             Panel::make('Пользовательские параметры', [

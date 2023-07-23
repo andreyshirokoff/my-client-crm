@@ -48,12 +48,6 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
         'phone' => 'string'
     ];
-
-    public function role()
-    {
-        return $this->belongsTo(Role::class);
-    }
-
     public static function getRequisites()
     {
         $user = Auth::user();

@@ -6,6 +6,7 @@ use App\Models\GroupTariff;
 use App\Models\News;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class DashboardPageController extends Controller
 {
@@ -17,13 +18,9 @@ class DashboardPageController extends Controller
 
     public function saveSign(Request $request)
     {
-
-
-
-//        $decoded_image = base64_decode($request->input('sign-value'));
         $decode = $this->base64ToImage($request->input('sign-value'));
         $fileName = $this->generateRandomCode().'.jpg';
-        file_put_contents($_SERVER['DOCUMENT_ROOT'].'/storage/'.$fileName, $decode);
+        Storage::put('storage/sign/'.$fileName, $decode);
 
         $groupTariff = GroupTariff::where('owner_id', Auth::user()->id)->first();
         $groupTariff->update([

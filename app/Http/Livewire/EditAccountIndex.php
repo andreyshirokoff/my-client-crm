@@ -11,13 +11,13 @@ class EditAccountIndex extends Component
     public ?string $phone = '';
 
     protected $rules = [
-        'fullname' => 'string|min:3|nullable',
-        'email' => 'email|nullable',
+        'name' => 'string|min:3|nullable',
+        'lastName' => 'string|min:3|nullable',
         'phone' => 'string|min:10|nullable',
     ];
     protected $messages = [
-        'fullname.string' => 'its not string',
-        'email.email' => 'its not email',
+        'name.string' => 'its not string',
+        'lastName.string' => 'its not string',
         'phone.string' => 'its not string',
     ];
 

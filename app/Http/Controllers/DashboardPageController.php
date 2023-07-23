@@ -17,6 +17,11 @@ class DashboardPageController extends Controller
         return view('client_search');
     }
 
+    public function settings()
+    {
+        return view('ustawienia');
+    }
+
     public function createClient()
     {
         return view('client_create');

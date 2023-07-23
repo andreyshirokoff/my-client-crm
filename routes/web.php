@@ -26,21 +26,14 @@ Route::middleware('auth')->prefix('dashboard')->group(function (){
     Route::get('/client-search', [\App\Http\Controllers\DashboardPageController::class, 'searchClient'])->name('searchClient');
     Route::get('/functions/document_search', [\App\Http\Controllers\DashboardPageController::class, 'documentSearch'])->name('documentSearch');
 
+    Route::prefix('ustawienia')->group(function (){
+        Route::get('/', [\App\Http\Controllers\DashboardPageController::class, 'settings'])->name('settings');
+    });
 
     if(Schema::hasTable('news')){
         Route::get('/news/{slug}', [\App\Http\Controllers\NewsPageController::class, 'index'])->name('news');
     }
 });
-
-
-//functions
-
-
-
-//settings
-Route::get('/ustawienia', function () {
-    return view('ustawienia');
-})->middleware(['auth']);
 
 //ustawienia
 Route::get('/functions/usrimage', function () {

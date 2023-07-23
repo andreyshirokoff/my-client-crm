@@ -54,9 +54,7 @@ layout = {
 
     headerLewy: function()
     {
-        $('#header #header-lewy').click(() => {
-            window.location.href = '/'
-        })
+
     },
 
     loginForm: function()

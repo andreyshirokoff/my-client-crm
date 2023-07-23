@@ -10,6 +10,7 @@ class UsrimageIndex extends Component
 {
     use WithFileUploads;
     public $image;
+
     public function render()
     {
         return view('livewire.usrimage-index');

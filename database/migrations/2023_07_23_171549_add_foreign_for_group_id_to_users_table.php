@@ -8,6 +8,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
+            $table->unsignedBigInteger('group_id')->after('is_main');
             $table->foreign('group_id')->references('id')->on('user_groups');
         });
     }
@@ -15,7 +16,8 @@ return new class extends Migration {
     public function down(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropForeign('group_id');
+            $table->dropForeign(['group_id']);
+            $table->dropColumn('group_id');
         });
     }
 };

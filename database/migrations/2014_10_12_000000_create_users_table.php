@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('phone')->unique();
 
             $table->boolean('is_main')->default(false);
-            $table->unsignedBigInteger('group_id');
+
             $table->enum('role', ['user', 'administrator', 'owner'])->default('user');
             $table->enum('status', ['checked', 'active', 'ban'])->default('active');
             $table->unsignedBigInteger('theme_id')->default(1);

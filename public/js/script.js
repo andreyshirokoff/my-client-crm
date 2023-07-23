@@ -243,6 +243,49 @@ script = {
         $(element).inputmask('+48 (999) 999-99-99')
     },
 
+    decodeSign: function dataURLToFile(dataURL, fileName) {
+        // Извлекаем тип файла из dataURL (например, "image/png")
+        var type = dataURL.match(/data:([^;]+)/)[1];
+
+        // Извлекаем base64 данные из dataURL
+        var base64Data = dataURL.replace(/^data:image\/(png|jpeg|jpg);base64,/, "");
+
+        // Преобразуем base64 в бинарный формат
+        var binaryData = atob(base64Data);
+
+        // Создаем массив байтов
+        var arrayBuffer = new ArrayBuffer(binaryData.length);
+        var uint8Array = new Uint8Array(arrayBuffer);
+        for (var i = 0; i < binaryData.length; i++) {
+            uint8Array[i] = binaryData.charCodeAt(i);
+        }
+            // Создаем объект Blob или File
+            var blob;
+            try {
+                blob = new Blob([uint8Array], { type: type });
+            } catch (e) {
+                // В старых браузерах может не поддерживаться конструктор Blob
+                var BlobBuilder = window.BlobBuilder || window.MozBlobBuilder || window.WebKitBlobBuilder || window.MSBlobBuilder;
+                var blobBuilder = new BlobBuilder();
+                blobBuilder.append(arrayBuffer);
+                blob = blobBuilder.getBlob(type);
+            }
+
+            // Создаем объект File, если указано имя файла
+            var file;
+            if (fileName) {
+                try {
+                    file = new File([blob], fileName, { type: type });
+                } catch (e) {
+                    // В старых браузерах может не поддерживаться конструктор File
+                    file = blob;
+                    file.name = fileName;
+                }
+            }
+
+            return file || blob;
+        },
+
     callToast: function (status, message)
     {
         const Toast = Swal.mixin({

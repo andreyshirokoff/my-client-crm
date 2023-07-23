@@ -6,6 +6,7 @@
   'history-index' => 'App\\Http\\Livewire\\HistoryIndex',
   'upload-image-form' => 'App\\Http\\Livewire\\UploadImageForm',
   'user-data-index' => 'App\\Http\\Livewire\\UserDataIndex',
+  'usr-signature-index' => 'App\\Http\\Livewire\\UsrSignatureIndex',
   'usrimage-index' => 'App\\Http\\Livewire\\UsrimageIndex',
   'your-account-index' => 'App\\Http\\Livewire\\YourAccountIndex',
 );

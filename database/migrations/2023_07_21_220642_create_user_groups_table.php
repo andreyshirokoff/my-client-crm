@@ -15,12 +15,12 @@ return new class extends Migration {
             $table->unsignedBigInteger('sms_count')->default(0);
             $table->unsignedBigInteger('emails_count')->default(0);
             $table->unsignedBigInteger('users_count')->default(2);
-            $table->boolean('show_phone');
-            $table->boolean('can_edit_card');
-            $table->boolean('can_edit_control');
-            $table->text('non_medical');
-            $table->text('medical');
-            $table->text('note_user');
+            $table->boolean('show_phone')->default(1);
+            $table->boolean('can_edit_card')->default(0);
+            $table->boolean('can_edit_control')->default(0);
+            $table->text('non_medical')->nullable();
+            $table->text('medical')->nullable();
+            $table->text('note_user')->nullable();
 
             $table->timestamps();
         });

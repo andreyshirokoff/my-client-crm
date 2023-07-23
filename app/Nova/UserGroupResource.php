@@ -4,7 +4,9 @@ namespace App\Nova;
 
 use App\Models\UserGroup;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
 
@@ -28,9 +30,11 @@ class UserGroupResource extends Resource
         return [
             ID::make()->sortable(),
             Text::make('Название группы/заведения', "name")->sortable()->required(),
+            Image::make('Лого', 'logo_path')->disk('public')->nullable(),
             Number::make('Осталось SMS','sms_count')->sortable()->rules('required', 'integer'),
             Number::make('Осталось писем','emails_count')->sortable()->rules('required', 'integer'),
             Number::make('Кол-во пользователей','users_count')->sortable()->rules('required', 'integer'),
+            Boolean::make('Может редактировать карточку?','can_edit_card')->sortable()->rules('required', 'integer'),
         ];
     }
 

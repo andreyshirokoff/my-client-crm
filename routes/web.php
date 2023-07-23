@@ -45,9 +45,9 @@ Route::get('/functions/editaccount', function () {
 Route::get('/functions/usrsignature', function () {
     return view('ustawienia.usrsignature');
 })->middleware(['auth']);
-Route::get('/functions/usrpin', function () {
-    return view('ustawienia.usrpin');
-})->middleware(['auth']);
+//Route::get('/functions/usrpin', function () {
+//    return view('ustawienia.usrpin');
+//})->middleware(['auth']);
 Route::get('/functions/rodoreset', function () {
     return view('ustawienia.rodoreset');
 })->middleware(['auth']);

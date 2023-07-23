@@ -4,7 +4,7 @@
 
         <h3> UWAGA! </h3><br>
         <div>
-            Ta operacja pobierze ze strony internetowej Twoje dane firmy i wygeneruje ponownie warstwę rodo opracowaną przez BeautyCheck. Czynność ta jest nieodwracalna i usunie obecną warstwę RODO. Potwierdź jej wykonanie.
+            Ta operacja pobierze ze strony internetowej Twoje dane firmy i wygeneruje ponownie warstwę rodo opracowaną przez MyClient. Czynność ta jest nieodwracalna i usunie obecną warstwę RODO. Potwierdź jej wykonanie.
         </div>
     </div>
 

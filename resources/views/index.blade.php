@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="whitebox-listing head-links">
-        <div onclick="location.href='/functions/client_create';" class="colorbox33">
+        <div onclick="location.href='{{route('createClient')}}';" class="colorbox33">
             <div class="whiteboxiconbox">
                 <i class="fas fa-user-plus" aria-hidden="true"></i>
             </div>
@@ -12,7 +12,7 @@
 
         <div class="boxseparator1procent"></div>
 
-        <div onclick="location.href='/functions/client_search?baza=on';" class="colorbox33">
+        <div onclick="location.href='{{route('searchClient')}}';" class="colorbox33">
             <div class="whiteboxiconbox">
                 <i class="fas fa-search" aria-hidden="true"></i>
             </div>
@@ -45,7 +45,7 @@
                 <i class="far fa-newspaper" aria-hidden="true"></i>
             </div>
             <div style="margin-left:20px;">
-                <h3>Nowości w BeautyCheck:</h3>
+                <h3>Nowości w MyClient:</h3>
             </div>
         </div>
         <div class="boxinbox block1_nowosci_w_beautycheck">

@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('fullname')->nullable();
             $table->string('avatar')->nullable();
             $table->string('password');
-            $table->string('password');
             $table->string('email')->unique();
 
             $table->boolean('is_main')->default(false);

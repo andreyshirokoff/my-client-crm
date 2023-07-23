@@ -5,7 +5,7 @@
         </div>
         <div class="navbar-mobile__content navbar-mobile__block mt-5">
             <div class="d-flex">
-                <a href="{{url('/')}}" style="color:white">
+                <a href="{{route('dashboard')}}" style="color:white">
                     <span class="icon">
                         <i class="fas fa-home" aria-hidden="true"></i>
                     </span>
@@ -42,12 +42,15 @@
     </div>
 </div>
 <div id="header" class="d-flex justify-content-between align-items-center">
-
     <div id="header-lewy" class="d-flex align-items-center">
-        <img src="/userfiles/userphoto/default.jpg" style="width:54px;height:54px;border:3px solid #ffffff;border-radius:60px;">
+        @if(Auth::user()->avatar)
+            <img src="/storage/{{Auth::user()->avatar}}" style="width:54px;height:54px;border:3px solid #ffffff;border-radius:60px;">
+        @else
+            <img src="{{asset('image/user/default.jpg')}}" style="width:54px;height:54px;border:3px solid #ffffff;border-radius:60px;">
+        @endif
         <div id="header-lewy-dane" class="d-flex flex-column">
             <p style="font-size:18px;font-weight:300;line-height:20px;"><a style="color:white;text-decoration: none">Zalogowany jako:</a></p>
-            <p style="font-size:26px;font-weight:600;line-height:28px;"><a style="color:white;text-decoration: none">Test Test</a></p>
+            <p style="font-size:26px;font-weight:600;line-height:28px;"><a style="color:white;text-decoration: none">{{Auth::user()->fullname}}</a></p>
         </div>
     </div>
 
@@ -60,7 +63,7 @@
                 </span>
             </a>
             <div style="padding-left:15px;padding-right:15px;" class="d-flex align-items-center">
-                <a href="{{url('/')}}" style="text-decoration:none;color:white"><span style="font-size:18px;font-weight:300;">Strona Główna</span></a>
+                <a href="{{route('dashboard')}}" style="text-decoration:none;color:white"><span style="font-size:18px;font-weight:300;">Strona Główna</span></a>
             </div>
         </div>
         <div class="d-flex header-prawy__desktop_btn">

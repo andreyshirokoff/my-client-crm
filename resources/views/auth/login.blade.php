@@ -139,7 +139,7 @@
 
         </div>
         <div style="font-size:26px;font-weight:300;color:white;position: absolute;bottom: -100px" class="login__copyright">
-            (C) Prawa autorskie - BeautyCheck.pl
+            (C) Prawa autorskie - MyClient.pl
         </div>
 
 

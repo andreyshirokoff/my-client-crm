@@ -38,6 +38,15 @@
         layout.headerHover()
         script.clickBtn()
     })
+
+    document.addEventListener('error-more-shows', (e)=>{
+        e.preventDefault();
+        Swal.fire(
+            'Błąd wyświetlacza',
+            'Zbyt często przeglądasz numery telefonów. Spróbuj później!',
+            'error'
+        )
+    })
 </script>
 @yield('addit_js')
 </body>

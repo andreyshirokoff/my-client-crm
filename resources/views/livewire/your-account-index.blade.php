@@ -2,7 +2,11 @@
 
     <div style="display: flex; flex-direction: row;height: 100px; align-items: center;" class="boxinbox-inside__body">
         <div style="width: 15%;" class="boxinbox-inside__item">
-            <img src="/userfiles/userphoto/default.jpg" style="width:100px; border: 3px solid #ffffff; border-radius: 500px;">
+            @if(!$user->avatar)
+                <img src="{{url('image/user/default.jpg')}}" style="width:100px; border: 3px solid #ffffff; border-radius: 500px;">
+            @else
+                <img src="/storage/{{Auth::user()->avatar}}" style="width:54px;height:54px;border:3px solid #ffffff;border-radius:60px;">
+            @endif
         </div>
         <div style="width: 40%;margin-left:10px;" class="boxinbox-inside__item">
             {{$user->role}}<br>
@@ -24,7 +28,7 @@
 
     <div style="display: flex; flex-direction: row; min-height: 100px; align-items: center;" class="boxinbox-inside__body">
         <div style="width: 15%; display: flex; flex-direction: row; justify-content:flex-start; align-items: center;" class="boxinbox-inside__item">
-            <img src="/systemfiles/BCLogo_svg_sygnet.svg" width="95px">
+            <img src="{{url('image/systemfiles/BCLogo_svg_sygnet.svg')}}" width="95px">
             <!--<span class="icona-bc" style="width:75px; height:75px; background-size:75px 75px;background-position: center;"></span>-->
         </div>
         <div style="width: 40%;margin-left:10px;" class="boxinbox-inside__item">

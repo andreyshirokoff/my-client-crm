@@ -14,7 +14,7 @@
         </div>
         <div style="width: 60%;margin-left:10px;">
             <span>Aby zwiększyć ilość sms - możesz kupić dowolny pakiet przez</span><br>
-            <span>zakładkę Moje konto na stronie www.BeautyCheck.pl.</span><br>
+            <span>zakładkę Moje konto na stronie www.MyClient.pl.</span><br>
             <span><b>Doładowanie smsów znajduje się pod przedłużeniem konta.</b></span>
         </div>
 

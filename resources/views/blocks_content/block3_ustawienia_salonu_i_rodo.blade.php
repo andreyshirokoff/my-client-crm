@@ -47,12 +47,12 @@
 
     <div class="listing-element row-with-input">
         <div style="width:70%;">
-            Wybierz kolory Twojej aplikacji BeautyCheck
+            Wybierz kolory Twojej aplikacji MyClient
         </div>
         <div style="width:30%;" class="input-in">
             <select name="motyw" class="formularz">
                 <option value="">-- wybierz motyw --</option>
-                <option value="1" selected="">BeautyCheck</option>
+                <option value="1" selected="">MyClient</option>
                 <option value="2">Czarny</option>
                 <option value="3">Jasny brąz</option>
                 <option value="4">Srebrny</option>
@@ -136,7 +136,7 @@
     <div class="listing-element" style="flex-direction:column">
         <div style="width:100%;">
             <h4>Oświadczenie karty zabiegowej (niemedycznej)</h4>
-            <p style="padding-bottom:20px;">Poniższe oświadczenie zostało wygenerowane automatycznie i stanowi opracowanie RODO w konsultacji z działem prawnym BeautyCheck. Jeśli posiadasz własną warstwę oświadczeń - możesz edytować poniższy tekst, jednak nie ponosimy odpowiedzi za jego skutki prawne w zmienionej formie. Zostaje ono dołączone do każdego podpisywanego dokumentu (nie dotyczy zabiegów medycznych).</p>
+            <p style="padding-bottom:20px;">Poniższe oświadczenie zostało wygenerowane automatycznie i stanowi opracowanie RODO w konsultacji z działem prawnym MyClient. Jeśli posiadasz własną warstwę oświadczeń - możesz edytować poniższy tekst, jednak nie ponosimy odpowiedzi za jego skutki prawne w zmienionej formie. Zostaje ono dołączone do każdego podpisywanego dokumentu (nie dotyczy zabiegów medycznych).</p>
         </div>
         <div style="width:100%">
                             <textarea name="rodo_txt" id="rodo_txt" rows="40" cols="50" aria-hidden="true" style="display: none;">                                    &lt;strong&gt;Niniejszym oświadczam, że wyrażam świadomą zgodę na wykonanie powyższego zabiegu. Oświadczam, że poinformowano mnie o:&lt;/strong&gt;&lt;/p&gt;
@@ -161,7 +161,7 @@
     <div class="listing-element" style="flex-direction:column">
         <div style="width:100%;">
             <h4>Oświadczenie karty zabiegowej (medycznej)</h4>
-            <p style="padding-bottom:20px;">Poniższe oświadczenie zostało wygenerowane automatycznie i stanowi opracowanie RODO w konsultacji z działem prawnym BeautyCheck. Jeśli posiadasz własną warstwę oświadczeń - możesz edytować poniższy tekst, jednak nie ponosimy odpowiedzi za jego skutki prawne w zmienionej formie. Zostaje ono dołączone do każdego podpisywanego dokumentu (dotyczy wyłącznie zabiegów medycznych).</p>
+            <p style="padding-bottom:20px;">Poniższe oświadczenie zostało wygenerowane automatycznie i stanowi opracowanie RODO w konsultacji z działem prawnym MyClient. Jeśli posiadasz własną warstwę oświadczeń - możesz edytować poniższy tekst, jednak nie ponosimy odpowiedzi za jego skutki prawne w zmienionej formie. Zostaje ono dołączone do każdego podpisywanego dokumentu (dotyczy wyłącznie zabiegów medycznych).</p>
         </div>
         <div style="width:100%">
                             <textarea name="rodo_txt2" id="rodo_txt2" rows="40" cols="50" aria-hidden="true" style="display: none;">                                    &lt;strong&gt;Niniejszym oświadczam, że wyrażam świadomą zgodę, o której mowa w art. 32-35 ustawy z &lt;/strong&gt;&lt;strong&gt;dnia 5 grudnia 1996 r. o zawodach lekarza i lekarza dentysty (Dz. U. z 2021 r. poz. 790), na &lt;/strong&gt;&lt;strong&gt;wykonanie powyższego zabiegu.&lt;/strong&gt;&lt;/p&gt;
@@ -186,7 +186,7 @@
     <div class="listing-element" style="flex-direction:column">
         <div style="width:100%;">
             <h4>Oświadczenie ogólnej karty klienta</h4>
-            <p style="padding-bottom:20px;">Poniższe oświadczenie zostało wygenerowane automatycznie i stanowi opracowanie RODO w konsultacji z działem prawnym BeautyCheck. Jeśli posiadasz własną warstwę oświadczeń - możesz edytować poniższy tekst, jednak nie ponosimy odpowiedzi za jego skutki prawne w zmienionej formie. Zostaje ono dołączone do każdego podpisywanego dokumentu (dotyczy wyłącznie zabiegów medycznych).</p>
+            <p style="padding-bottom:20px;">Poniższe oświadczenie zostało wygenerowane automatycznie i stanowi opracowanie RODO w konsultacji z działem prawnym MyClient. Jeśli posiadasz własną warstwę oświadczeń - możesz edytować poniższy tekst, jednak nie ponosimy odpowiedzi za jego skutki prawne w zmienionej formie. Zostaje ono dołączone do każdego podpisywanego dokumentu (dotyczy wyłącznie zabiegów medycznych).</p>
         </div>
         <div style="width:100%">
                             <textarea name="rodo_txt3" id="rodo_txt3" rows="40" cols="50" aria-hidden="true" style="display: none;">                                    &lt;p style="line-height: 1;"&gt;Administratorem Twoich danych osobowych jest Test-z siedzibą w test, przy ul. test. Jeśli masz jakiekolwiek pytania odnośnie przetwarzania przez nas Twoich danych lub chcesz zrealizować swoje uprawnienia z nim związane, skontaktuj się z nami na adres firmy lub adres e-mail: tekijap368@msback.com &lt;br&gt;&lt;br&gt;&lt;strong&gt;W jakim celu, jak długo i na jakiej podstawie będziemy wykorzystywać Twoje dane? Twoje dane osobowe są przetwarzane zgodnie z odpowiednimi postanowieniami RODO, tj.:&lt;/strong&gt;&lt;/p&gt;

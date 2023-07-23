@@ -46,7 +46,8 @@
             });
 
             //Funkcja wykonujaca formularz
-            function zapiszpodpis(){
+            function zapiszpodpis(event){
+                event.preventDefault()
                 if (signaturePad.isEmpty()) {
                     alert("Musisz złożyć podpis aby zapisać zmiany.");
                 } else {
@@ -87,7 +88,10 @@
 
 
     <div class="listing-actionbar">
-        <button class="btn1" onclick="zapiszpodpis()" type="button" id="sign-submit"><i class="far fa-check-circle" aria-hidden="true" style="margin-right: 10px;color:white"></i>Zapisz zmiany</button>
+        <button class="btn1" onclick="zapiszpodpis(event)" type="button" id="sign-submit"><i class="far fa-check-circle" aria-hidden="true" style="margin-right: 10px;color:white"></i>Zapisz zmiany</button>
         <button class="d-none" id="form-submit-btn" type="submit"></button>
     </div>
+    <script>
+
+    </script>
 </form>

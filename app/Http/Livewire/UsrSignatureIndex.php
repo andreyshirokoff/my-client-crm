@@ -8,11 +8,15 @@ use Livewire\Component;
 
 class UsrSignatureIndex extends Component
 {
-    public ?string $sign = '';
+    public $sign = '';
     public function render()
     {
         return view('livewire.usr-signature-index');
     }
+
+    protected $rules = [
+        'sign' => 'nullable'
+    ];
 
     public function submitForm()
     {
@@ -39,5 +43,10 @@ class UsrSignatureIndex extends Component
     {
         $bytes = random_bytes($length);
         return substr(str_replace(['/', '+', '='], '', base64_encode($bytes)), 0, $length);
+    }
+
+    public function setSignItem($item)
+    {
+        dd($item);
     }
 }

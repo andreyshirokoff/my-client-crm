@@ -15,6 +15,7 @@
         </div>
         <div style="width:60%;">
             <input type="file" name="plik" accept="image/*" class="formularz" required="" wire:model="image">
+            @error('image') <span class="error">{{ $message }}</span> @enderror
         </div>
     </div>
 

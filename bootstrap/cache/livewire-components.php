@@ -5,6 +5,7 @@
   'edit-account-index' => 'App\\Http\\Livewire\\EditAccountIndex',
   'history-index' => 'App\\Http\\Livewire\\HistoryIndex',
   'rodo-index' => 'App\\Http\\Livewire\\RodoIndex',
+  'treatment-create-index' => 'App\\Http\\Livewire\\TreatmentCreateIndex',
   'upload-image-form' => 'App\\Http\\Livewire\\UploadImageForm',
   'user-data-index' => 'App\\Http\\Livewire\\UserDataIndex',
   'usr-signature-index' => 'App\\Http\\Livewire\\UsrSignatureIndex',

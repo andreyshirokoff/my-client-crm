@@ -6,6 +6,7 @@ use App\Models\News;
 use App\Models\UserGroup;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class DashboardPageController extends Controller
 {

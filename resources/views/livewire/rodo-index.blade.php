@@ -6,7 +6,7 @@
         </div>
         <div style="width:30%;" class="input-in">
             <input class="formularz" name="salonTitle" id="salonname" type="text" value="" maxlength="40" wire:model="salonTitle">
-            @error('salonname') <span class="error">{{ $message }}</span> @enderror
+            @error('salonTitle') <span class="error">{{ $message }}</span> @enderror
         </div>
     </div>
 
@@ -33,11 +33,14 @@
             <p style="padding-bottom:20px;">Utwórz stopkę salonu, która będzie automatycznie dołączana u dołu maili wysyłanych do klientów. Stopka oddzielona jest poziomą linią od pozostałej treści maila i może zawierać dowolne dane.</p>
         </div>
         <div style="width:100%">
-            <div id="quil-footer" style="height: 300px">
-                <p></p>
-            </div>
-            <input type="hidden" id="footerDb" wire:model="footer">
-            <input type="hidden" id="quil-footer-input" name="footer">
+            <textarea style="height: 300px;width: 100%" name="footer" wire:model="footer">
+
+            </textarea>
+{{--            <div id="quil-footer" style="height: 300px">--}}
+{{--                <p></p>--}}
+{{--            </div>--}}
+{{--            <input type="hidden" id="footerDb" wire:model="footer">--}}
+{{--            <input type="hidden" id="quil-footer-input" name="footer">--}}
             @error('footer') <span class="error">{{ $message }}</span> @enderror
         </div>
     </div>
@@ -48,7 +51,7 @@
             Wybierz kolory Twojej aplikacji BeautyCheck
         </div>
         <div style="width:30%;" class="input-in">
-            <select name="motyw" class="formularz" wire:model.defer="selectedThemeId" name="selectedThemeId">
+            <select name="selectedThemeId" class="formularz" wire:model.defer="selectedThemeId" name="selectedThemeId">
                 @foreach($themes as $theme)
                     <option value="{{$theme->id}}">{{$theme->name}}</option>
                 @endforeach
@@ -124,12 +127,15 @@
             <p style="padding-bottom:20px;">Poniższe oświadczenie zostało wygenerowane automatycznie i stanowi opracowanie RODO w konsultacji z działem prawnym BeautyCheck. Jeśli posiadasz własną warstwę oświadczeń - możesz edytować poniższy tekst, jednak nie ponosimy odpowiedzi za jego skutki prawne w zmienionej formie. Zostaje ono dołączone do każdego podpisywanego dokumentu (nie dotyczy zabiegów medycznych).</p>
         </div>
         <div style="width:100%">
-            <div id="quil-non-medical" style="height: 300px">
-                <p></p>
-            </div>
-            <input type="hidden" id="nonMedicalDb" wire:model="nonMedical">
-            <input type="hidden" id="quil-non-medical-input" name="nonMedical">
-            @error('nonMedical') <span class="error">{{ $message }}</span> @enderror
+            <textarea style="height: 300px;width: 100%" name="nonMedical" wire:model="nonMedical">
+
+            </textarea>
+{{--            <div id="quil-non-medical" style="height: 300px">--}}
+{{--                <p></p>--}}
+{{--            </div>--}}
+{{--            <input type="hidden" id="nonMedicalDb" wire:model="nonMedical">--}}
+{{--            <input type="hidden" id="quil-non-medical-input" name="nonMedical">--}}
+{{--            @error('nonMedical') <span class="error">{{ $message }}</span> @enderror--}}
         </div>
     </div>
 
@@ -139,11 +145,15 @@
             <p style="padding-bottom:20px;">Poniższe oświadczenie zostało wygenerowane automatycznie i stanowi opracowanie RODO w konsultacji z działem prawnym BeautyCheck. Jeśli posiadasz własną warstwę oświadczeń - możesz edytować poniższy tekst, jednak nie ponosimy odpowiedzi za jego skutki prawne w zmienionej formie. Zostaje ono dołączone do każdego podpisywanego dokumentu (dotyczy wyłącznie zabiegów medycznych).</p>
         </div>
         <div style="width:100%">
-            <div id="quil-medical" style="height: 300px">
-                <p></p>
-            </div>
-            <input type="hidden" id="medicalDb" wire:model="medical">
-            <input type="hidden" id="quil-medical-input" name="medical">
+            <textarea style="height: 300px;width: 100%" name="medical" wire:model="medical">
+
+            </textarea>
+{{--            <div id="quil-medical" style="height: 300px">--}}
+{{--                <p></p>--}}
+{{--            </div>--}}
+{{--            --}}
+{{--            <input type="hidden" id="medicalDb" wire:model="medical">--}}
+{{--            <input type="hidden" id="quil-medical-input" name="medical">--}}
             @error('medical') <span class="error">{{ $message }}</span> @enderror
         </div>
     </div>
@@ -153,11 +163,14 @@
             <p style="padding-bottom:20px;">Poniższe oświadczenie zostało wygenerowane automatycznie i stanowi opracowanie RODO w konsultacji z działem prawnym BeautyCheck. Jeśli posiadasz własną warstwę oświadczeń - możesz edytować poniższy tekst, jednak nie ponosimy odpowiedzi za jego skutki prawne w zmienionej formie. Zostaje ono dołączone do każdego podpisywanego dokumentu (dotyczy wyłącznie zabiegów medycznych).</p>
         </div>
         <div style="width:100%">
-            <div id="quil-note" style="height: 300px">
-                <p></p>
-            </div>
-            <input type="hidden" id="noteDb" wire:model="note">
-            <input type="hidden" id="quil-note-input" name="note">
+            <textarea style="height: 300px;width: 100%" name="note" wire:model="note">
+
+            </textarea>
+{{--            <div id="quil-note" style="height: 300px">--}}
+{{--                <p></p>--}}
+{{--            </div>--}}
+{{--            <input type="hidden" id="noteDb" wire:model="note">--}}
+{{--            <input type="hidden" id="quil-note-input" name="note">--}}
             @error('note') <span class="error">{{ $message }}</span> @enderror
         </div>
     </div>
@@ -173,68 +186,68 @@
 </form>
 @section('addit_js')
     <script>
-        $(document).ready(() => {
-            var quillFooter = new Quill('#quil-footer', {
-                theme: 'snow' // Выбор темы редактора (snow или bubble)
-            });
-            var quillNonMedical = new Quill('#quil-non-medical', {
-                theme: 'snow' // Выбор темы редактора (snow или bubble)
-            });
-            var quillMedical = new Quill('#quil-medical', {
-                theme: 'snow' // Выбор темы редактора (snow или bubble)
-            });
-            var quillNote = new Quill('#quil-note', {
-                theme: 'snow' // Выбор темы редактора (snow или bubble)
-            });
+        {{--$(document).ready(() => {--}}
+        {{--    var quillFooter = new Quill('#quil-footer', {--}}
+        {{--        theme: 'snow' // Выбор темы редактора (snow или bubble)--}}
+        {{--    });--}}
+        {{--    var quillNonMedical = new Quill('#quil-non-medical', {--}}
+        {{--        theme: 'snow' // Выбор темы редактора (snow или bubble)--}}
+        {{--    });--}}
+        {{--    var quillMedical = new Quill('#quil-medical', {--}}
+        {{--        theme: 'snow' // Выбор темы редактора (snow или bubble)--}}
+        {{--    });--}}
+        {{--    var quillNote = new Quill('#quil-note', {--}}
+        {{--        theme: 'snow' // Выбор темы редактора (snow или bubble)--}}
+        {{--    });--}}
 
-            setContentToEditor(quillFooter, document.querySelector('#footerDb').value);
-            setContentToEditor(quillNonMedical, document.querySelector('#nonMedicalDb').value);
-            setContentToEditor(quillMedical, document.querySelector('#medicalDb').value);
-            setContentToEditor(quillNote, document.querySelector('#noteDb').value);
-            handleSubmit()
-            function setContentToEditor(className, content) {
-                setTimeout(() => {
-                    console.log()
-                    className.setContents(JSON.parse(content));
-                },2000)
+        {{--    setContentToEditor(quillFooter, document.querySelector('#footerDb').value);--}}
+        {{--    setContentToEditor(quillNonMedical, document.querySelector('#nonMedicalDb').value);--}}
+        {{--    setContentToEditor(quillMedical, document.querySelector('#medicalDb').value);--}}
+        {{--    setContentToEditor(quillNote, document.querySelector('#noteDb').value);--}}
+        {{--    handleSubmit()--}}
+        {{--    function setContentToEditor(className, content) {--}}
+        {{--        setTimeout(() => {--}}
+        {{--            console.log()--}}
+        {{--            className.setContents(JSON.parse(content));--}}
+        {{--        },2000)--}}
 
-            }
-            function handleSubmit(event) {
-                //event.preventDefault()
-                setContentToInput(quillFooter, '#quil-footer-input')
-                quillFooter.on('text-change', () => {
-                    setContentToInput(quillFooter, '#quil-footer-input')
-                    //updateLivewire(document.querySelector('#quil-footer-input'), 'footer')
-                })
-                setContentToInput(quillNonMedical, '#quil-non-medical-input')
-                quillNonMedical.on('text-change', () => {
-                    setContentToInput(quillNonMedical, '#quil-non-medical-input')
-                    //updateLivewire(document.querySelector('#quil-non-medical-input'), 'nonMedical')
-                })
-                setContentToInput(quillMedical, '#quil-medical-input')
-                quillMedical.on('text-change', () => {
-                    setContentToInput(quillMedical, '#quil-medical-input')
-                    //updateLivewire(document.querySelector('#quil-medical-input'), 'medical')
-                })
-                setContentToInput(quillNote, '#quil-note-input')
-                quillNote.on('text-change', () => {
-                    setContentToInput(quillNote, '#quil-note-input')
-                    // updateLivewire(document.querySelector('#quil-note-input'), 'note')
-                })
-            }
-            function setContentToInput(className, element)
-            {
+        {{--    }--}}
+        {{--    function handleSubmit(event) {--}}
+        {{--        //event.preventDefault()--}}
+        {{--        setContentToInput(quillFooter, '#quil-footer-input')--}}
+        {{--        quillFooter.on('text-change', () => {--}}
+        {{--            setContentToInput(quillFooter, '#quil-footer-input')--}}
+        {{--            //updateLivewire(document.querySelector('#quil-footer-input'), 'footer')--}}
+        {{--        })--}}
+        {{--        setContentToInput(quillNonMedical, '#quil-non-medical-input')--}}
+        {{--        quillNonMedical.on('text-change', () => {--}}
+        {{--            setContentToInput(quillNonMedical, '#quil-non-medical-input')--}}
+        {{--            //updateLivewire(document.querySelector('#quil-non-medical-input'), 'nonMedical')--}}
+        {{--        })--}}
+        {{--        setContentToInput(quillMedical, '#quil-medical-input')--}}
+        {{--        quillMedical.on('text-change', () => {--}}
+        {{--            setContentToInput(quillMedical, '#quil-medical-input')--}}
+        {{--            //updateLivewire(document.querySelector('#quil-medical-input'), 'medical')--}}
+        {{--        })--}}
+        {{--        setContentToInput(quillNote, '#quil-note-input')--}}
+        {{--        quillNote.on('text-change', () => {--}}
+        {{--            setContentToInput(quillNote, '#quil-note-input')--}}
+        {{--            // updateLivewire(document.querySelector('#quil-note-input'), 'note')--}}
+        {{--        })--}}
+        {{--    }--}}
+        {{--    function setContentToInput(className, element)--}}
+        {{--    {--}}
 
-                const editorText = className.getContents();
-                document.querySelector(element).value = JSON.stringify(editorText)
-            }
-            function updateLivewire(documentElement, value)
-            {
-                // documentElement.addEventListener('change', function () {
-                @this.set(value, documentElement.value);
-                // });
-            }
-        })
+        {{--        const editorText = className.getContents();--}}
+        {{--        document.querySelector(element).value = JSON.stringify(editorText)--}}
+        {{--    }--}}
+        {{--    function updateLivewire(documentElement, value)--}}
+        {{--    {--}}
+        {{--        // documentElement.addEventListener('change', function () {--}}
+        {{--        @this.set(value, documentElement.value);--}}
+        {{--        // });--}}
+        {{--    }--}}
+        {{--})--}}
 
     </script>
 @endsection

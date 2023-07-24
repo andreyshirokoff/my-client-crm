@@ -27,7 +27,7 @@ class DashboardPageController extends Controller
 
     public function submitVisual(Request $request)
     {
-
+        //dd($request->input('selectedThemeId'));
         if($request->hasFile('logofile'))
         {
             $file = $request->file('logofile');
@@ -42,17 +42,17 @@ class DashboardPageController extends Controller
         UserGroup::where('id', Auth::user()->group_id)->first()
             ->update([
                 'name' => $request->input('salonTitle'),
-                'can_edit_card' => $request->input('checkBoxCanEditCard'),
-                'can_edit_control' => $request->input('checkBoxCanEditControl'),
-                'can_remove_signed_docs' => $request->input('checkBoxCanRemoveSignedDocs'),
-                'show_phone' => $request->input('checkBoxShowPhone'),
+                'can_edit_card' => $request->input('checkBoxCanEditCard') ?? '0',
+                'can_edit_control' => $request->input('checkBoxCanEditControl') ?? '0',
+                'can_remove_signed_docs' => $request->input('checkBoxCanRemoveSignedDocs') ?? '0',
+                'show_phone' => $request->input('checkBoxShowPhone') ?? '0',
                 'footer' => $request->input('footer'),
                 'non_medical' => $request->input('nonMedical'),
                 'medical' => $request->input('medical'),
                 'note_user' => $request->input('note'),
             ]);
 
-        Auth::user()->update(['theme_id' => $request->input('selectedThemeId')]);
+        Auth::user()->update(['theme_id' => (int)$request->input('selectedThemeId')]);
 
         return redirect('/dashboard/ustawienia');
 
@@ -70,8 +70,8 @@ class DashboardPageController extends Controller
                 'show_phone' => '0',
                 'footer' => '',
                 'non_medical' => '',
-                'medical' => '0',
-                'note_user' => '0',
+                'medical' => '',
+                'note_user' => '',
             ]);
         Auth::user()->update(['theme_id' => '1']);
         return redirect('/dashboard/ustawienia');

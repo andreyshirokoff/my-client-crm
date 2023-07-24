@@ -10,7 +10,6 @@ use Livewire\WithFileUploads;
 
 class RodoIndex extends Component
 {
-    use WithFileUploads;
 
     public ?string $salonTitle = '';
     public $image;

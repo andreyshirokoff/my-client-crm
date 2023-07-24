@@ -28,6 +28,7 @@ Route::middleware('auth')->prefix('dashboard')->group(function (){
 
     Route::prefix('ustawienia')->group(function (){
         Route::get('/', [\App\Http\Controllers\DashboardPageController::class, 'settings'])->name('settings');
+        Route::get('/worker_create', [\App\Http\Controllers\DashboardPageController::class, 'workers'])->name('workers');
     });
 
     if(Schema::hasTable('news')){
@@ -55,9 +56,7 @@ Route::get('/functions/rodoreset', function () {
 Route::get('/functions/document_kartaklienta_edit', function () {
     return view('ustawienia.document_kartaklienta_edit');
 })->middleware(['auth']);
-Route::get('/functions/worker_create', function () {
-    return view('ustawienia.worker_create');
-})->middleware(['auth']);
+
 Route::get('/functions/treatment_template', function () {
     return view('ustawienia.treatment_template');
 })->middleware(['auth']);

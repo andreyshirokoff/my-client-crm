@@ -37,7 +37,7 @@ class User extends Resource
      *
      * @var string
      */
-    public static $title = 'name';
+    public static $title = 'fullname';
 
     /**
      * The columns that should be searched.
@@ -45,7 +45,7 @@ class User extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'name', 'email',
+        'id', 'fullname', 'email',
     ];
 
     /**
@@ -63,29 +63,37 @@ class User extends Resource
                 Image::make('Аватар', 'avatar')->disk('public')->nullable(),
                 Text::make('Имя', 'fullname')->required(),
                 Email::make('E-mail', 'email')->required(),
-                Password::make('Пароль', 'password')->required()->rules('min:8'),
+                Text::make('Телефон', 'phone')->rules('min:8')->required(),
+                Password::make('Пароль', 'password')
+                    ->onlyOnForms()
+                    ->creationRules('required', Rules\Password::defaults())
+                    ->updateRules('nullable', Rules\Password::defaults()),
             ]),
 
             Panel::make('Пользовательские параметры', [
                 Boolean::make('Главный пользователь', 'is_main'),
-                Select::make('Роль пользователя', 'role')->options([
-                    'user' => 'Обычный пользователь',
-                    'administrator' => 'Администратор',
-                    'owner' => 'Владелец',
-                ])->default('user'),
-                Select::make('Статус пользователя', 'status')->options([
-                    'checked' => 'Проверка',
-                    'active' => 'Активен',
-                    'ban' => 'Забанен',
-                ])->default('active'),
+                Select::make('Роль пользователя', 'roles')
+                    ->sortable()
+                    ->options([
+                        'user' => 'Обычный пользователь',
+                        'administrator' => 'Администратор',
+                        'owner' => 'Владелец'
+                    ])
+                    ->default('user')
+                    ->required()->displayUsingLabels(),
+                Select::make('Статус пользователя', 'status')
+                    ->sortable()
+                    ->options([
+                        'checked' => 'Проверка',
+                        'active' => 'Активен',
+                        'ban' => 'Забанен',
+                    ])
+                    ->default('active')
+                    ->required()->displayUsingLabels(),
             ]),
 
             Panel::make('Доп. параметры', [
                 BelongsTo::make('Группа пользователя', 'getUserGroup', UserGroupResource::class)->searchable(),
-
-                Select::make('Тема', 'role')->options([
-                    1 => 'По умолчанию',
-                ])->default(1),
             ]),
         ];
     }

@@ -31,4 +31,9 @@ class DashboardPageController extends Controller
     {
         return view('document_search');
     }
+
+    public function workers()
+    {
+        return view('ustawienia.worker_create');
+    }
 }

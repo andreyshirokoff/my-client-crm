@@ -24,7 +24,7 @@ return new class extends Migration
 
             $table->boolean('is_main')->default(false);
 
-            $table->enum('role', ['user', 'administrator', 'owner'])->default('user');
+            $table->enum('roles', ['user', 'administrator', 'owner'])->default('user');
             $table->enum('status', ['checked', 'active', 'ban'])->default('active');
             $table->unsignedBigInteger('theme_id')->default(1);
 

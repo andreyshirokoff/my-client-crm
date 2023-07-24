@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Nova\AdminsResource;
 use App\Nova\Dashboards\Main;
+use App\Nova\GroupTarifsResource;
 use App\Nova\NewsResource;
 use App\Nova\User;
 use App\Nova\Role;
@@ -34,6 +35,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                 MenuSection::make('Пользователи', [
                     MenuItem::resource(User::class),
                     MenuItem::resource(UserGroupResource::class),
+                    MenuItem::resource(GroupTarifsResource::class),
                     MenuItem::resource(AdminsResource::class),
 
                 ])->collapsable()->icon('users'),

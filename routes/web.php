@@ -12,12 +12,10 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-//Route::get('/login', function () {
-//    return view('login');
-//});
-
-
+Route::get('/', function (){
+    if (auth()->user()) return redirect()->route('dashboard');
+    else return redirect()->route('login');
+});
 
 Route::middleware('auth')->prefix('dashboard')->group(function (){
     Route::get('/', [\App\Http\Controllers\DashboardPageController::class, 'index'])->name('dashboard');
@@ -28,9 +26,8 @@ Route::middleware('auth')->prefix('dashboard')->group(function (){
 
     Route::prefix('ustawienia')->group(function (){
         Route::get('/', [\App\Http\Controllers\DashboardPageController::class, 'settings'])->name('settings');
-        Route::get('/worker_create', [\App\Http\Controllers\DashboardPageController::class, 'workers'])->name('workers');
+        Route::get('/worker-create', [\App\Http\Controllers\DashboardPageController::class, 'workers'])->name('workers');
         Route::post('/save-sign', [\App\Http\Controllers\DashboardPageController::class, 'saveSign'])->name('save.sign');
-
     });
 
     if(Schema::hasTable('news')){

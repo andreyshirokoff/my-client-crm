@@ -15,9 +15,7 @@
 {{--        @elseif($block3_3_content_class == 'block3_3_editaccount')--}}
 {{--            @include('blocks_content.block3_3_editaccount')--}}
         @elseif($block3_3_content_class == 'block3_2_dodaj_pracownika')
-            <div class="boxinbox" style="background: {{$background}}">
-                <p>Nie możesz dodać więcej pracowników (limit pakietu).</p>
-            </div>
+            <livewire:workers.create-worker/>
         @elseif($block3_3_content_class == 'block3_2_dodaj_gotowe_zabiegi')
             <div class="boxinbox" style="background: {{$background}}">
             @include('blocks_content.block3_2_dodaj_gotowe_zabiegi')

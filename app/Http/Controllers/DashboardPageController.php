@@ -58,6 +58,25 @@ class DashboardPageController extends Controller
 
     }
 
+    public function rodoReset(Request $request)
+    {
+        UserGroup::where('id', Auth::user()->group_id)->first()
+            ->update([
+                'name' => '',
+                'logo_path' => '',
+                'can_edit_card' => '0',
+                'can_edit_control' => '0',
+                'can_remove_signed_docs' => '0',
+                'show_phone' => '0',
+                'footer' => '',
+                'non_medical' => '',
+                'medical' => '0',
+                'note_user' => '0',
+            ]);
+        Auth::user()->update(['theme_id' => '1']);
+        return redirect('/dashboard/ustawienia');
+    }
+
     private function generateRandomCode($length = 16)
     {
         $bytes = random_bytes($length);

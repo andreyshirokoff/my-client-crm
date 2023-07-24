@@ -1,4 +1,4 @@
-<form action="{{route('submit.visual')}}" method="POST">
+<form action="{{route('submit.visual')}}" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="listing-element row-with-input">
         <div style="width:70%;">

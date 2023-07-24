@@ -27,7 +27,7 @@ class DashboardPageController extends Controller
 
     public function submitVisual(Request $request)
     {
-        dd($request->input('logofile'));
+        dd($request->hasFile('file'));
 
         UserGroup::where('id', Auth::user()->group_id)->first()
             ->update([

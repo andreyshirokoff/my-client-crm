@@ -27,7 +27,6 @@ class DashboardPageController extends Controller
 
     public function submitVisual(Request $request)
     {
-//        dd($request->hasFile('logofile'));
 
         if($request->hasFile('logofile'))
         {
@@ -54,7 +53,9 @@ class DashboardPageController extends Controller
             ]);
 
         Auth::user()->update(['theme_id' => $request->input('selectedThemeId')]);
-        
+
+        return redirect('/dashboard/ustawienia');
+
     }
 
     private function generateRandomCode($length = 16)

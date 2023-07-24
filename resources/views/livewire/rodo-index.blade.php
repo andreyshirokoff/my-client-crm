@@ -5,7 +5,7 @@
             Nazwa salonu
         </div>
         <div style="width:30%;" class="input-in">
-            <input class="formularz" name="salonname" id="salonname" type="text" value="" maxlength="40" wire:model="salonTitle">
+            <input class="formularz" name="salonTitle" id="salonname" type="text" value="" maxlength="40" wire:model="salonTitle">
             @error('salonname') <span class="error">{{ $message }}</span> @enderror
         </div>
     </div>
@@ -36,6 +36,7 @@
             <div id="quil-footer" style="height: 300px">
                 <p></p>
             </div>
+            <input type="hidden" id="footerDb" wire:model="footer">
             <input type="hidden" id="quil-footer-input" name="footer">
             @error('footer') <span class="error">{{ $message }}</span> @enderror
         </div>
@@ -126,6 +127,7 @@
             <div id="quil-non-medical" style="height: 300px">
                 <p></p>
             </div>
+            <input type="hidden" id="nonMedicalDb" wire:model="nonMedical">
             <input type="hidden" id="quil-non-medical-input" name="nonMedical">
             @error('nonMedical') <span class="error">{{ $message }}</span> @enderror
         </div>
@@ -140,6 +142,7 @@
             <div id="quil-medical" style="height: 300px">
                 <p></p>
             </div>
+            <input type="hidden" id="medicalDb" wire:model="medical">
             <input type="hidden" id="quil-medical-input" name="medical">
             @error('medical') <span class="error">{{ $message }}</span> @enderror
         </div>
@@ -153,6 +156,7 @@
             <div id="quil-note" style="height: 300px">
                 <p></p>
             </div>
+            <input type="hidden" id="noteDb" wire:model="note">
             <input type="hidden" id="quil-note-input" name="note">
             @error('note') <span class="error">{{ $message }}</span> @enderror
         </div>
@@ -182,7 +186,14 @@
         var quillNote = new Quill('#quil-note', {
             theme: 'snow' // Выбор темы редактора (snow или bubble)
         });
+        setContentToEditor(quillFooter, document.querySelector('#footerDb').value);
+        setContentToEditor(quillNonMedical, document.querySelector('#footerDb').value);
+        setContentToEditor(quillMedical, document.querySelector('#footerDb').value);
+        setContentToEditor(quillNote, document.querySelector('#footerDb').value);
         handleSubmit()
+        function setContentToEditor(className, content) {
+            className.setContents(JSON.parse(content));
+        }
         function handleSubmit(event) {
             //event.preventDefault()
             setContentToInput(quillFooter, '#quil-footer-input')

@@ -91,6 +91,7 @@ class RodoIndex extends Component
         $this->checkBoxShowPhone = $salon->show_phone;
         $this->checkBoxCanEditCard = $salon->can_edit_card;
         $this->checkBoxCanEditControl = $salon->can_edit_control;
+        
         $this->checkBoxCanRemoveSignedDocs = $salon->can_remove_signed_docs;
     }
 

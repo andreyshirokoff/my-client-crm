@@ -173,62 +173,68 @@
 </form>
 @section('addit_js')
     <script>
-        $(document).ready(() => {})
-        var quillFooter = new Quill('#quil-footer', {
-            theme: 'snow' // Выбор темы редактора (snow или bubble)
-        });
-        var quillNonMedical = new Quill('#quil-non-medical', {
-            theme: 'snow' // Выбор темы редактора (snow или bubble)
-        });
-        var quillMedical = new Quill('#quil-medical', {
-            theme: 'snow' // Выбор темы редактора (snow или bubble)
-        });
-        var quillNote = new Quill('#quil-note', {
-            theme: 'snow' // Выбор темы редактора (snow или bubble)
-        });
-        setContentToEditor(quillFooter, document.querySelector('#footerDb').value);
-        setContentToEditor(quillNonMedical, document.querySelector('#footerDb').value);
-        setContentToEditor(quillMedical, document.querySelector('#footerDb').value);
-        setContentToEditor(quillNote, document.querySelector('#footerDb').value);
-        handleSubmit()
-        function setContentToEditor(className, content) {
-            className.setContents(JSON.parse(content));
-        }
-        function handleSubmit(event) {
-            //event.preventDefault()
-            setContentToInput(quillFooter, '#quil-footer-input')
-            quillFooter.on('text-change', () => {
-                setContentToInput(quillFooter, '#quil-footer-input')
-                //updateLivewire(document.querySelector('#quil-footer-input'), 'footer')
-            })
-            setContentToInput(quillNonMedical, '#quil-non-medical-input')
-            quillNonMedical.on('text-change', () => {
-                setContentToInput(quillNonMedical, '#quil-non-medical-input')
-                //updateLivewire(document.querySelector('#quil-non-medical-input'), 'nonMedical')
-            })
-            setContentToInput(quillMedical, '#quil-medical-input')
-            quillMedical.on('text-change', () => {
-                setContentToInput(quillMedical, '#quil-medical-input')
-                //updateLivewire(document.querySelector('#quil-medical-input'), 'medical')
-            })
-            setContentToInput(quillNote, '#quil-note-input')
-            quillNote.on('text-change', () => {
-                setContentToInput(quillNote, '#quil-note-input')
-                // updateLivewire(document.querySelector('#quil-note-input'), 'note')
-            })
-        }
-        function setContentToInput(className, element)
-        {
+        $(document).ready(() => {
+            var quillFooter = new Quill('#quil-footer', {
+                theme: 'snow' // Выбор темы редактора (snow или bubble)
+            });
+            var quillNonMedical = new Quill('#quil-non-medical', {
+                theme: 'snow' // Выбор темы редактора (snow или bubble)
+            });
+            var quillMedical = new Quill('#quil-medical', {
+                theme: 'snow' // Выбор темы редактора (snow или bubble)
+            });
+            var quillNote = new Quill('#quil-note', {
+                theme: 'snow' // Выбор темы редактора (snow или bubble)
+            });
 
-            const editorText = className.getContents();
-            console.log(JSON.stringify(editorText))
-            document.querySelector(element).value = JSON.stringify(editorText)
-        }
-        function updateLivewire(documentElement, value)
-        {
-            // documentElement.addEventListener('change', function () {
+            setContentToEditor(quillFooter, document.querySelector('#footerDb').value);
+            setContentToEditor(quillNonMedical, document.querySelector('#nonMedicalDb').value);
+            setContentToEditor(quillMedical, document.querySelector('#medicalDb').value);
+            setContentToEditor(quillNote, document.querySelector('#noteDb').value);
+            handleSubmit()
+            function setContentToEditor(className, content) {
+                setTimeout(() => {
+                    console.log()
+                    className.setContents(JSON.parse(content));
+                },2000)
+
+            }
+            function handleSubmit(event) {
+                //event.preventDefault()
+                setContentToInput(quillFooter, '#quil-footer-input')
+                quillFooter.on('text-change', () => {
+                    setContentToInput(quillFooter, '#quil-footer-input')
+                    //updateLivewire(document.querySelector('#quil-footer-input'), 'footer')
+                })
+                setContentToInput(quillNonMedical, '#quil-non-medical-input')
+                quillNonMedical.on('text-change', () => {
+                    setContentToInput(quillNonMedical, '#quil-non-medical-input')
+                    //updateLivewire(document.querySelector('#quil-non-medical-input'), 'nonMedical')
+                })
+                setContentToInput(quillMedical, '#quil-medical-input')
+                quillMedical.on('text-change', () => {
+                    setContentToInput(quillMedical, '#quil-medical-input')
+                    //updateLivewire(document.querySelector('#quil-medical-input'), 'medical')
+                })
+                setContentToInput(quillNote, '#quil-note-input')
+                quillNote.on('text-change', () => {
+                    setContentToInput(quillNote, '#quil-note-input')
+                    // updateLivewire(document.querySelector('#quil-note-input'), 'note')
+                })
+            }
+            function setContentToInput(className, element)
+            {
+
+                const editorText = className.getContents();
+                document.querySelector(element).value = JSON.stringify(editorText)
+            }
+            function updateLivewire(documentElement, value)
+            {
+                // documentElement.addEventListener('change', function () {
                 @this.set(value, documentElement.value);
-            // });
-        }
+                // });
+            }
+        })
+
     </script>
 @endsection

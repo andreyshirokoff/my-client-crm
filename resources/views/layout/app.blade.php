@@ -11,6 +11,8 @@
     <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
     <link rel="stylesheet" href="{{asset(\App\Models\Theme::where('id', Auth::user()->theme_id)->first()->path)}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+{{--    <link href="//cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">--}}
     @yield('additional_css')
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -32,6 +34,7 @@
 <script src="https://kit.fontawesome.com/b675a8d36a.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+<script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
 <script src="{{asset('js/script.js')}}"></script>
 <script src="{{asset('js/layout.js')}}"></script>
 <script>

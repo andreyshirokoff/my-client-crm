@@ -12,6 +12,7 @@ return new class extends Migration {
 
             $table->string('name');
             $table->string('logo_path')->nullable();
+            $table->text('footer')->nullable();
             $table->unsignedBigInteger('sms_count')->default(0);
             $table->unsignedBigInteger('emails_count')->default(0);
             $table->unsignedBigInteger('users_count')->default(2);

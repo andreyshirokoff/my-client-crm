@@ -62,7 +62,7 @@ class DashboardPageController extends Controller
     {
         UserGroup::where('id', Auth::user()->group_id)->first()
             ->update([
-                'name' => '',
+                'name' => 'test-text',
                 'logo_path' => '',
                 'can_edit_card' => '0',
                 'can_edit_control' => '0',

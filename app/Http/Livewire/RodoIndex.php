@@ -15,13 +15,27 @@ class RodoIndex extends Component
     public ?string $salonTitle = '';
     public $image;
 
+    public ?string $footer = '';
+    public ?string $nonMedical = '';
+    public ?string $medical = '';
+    public ?string $note = '';
+
+    public $checkBoxShowPhone;
+    public $checkBoxCanEditCard;
+    public $checkBoxCanEditControl;
+    public $checkBoxCanRemoveSignedDocs;
+
     public $themes;
     public $selectedThemeId;
 
     public $themeId;
 
     protected $rules = [
-        'salonTitle' => 'required|min:3',
+        'salonTitle' => 'required|min:3|max:100',
+        'footer' => 'max:200',
+        'nonMedical' => 'max:200',
+        'medical' => 'max:200',
+        'note' => 'max:200',
     ];
 
     public function render()
@@ -38,6 +52,10 @@ class RodoIndex extends Component
         UserGroup::where('id', Auth::user()->group_id)->first()
             ->update([
                 'name' => $this->salonTitle,
+                'can_edit_card' => $this->checkBoxCanEditCard,
+                'can_edit_control' => $this->checkBoxCanEditControl,
+                'can_remove_signed_docs' => $this->checkBoxCanRemoveSignedDocs,
+                'show_phone' => $this->checkBoxShowPhone,
 
             ]);
 
@@ -62,6 +80,10 @@ class RodoIndex extends Component
         $salon = UserGroup::where('id', Auth::user()->group_id)->first();
         $this->salonTitle = $salon->name;
         $this->image = $salon->logo_path;
+        $this->checkBoxShowPhone = $salon->show_phone;
+        $this->checkBoxCanEditCard = $salon->can_edit_card;
+        $this->checkBoxCanEditControl = $salon->can_edit_control;
+        $this->checkBoxCanRemoveSignedDocs = $salon->can_remove_signed_docs;
     }
 
 

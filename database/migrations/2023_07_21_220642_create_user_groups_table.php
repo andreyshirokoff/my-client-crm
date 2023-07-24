@@ -19,6 +19,7 @@ return new class extends Migration {
             $table->boolean('show_phone')->default(1);
             $table->boolean('can_edit_card')->default(0);
             $table->boolean('can_edit_control')->default(0);
+            $table->boolean('can_remove_signed_docs')->default(0);
             $table->text('non_medical')->nullable();
             $table->text('medical')->nullable();
             $table->text('note_user')->nullable();

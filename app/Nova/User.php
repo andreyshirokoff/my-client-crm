@@ -37,7 +37,7 @@ class User extends Resource
      *
      * @var string
      */
-    public static $title = 'name';
+    public static $title = 'fullname';
 
     /**
      * The columns that should be searched.
@@ -64,26 +64,27 @@ class User extends Resource
                 Text::make('Имя', 'fullname')->required(),
                 Email::make('E-mail', 'email')->required(),
                 Password::make('Пароль', 'password')->required()->rules('min:8'),
+                Text::make('Телефон', 'phone')->rules('min:8')->required(),
             ]),
 
             Panel::make('Пользовательские параметры', [
                 Boolean::make('Главный пользователь', 'is_main'),
-                Select::make('Роль пользователя', 'role')->options([
+                Select::make('Роль пользователя', 'roles')->options([
                     'user' => 'Обычный пользователь',
                     'administrator' => 'Администратор',
                     'owner' => 'Владелец',
-                ])->default('user'),
+                ])->default('user')->displayUsingLabels(),
                 Select::make('Статус пользователя', 'status')->options([
                     'checked' => 'Проверка',
                     'active' => 'Активен',
                     'ban' => 'Забанен',
-                ])->default('active'),
+                ])->default('active')->displayUsingLabels(),
             ]),
 
             Panel::make('Доп. параметры', [
                 BelongsTo::make('Группа пользователя', 'getUserGroup', UserGroupResource::class)->searchable(),
 
-                Select::make('Тема', 'role')->options([
+                Select::make('Тема', 'theme_id')->options([
                     1 => 'По умолчанию',
                 ])->default(1),
             ]),

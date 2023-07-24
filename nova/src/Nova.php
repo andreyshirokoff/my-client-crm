@@ -1403,7 +1403,7 @@ class Nova
      */
     public static function defaultFooter(Request $request)
     {
-        return Blade::render('<p class="text-center"><a class="link-default" target="_blank" href="/">ManekiNeko</a> · v{!! $version !!}</p>', [
+        return Blade::render('<p class="text-center"><a class="link-default" target="_blank" href="/">DigitalLabCrm v1.0.0</a> · v{!! $version !!}</p>', [
           'version' => static::version()
         ]);
     }

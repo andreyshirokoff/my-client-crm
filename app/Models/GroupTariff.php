@@ -8,6 +8,9 @@ class GroupTariff extends Model
 {
     protected $table = 'group_tariffs';
 
+    protected $casts = [
+        'active_to' => 'date'
+    ];
     protected $fillable = [
         'id',
         'name',
@@ -17,4 +20,14 @@ class GroupTariff extends Model
         'xml_id',
         'sign_path',
     ];
+
+    public function getOwner()
+    {
+        return $this->belongsTo(User::class, 'owner_id', 'id');
+    }
+
+    public function getGroup()
+    {
+        return $this->belongsTo(UserGroup::class, 'group_id', 'id');
+    }
 }

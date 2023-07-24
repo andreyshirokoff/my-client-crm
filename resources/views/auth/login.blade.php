@@ -26,7 +26,6 @@
 <div class="wrapper">
     <div id="login-top">
         <div style="display:flex;flex-direction:row;" class="login__logo">
-            <span class="icona-bc" style="margin-top:100px;"></span>
             <img src="{{url('image/login/BCLogo_svg_napis.svg')}}" style="display:flex;margin-left: 30px;height:110px;margin-top:100px;">
         </div>
     </div>

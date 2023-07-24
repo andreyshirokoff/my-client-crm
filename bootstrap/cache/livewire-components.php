@@ -9,5 +9,6 @@
   'user-data-index' => 'App\\Http\\Livewire\\UserDataIndex',
   'usr-signature-index' => 'App\\Http\\Livewire\\UsrSignatureIndex',
   'usrimage-index' => 'App\\Http\\Livewire\\UsrimageIndex',
+  'workers.create-worker' => 'App\\Http\\Livewire\\Workers\\CreateWorker',
   'your-account-index' => 'App\\Http\\Livewire\\YourAccountIndex',
 );

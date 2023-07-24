@@ -12,12 +12,10 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-//Route::get('/login', function () {
-//    return view('login');
-//});
-
-
+Route::get('/', function (){
+    if (auth()->user()) return redirect()->route('dashboard');
+    else return redirect()->route('login');
+});
 
 Route::middleware('auth')->prefix('dashboard')->group(function (){
     Route::get('/', [\App\Http\Controllers\DashboardPageController::class, 'index'])->name('dashboard');
@@ -28,6 +26,8 @@ Route::middleware('auth')->prefix('dashboard')->group(function (){
 
     Route::prefix('ustawienia')->group(function (){
         Route::get('/', [\App\Http\Controllers\DashboardPageController::class, 'settings'])->name('settings');
+        Route::get('/worker-create', [\App\Http\Controllers\DashboardPageController::class, 'workers'])->name('workers');
+        Route::post('/save-sign', [\App\Http\Controllers\DashboardPageController::class, 'saveSign'])->name('save.sign');
     });
     Route::prefix('ustawienia')->group(function (){
         Route::post('/submit-visual', [\App\Http\Controllers\DashboardPageController::class, 'submitVisual'])->name('submit.visual');
@@ -61,9 +61,7 @@ Route::get('/functions/rodoreset', function () {
 Route::get('/functions/document_kartaklienta_edit', function () {
     return view('ustawienia.document_kartaklienta_edit');
 })->middleware(['auth']);
-Route::get('/functions/worker_create', function () {
-    return view('ustawienia.worker_create');
-})->middleware(['auth']);
+
 Route::get('/functions/treatment_template', function () {
     return view('ustawienia.treatment_template');
 })->middleware(['auth']);

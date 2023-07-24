@@ -45,6 +45,7 @@ class RodoIndex extends Component
 
     public function submitForm()
     {
+        dd(123);
         $this->validate([
             'image' => 'image|mimes:jpeg,jpg,png,gif|max:5120',
         ]);
@@ -56,8 +57,15 @@ class RodoIndex extends Component
                 'can_edit_control' => $this->checkBoxCanEditControl,
                 'can_remove_signed_docs' => $this->checkBoxCanRemoveSignedDocs,
                 'show_phone' => $this->checkBoxShowPhone,
+                'footer' => $this->footer,
+                'non_medical' => $this->nonMedical,
+                'medical' => $this->medical,
+                'note_user' => $this->note,
+
 
             ]);
+
+
 
         Auth::user()->update(['theme_id' => $this->selectedThemeId]);
         return redirect(request()->header('Referer'));

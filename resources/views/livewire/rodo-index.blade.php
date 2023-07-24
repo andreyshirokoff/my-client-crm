@@ -36,6 +36,7 @@
             <div id="quil-footer" style="height: 300px">
                 <p></p>
             </div>
+            <input type="hidden" id="quil-footer-input">
             @error('footer') <span class="error">{{ $message }}</span> @enderror
         </div>
     </div>
@@ -125,6 +126,7 @@
             <div id="quil-non-medical" style="height: 300px">
                 <p></p>
             </div>
+            <input type="hidden" id="quil-non-medical-input">
             @error('nonMedical') <span class="error">{{ $message }}</span> @enderror
         </div>
     </div>
@@ -138,6 +140,7 @@
             <div id="quil-medical" style="height: 300px">
                 <p></p>
             </div>
+            <input type="hidden" id="quil-medical-input">
             @error('medical') <span class="error">{{ $message }}</span> @enderror
         </div>
     </div>
@@ -150,6 +153,7 @@
             <div id="quil-note" style="height: 300px">
                 <p></p>
             </div>
+            <input type="hidden" id="quil-note-input">
             @error('note') <span class="error">{{ $message }}</span> @enderror
         </div>
     </div>
@@ -160,7 +164,7 @@
 
     <div class="listing-actionbar flex-wrap btns" style="gap:10px">
         <button type="button" class="btn1" onclick="location.href='{{url('functions/rodoreset')}}'"><i class="fas fa-history" aria-hidden="true"></i> Resetuj RODO</button>
-        <button type="submit" class="btn1" style=""><i class="fas fa-check-circle" aria-hidden="true"></i> Zapisz ustawienia</button>
+        <button type="button" class="btn1" style="" onclick="handleSubmit(event)"><i class="fas fa-check-circle" aria-hidden="true"></i> Zapisz ustawienia</button>
     </div>
 </form>
 @section('addit_js')
@@ -177,5 +181,20 @@
         var quillNote = new Quill('#quil-note', {
             theme: 'snow' // Выбор темы редактора (snow или bubble)
         });
+        function handleSubmit(event) {
+            event.preventDefault()
+
+            setContentToInput(quillFooter, '#quil-footer-input')
+            setContentToInput(quillNonMedical, '#quil-non-medical-input')
+            setContentToInput(quillMedical, '#quil-medical-input')
+            setContentToInput(quillNote, '#quil-note-input')
+
+
+        }
+        function setContentToInput(className, element)
+        {
+            const editorText = className.getContents();
+            document.querySelector(element).value = JSON.stringify(editorText)
+        }
     </script>
 @endsection

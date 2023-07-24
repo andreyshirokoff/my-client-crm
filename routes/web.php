@@ -29,6 +29,9 @@ Route::middleware('auth')->prefix('dashboard')->group(function (){
     Route::prefix('ustawienia')->group(function (){
         Route::get('/', [\App\Http\Controllers\DashboardPageController::class, 'settings'])->name('settings');
     });
+    Route::prefix('ustawienia')->group(function (){
+        Route::post('/submit-visual', [\App\Http\Controllers\DashboardPageController::class, 'submitVisual'])->name('submit.visual');
+    });
 
     if(Schema::hasTable('news')){
         Route::get('/news/{slug}', [\App\Http\Controllers\NewsPageController::class, 'index'])->name('news');

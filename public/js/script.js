@@ -29,6 +29,46 @@ script = {
                 $(identify).addClass('active')
             }
 
+            //sendVisualForm
+            // if(
+            //     $(e.target).is('#submit-rodo-btn')
+            //     || $(e.target).closest('#submit-rodo-btn').length > 0
+            // )
+            // {
+            //     let item
+            //     if($(e.target).is('#submit-rodo-btn')) item = $(e.target)
+            //     else if($(e.target).closest('#submit-rodo-btn').length > 0) item = $(e.target).closest('#submit-rodo-btn')
+            //
+            //     let form = $(item).closest('form')
+            //
+            //     let _token = $(form).attr('data-token')
+            //     let url = $(form).attr('data-action')
+            //
+            //     let footerValue = $('#quil-footer-input').val()
+            //     let nonMedicalValue = $('#quil-non-medical-input').val()
+            //     let medicalValue = $('#quil-medical-input').val()
+            //     let noteValue = $('#quil-note-input').val()
+            //
+            //     let dataFilter = new FormData
+            //     dataFilter.append('_token', _token)
+            //     dataFilter.append('footer', footerValue)
+            //     dataFilter.append('nonMedical', nonMedicalValue)
+            //     dataFilter.append('medical', medicalValue)
+            //     dataFilter.append('note', noteValue)
+            //     console.log(noteValue)
+            //
+            //     const request = await fetch(url, {
+            //         method: 'POST',
+            //         body: dataFilter
+            //     })
+            //     const result = await request.text()
+            //     if(result != 'ERROR')
+            //     {
+            //         console.log('result')
+            //         console.log(result)
+            //     }
+            // }
+
             //searchClient
             // if($(e.target).is('#search-client-btn'))
             // {

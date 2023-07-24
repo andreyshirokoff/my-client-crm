@@ -30,13 +30,13 @@ class RodoIndex extends Component
 
     public $themeId;
 
-    protected $rules = [
-        'salonTitle' => 'required|min:3|max:100',
-        'footer' => 'max:200',
-        'nonMedical' => 'max:200',
-        'medical' => 'max:200',
-        'note' => 'max:200',
-    ];
+//    protected $rules = [
+//        'salonTitle' => 'required|min:3|max:100',
+////        'footer' => 'max:200',
+////        'nonMedical' => 'max:200',
+////        'medical' => 'max:200',
+////        'note' => 'max:200',
+//    ];
 
     public function render()
     {
@@ -45,24 +45,24 @@ class RodoIndex extends Component
 
     public function submitForm()
     {
-        dd($this->note);
-        $this->validate([
+        //dd($this->salonTitle);
+        $validatedData = $this->validate([
             'image' => 'image|mimes:jpeg,jpg,png,gif|max:5120',
         ]);
+        $path = $validatedData['image']->store('storage', 'public');
 
         UserGroup::where('id', Auth::user()->group_id)->first()
             ->update([
                 'name' => $this->salonTitle,
+                'logo_path' => str_replace("storage/", "", $path),
                 'can_edit_card' => $this->checkBoxCanEditCard,
                 'can_edit_control' => $this->checkBoxCanEditControl,
                 'can_remove_signed_docs' => $this->checkBoxCanRemoveSignedDocs,
                 'show_phone' => $this->checkBoxShowPhone,
-                'footer' => $this->footer,
-                'non_medical' => $this->nonMedical,
-                'medical' => $this->medical,
-                'note_user' => $this->note,
-
-
+//                'footer' => $this->footer,
+//                'non_medical' => $this->nonMedical,
+//                'medical' => $this->medical,
+//                'note_user' => $this->note,
             ]);
 
 

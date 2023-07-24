@@ -1,12 +1,12 @@
-<form wire:submit.prevent="submitForm">
-
+<form action="{{route('submit.visual')}}" method="POST">
+    @csrf
     <div class="listing-element row-with-input">
         <div style="width:70%;">
             Nazwa salonu
         </div>
         <div style="width:30%;" class="input-in">
             <input class="formularz" name="salonname" id="salonname" type="text" value="" maxlength="40" wire:model="salonTitle">
-            @error('salonTitle') <span class="error">{{ $message }}</span> @enderror
+            @error('salonname') <span class="error">{{ $message }}</span> @enderror
         </div>
     </div>
 
@@ -22,8 +22,8 @@
                     Brak logo.
                 @endif
             </div>
-            <input class="formularz" name="logofile" id="logofile" type="file" image="image/png" wire:model="image">
-            @error('image') <span class="error">{{ $message }}</span> @enderror
+            <input class="formularz" name="logofile" id="logofile" type="file" image="image/png">
+            @error('logofile') <span class="error">{{ $message }}</span> @enderror
         </div>
     </div>
 
@@ -36,7 +36,7 @@
             <div id="quil-footer" style="height: 300px">
                 <p></p>
             </div>
-            <input type="hidden" id="quil-footer-input" wire:model="footer">
+            <input type="hidden" id="quil-footer-input" name="footer">
             @error('footer') <span class="error">{{ $message }}</span> @enderror
         </div>
     </div>
@@ -47,7 +47,7 @@
             Wybierz kolory Twojej aplikacji BeautyCheck
         </div>
         <div style="width:30%;" class="input-in">
-            <select name="motyw" class="formularz" wire:model.defer="selectedThemeId">
+            <select name="motyw" class="formularz" wire:model.defer="selectedThemeId" name="selectedThemeId">
                 @foreach($themes as $theme)
                     <option value="{{$theme->id}}">{{$theme->name}}</option>
                 @endforeach
@@ -61,7 +61,7 @@
         </div>
         <div style="width:30%;display:flex;justify-content:flex-end;" class="input-in check">
             <label class="switch">
-                <input type="checkbox" name="pracownik_telefon" value="1" wire:model="checkBoxShowPhone">
+                <input type="checkbox" value="1" wire:model="checkBoxShowPhone" name="checkBoxShowPhone">
                 <span class="slider round"></span>
             </label>
         </div>
@@ -72,7 +72,7 @@
         </div>
         <div style="width:30%;display:flex;justify-content:flex-end;" class="input-in check">
             <label class="switch">
-                <input type="checkbox" name="pracownik_edycja_kart_klienta" value="1" wire:model="checkBoxCanEditCard">
+                <input type="checkbox" value="1" wire:model="checkBoxCanEditCard" name="checkBoxCanEditCard">
                 <span class="slider round"></span>
             </label>
         </div>
@@ -83,7 +83,7 @@
         </div>
         <div style="width:30%;display:flex;justify-content:flex-end;" class="input-in check">
             <label class="switch">
-                <input type="checkbox" name="pracownik_edycja_zabiegow_i_kart_zabiegow" value="1" wire:model="checkBoxCanEditControl">
+                <input type="checkbox" value="1" wire:model="checkBoxCanEditControl" name="checkBoxCanEditControl">
                 <span class="slider round"></span>
             </label>
         </div>
@@ -94,7 +94,7 @@
         </div>
         <div style="width:30%;display:flex;justify-content:flex-end;" class="input-in check">
             <label class="switch">
-                <input type="checkbox" name="pracownik_edycja_usuwanie_danych" value="1" wire:model="checkBoxCanRemoveSignedDocs">
+                <input type="checkbox" value="1" wire:model="checkBoxCanRemoveSignedDocs" name="checkBoxCanRemoveSignedDocs">
                 <span class="slider round"></span>
             </label>
         </div>
@@ -126,7 +126,7 @@
             <div id="quil-non-medical" style="height: 300px">
                 <p></p>
             </div>
-            <input type="hidden" id="quil-non-medical-input" wire:model="nonMedical">
+            <input type="hidden" id="quil-non-medical-input" name="nonMedical">
             @error('nonMedical') <span class="error">{{ $message }}</span> @enderror
         </div>
     </div>
@@ -140,7 +140,7 @@
             <div id="quil-medical" style="height: 300px">
                 <p></p>
             </div>
-            <input type="hidden" id="quil-medical-input" wire:model="medical">
+            <input type="hidden" id="quil-medical-input" name="medical">
             @error('medical') <span class="error">{{ $message }}</span> @enderror
         </div>
     </div>
@@ -153,7 +153,7 @@
             <div id="quil-note" style="height: 300px">
                 <p></p>
             </div>
-            <input type="hidden" id="quil-note-input" wire:model="note">
+            <input type="hidden" id="quil-note-input" name="note">
             @error('note') <span class="error">{{ $message }}</span> @enderror
         </div>
     </div>
@@ -164,7 +164,7 @@
 
     <div class="listing-actionbar flex-wrap btns" style="gap:10px">
         <button type="button" class="btn1" onclick="location.href='{{url('functions/rodoreset')}}'"><i class="fas fa-history" aria-hidden="true"></i> Resetuj RODO</button>
-        <button type="submit" class="btn1" style="" onclick=""><i class="fas fa-check-circle" aria-hidden="true"></i> Zapisz ustawienia</button>
+        <button type="submit" class="btn1" style="" onclick="" id="submit-rodo-btn"><i class="fas fa-check-circle" aria-hidden="true"></i> Zapisz ustawienia</button>
     </div>
 </form>
 @section('addit_js')
@@ -185,34 +185,39 @@
         handleSubmit()
         function handleSubmit(event) {
             //event.preventDefault()
+            setContentToInput(quillFooter, '#quil-footer-input')
             quillFooter.on('text-change', () => {
                 setContentToInput(quillFooter, '#quil-footer-input')
-                updateLivewire(document.querySelector('#quil-footer-input'), 'footer')
+                //updateLivewire(document.querySelector('#quil-footer-input'), 'footer')
             })
+            setContentToInput(quillNonMedical, '#quil-non-medical-input')
             quillNonMedical.on('text-change', () => {
                 setContentToInput(quillNonMedical, '#quil-non-medical-input')
-                updateLivewire(document.querySelector('#quil-non-medical-input'), 'nonMedical')
+                //updateLivewire(document.querySelector('#quil-non-medical-input'), 'nonMedical')
             })
+            setContentToInput(quillMedical, '#quil-medical-input')
             quillMedical.on('text-change', () => {
                 setContentToInput(quillMedical, '#quil-medical-input')
-                updateLivewire(document.querySelector('#quil-medical-input'), 'medical')
+                //updateLivewire(document.querySelector('#quil-medical-input'), 'medical')
             })
+            setContentToInput(quillNote, '#quil-note-input')
             quillNote.on('text-change', () => {
                 setContentToInput(quillNote, '#quil-note-input')
-                updateLivewire(document.querySelector('#quil-note-input'), 'note')
+                // updateLivewire(document.querySelector('#quil-note-input'), 'note')
             })
         }
         function setContentToInput(className, element)
         {
-            console.log(className.getContents())
+
             const editorText = className.getContents();
+            console.log(JSON.stringify(editorText))
             document.querySelector(element).value = JSON.stringify(editorText)
         }
         function updateLivewire(documentElement, value)
         {
-            documentElement.addEventListener('change', function () {
+            // documentElement.addEventListener('change', function () {
                 @this.set(value, documentElement.value);
-            });
+            // });
         }
     </script>
 @endsection

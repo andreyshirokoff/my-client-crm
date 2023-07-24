@@ -1,6 +1,6 @@
 <livewire:usr-signature-index/>
-{{--<form name="theForm" id="theForm" action="usrsignature-save.php" method="POST" enctype="multipart/form-data">--}}
-
+{{--<form method="POST" action="{{route('save.sign')}}" id="save-sign-form">--}}
+{{--    @csrf--}}
 {{--    <div class="listing-titlebar" style="margin-top:10px;">--}}
 {{--        <div style="width:40%">--}}
 {{--            <p>Aktualny podpis:</p>--}}
@@ -34,6 +34,7 @@
 {{--            <span style="font-size:18px;margin-bottom:15px;">W miarę możliwości wykorzystaj całą wielkość ramki.</span>--}}
 {{--            <canvas id="signature-pad" class="signature-pad" style="border: 1px solid rgb(176, 176, 176); touch-action: none;" width="800" height="500">--}}
 {{--            </canvas>--}}
+{{--            <input type="hidden" name="sign-value" id="sign-value" wire:model="sign">--}}
 {{--            <button class="btn" style="margin-top:10px;" type="button" onclick="signaturePad.clear()">Wyczyść podpis</button>--}}
 {{--        </div>--}}
 {{--        <!-- Skrypt tworzący z API ramke podpisu -->--}}
@@ -46,15 +47,19 @@
 {{--            });--}}
 
 {{--            //Funkcja wykonujaca formularz--}}
-{{--            function zapiszpodpis(){--}}
+{{--            function zapiszpodpis(event){--}}
+{{--                event.preventDefault()--}}
 {{--                if (signaturePad.isEmpty()) {--}}
 {{--                    alert("Musisz złożyć podpis aby zapisać zmiany.");--}}
 {{--                } else {--}}
 {{--                    var dataURL = signaturePad.toDataURL("image/jpeg");--}}
-{{--                    console.log(dataURL);--}}
-{{--                    addHidden(theForm, 'kluczobrazu', dataURL);--}}
-{{--                    document.theForm.submit();--}}
-{{--                    console.log("Formularz poprawny.");--}}
+{{--                    document.querySelector('#sign-value').value = dataURL--}}
+{{--                    //console.log(dataURL);--}}
+{{--                    let myForm = document.getElementById('save-sign-form');--}}
+{{--                    myForm.submit();--}}
+{{--                    // addHidden(theForm, 'kluczobrazu', dataURL);--}}
+{{--                    // document.theForm.submit();--}}
+{{--                    // console.log("Formularz poprawny.");--}}
 {{--                }--}}
 {{--            }--}}
 
@@ -69,6 +74,6 @@
 
 
 {{--    <div class="listing-actionbar">--}}
-{{--        <button class="btn1" onclick="zapiszpodpis()"><i class="far fa-check-circle" aria-hidden="true" style="margin-right: 10px;color:white"></i>Zapisz zmiany</button>--}}
+{{--        <button class="btn1" onclick="zapiszpodpis(event)" type="submit"><i class="far fa-check-circle" aria-hidden="true" style="margin-right: 10px;color:white"></i>Zapisz zmiany</button>--}}
 {{--    </div>--}}
 {{--</form>--}}

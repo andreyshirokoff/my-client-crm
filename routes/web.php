@@ -29,6 +29,8 @@ Route::middleware('auth')->prefix('dashboard')->group(function (){
     Route::prefix('ustawienia')->group(function (){
         Route::get('/', [\App\Http\Controllers\DashboardPageController::class, 'settings'])->name('settings');
         Route::get('/worker_create', [\App\Http\Controllers\DashboardPageController::class, 'workers'])->name('workers');
+        Route::post('/save-sign', [\App\Http\Controllers\DashboardPageController::class, 'saveSign'])->name('save.sign');
+
     });
 
     if(Schema::hasTable('news')){

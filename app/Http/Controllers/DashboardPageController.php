@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\GroupTariff;
 use App\Models\News;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class DashboardPageController extends Controller
 {
@@ -10,6 +14,37 @@ class DashboardPageController extends Controller
     {
         $news = News::orderBy('created_at')->paginate(5);
         return view('index', compact('news'));
+    }
+
+    public function saveSign(Request $request)
+    {
+        $decode = $this->base64ToImage($request->input('sign-value'));
+        $fileName = $this->generateRandomCode().'.jpg';
+        Storage::put('storage/sign/'.$fileName, $decode);
+
+        $groupTariff = GroupTariff::where('owner_id', Auth::user()->id)->first();
+        $groupTariff->update([
+            'sign_path' => $fileName,
+        ]);
+
+        return redirect('/functions/usrsignature');
+
+    }
+
+    private function generateRandomCode($length = 16)
+    {
+        $bytes = random_bytes($length);
+        return substr(str_replace(['/', '+', '='], '', base64_encode($bytes)), 0, $length);
+    }
+
+    private function base64ToImage($base64String)
+    {
+        // Удаляем возможные префиксы base64, если они есть
+        $base64String = preg_replace('#^data:image/\w+;base64,#i', '', $base64String);
+
+        // Преобразуем base64 в бинарные данные
+        $imageData = base64_decode($base64String);
+        return $imageData;
     }
 
     public function searchClient()

@@ -45,7 +45,7 @@ class RodoIndex extends Component
 
     public function submitForm()
     {
-        dd(123);
+        dd($this->note);
         $this->validate([
             'image' => 'image|mimes:jpeg,jpg,png,gif|max:5120',
         ]);

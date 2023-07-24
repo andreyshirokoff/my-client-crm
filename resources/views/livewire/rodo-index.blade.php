@@ -36,7 +36,7 @@
             <div id="quil-footer" style="height: 300px">
                 <p></p>
             </div>
-            <input type="hidden" id="quil-footer-input">
+            <input type="hidden" id="quil-footer-input" wire:model="footer">
             @error('footer') <span class="error">{{ $message }}</span> @enderror
         </div>
     </div>
@@ -126,7 +126,7 @@
             <div id="quil-non-medical" style="height: 300px">
                 <p></p>
             </div>
-            <input type="hidden" id="quil-non-medical-input">
+            <input type="hidden" id="quil-non-medical-input" wire:model="nonMedical">
             @error('nonMedical') <span class="error">{{ $message }}</span> @enderror
         </div>
     </div>
@@ -140,7 +140,7 @@
             <div id="quil-medical" style="height: 300px">
                 <p></p>
             </div>
-            <input type="hidden" id="quil-medical-input">
+            <input type="hidden" id="quil-medical-input" wire:model="medical">
             @error('medical') <span class="error">{{ $message }}</span> @enderror
         </div>
     </div>
@@ -153,7 +153,7 @@
             <div id="quil-note" style="height: 300px">
                 <p></p>
             </div>
-            <input type="hidden" id="quil-note-input">
+            <input type="hidden" id="quil-note-input" wire:model="note">
             @error('note') <span class="error">{{ $message }}</span> @enderror
         </div>
     </div>
@@ -164,11 +164,12 @@
 
     <div class="listing-actionbar flex-wrap btns" style="gap:10px">
         <button type="button" class="btn1" onclick="location.href='{{url('functions/rodoreset')}}'"><i class="fas fa-history" aria-hidden="true"></i> Resetuj RODO</button>
-        <button type="button" class="btn1" style="" onclick="handleSubmit(event)"><i class="fas fa-check-circle" aria-hidden="true"></i> Zapisz ustawienia</button>
+        <button type="submit" class="btn1" style="" onclick=""><i class="fas fa-check-circle" aria-hidden="true"></i> Zapisz ustawienia</button>
     </div>
 </form>
 @section('addit_js')
     <script>
+        $(document).ready(() => {})
         var quillFooter = new Quill('#quil-footer', {
             theme: 'snow' // Выбор темы редактора (snow или bubble)
         });
@@ -181,20 +182,37 @@
         var quillNote = new Quill('#quil-note', {
             theme: 'snow' // Выбор темы редактора (snow или bubble)
         });
+        handleSubmit()
         function handleSubmit(event) {
-            event.preventDefault()
-
-            setContentToInput(quillFooter, '#quil-footer-input')
-            setContentToInput(quillNonMedical, '#quil-non-medical-input')
-            setContentToInput(quillMedical, '#quil-medical-input')
-            setContentToInput(quillNote, '#quil-note-input')
-
-
+            //event.preventDefault()
+            quillFooter.on('text-change', () => {
+                setContentToInput(quillFooter, '#quil-footer-input')
+                updateLivewire(document.querySelector('#quil-footer-input'), 'footer')
+            })
+            quillNonMedical.on('text-change', () => {
+                setContentToInput(quillNonMedical, '#quil-non-medical-input')
+                updateLivewire(document.querySelector('#quil-non-medical-input'), 'nonMedical')
+            })
+            quillMedical.on('text-change', () => {
+                setContentToInput(quillMedical, '#quil-medical-input')
+                updateLivewire(document.querySelector('#quil-medical-input'), 'medical')
+            })
+            quillNote.on('text-change', () => {
+                setContentToInput(quillNote, '#quil-note-input')
+                updateLivewire(document.querySelector('#quil-note-input'), 'note')
+            })
         }
         function setContentToInput(className, element)
         {
+            console.log(className.getContents())
             const editorText = className.getContents();
             document.querySelector(element).value = JSON.stringify(editorText)
+        }
+        function updateLivewire(documentElement, value)
+        {
+            documentElement.addEventListener('change', function () {
+                @this.set(value, documentElement.value);
+            });
         }
     </script>
 @endsection

@@ -46,7 +46,7 @@
             $(document).ready(() => {
                 script.phoneMask('#edit-account-phone-input')
                 $('#edit-account-phone-input').on('input', function(event) {
-                    var phoneNumber = event.target.value;
+                    var phone = event.target.value;
                     @this.set('phone', phone); // Обновляем свойство phoneNumber в компоненте Livewire
                 });
             })

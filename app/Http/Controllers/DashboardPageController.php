@@ -46,6 +46,12 @@ class DashboardPageController extends Controller
         Auth::user()->update(['theme_id' => $request->input('selectedThemeId')]);
     }
 
+    private function generateRandomCode($length = 16)
+    {
+        $bytes = random_bytes($length);
+        return substr(str_replace(['/', '+', '='], '', base64_encode($bytes)), 0, $length);
+    }
+
     public function createClient()
     {
         return view('client_create');

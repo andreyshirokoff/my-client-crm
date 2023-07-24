@@ -27,23 +27,34 @@ class DashboardPageController extends Controller
 
     public function submitVisual(Request $request)
     {
-        dd($request->hasFile('file'));
+//        dd($request->hasFile('logofile'));
+
+        if($request->hasFile('logofile'))
+        {
+            $file = $request->file('logofile');
+            $storagePath = 'logos';
+            $filePath = $file->store($storagePath, '');
+            UserGroup::where('id', Auth::user()->group_id)->first()
+                ->update([
+                    'logo_path' => str_replace("logos/", "", $filePath),
+                ]);
+        }
 
         UserGroup::where('id', Auth::user()->group_id)->first()
             ->update([
-                'name' => $this->salonTitle,
-                'logo_path' => str_replace("storage/", "", $path),
-                'can_edit_card' => $this->checkBoxCanEditCard,
-                'can_edit_control' => $this->checkBoxCanEditControl,
-                'can_remove_signed_docs' => $this->checkBoxCanRemoveSignedDocs,
-                'show_phone' => $this->checkBoxShowPhone,
-//                'footer' => $this->footer,
-//                'non_medical' => $this->nonMedical,
-//                'medical' => $this->medical,
-//                'note_user' => $this->note,
+                'name' => $request->input('salonTitle'),
+                'can_edit_card' => $request->input('checkBoxCanEditCard'),
+                'can_edit_control' => $request->input('checkBoxCanEditControl'),
+                'can_remove_signed_docs' => $request->input('checkBoxCanRemoveSignedDocs'),
+                'show_phone' => $request->input('checkBoxShowPhone'),
+                'footer' => $request->input('footer'),
+                'non_medical' => $request->input('nonMedical'),
+                'medical' => $request->input('medical'),
+                'note_user' => $request->input('note'),
             ]);
 
         Auth::user()->update(['theme_id' => $request->input('selectedThemeId')]);
+        
     }
 
     private function generateRandomCode($length = 16)

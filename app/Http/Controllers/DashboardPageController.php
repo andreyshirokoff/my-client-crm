@@ -79,6 +79,7 @@ class DashboardPageController extends Controller
             'group_id' => Auth::user()->group_id,
             'is_med' => $request->input('is_med'),
             'description' => $request->input('description'),
+            'description_text' => $request->input('description-text'),
             'contraindications' => $request->input('contraindications'),
             'indicators' => $request->input('indications'),
             'recommendation' => $request->input('recommendations'),

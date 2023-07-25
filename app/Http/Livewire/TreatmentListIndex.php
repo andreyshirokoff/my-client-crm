@@ -3,16 +3,12 @@
 namespace App\Http\Livewire;
 
 use App\Models\Service;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class TreatmentListIndex extends Component
 {
-    public $title = '';
-    public $description = '';
-    public $contraindications = '';
-    public $indications = '';
-    public $recommendations = '';
-    public $amount;
+    public $services;
     public function render()
     {
         return view('livewire.settings.treatment-list-index');
@@ -20,10 +16,6 @@ class TreatmentListIndex extends Component
 
     public function mount()
     {
-        $services = Service::create([
-
-        ]);
-
-
+        $this->services = Service::where('group_id', Auth::user()->group_id)->get();
     }
 }

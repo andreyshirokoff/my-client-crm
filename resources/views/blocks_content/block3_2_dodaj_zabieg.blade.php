@@ -51,7 +51,7 @@
             <div id="quil-description" style="height: 300px">
                 <p></p>
             </div>
-            <input type="hidden" id="descriptionDb">
+            <input type="hidden" id="quil-description-text-input" name="description-text">
             <input type="hidden" id="quil-description-input" name="description">
         </div>
     </div>
@@ -64,7 +64,6 @@
             <div id="quil-contraindications" style="height: 300px">
                 <p></p>
             </div>
-            <input type="hidden" id="contraindicationsDb">
             <input type="hidden" id="quil-contraindications-input" name="contraindications">
         </div>
     </div>
@@ -77,7 +76,6 @@
             <div id="quil-indications" style="height: 300px">
                 <p></p>
             </div>
-            <input type="hidden" id="indicationsDb">
             <input type="hidden" id="quil-indications-input" name="indications">
         </div>
     </div>
@@ -90,7 +88,6 @@
             <div id="quil-recommendations" style="height: 300px">
                 <p></p>
             </div>
-            <input type="hidden" id="recommendationsDb">
             <input type="hidden" id="quil-recommendations-input" name="recommendations">
         </div>
     </div>
@@ -131,11 +128,6 @@
                 theme: 'snow' // Выбор темы редактора (snow или bubble)
             });
 
-
-            setContentToEditor(quillDescription, document.querySelector('#descriptionDb').value);
-            setContentToEditor(quillContraindications, document.querySelector('#contraindicationsDb').value);
-            setContentToEditor(quillIndications, document.querySelector('#indicationsDb').value);
-            setContentToEditor(quillRecommendations, document.querySelector('#recommendationsDb').value);
             handleSubmit()
             function setContentToEditor(className, content) {
                 setTimeout(() => {
@@ -147,8 +139,10 @@
             function handleSubmit(event) {
                 //event.preventDefault()
                 setContentToInput(quillDescription, '#quil-description-input')
+                setContentTextToInput(quillDescription, '#quil-description-text-input')
                 quillDescription.on('text-change', () => {
                     setContentToInput(quillDescription, '#quil-description-input')
+                    setContentTextToInput(quillDescription, '#quil-description-text-input')
                     //updateLivewire(document.querySelector('#quil-footer-input'), 'footer')
                 })
                 setContentToInput(quillContraindications, '#quil-contraindications-input')
@@ -170,6 +164,11 @@
             function setContentToInput(className, element)
             {
                 const editorText = className.getContents();
+                document.querySelector(element).value = JSON.stringify(editorText)
+            }
+            function setContentTextToInput(className, element)
+            {
+                const editorText = className.getText();
                 document.querySelector(element).value = JSON.stringify(editorText)
             }
         })

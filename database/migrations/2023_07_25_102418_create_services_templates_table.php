@@ -12,6 +12,7 @@ return new class extends Migration {
             $table->string('is_med')->default(0);
             $table->string('name');
             $table->longText('description')->nullable();
+            $table->longText('description_text')->nullable();
             $table->longText('contraindications')->nullable();
             $table->longText('indicators')->nullable();
             $table->longText('recommendation')->nullable();

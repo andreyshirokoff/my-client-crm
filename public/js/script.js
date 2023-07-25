@@ -344,5 +344,11 @@ script = {
             icon: status,
             title: message
         })
-    }
+    },
+
+    // changeEvent: function(element)
+    // {
+    //     console.log('change')
+    //     $(element).trigger('change')
+    // }
 }

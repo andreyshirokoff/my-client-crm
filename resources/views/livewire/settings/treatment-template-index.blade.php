@@ -1,12 +1,17 @@
-<livewire:treatment-template-index/>
+<div>
 
-{{--    <div class="boxinbox-inside">--}}
 
-{{--        <form action="treatment_template_do.php" method="post">--}}
-{{--            <h4>Wybierz z listy jeden z gotowych zabiegów do zaimportowania.</h4><br>--}}
-{{--            <p>W ustawieniach Twojego miejsca Beauty pojawi się wskazany zabieg wraz z przypisaną do niego kartą zabiegową. Zarówno wszystkie ustawienia poniższego zabiegu oraz karty mogą zostać przez Ciebie edytowane lub usunięte zaraz dodaniu zabiegu. Skorzystaj z gotowych rozwiązań, które oszczędzą Twój czas.</p><br>--}}
-{{--            <select name="treatment_selected" id="treatment_selected" class="formularz" style="margin-bottom:20px;">--}}
+    <div class="boxinbox-inside">
 
+        <form>
+            <h4>Wybierz z listy jeden z gotowych zabiegów do zaimportowania.</h4><br>
+            <p>W ustawieniach Twojego miejsca Beauty pojawi się wskazany zabieg wraz z przypisaną do niego kartą zabiegową. Zarówno wszystkie ustawienia poniższego zabiegu oraz karty mogą zostać przez Ciebie edytowane lub usunięte zaraz dodaniu zabiegu. Skorzystaj z gotowych rozwiązań, które oszczędzą Twój czas.</p><br>
+            <select name="treatment_selected" id="treatment_selected" class="formularz" style="margin-bottom:20px;" wire:model.defer="selected">
+                @if($serviceTemplates)
+                    @foreach($serviceTemplates as $temp)
+                        <option value="{{$temp->id}}">{{$temp->name}}</option>
+                    @endforeach
+                @endif
 {{--                <option value="2943">Epilacja laserowa ALMA SOPRANO TITANIUM</option>--}}
 {{--                <option value="2944">Mikronakłuwanie DERMAPEN </option>--}}
 {{--                <option value="2945">Zagęszczenie owalu twarzy ALMA HARMONY NIR</option>--}}
@@ -50,16 +55,26 @@
 {{--                <option value="5082">Mezoterapia mikroigłowa</option>--}}
 {{--                <option value="5083">Medycyna estetyczna</option>--}}
 
-{{--            </select>--}}
+            </select>
 
 
 
-{{--        </form></div>--}}
+        </form></div>
 
-{{--    <div class="listing-actionbar bottom-buttons">--}}
-{{--        <a href="{{url('ustawienia')}}"><button type="button" class="btn1"><i class="fas fa-chevron-left" aria-hidden="true"></i> Anuluj</button></a>--}}
-{{--        <button type="submit" class="btn1" style="margin-left:10px;"><i class="fas fa-plus-circle" aria-hidden="true"></i> Importuj zabieg</button>--}}
+    <div class="listing-actionbar bottom-buttons">
+        <a href="{{url('dashboard/ustawienia')}}"><button type="button" class="btn1"><i class="fas fa-chevron-left" aria-hidden="true"></i> Anuluj</button></a>
+        <button type="submit" class="btn1" style="margin-left:10px;" wire:click.prevent="submitForm"><i class="fas fa-plus-circle" aria-hidden="true"></i> Importuj zabieg</button>
 
-{{--    </div>--}}
+    </div>
 
 
+
+</div>
+@section('addit_js')
+    <script>
+        $(document).ready(() => {
+            $('#treatment_selected').trigger('change')
+            @this.set('selected', $('#treatment_selected').val())
+        })
+    </script>
+@endsection

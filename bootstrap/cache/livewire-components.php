@@ -6,6 +6,7 @@
   'history-index' => 'App\\Http\\Livewire\\HistoryIndex',
   'rodo-index' => 'App\\Http\\Livewire\\RodoIndex',
   'treatment-list-index' => 'App\\Http\\Livewire\\TreatmentListIndex',
+  'treatment-template-index' => 'App\\Http\\Livewire\\TreatmentTemplateIndex',
   'upload-image-form' => 'App\\Http\\Livewire\\UploadImageForm',
   'user-data-index' => 'App\\Http\\Livewire\\UserDataIndex',
   'usr-signature-index' => 'App\\Http\\Livewire\\UsrSignatureIndex',

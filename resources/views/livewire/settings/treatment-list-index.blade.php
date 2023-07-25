@@ -15,13 +15,13 @@
         @foreach($services as $service)
             <div class="listing-element">
                 <div style="width:60%">
-                    <h6>{{$service->title}}</h6>
+                    <h6>{{$service->name}}</h6>
                 </div>
                 <div style="width:20%">
                     <h6>Karta klienta</h6>
                 </div>
                 <div style="width:20%">
-                    <h6>Opis zabiegu</h6>
+                    <h6>{{$service->description_text}}</h6>
                 </div>
             </div>
         @endforeach

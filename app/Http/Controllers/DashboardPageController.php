@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\News;
+use App\Models\Service;
 use App\Models\UserGroup;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
 
 class DashboardPageController extends Controller
 {
@@ -57,6 +59,33 @@ class DashboardPageController extends Controller
 
         return redirect('/dashboard/ustawienia');
 
+    }
+
+    public function treatmentCreate(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'title' => 'min:3',
+        ], [
+            //'input_field.required' => 'Поле :attribute обязательно для заполнения.',
+            'title.min' => 'Pole :attribute musi mieć co najmniej :min znaków.',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+
+        Service::create([
+            'name' => $request->input('title'),
+            'group_id' => Auth::user()->group_id,
+            'is_med' => $request->input('is_med'),
+            'description' => $request->input('description'),
+            'contraindications' => $request->input('contraindications'),
+            'indicators' => $request->input('indications'),
+            'recommendation' => $request->input('recommendations'),
+            'amount' => $request->input('amount'),
+        ]);
+
+        return redirect('/dashboard/ustawienia');
     }
 
     public function rodoReset(Request $request)

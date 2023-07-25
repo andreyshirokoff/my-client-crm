@@ -11,13 +11,13 @@ return new class extends Migration {
             $table->id();
             $table->unsignedBigInteger('group_id');
             $table->foreign('group_id')->references('id')->on('user_groups');
-            $table->boolean('is_med');
+            $table->boolean('is_med')->default(0);;
             $table->string('name');
-            $table->longText('description');
-            $table->longText('contradation');
-            $table->longText('indicators');
-            $table->longText('recommendation');
-            $table->unsignedBigInteger('amount');
+            $table->longText('description')->nullable();
+            $table->longText('contraindications')->nullable();
+            $table->longText('indicators')->nullable();
+            $table->longText('recommendation')->nullable();
+            $table->unsignedBigInteger('amount')->default(1);
             $table->timestamps();
         });
     }

@@ -9,13 +9,13 @@ return new class extends Migration {
     {
         Schema::create('services_templates', function (Blueprint $table) {
             $table->id();
-            $table->string('is_med');
+            $table->string('is_med')->default(0);
             $table->string('name');
-            $table->longText('description');
-            $table->longText('contradation');
-            $table->longText('indicators');
-            $table->longText('recommendation');
-            $table->unsignedBigInteger('amount');
+            $table->longText('description')->nullable();
+            $table->longText('contraindications')->nullable();
+            $table->longText('indicators')->nullable();
+            $table->longText('recommendation')->nullable();
+            $table->unsignedBigInteger('amount')->default();
             $table->timestamps();
         });
     }

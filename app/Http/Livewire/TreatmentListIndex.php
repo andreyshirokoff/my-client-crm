@@ -2,9 +2,10 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Service;
 use Livewire\Component;
 
-class TreatmentCreateIndex extends Component
+class TreatmentListIndex extends Component
 {
     public $title = '';
     public $description = '';
@@ -14,11 +15,15 @@ class TreatmentCreateIndex extends Component
     public $amount;
     public function render()
     {
-        return view('livewire.treatment-create-index');
+        return view('livewire.settings.treatment-list-index');
     }
 
     public function mount()
     {
+        $services = Service::create([
+
+        ]);
+
 
     }
 }

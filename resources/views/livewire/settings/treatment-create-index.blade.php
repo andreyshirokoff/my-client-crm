@@ -173,7 +173,7 @@
                 function setContentToInput(className, element)
                 {
                     const editorText = className.getContents();
-                    document.querySelector(element).value = JSON.stringify(editorText)
+                    if(document.querySelector(element).value.length > 0) document.querySelector(element).value = JSON.stringify(editorText)
                 }
                 function setContentTextToInput(className, element)
                 {

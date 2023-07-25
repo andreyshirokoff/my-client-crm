@@ -27,8 +27,8 @@
 
                             <a href="{{url('/functions/treatment_create')}}?type=edit&id={{$service->id}}"><i class="fa-solid fa-pen-to-square i-black"></i></a>
 {{--                            @livewire('treatment-list-index', ['idService' => '123'])--}}
-                            <a style="cursor: pointer" wire:click.prevent="copy('{{$service->id}}')"><i class="fa-solid fa-copy i-black"></i></a>
-                            <a href="" wire:click.prevent="delete" id="delete-service('{{$service->id}}')"><i class="fa-solid fa-trash i-black"></i></a>
+                            <a style="cursor: pointer" wire:click.prevent="copy('{{$service->id}}', '{{$service->name}}')"><i class="fa-solid fa-copy i-black"></i></a>
+                            <a href="" wire:click.prevent="delete('{{$service->id}}')" id="delete-service"><i class="fa-solid fa-trash i-black"></i></a>
                             <input type="hidden" wire:model="fieldName">
 
                     </form>

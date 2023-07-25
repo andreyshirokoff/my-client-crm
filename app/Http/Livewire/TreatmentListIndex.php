@@ -20,8 +20,21 @@ class TreatmentListIndex extends Component
         $this->services = Service::where('group_id', Auth::user()->group_id)->get();
     }
 
-    public function copy($s)
+    public function copy($id, $name)
     {
-        $serive = 
+        $originalRecord = Service::find($id);
+        $newRecord = $originalRecord->replicate();
+        $newRecord->name = $name.' (COPY)';
+        $newRecord->save();
+
+        return redirect(request()->header('Referer'));
+    }
+
+    public function delete($id)
+    {
+        $record = Service::find($id);
+        $record->delete();
+
+        return redirect(request()->header('Referer'));
     }
 }

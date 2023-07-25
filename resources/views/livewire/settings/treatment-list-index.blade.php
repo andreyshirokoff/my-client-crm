@@ -21,7 +21,11 @@
                     <h6>Karta klienta</h6>
                 </div>
                 <div style="width:20%">
-                    <h6>{{$service->description_text}}</h6>
+                    <div class="d-flex gap-3" style="font-size:20px;position:relative;top:-5px">
+                        <a href=""><i class="fa-solid fa-pen-to-square i-black"></i></a>
+                        <a href=""><i class="fa-solid fa-copy i-black"></i></a>
+                        <a href=""><i class="fa-solid fa-trash i-black"></i></a>
+                    </div>
                 </div>
             </div>
         @endforeach

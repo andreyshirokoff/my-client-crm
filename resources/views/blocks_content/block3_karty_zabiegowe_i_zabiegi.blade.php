@@ -1,4 +1,4 @@
-<livewire:treatment-list-index/>
+<livewire:treatment-list-index />
 
 {{--<div class="listing-titlebar">--}}
 {{--    <div style="width:60%">--}}

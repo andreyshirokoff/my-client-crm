@@ -13,7 +13,7 @@
     </div>
     @if($services)
         @foreach($services as $service)
-            <div class="listing-element">
+            <div class="listing-element service-block" data-id="{{$service->id}}">
                 <div style="width:60%">
                     <h6>{{$service->name}}</h6>
                 </div>
@@ -21,11 +21,17 @@
                     <h6>Karta klienta</h6>
                 </div>
                 <div style="width:20%">
-                    <div class="d-flex gap-3" style="font-size:20px;position:relative;top:-5px">
-                        <a href="{{url('/functions/treatment_create')}}?type=edit&id={{$service->id}}"><i class="fa-solid fa-pen-to-square i-black"></i></a>
-                        <a href=""><i class="fa-solid fa-copy i-black"></i></a>
-                        <a href=""><i class="fa-solid fa-trash i-black"></i></a>
-                    </div>
+                    <form class="d-flex gap-3" style="font-size:20px;position:relative;top:-5px">
+
+                            <input type="hidden" value="{{$service->id}}" wire:model="idService">
+
+                            <a href="{{url('/functions/treatment_create')}}?type=edit&id={{$service->id}}"><i class="fa-solid fa-pen-to-square i-black"></i></a>
+{{--                            @livewire('treatment-list-index', ['idService' => '123'])--}}
+                            <a style="cursor: pointer" wire:click.prevent="copy('{{$service->id}}')"><i class="fa-solid fa-copy i-black"></i></a>
+                            <a href="" wire:click.prevent="delete" id="delete-service('{{$service->id}}')"><i class="fa-solid fa-trash i-black"></i></a>
+                            <input type="hidden" wire:model="fieldName">
+
+                    </form>
                 </div>
             </div>
         @endforeach
@@ -43,3 +49,18 @@
 
 
 </div>
+
+{{--@section('addit_js')--}}
+{{--    <script>--}}
+{{--        $(document).click((e) => {--}}
+{{--            if(--}}
+{{--                $(e.target).is('#copy-service')--}}
+{{--                || $(e.target).closest('#copy').length > 0--}}
+{{--            )--}}
+{{--            {--}}
+{{--                let id = $(e.target).closest('.service-block').attr('data-id')--}}
+{{--                @this.set('idService', id)--}}
+{{--            }--}}
+{{--        })--}}
+{{--    </script>--}}
+{{--@endsection--}}

@@ -7,6 +7,7 @@ use Livewire\Component;
 
 class TreatmentCreateIndex extends Component
 {
+    public $idService;
 
     public $name;
     public $wireIsMed;
@@ -31,13 +32,15 @@ class TreatmentCreateIndex extends Component
         {
             if($_GET['type'] == 'edit')
             {
+
                 $services = Service::where('id', $_GET['id'])->first();
+                $this->idService = $services->id;
                 $this->name = $services->name;
                 $this->wireIsMed = $services->is_med;
                 $this->wireDesc = $services->description;
                 $this->wireInd = $services->indicators;
                 $this->wireRec = $services->recommendation;
-                $this->wireCont = $services->contradation;
+                $this->wireCont = $services->contraindications;
                 $this->wireCount = $services->amount;
 
             }

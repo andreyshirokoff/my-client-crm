@@ -74,17 +74,39 @@ class DashboardPageController extends Controller
             return redirect()->back()->withErrors($validator)->withInput();
         }
 
-        Service::create([
-            'name' => $request->input('title'),
-            'group_id' => Auth::user()->group_id,
-            'is_med' => $request->input('is_med'),
-            'description' => $request->input('description'),
-            'description_text' => $request->input('description-text'),
-            'contraindications' => $request->input('contraindications'),
-            'indicators' => $request->input('indications'),
-            'recommendation' => $request->input('recommendations'),
-            'amount' => $request->input('amount'),
-        ]);
+        $isMed = 0;
+        if($request->input('is_med') == 'on') $isMed = 1;
+        elseif($request->input('is_med') == null) $isMed = 0;
+        else $isMed = $request->input('is_med');
+
+        if(strlen($request->input('id-service')) > 0)
+        {
+            Service::where('id', $request->input('id-service'))->update([
+                'name' => $request->input('title'),
+                'group_id' => Auth::user()->group_id,
+                'is_med' => $isMed,
+                'description' => $request->input('description'),
+                'description_text' => $request->input('description-text'),
+                'contraindications' => $request->input('contraindications'),
+                'indicators' => $request->input('indications'),
+                'recommendation' => $request->input('recommendations'),
+                'amount' => $request->input('amount'),
+            ]);
+        }
+        else
+        {
+            Service::create([
+                'name' => $request->input('title'),
+                'group_id' => Auth::user()->group_id,
+                'is_med' => $request->input('is_med'),
+                'description' => $request->input('description'),
+                'description_text' => $request->input('description-text'),
+                'contraindications' => $request->input('contraindications'),
+                'indicators' => $request->input('indications'),
+                'recommendation' => $request->input('recommendations'),
+                'amount' => $request->input('amount'),
+            ]);
+        }
 
         return redirect('/dashboard/ustawienia');
     }

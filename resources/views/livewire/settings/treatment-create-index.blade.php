@@ -11,6 +11,7 @@
                 }
             }
         </style>
+        <input type="hidden" name="id-service" wire:model.defer="idService">
         <div class="listing-titlebar" style="margin-top:10px;">
             <div style="width:40%">
 
@@ -134,22 +135,23 @@
 
                 handleSubmit()
                 function setContentToEditor(className, content) {
-                    setTimeout(() => {
-                        console.log()
-                        className.setContents(JSON.parse(content));
-                    },2000)
+                    className.setContents(JSON.parse(content));
+
 
                 }
-                setContentToEditor(quillDescription, document.querySelector('#descriptionDb').value);
-                setContentToEditor(quillContraindications, document.querySelector('#contraindicationsDb').value);
-                setContentToEditor(quillIndications, document.querySelector('#indicationsDb').value);
-                setContentToEditor(quillRecommendations, document.querySelector('#recommendationsDb').value);
+                setTimeout(() => {
+                    setContentToEditor(quillDescription, document.querySelector('#descriptionDb').value);
+                    setContentToEditor(quillContraindications, document.querySelector('#contraindicationsDb').value);
+                    setContentToEditor(quillIndications, document.querySelector('#indicationsDb').value);
+                    setContentToEditor(quillRecommendations, document.querySelector('#recommendationsDb').value);
+                }, 0)
+
+
                 function handleSubmit(event) {
                     //event.preventDefault()
                     setContentToInput(quillDescription, '#quil-description-input')
                     quillDescription.on('text-change', () => {
                         setContentToInput(quillDescription, '#quil-description-input')
-                        setContentTextToInput(quillDescription, '#quil-description-text-input')
                         //updateLivewire(document.querySelector('#quil-footer-input'), 'footer')
                     })
                     setContentToInput(quillContraindications, '#quil-contraindications-input')

@@ -22,7 +22,7 @@
                 </div>
                 <div style="width:20%">
                     <div class="d-flex gap-3" style="font-size:20px;position:relative;top:-5px">
-                        <a href=""><i class="fa-solid fa-pen-to-square i-black"></i></a>
+                        <a href="{{url('/functions/treatment_create')}}?type=edit&id={{$service->id}}"><i class="fa-solid fa-pen-to-square i-black"></i></a>
                         <a href=""><i class="fa-solid fa-copy i-black"></i></a>
                         <a href=""><i class="fa-solid fa-trash i-black"></i></a>
                     </div>

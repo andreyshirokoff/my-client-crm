@@ -40,11 +40,11 @@
                         @case('checkbox')
                             <div class="listing-element service-block">
                                 <h6 class="mb-3">{{$f['title']}}</h6>
-                                @foreach($f['fields'] as $ff)
-                                    <div class="d-flex justify-content-between w-100 flex-wrap">
+                                @foreach($f['fields'] as $key => $ff)
+                                    <div class="d-flex justify-content-between w-100 flex-wrap @if($key != 0) mt-2 @endif">
                                         <p>{{$ff}}</p>
                                         <label class="switch">
-                                            <input type="checkbox" name="use_pin" id="use_pin" value="1">
+                                            <input type="checkbox" name="UF_{{$key}}" id="use_pin" value="1">
                                             <span class="slider round"></span>
                                         </label>
                                     </div>
@@ -61,7 +61,7 @@
                                 @foreach($f['fields'] as $key => $ff)
                                     <div class="d-flex justify-content-between w-100 flex-wrap @if($key != 0) mt-2 @endif">
                                         <p>{{$ff}}</p>
-                                        <input type="radio" id="tak2" value="{{$ff}}" name="{{$randCode}}" @if($key == 0) checked @endif>
+                                        <input type="radio" id="tak2" value="{{$ff}}" name="UF_{{$randCode}}" @if($key == 0) checked @endif>
                                     </div>
                                 @endforeach
                             </div>
@@ -69,7 +69,7 @@
                     @endswitch
                 @endforeach
                 <div class="listing-actionbar mt-3">
-                    <a href="http://myclientcrm/dashboard/ustawienia/worker-create"><button type="button" class="btn1" style="width:100%;"><i class="fa-solid fa-floppy-disk" style="margin-right:15px;color:white"></i></i> Save</button></a>
+                    <a><button type="button" class="btn1" style="width:100%;"><i class="fa-solid fa-floppy-disk" style="margin-right:15px;color:white" wire:click.prevent="submitForm"></i></i> Save</button></a>
                 </div>
 
         @endif

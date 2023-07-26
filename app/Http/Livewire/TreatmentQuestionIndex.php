@@ -2,11 +2,15 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\ServicesForm;
+use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Validator;
 use Livewire\Component;
 
 class TreatmentQuestionIndex extends Component
 {
+    protected $queryString = ['type'];
+
     public ?string $field = '';
     public $fieldsArr = [];
 
@@ -24,6 +28,17 @@ class TreatmentQuestionIndex extends Component
     {
 
         return view('livewire.settings.treatment-question-index');
+    }
+
+    public function submitForm()
+    {
+        dd($this->type);
+        ServicesForm::firstOrNew([
+            'service_id' => $this->id,
+            'fields' => json_encode($this->fieldsArr),
+        ]);
+
+        return redirect(request()->header('Referer'));
     }
 
 //    public function showFormItem()
@@ -45,7 +60,7 @@ class TreatmentQuestionIndex extends Component
         switch($type)
         {
             case 'input':
-                $fields[$key] = [
+                $this->fieldsArr[$key] = [
                     'type' => $type,
                     'title' => $title,
                     'order' => $order,
@@ -53,7 +68,7 @@ class TreatmentQuestionIndex extends Component
                 break;
 
             case 'textarea':
-                $fields[$key] = [
+                $this->fieldsArr[$key] = [
                     'type' => $type,
                     'title' => $title,
                     'order' => $order,
@@ -61,7 +76,7 @@ class TreatmentQuestionIndex extends Component
                 break;
 
             case 'checkbox':
-                $fields[$key] = [
+                $this->fieldsArr[$key] = [
                     'type' => $type,
                     'title' => $title,
                     'order' => $order,
@@ -70,7 +85,7 @@ class TreatmentQuestionIndex extends Component
                 break;
 
             case 'radio':
-                $fields[$key] = [
+                $this->fieldsArr[$key] = [
                     'type' => $type,
                     'title' => $title,
                     'order' => $order,
@@ -79,12 +94,13 @@ class TreatmentQuestionIndex extends Component
                 break;
         }
 
-        usort($fields, function ($a, $b) {
+        uasort($this->fieldsArr, function ($a, $b) {
             return $b['order'] - $a['order'];
         });
 
-        $this->field = json_encode($fields);
-        $this->fieldsArr = $fields;
+
+        $this->field = json_encode($this->fieldsArr);
+//        $this->fieldsArr = $fields;
     }
 
 

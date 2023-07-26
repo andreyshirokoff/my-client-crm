@@ -208,7 +208,7 @@
             function setContentToEditor(className, content) {
                 setTimeout(() => {
                     console.log()
-                    className.setContents(JSON.parse(content));
+                    if(content.length > 0) className.setContents(JSON.parse(content));
                 },2000)
 
             }
@@ -239,7 +239,7 @@
             {
 
                 const editorText = className.getContents();
-                if(document.querySelector(element).value.length > 0)document.querySelector(element).value = JSON.stringify(editorText)
+                if(document.querySelector(element).value.length > 0) document.querySelector(element).value = JSON.stringify(editorText)
             }
             {{--function updateLivewire(documentElement, value)--}}
             {{--{--}}

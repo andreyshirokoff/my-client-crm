@@ -72,6 +72,9 @@ Route::get('/functions/treatment_template', function () {
 Route::get('/functions/treatment_create', function () {
     return view('ustawienia.treatment_create');
 })->middleware(['auth']);
+Route::get('/functions/treatment_question', function () {
+    return view('ustawienia.treatment_question');
+})->middleware(['auth']);
 Route::get('/functions/product_create', function () {
     return view('ustawienia.product_create');
 })->middleware(['auth']);

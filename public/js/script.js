@@ -29,6 +29,12 @@ script = {
                 $(identify).addClass('active')
             }
 
+            // if($(e.target).is('#add-field-in-question'))
+            // {
+            //
+            //     $('#addField').modal('show')
+            // }
+
             //sendVisualForm
             // if(
             //     $(e.target).is('#submit-rodo-btn')
@@ -268,6 +274,8 @@ script = {
             //         }
             //     }
             // }
+
+
 
         })
     },

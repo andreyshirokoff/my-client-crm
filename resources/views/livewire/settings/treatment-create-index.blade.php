@@ -11,6 +11,7 @@
                 }
             }
         </style>
+
         <input type="hidden" name="id-service" wire:model.defer="idService">
         <div class="listing-titlebar" style="margin-top:10px;">
             <div style="width:40%">
@@ -135,7 +136,7 @@
 
                 handleSubmit()
                 function setContentToEditor(className, content) {
-                    className.setContents(JSON.parse(content));
+                    if(content.length > 0) className.setContents(JSON.parse(content));
 
 
                 }

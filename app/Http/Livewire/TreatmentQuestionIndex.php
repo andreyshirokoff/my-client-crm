@@ -15,7 +15,7 @@ class TreatmentQuestionIndex extends Component
     ];
 
     public $type;
-    public $name;
+    public $title;
     public $order;
 
     protected $listeners = ['addNewFields' => 'addNewFields'];
@@ -29,7 +29,7 @@ class TreatmentQuestionIndex extends Component
     public function addNewFields($props)
     {
         $type = $props['type'];
-        $name = $props['name'];
+        $title = $props['title'];
         $order = $props['order'];
 
         $key = uniqid();
@@ -39,7 +39,7 @@ class TreatmentQuestionIndex extends Component
             case 'input':
                 $fields[$key] = [
                     'type' => $type,
-                    'name' => $name,
+                    'title' => $title,
                     'order' => $order,
                 ];
                 break;
@@ -47,7 +47,7 @@ class TreatmentQuestionIndex extends Component
             case 'textarea':
                 $fields[$key] = [
                     'type' => $type,
-                    'name' => $name,
+                    'title' => $title,
                     'order' => $order,
                 ];
                 break;
@@ -55,7 +55,7 @@ class TreatmentQuestionIndex extends Component
             case 'checkbox':
                 $fields[$key] = [
                     'type' => $type,
-                    'name' => 'test',
+                    'title' => $title,
                     'order' => 0,
                 ];
                 break;
@@ -63,15 +63,21 @@ class TreatmentQuestionIndex extends Component
             case 'radio':
                 $fields[$key] = [
                     'type' => $type,
-                    'name' => 'test',
+                    'title' => $title,
                     'order' => 0,
                 ];
                 break;
         }
 
+        usort($fields, function ($a, $b) {
+            return $b['order'] - $a['order'];
+        });
+
         $this->field = json_encode($fields);
         $this->fieldsArr = $fields;
     }
+
+
 
     public function showAddModal()
     {

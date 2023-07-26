@@ -8,15 +8,15 @@ class ModalFieldsAdd extends Component
 {
     protected $listeners = ['showForm' => 'showFormItem'];
 
-    public $name;
+    public $title;
     public $type = 'input';
     public $order;
     public $fieldsArr = [];
 
-    public $showMultiFields = false;
+    public $showMultiFields = 'false';
 
     protected $rules = [
-        'name' => 'string|required',
+        'title' => 'string|required',
         'type' => 'string|required',
         'order' => 'integer',
     ];
@@ -34,11 +34,10 @@ class ModalFieldsAdd extends Component
 
     public function addNewFields()
     {
-        dd($this->fieldsArr);
         $this->validate();
 
-        $this->emitUp('addNewFields', ['name' => $this->name, 'order' => $this->order, 'type' => $this->type, 'fields' => json_encode($this->fieldsArr)]);
-        $this->name = '';
+        $this->emitUp('addNewFields', ['title' => $this->title, 'order' => $this->order, 'type' => $this->type, 'fields' => json_encode($this->fieldsArr)]);
+        $this->title = '';
         $this->order = 0;
         $this->type = 'input';
     }
@@ -55,15 +54,24 @@ class ModalFieldsAdd extends Component
         $this->fieldsArr[$key] = $value;
     }
 
-    public function updatedTypeOfField()
+    public function setField()
+    {
+        $this->dispatchBrowserEvent('event-add-field');
+    }
+    public function updatedType()
     {
         if($this->type == 'radio' || $this->type == 'checkbox')
         {
-            $this->showMultiFields = true;
+            $this->showMultiFields = 'true';
         }
         else
         {
-            $this->showMultiFields = false;
+            $this->showMultiFields = 'false';
         }
+    }
+
+    public function showAddModal()
+    {
+        $this->emitTo(ModalFieldsAdd::class, 'showForm');
     }
 }

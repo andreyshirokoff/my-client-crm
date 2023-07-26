@@ -25,29 +25,43 @@
                 @foreach($fieldsArr as $f)
                     @switch($f['type'])
                         @case('input')
+
                             <div class="listing-element service-block">
-                                <input class="formularz" name="" id="" type="" value="" maxlength="40">
+                                <p>{{$f['title']}}</p>
+                                <input class="formularz" name="" data-order="{{$f['order']}}" id="" type="" value="" maxlength="40">
                             </div>
                             @break
                         @case('textarea')
                             <div class="listing-element service-block">
-                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                                <p>{{$f['title']}}</p>
+                                <textarea class="formularz" name="" data-order="{{$f['order']}}" id="" cols="30" rows="10"></textarea>
                             </div>
                             @break
-                        @case('textarea')
+                        @case('checkbox')
                             <div class="listing-element service-block">
-                                checkbox
+                                <div style="display:flex;justify-content:space-between;width:100%;flex-wrap:wrap">
+                                    <p>{{$f['title']}}</p>
+                                    <label class="switch">
+                                        <input type="checkbox" name="use_pin" id="use_pin" value="1">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
                             </div>
                             @break
-                        @case('textarea')
+                        @case('radio')
                             <div class="listing-element service-block">
+                                <p>{{$f['title']}}</p>
                                 radio
                             </div>
                             @break
                     @endswitch
                 @endforeach
-            </div>
+                <div class="listing-actionbar mt-3">
+                    <a href="http://myclientcrm/dashboard/ustawienia/worker-create"><button type="button" class="btn1" style="width:100%;"><i class="fa-solid fa-floppy-disk" style="margin-right:15px;color:white"></i></i> Save</button></a>
+                </div>
+
         @endif
+    </div>
     <livewire:modal-fields-add/>
 </div>
 

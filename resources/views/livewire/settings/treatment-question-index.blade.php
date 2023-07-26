@@ -62,6 +62,14 @@
 
         @endif
     </div>
-    <livewire:modal-fields-add/>
+    <div class="modal fade" id="addField" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <livewire:modal-fields-add/>
+    </div>
+    <script>
+        document.addEventListener('event-add-field', () => {
+            let modalItem = new bootstrap.Modal(document.querySelector('#addField'))
+            modalItem.show()
+        })
+    </script>
 </div>
 

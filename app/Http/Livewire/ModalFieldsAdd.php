@@ -27,11 +27,6 @@ class ModalFieldsAdd extends Component
         return view('livewire.modal-fields-add');
     }
 
-    public function showFormItem()
-    {
-        $this->dispatchBrowserEvent('event-add-field');
-    }
-
     public function addNewFields()
     {
         $this->validate();

@@ -26,6 +26,11 @@ class TreatmentQuestionIndex extends Component
         return view('livewire.settings.treatment-question-index');
     }
 
+//    public function showFormItem()
+//    {
+//        $this->dispatchBrowserEvent('event-add-field');
+//    }
+
     public function addNewFields($props)
     {
         $type = $props['type'];
@@ -81,6 +86,7 @@ class TreatmentQuestionIndex extends Component
 
     public function showAddModal()
     {
-        $this->emitTo(ModalFieldsAdd::class, 'showForm');
+        $this->dispatchBrowserEvent('event-add-field');
+        //$this->emitTo(ModalFieldsAdd::class, 'showForm');
     }
 }

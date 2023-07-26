@@ -29,7 +29,7 @@
     @yield('content')
 </div>
 
-@livewireScripts(['preset' => 'preserveScript'])
+@livewireScripts
 <script src="https://kit.fontawesome.com/3c6f321247.js" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/b675a8d36a.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>

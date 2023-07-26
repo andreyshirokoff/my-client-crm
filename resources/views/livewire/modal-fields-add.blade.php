@@ -28,10 +28,13 @@
                         </div>
 {{--                        <div style="color:black">{{$showMultiFields}}</div>--}}
                         @if($showMultiFields != 'false')
-                            <button type="button" class="btn1" data-dismiss="modal" wire:click="addMultiFields">Add Fields</button>
+                            <button type="button" class="btn1 mt-2" wire:click="addMultiFields">Add Fields</button>
                             <div class="w-100 d-flex flex-column" id="radios">
                                 @foreach($fieldsArr as $key => $sf)
-                                    <input type="text" wire:change="updateMultiFieldsValue({{$key}}, '123')">
+                                    <div class="form-group mt-3" id="last-field">
+                                        <label for="addAdditField-{{$key}}" style="color:black">Dodatkowa nazwa pola</label>
+                                        <input type="text" class="form-control mt-2" id="addAdditField-{{$key}}" wire:model="fieldsArr.{{$key}}">
+                                    </div>
                                 @endforeach
                             </div>
                         @endif

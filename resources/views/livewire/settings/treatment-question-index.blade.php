@@ -27,31 +27,43 @@
                         @case('input')
 
                             <div class="listing-element service-block">
-                                <p>{{$f['title']}}</p>
+                                <h6>{{$f['title']}}</h6>
                                 <input class="formularz" name="" data-order="{{$f['order']}}" id="" type="" value="" maxlength="40">
                             </div>
                             @break
                         @case('textarea')
                             <div class="listing-element service-block">
-                                <p>{{$f['title']}}</p>
+                                <h6>{{$f['title']}}</h6>
                                 <textarea class="formularz" name="" data-order="{{$f['order']}}" id="" cols="30" rows="10"></textarea>
                             </div>
                             @break
                         @case('checkbox')
                             <div class="listing-element service-block">
-                                <div style="display:flex;justify-content:space-between;width:100%;flex-wrap:wrap">
-                                    <p>{{$f['title']}}</p>
-                                    <label class="switch">
-                                        <input type="checkbox" name="use_pin" id="use_pin" value="1">
-                                        <span class="slider round"></span>
-                                    </label>
-                                </div>
+                                <h6 class="mb-3">{{$f['title']}}</h6>
+                                @foreach($f['fields'] as $ff)
+                                    <div class="d-flex justify-content-between w-100 flex-wrap">
+                                        <p>{{$ff}}</p>
+                                        <label class="switch">
+                                            <input type="checkbox" name="use_pin" id="use_pin" value="1">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                @endforeach
                             </div>
                             @break
                         @case('radio')
                             <div class="listing-element service-block">
-                                <p>{{$f['title']}}</p>
-                                radio
+                                <h6 class="mb-3">{{$f['title']}}</h6>
+                                @php
+                                    $bytes = random_bytes(16);
+                                    $randCode = substr(str_replace(['/', '+', '='], '', base64_encode($bytes)), 0, 16);
+                                @endphp
+                                @foreach($f['fields'] as $key => $ff)
+                                    <div class="d-flex justify-content-between w-100 flex-wrap @if($key != 0) mt-2 @endif">
+                                        <p>{{$ff}}</p>
+                                        <input type="radio" id="tak2" value="{{$ff}}" name="{{$randCode}}" @if($key == 0) checked @endif>
+                                    </div>
+                                @endforeach
                             </div>
                             @break
                     @endswitch

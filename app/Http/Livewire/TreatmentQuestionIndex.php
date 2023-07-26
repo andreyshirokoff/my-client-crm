@@ -35,10 +35,13 @@ class TreatmentQuestionIndex extends Component
     {
         $type = $props['type'];
         $title = $props['title'];
-        $order = $props['order'];
+        $order = (int)$props['order'];
+        //dd($order);
 
         $key = uniqid();
-        $fields = json_decode($this->field, 1);
+        $fields1 = [];
+        if(isset($props['fields'])) $fields1 = json_decode($props['fields'], 1);
+
         switch($type)
         {
             case 'input':
@@ -61,7 +64,8 @@ class TreatmentQuestionIndex extends Component
                 $fields[$key] = [
                     'type' => $type,
                     'title' => $title,
-                    'order' => 0,
+                    'order' => $order,
+                    'fields' => $fields1,
                 ];
                 break;
 
@@ -69,7 +73,8 @@ class TreatmentQuestionIndex extends Component
                 $fields[$key] = [
                     'type' => $type,
                     'title' => $title,
-                    'order' => 0,
+                    'order' => $order,
+                    'fields' => $fields1,
                 ];
                 break;
         }

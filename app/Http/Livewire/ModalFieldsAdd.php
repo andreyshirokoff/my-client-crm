@@ -30,7 +30,6 @@ class ModalFieldsAdd extends Component
     public function addNewFields()
     {
         $this->validate();
-
         $this->emitUp('addNewFields', ['title' => $this->title, 'order' => $this->order, 'type' => $this->type, 'fields' => json_encode($this->fieldsArr)]);
         $this->title = '';
         $this->order = 0;
@@ -68,5 +67,11 @@ class ModalFieldsAdd extends Component
     public function showAddModal()
     {
         $this->emitTo(ModalFieldsAdd::class, 'showForm');
+    }
+
+    private function generateRandomCode($length = 16)
+    {
+        $bytes = random_bytes($length);
+        return substr(str_replace(['/', '+', '='], '', base64_encode($bytes)), 0, $length);
     }
 }

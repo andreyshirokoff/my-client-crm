@@ -51,7 +51,7 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn1" wire:click="addNewFields">Add</button>
+                    <button type="button" class="btn1" data-dismiss="modal" wire:click="addNewFields">Add</button>
                 </div>
             </div>
         </div>

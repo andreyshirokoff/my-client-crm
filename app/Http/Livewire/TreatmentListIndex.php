@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Service;
+use App\Models\ServicesForm;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
@@ -10,6 +11,9 @@ class TreatmentListIndex extends Component
 {
     public $services;
     public $idService;
+
+    public $isAdded = [];
+
     public function render()
     {
         return view('livewire.settings.treatment-list-index');
@@ -18,6 +22,10 @@ class TreatmentListIndex extends Component
     public function mount()
     {
         $this->services = Service::where('group_id', Auth::user()->group_id)->get();
+
+
+
+
     }
 
     public function copy($id, $name)

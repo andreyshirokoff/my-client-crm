@@ -19,7 +19,7 @@
                 </div>
                 <div style="width:20%">
 {{--                    <a href="{{route('treatment.question', ['type' => 'karta', 'id_service' => $service->id])}}">123</a>--}}
-                    <a href="{{route('treatment.question')}}?type=karta&idservice={{$service->id}}">123</a>
+                    <a href="{{route('treatment.question')}}?type=karta&idservice={{$service->id}}">@if(\App\Models\ServicesForm::where('service_id', $service->id)->first()->id)<i class="fa-solid fa-pen-to-square"></i> @else Dodaj @endif</a>
                 </div>
                 <div style="width:20%">
                     <form class="d-flex gap-3" style="font-size:20px;position:relative;top:-5px">

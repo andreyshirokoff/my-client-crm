@@ -13,6 +13,6 @@
         @endif
     </div>
     <div style="width:10%;display:flex;justify-content:flex-end;" class="width-10">
-        <h6>Pokaż</h6>
+        <a href="{{url('')}}"><button class="btn1" style="color:white">Więcej</button></a>
     </div>
 </div>

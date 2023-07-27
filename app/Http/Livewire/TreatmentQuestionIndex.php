@@ -3,13 +3,16 @@
 namespace App\Http\Livewire;
 
 use App\Models\ServicesForm;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Livewire\Component;
 
 class TreatmentQuestionIndex extends Component
 {
-    protected $queryString = ['type'];
+    public $idservice;
+    protected $queryString = ['idservice'];
+
+    //public $idService;
 
     public ?string $field = '';
     public $fieldsArr = [];
@@ -32,12 +35,11 @@ class TreatmentQuestionIndex extends Component
 
     public function submitForm()
     {
-        dd($this->type);
-        ServicesForm::firstOrNew([
-            'service_id' => $this->id,
+        $ServicesFormSave = ServicesForm::firstOrNew([
+            'service_id' => $this->idservice,
             'fields' => json_encode($this->fieldsArr),
         ]);
-
+        $ServicesFormSave->save();
         return redirect(request()->header('Referer'));
     }
 

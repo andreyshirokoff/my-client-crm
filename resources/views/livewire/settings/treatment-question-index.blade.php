@@ -1,5 +1,8 @@
 
 <div id="heading_block3_2_dodaj_pytania">
+{{--    @php echo '<pre style="color:black">'.print_r($_GET,1).'</pre>'; @endphp--}}
+{{--    <p style="color:black">{{$_GET['id']}}</p>--}}
+{{--    <input type="hidden" value="{{$_GET['id']}}" wire:model.defer="idService">--}}
     <div class="boxinbox-titlebar">
         <div class="icon">
             <i class="fa-solid fa-pen-to-square"></i>
@@ -69,7 +72,7 @@
                     @endswitch
                 @endforeach
                 <div class="listing-actionbar mt-3">
-                    <a><button type="button" class="btn1" style="width:100%;"><i class="fa-solid fa-floppy-disk" style="margin-right:15px;color:white" wire:click.prevent="submitForm"></i></i> Save</button></a>
+                    <a><button type="button" class="btn1" style="width:100%;" wire:click.prevent="submitForm"><i class="fa-solid fa-floppy-disk" style="margin-right:15px;color:white"></i></i> Save</button></a>
                 </div>
 
         @endif

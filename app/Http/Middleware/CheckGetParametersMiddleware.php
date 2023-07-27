@@ -17,7 +17,7 @@ class CheckGetParametersMiddleware
         $serviceId = Service::where('group_id', $groupId)->first()->id;
 
         if (
-            $request->query('id') != $serviceId
+            $request->query('idservice') != $serviceId
             || $role != 'administrator'
         )
         {

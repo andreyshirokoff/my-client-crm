@@ -16,13 +16,17 @@ class CheckGetParametersMiddleware
         $role = Auth::user()->roles;
         $serviceId = Service::where('group_id', $groupId)->first()->id;
 
-        if (
-            $request->query('idservice') != $serviceId
-            || $role != 'administrator'
-        )
+        if($request->query('idservice') !== false)
         {
-            abort(404);
+            if (
+                $request->query('idservice') != $serviceId
+                || $role != 'administrator'
+            )
+            {
+                abort(404);
+            }
         }
+
         return $next($request);
     }
 }

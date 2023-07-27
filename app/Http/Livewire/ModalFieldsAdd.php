@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use Illuminate\Validation\ValidationException;
 use Livewire\Component;
 
 class ModalFieldsAdd extends Component
@@ -10,16 +11,20 @@ class ModalFieldsAdd extends Component
 
     public $title;
     public $type = 'input';
-    public $order;
+    public $order = 0;
     public $fieldsArr = [];
 
-    public $showMultiFields = 'false';
+    public $showMultiFields = false;
 
     protected $rules = [
-        'title' => 'string|required',
+        'title' => 'string|required|min:3',
         'type' => 'string|required',
         'order' => 'integer',
     ];
+//    protected $messages = [
+//        'title.string' => 'Ciąg musi mieć co najmniej 3 znaki',
+//        //'fields.*.string' => 'Ciąg musi mieć co najmniej 3 znaki',
+//    ];
 
 
     public function render()
@@ -29,11 +34,34 @@ class ModalFieldsAdd extends Component
 
     public function addNewFields()
     {
+
         $this->validate();
+//        try {
+//            $this->validate();
+//
+//            // Другая логика обработки формы, если валидация прошла успешно
+//
+//        } catch (ValidationException $e) {
+//            $errors = $e->validator->errors();
+//            // Выводим сообщения об ошибках
+//            dd($errors);
+//        }
+
+        if(count($this->fieldsArr) > 0)
+        {
+            $this->validate([
+                'fields.*' => 'required|string|min:3|max:50'
+            ]);
+        }
+
+//        $this->dispatchBrowserEvent('close-modal');
+
         $this->emitUp('addNewFields', ['title' => $this->title, 'order' => $this->order, 'type' => $this->type, 'fields' => json_encode($this->fieldsArr)]);
         $this->title = '';
         $this->order = 0;
         $this->type = 'input';
+        $this->fieldsArr = [];
+        $this->showMultiFields = false;
     }
 
     public function addMultiFields()
@@ -56,11 +84,11 @@ class ModalFieldsAdd extends Component
     {
         if($this->type == 'radio' || $this->type == 'checkbox')
         {
-            $this->showMultiFields = 'true';
+            $this->showMultiFields = true;
         }
         else
         {
-            $this->showMultiFields = 'false';
+            $this->showMultiFields = false;
         }
     }
 

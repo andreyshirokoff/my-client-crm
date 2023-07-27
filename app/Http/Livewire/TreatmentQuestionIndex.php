@@ -50,6 +50,7 @@ class TreatmentQuestionIndex extends Component
 //        $this->dispatchBrowserEvent('event-add-field');
 //    }
 
+
     public function addNewFields($props)
     {
         $type = $props['type'];
@@ -107,6 +108,119 @@ class TreatmentQuestionIndex extends Component
 //        $this->fieldsArr = $fields;
     }
 
+    public function deleteConfirm($firstKey, $secondKey = 0)
+    {
+        $this->dispatchBrowserEvent('swal:confirm', [
+            'type' => 'warning',
+            'title' => 'Jesteś pewien?',
+            'text' => '',
+            'firstKey' => $firstKey,
+            'secondKey' => $secondKey,
+        ]);
+    }
+    public function deleteFromDb($keys)
+    {
+        $firstKey = $keys[0];
+        $secondKey = $keys[1];
+
+        $returnFields = $this->returnFields;
+
+        foreach($returnFields as $key => $returnField)
+        {
+            $returnFields[$key] = json_decode($returnField,1);
+        }
+
+        if($secondKey != 0)
+        {
+
+            foreach($returnFields as $key => $returnField)
+            {
+
+                if(isset($returnField[$firstKey]['fields'][$secondKey]))
+                {
+
+                    unset($returnField[$firstKey]['fields'][$secondKey]);
+                }
+                if(!count($returnField[$firstKey]['fields']) > 0)
+                {
+                    unset($returnField[$firstKey]);
+                }
+                if(!count($returnField) > 0)
+                {
+                    ServicesForm::where('id', $key)->delete();
+                }
+                else
+                {
+                    ServicesForm::where('id', $key)->update([
+                        'fields' => json_encode($returnField),
+                    ]);
+                }
+            }
+        }
+        else
+        {
+            foreach($returnFields as $key => $returnField)
+            {
+                if(isset($returnField[$firstKey]))
+                {
+
+                    unset($returnField[$firstKey]);
+                }
+                //dd($returnField[$firstKey]);
+                if(!count($returnField) > 0)
+                {
+
+                    ServicesForm::where('id', $key)->delete();
+                }
+                else
+                {
+                    //dd($key);
+                    $res = ServicesForm::where('id', $key)->update([
+                        'fields' => json_encode($returnField),
+                    ]);
+                    //dd($res);
+
+                }
+            }
+        }
+
+        return redirect(request()->header('Referer'));
+    }
+
+    public function deleteFromPage($firstKey, $secondKey = 0)
+    {
+        $fieldsArr = $this->fieldsArr;
+        if($secondKey != 0)
+        {
+            if(isset($fieldsArr[$firstKey]['fields'][$secondKey]))
+            {
+
+                unset($fieldsArr[$firstKey]['fields'][$secondKey]);
+            }
+            if(!count($fieldsArr[$firstKey]['fields']) > 0)
+            {
+                unset($fieldsArr[$firstKey]);
+            }
+            if(!count($fieldsArr) > 0)
+            {
+                $fieldsArr = [];
+            }
+        }
+        else
+        {
+            if(isset($fieldsArr[$firstKey]))
+            {
+                unset($fieldsArr[$firstKey]);
+            }
+            if(!count($fieldsArr) > 0)
+            {
+                $fieldsArr = [];
+            }
+        }
+
+        $this->fieldsArr = $fieldsArr;
+    }
+
 
 
     public function showAddModal()
@@ -118,6 +232,16 @@ class TreatmentQuestionIndex extends Component
     public function mount()
     {
         $ServicesForm = ServicesForm::where('service_id', $this->idservice)->get();
-        $this->returnFields = $ServicesForm->pluck('fields')->toArray();
+//        dd($ServicesForm);
+//        $this->returnFields = $ServicesForm->pluck('fields')->toArray();
+
+        $this->returnFields = $ServicesForm->mapWithKeys(function ($service) {
+            return [$service->id => $service->fields];
+        })->toArray();
+
+//        dd($servicesArray);
+//        $servicesArray = $ServicesForm->mapWithKeys(function ($item) {
+//            return [$item->id => $item->fields];
+//        })->toArray();
     }
 }

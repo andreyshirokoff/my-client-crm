@@ -20,14 +20,19 @@
                         </div>
                         <div class="form-group mt-3">
                             <label for="addNameModal" style="color:black">Nazwa</label>
-                            <input type="text" class="form-control mt-2" id="addNameModal" wire:model.defer="title">
+                            <input type="text" class="form-control mt-2" id="addNameModal" wire:model="title">
                         </div>
+                        @error('title')
+                            <span class="is-invalid" role="alert" style="color:black">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                        @enderror
                         <div class="form-group mt-3" id="last-field">
                             <label for="addOrderModal" style="color:black">Wybierz pole</label>
-                            <input type="number" class="form-control mt-2" id="addOrderModal" wire:model.defer="order">
+                            <input type="number" class="form-control mt-2" id="addOrderModal" wire:model="order">
                         </div>
 {{--                        <div style="color:black">{{$showMultiFields}}</div>--}}
-                        @if($showMultiFields != 'false')
+                        @if($showMultiFields !== false)
                             <button type="button" class="btn1 mt-2" wire:click="addMultiFields">Add Fields</button>
                             <div class="w-100 d-flex flex-column" id="radios">
                                 @foreach($fieldsArr as $key => $sf)
@@ -35,13 +40,18 @@
                                         <label for="addAdditField-{{$key}}" style="color:black">Dodatkowa nazwa pola</label>
                                         <input type="text" class="form-control mt-2" id="addAdditField-{{$key}}" wire:model="fieldsArr.{{$key}}">
                                     </div>
+                                    @error('fieldsArr.'.$key)
+                                        <span class="is-invalid" role="alert" style="color:black">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 @endforeach
                             </div>
                         @endif
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn1" data-dismiss="modal" wire:click.prevent="addNewFields">Add</button>
+                    <button type="button" class="btn1" wire:click="addNewFields">Add</button>
                 </div>
             </div>
         </div>

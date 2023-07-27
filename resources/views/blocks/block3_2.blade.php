@@ -32,6 +32,18 @@
             <div class="boxinbox" style="background: {{$background}}">
                 @include('blocks_content.block3_2_product_create')
             </div>
+        @elseif($block3_3_content_class == 'block3_2_klienta_notatka')
+            <div class="boxinbox" style="background: {{$background}}">
+            @include('blocks_content.block3_2_klienta_notatka')
+            </div>
+        @elseif($block3_3_content_class == 'block3_2_galeria_efektow_przed')
+            <div class="boxinbox" style="background: {{$background}}">
+                @include('blocks_content.block3_2_galeria_efektow_przed')
+            </div>
+        @elseif($block3_3_content_class == 'block3_2_zabiegi_klienta')
+            <div class="boxinbox" style="background: {{$background}}">
+                @include('blocks_content.block3_2_zabiegi_klienta')
+            </div>
         @endif()
     </div>
 

@@ -7,11 +7,14 @@ use Livewire\Component;
 
 class SmallListItem extends Component
 {
+    public $clientId;
+
     public $client;
     public bool $show = false;
 
     public function mount(int $id)
     {
+        $this->clientId = $id;
         $this->client = Client::find($id);
     }
 

@@ -37,6 +37,8 @@
             @include('blocks_content.block3_3_usrsignature')
         @elseif($block3_3_content_class == 'block3_3_usrpin')
             @include('blocks_content.block3_3_usrpin')
+        @elseif($block3_3_content_class == 'block3_2_profil_klienta')
+            @include('blocks_content.block3_3_profil_klienta')
         @endif()
     </div>
 </div>

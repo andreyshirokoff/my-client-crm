@@ -40,10 +40,16 @@ Route::middleware('auth')->prefix('dashboard')->group(function (){
     if(Schema::hasTable('news')){
         Route::get('/news/{slug}', [\App\Http\Controllers\NewsPageController::class, 'index'])->name('news');
     }
+    Route::prefix('functions')->group(function (){
+        Route::post('/treatment-create-add', [\App\Http\Controllers\DashboardPageController::class, 'treatmentCreate'])->name('treatment.create.add');
+    });
+
+    Route::get('/clients', function (){
+        return view('client_page');
+    })->name('clients');
+
 });
-Route::prefix('functions')->group(function (){
-    Route::post('/treatment-create-add', [\App\Http\Controllers\DashboardPageController::class, 'treatmentCreate'])->name('treatment.create.add');
-});
+
 
 //ustawienia
 Route::get('/functions/usrimage', function () {

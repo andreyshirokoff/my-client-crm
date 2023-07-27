@@ -99,7 +99,12 @@
                     'block3_2_heading' => 'heading_block3_2_dodaj_zabieg',
                 ])
         @elseif($block3_3_content_class == 'block3_2_dodaj_pytania')
-            <livewire:treatment-question-index/>
+{{--            <div>--}}
+{{--            <livewire:treatment-quest-result-index />--}}
+{{--            </div>--}}
+            <div>
+            <livewire:treatment-question-index />
+            </div>
         @elseif($block3_3_content_class == 'block3_2_product_create')
             @include('blocks.block3_2', [
                     'block3_2_icon' => 'fas fa-user-friends',

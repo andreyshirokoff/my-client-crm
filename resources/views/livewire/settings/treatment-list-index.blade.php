@@ -19,7 +19,7 @@
                 </div>
                 <div style="width:20%">
 {{--                    <a href="{{route('treatment.question', ['type' => 'karta', 'id_service' => $service->id])}}">123</a>--}}
-                    <a href="{{route('treatment.question')}}?type=gagaga&idservice={{$service->id}}">123</a>
+                    <a href="{{route('treatment.question')}}?type=karta&idservice={{$service->id}}">123</a>
                 </div>
                 <div style="width:20%">
                     <form class="d-flex gap-3" style="font-size:20px;position:relative;top:-5px">

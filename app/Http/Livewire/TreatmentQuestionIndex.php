@@ -17,6 +17,8 @@ class TreatmentQuestionIndex extends Component
     public ?string $field = '';
     public $fieldsArr = [];
 
+    public $returnFields = [];
+
     public $rules = [
         'field' => 'required|min:10'
     ];
@@ -111,5 +113,11 @@ class TreatmentQuestionIndex extends Component
     {
         $this->dispatchBrowserEvent('event-add-field');
         //$this->emitTo(ModalFieldsAdd::class, 'showForm');
+    }
+
+    public function mount()
+    {
+        $ServicesForm = ServicesForm::where('service_id', $this->idservice)->get();
+        $this->returnFields = $ServicesForm->pluck('fields')->toArray();
     }
 }

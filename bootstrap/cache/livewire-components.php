@@ -8,6 +8,7 @@
   'rodo-index' => 'App\\Http\\Livewire\\RodoIndex',
   'treatment-create-index' => 'App\\Http\\Livewire\\TreatmentCreateIndex',
   'treatment-list-index' => 'App\\Http\\Livewire\\TreatmentListIndex',
+  'treatment-quest-result-index' => 'App\\Http\\Livewire\\TreatmentQuestResultIndex',
   'treatment-question-index' => 'App\\Http\\Livewire\\TreatmentQuestionIndex',
   'treatment-template-index' => 'App\\Http\\Livewire\\TreatmentTemplateIndex',
   'upload-image-form' => 'App\\Http\\Livewire\\UploadImageForm',

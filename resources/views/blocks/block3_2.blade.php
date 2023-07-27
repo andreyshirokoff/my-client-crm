@@ -44,6 +44,10 @@
             <div class="boxinbox" style="background: {{$background}}">
                 @include('blocks_content.block3_2_zabiegi_klienta')
             </div>
+        @elseif($block3_3_content_class == 'block3_2_zabiegi_klienta')
+            <div class="boxinbox" style="background: {{$background}}">
+                @include('blocks_content.block3_2_zabiegi_klienta')
+            </div>
         @endif()
     </div>
 

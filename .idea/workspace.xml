@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9be1317-6be4-4290-9727-b2bf61f43604" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/AddClientProcedureIndex.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/edit_procedure.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/add-client-procedure-index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/AddClientProcedureIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/AddClientProcedureIndex.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Livewire/EditClientProcedureIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/EditClientProcedureIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/cache/livewire-components.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/cache/livewire-components.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/cache/routes-v7.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/cache/routes-v7.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/add_procedure.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/add_procedure.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/clients/client-procedure-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/clients/client-procedure-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/edit-client-procedure-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/edit-client-procedure-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -231,7 +223,7 @@
       <workItem from="1690560121143" duration="2000" />
       <workItem from="1690565231760" duration="2400000" />
       <workItem from="1690569068947" duration="160000" />
-      <workItem from="1690569477626" duration="3947000" />
+      <workItem from="1690569477626" duration="4756000" />
     </task>
     <servers />
   </component>

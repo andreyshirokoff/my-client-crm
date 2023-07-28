@@ -20,7 +20,7 @@ class EditClientProcedureIndex extends Component
     {
         $clientService = ClientService::where('id', $this->clientServiceId)->first();
         $this->servicesForm = \App\Models\ServicesForm::where('service_id', $clientService->service_id)->get();
-        dd($this->servicesForm);
+
         //$arrayFromDb = json_decode($clientService->fields);
         $note = ClientNote::where('id', $clientService->note_id)->first();
         $arrayFromDb = json_decode($note->note,1);

@@ -88,14 +88,15 @@ class AddClientProcedureIndex extends Component
         $clientNoteId = $clientNoteCreate->id;
 
         $service = Service::where('id', $this->serviceId)->first();
-        ClientService::create([
+        $ClientService = ClientService::create([
             'name' => $service->name,
             'client_id' => $this->clientId,
             'service_id' => $this->serviceId,
             'note_id' => $clientNoteId,
         ]);
 
-        return redirect(request()->header('Referer'));
+        //return redirect(request()->header('Referer'));
+        return redirect('dashboard/edit-procedure?clientServiceId='.$ClientService->id);
     }
 
 

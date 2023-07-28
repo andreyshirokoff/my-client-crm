@@ -1,121 +1,122 @@
 @extends('layout.app')
 
 @section('content')
-    <link rel="stylesheet" href="{{asset('css/slider.css')}}">
-    <div class="box">
-        <div class="boxinbox__body" id="accordion">
+    <livewire:edit-client-procedure-index/>
+{{--    <link rel="stylesheet" href="{{asset('css/slider.css')}}">--}}
+{{--    <div class="box">--}}
+{{--        <div class="boxinbox__body" id="accordion">--}}
 
-            <div class="boxinbox-titlebar" style="margin-top:10px;">
-                <div class="icon">
-                    <i class="fas fa-cog" aria-hidden="true"></i>
-                </div>
-                <div style="margin-left:20px;">
-                    <h3>Ustawienia</h3>
-                </div>
-            </div>
+{{--            <div class="boxinbox-titlebar" style="margin-top:10px;">--}}
+{{--                <div class="icon">--}}
+{{--                    <i class="fas fa-cog" aria-hidden="true"></i>--}}
+{{--                </div>--}}
+{{--                <div style="margin-left:20px;">--}}
+{{--                    <h3>Ustawienia</h3>--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
-            <div class="box-content" style="background: #fff">
-
-
-
-                <div>
-                    <div wire:id="Q5Tyh2hCfm48zlvWGXH5">
-                        <div id="heading_block3_2_edycja_karty_zabiegowej">
+{{--            <div class="box-content" style="background: #fff">--}}
 
 
 
-                            <div class="boxinbox-titlebar">
-                                <div class="icon">
-                                    <i class="fa-solid fa-list"></i>
-                                </div>
-                                <div style="margin-left:20px;"><h3>Karty zabiegowej</h3></div>
-                            </div>
-
-                            <div class="boxinbox" style="background-color: rgb(240, 241, 241);">
-                                <form action="{{route('send.answers')}}" method="POST">
-                                    @csrf
+{{--                <div>--}}
+{{--                    <div wire:id="Q5Tyh2hCfm48zlvWGXH5">--}}
+{{--                        <div id="heading_block3_2_edycja_karty_zabiegowej">--}}
 
 
 
+{{--                            <div class="boxinbox-titlebar">--}}
+{{--                                <div class="icon">--}}
+{{--                                    <i class="fa-solid fa-list"></i>--}}
+{{--                                </div>--}}
+{{--                                <div style="margin-left:20px;"><h3>Karty zabiegowej</h3></div>--}}
+{{--                            </div>--}}
 
-                                @foreach(\App\Models\ServicesForm::where('service_id', $_GET['serviceId'])->get() as $key => $service)
-                                    <div class="listing-titlebar d-flex flex-column" style="margin-top:10px;">
+{{--                            <div class="boxinbox" style="background-color: rgb(240, 241, 241);">--}}
+{{--                                <form action="{{route('send.answers')}}" method="POST">--}}
+{{--                                    @csrf--}}
 
-                                    </div>
-                                    @foreach(json_decode($service->fields, 1) as $f)
-                                        @switch($f['type'])
-                                            @case('input')
 
-                                                <div class="listing-element service-block">
-                                                    <h6>{{$f['title']}}</h6>
-                                                    <div class="d-flex gap-3 align-items-center w-100" style="">
-                                                        <input type="hidden" name="title_{{$key}}" value="{{$f['title']}}">
-                                                        <input class="formularz" name="UF_{{$key}}" data-order="{{$f['order']}}" id="" type="" value="" maxlength="40">
+
+
+{{--                                @foreach(\App\Models\ServicesForm::where('service_id', $_GET['serviceId'])->get() as $key => $service)--}}
+{{--                                    <div class="listing-titlebar d-flex flex-column" style="margin-top:10px;">--}}
+
+{{--                                    </div>--}}
+{{--                                    @foreach(json_decode($service->fields, 1) as $f)--}}
+{{--                                        @switch($f['type'])--}}
+{{--                                            @case('input')--}}
+
+{{--                                                <div class="listing-element service-block">--}}
+{{--                                                    <h6>{{$f['title']}}</h6>--}}
+{{--                                                    <div class="d-flex gap-3 align-items-center w-100" style="">--}}
+{{--                                                        <input type="hidden" name="title_{{$key}}" value="{{$f['title']}}">--}}
+{{--                                                        <input class="formularz" name="UF_{{$key}}" data-order="{{$f['order']}}" id="" type="" value="" maxlength="40">--}}
 {{--                                                        <i class="fa-solid fa-trash" style="cursor:pointer;color:black;font-size: 22px;" wire:click="deleteConfirm('{{$key}}')"></i>--}}
-                                                    </div>
-                                                </div>
-                                                @break
-                                            @case('textarea')
-                                                <div class="listing-element service-block">
-                                                    <h6>{{$f['title']}}</h6>
-                                                    <div class="d-flex gap-3 align-items-center w-100" style="">
-                                                        <input type="hidden" name="title_{{$key}}" value="{{$f['title']}}">
-                                                        <textarea class="formularz" name="UF_{{$key}}" data-order="{{$f['order']}}" id="" cols="30" rows="10"></textarea>
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
+{{--                                                @break--}}
+{{--                                            @case('textarea')--}}
+{{--                                                <div class="listing-element service-block">--}}
+{{--                                                    <h6>{{$f['title']}}</h6>--}}
+{{--                                                    <div class="d-flex gap-3 align-items-center w-100" style="">--}}
+{{--                                                        <input type="hidden" name="title_{{$key}}" value="{{$f['title']}}">--}}
+{{--                                                        <textarea class="formularz" name="UF_{{$key}}" data-order="{{$f['order']}}" id="" cols="30" rows="10"></textarea>--}}
 {{--                                                        <i class="fa-solid fa-trash" style="cursor:pointer;color:black;font-size: 22px;" wire:click="deleteConfirm('{{$key}}')"></i>--}}
-                                                    </div>
-                                                </div>
-                                                @break
-                                            @case('checkbox')
-                                                <div class="listing-element service-block">
-                                                    <h6 class="mb-3">{{$f['title']}}</h6>
-                                                    @foreach($f['fields'] as $keyff => $ff)
-                                                        <div class="d-flex justify-content-between w-100 flex-wrap @if($keyff != 0) mt-2 @endif">
-                                                            <p>{{$ff}}</p>
-                                                            <div class="d-flex gap-3 align-items-center" style="">
-                                                                <label class="switch">
-                                                                    <input type="checkbox" name="UF_{{$keyff}}" id="use_pin" value="1">
-                                                                    <span class="slider round"></span>
-                                                                </label>
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
+{{--                                                @break--}}
+{{--                                            @case('checkbox')--}}
+{{--                                                <div class="listing-element service-block">--}}
+{{--                                                    <h6 class="mb-3">{{$f['title']}}</h6>--}}
+{{--                                                    @foreach($f['fields'] as $keyff => $ff)--}}
+{{--                                                        <div class="d-flex justify-content-between w-100 flex-wrap @if($keyff != 0) mt-2 @endif">--}}
+{{--                                                            <p>{{$ff}}</p>--}}
+{{--                                                            <div class="d-flex gap-3 align-items-center" style="">--}}
+{{--                                                                <label class="switch">--}}
+{{--                                                                    <input type="checkbox" name="UF_{{$keyff}}" id="use_pin" value="1">--}}
+{{--                                                                    <span class="slider round"></span>--}}
+{{--                                                                </label>--}}
 {{--                                                                <i class="fa-solid fa-trash" style="cursor:pointer;color:black;font-size: 22px;" wire:click="deleteConfirm('{{$key}}', '{{$keyff}}')"></i>--}}
-                                                            </div>
-                                                        </div>
-                                                    @endforeach
-                                                </div>
-                                                @break
-                                            @case('radio')
-                                                <div class="listing-element service-block">
-                                                    <h6 class="mb-3">{{$f['title']}}</h6>
-                                                    {{--                                    @php--}}
-                                                    {{--                                        $bytes = random_bytes(16);--}}
-                                                    {{--                                        $randCode = substr(str_replace(['/', '+', '='], '', base64_encode($bytes)), 0, 16);--}}
-                                                    {{--                                    @endphp--}}
-                                                    @php
-                                                        $i = 0;
-                                                        $radioName = uniqid();
-                                                    @endphp
-                                                    @foreach($f['fields'] as $keyff => $ff)
+{{--                                                            </div>--}}
+{{--                                                        </div>--}}
+{{--                                                    @endforeach--}}
+{{--                                                </div>--}}
+{{--                                                @break--}}
+{{--                                            @case('radio')--}}
+{{--                                                <div class="listing-element service-block">--}}
+{{--                                                    <h6 class="mb-3">{{$f['title']}}</h6>--}}
+{{--                                                    --}}{{--                                    @php--}}
+{{--                                                    --}}{{--                                        $bytes = random_bytes(16);--}}
+{{--                                                    --}}{{--                                        $randCode = substr(str_replace(['/', '+', '='], '', base64_encode($bytes)), 0, 16);--}}
+{{--                                                    --}}{{--                                    @endphp--}}
+{{--                                                    @php--}}
+{{--                                                        $i = 0;--}}
+{{--                                                        $radioName = uniqid();--}}
+{{--                                                    @endphp--}}
+{{--                                                    @foreach($f['fields'] as $keyff => $ff)--}}
 
-                                                        <div class="d-flex justify-content-between w-100 flex-wrap @if($i != 0) mt-2 @endif">
-                                                            <p>{{$ff}}</p>
-                                                            <div class="d-flex gap-3 align-items-center" style="">
-                                                                <input type="radio" id="tak2" value="{{$ff}}" name="UF_{{$radioName}}" @if($i == 0) checked @endif>
+{{--                                                        <div class="d-flex justify-content-between w-100 flex-wrap @if($i != 0) mt-2 @endif">--}}
+{{--                                                            <p>{{$ff}}</p>--}}
+{{--                                                            <div class="d-flex gap-3 align-items-center" style="">--}}
+{{--                                                                <input type="radio" id="tak2" value="{{$ff}}" name="UF_{{$radioName}}" @if($i == 0) checked @endif>--}}
 {{--                                                                <i class="fa-solid fa-trash" style="cursor:pointer;color:black;font-size: 22px;" wire:click="deleteConfirm('{{$key}}', '{{$keyff}}')"></i>--}}
-                                                            </div>
-                                                        </div>
-                                                        @php
-                                                            $i++;
-                                                        @endphp
-                                                    @endforeach
-                                                </div>
-                                                @break
-                                        @endswitch
+{{--                                                            </div>--}}
+{{--                                                        </div>--}}
+{{--                                                        @php--}}
+{{--                                                            $i++;--}}
+{{--                                                        @endphp--}}
+{{--                                                    @endforeach--}}
+{{--                                                </div>--}}
+{{--                                                @break--}}
+{{--                                        @endswitch--}}
 
-                                    @endforeach
+{{--                                    @endforeach--}}
 
-                                    <div class="listing-actionbar">
-                                        <button type="sumbit" class="btn1" style="margin-left:10px;" ><i class="fa-solid fa-share" aria-hidden="true" style="color:white"></i> Wysłać</button>
-                                    </div>
-                                </form>
+{{--                                    <div class="listing-actionbar">--}}
+{{--                                        <button type="sumbit" class="btn1" style="margin-left:10px;" ><i class="fa-solid fa-share" aria-hidden="true" style="color:white"></i> Wysłać</button>--}}
+{{--                                    </div>--}}
+{{--                                </form>--}}
 
 
 
@@ -158,24 +159,24 @@
 {{--                                        </div>--}}
 {{--                                    </div>--}}
 {{--                                </div>--}}
-                                @endforeach
+{{--                                @endforeach--}}
 
 
-                            </div>
+{{--                            </div>--}}
 
 
 
 
 
-                                <!-- Livewire Component wire-end:M9Wxq53evaYOyxxJ8WBS -->                </div>
-                            <script>
-                                document.addEventListener('event-add-field', () => {
-                                    let modalItem = new bootstrap.Modal(document.querySelector('#addField'))
-                                    modalItem.show()
-                                })
-                            </script>
-                        </div>
-                        <div class="mar"></div>
+{{--                                <!-- Livewire Component wire-end:M9Wxq53evaYOyxxJ8WBS -->                </div>--}}
+{{--                            <script>--}}
+{{--                                document.addEventListener('event-add-field', () => {--}}
+{{--                                    let modalItem = new bootstrap.Modal(document.querySelector('#addField'))--}}
+{{--                                    modalItem.show()--}}
+{{--                                })--}}
+{{--                            </script>--}}
+{{--                        </div>--}}
+{{--                        <div class="mar"></div>--}}
 {{--                        <div id="heading_block3_2_dodaj_pytania">--}}
 
 
@@ -284,10 +285,10 @@
 {{--                            </script>--}}
 {{--                        </div>--}}
 
-                    </div>
+{{--                    </div>--}}
 
-                    <!-- Livewire Component wire-end:Q5Tyh2hCfm48zlvWGXH5 -->            </div>
-            </div>
-        </div>
-    </div>
+{{--                    <!-- Livewire Component wire-end:Q5Tyh2hCfm48zlvWGXH5 -->            </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
 @endsection

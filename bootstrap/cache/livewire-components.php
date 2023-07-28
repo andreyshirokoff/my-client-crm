@@ -5,6 +5,7 @@
   'clients.create-clients-item' => 'App\\Http\\Livewire\\Clients\\CreateClientsItem',
   'clients.small-list-item' => 'App\\Http\\Livewire\\Clients\\SmallListItem',
   'edit-account-index' => 'App\\Http\\Livewire\\EditAccountIndex',
+  'edit-client-procedure-index' => 'App\\Http\\Livewire\\EditClientProcedureIndex',
   'history-index' => 'App\\Http\\Livewire\\HistoryIndex',
   'modal-fields-add' => 'App\\Http\\Livewire\\ModalFieldsAdd',
   'rodo-index' => 'App\\Http\\Livewire\\RodoIndex',

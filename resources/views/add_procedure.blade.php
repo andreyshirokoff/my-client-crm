@@ -107,6 +107,10 @@
 
                                     @endforeach
 
+                                    <div class="listing-actionbar">
+                                        <a id=""><button type="button" class="btn1" style="margin-left:10px;" ><i class="fa-solid fa-share" aria-hidden="true" style="color:white"></i> Wysłać</button></a>
+                                    </div>
+
 
 
 

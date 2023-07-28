@@ -92,8 +92,8 @@
 
 
 
-    <div class="listing-actionbar">
-        <select class="input-control w-100" id="select_service">
+    <div class="listing-actionbar justify-content-between">
+        <select class="input-control w-100" id="select_service" style="width:50%!important;">
             @foreach(\App\Models\Service::get() as $service)
                 <option value="{{$service->id}}">{{$service->name}}</option>
             @endforeach

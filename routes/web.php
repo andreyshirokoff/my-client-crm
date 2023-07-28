@@ -36,6 +36,9 @@ Route::middleware('auth')->prefix('dashboard')->group(function (){
     Route::prefix('ustawienia')->group(function (){
         Route::post('/rodo-reset', [\App\Http\Controllers\DashboardPageController::class, 'rodoReset'])->name('rodo.reset');
     });
+    Route::prefix('ustawienia')->group(function (){
+        Route::post('/send-answers', [\App\Http\Controllers\DashboardPageController::class, 'sendAnswers'])->name('send.answers');
+    });
 
     if(Schema::hasTable('news')){
         Route::get('/news/{slug}', [\App\Http\Controllers\NewsPageController::class, 'index'])->name('news');

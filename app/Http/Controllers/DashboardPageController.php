@@ -177,4 +177,9 @@ class DashboardPageController extends Controller
         return redirect('/functions/usrsignature');
 
     }
+
+    public function sendAnswers(Request $request)
+    {
+        dd($request->input());
+    }
 }

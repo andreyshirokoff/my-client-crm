@@ -32,6 +32,8 @@
                             </div>
 
                             <div class="boxinbox" style="background-color: rgb(240, 241, 241);">
+                                <form action="{{route('send.answers')}}" method="POST">
+                                    @csrf
 
 
 
@@ -69,7 +71,7 @@
                                                             <p>{{$ff}}</p>
                                                             <div class="d-flex gap-3 align-items-center" style="">
                                                                 <label class="switch">
-                                                                    <input type="checkbox" name="UF_{{$key}}" id="use_pin" value="1">
+                                                                    <input type="checkbox" name="UF_{{$keyff}}" id="use_pin" value="1">
                                                                     <span class="slider round"></span>
                                                                 </label>
 {{--                                                                <i class="fa-solid fa-trash" style="cursor:pointer;color:black;font-size: 22px;" wire:click="deleteConfirm('{{$key}}', '{{$keyff}}')"></i>--}}
@@ -87,13 +89,14 @@
                                                     {{--                                    @endphp--}}
                                                     @php
                                                         $i = 0;
+                                                        $radioName = uniqid();
                                                     @endphp
                                                     @foreach($f['fields'] as $keyff => $ff)
 
                                                         <div class="d-flex justify-content-between w-100 flex-wrap @if($i != 0) mt-2 @endif">
                                                             <p>{{$ff}}</p>
                                                             <div class="d-flex gap-3 align-items-center" style="">
-                                                                <input type="radio" id="tak2" value="{{$ff}}" name="UF_{{$key}}" @if($i == 0) checked @endif>
+                                                                <input type="radio" id="tak2" value="{{$ff}}" name="UF_{{$radioName}}" @if($i == 0) checked @endif>
 {{--                                                                <i class="fa-solid fa-trash" style="cursor:pointer;color:black;font-size: 22px;" wire:click="deleteConfirm('{{$key}}', '{{$keyff}}')"></i>--}}
                                                             </div>
                                                         </div>
@@ -108,8 +111,9 @@
                                     @endforeach
 
                                     <div class="listing-actionbar">
-                                        <a id=""><button type="button" class="btn1" style="margin-left:10px;" ><i class="fa-solid fa-share" aria-hidden="true" style="color:white"></i> Wysłać</button></a>
+                                        <button type="sumbit" class="btn1" style="margin-left:10px;" ><i class="fa-solid fa-share" aria-hidden="true" style="color:white"></i> Wysłać</button>
                                     </div>
+                                </form>
 
 
 
@@ -156,43 +160,7 @@
 
 
                             </div>
-                            <div class="modal fade" id="addField" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div wire:id="M9Wxq53evaYOyxxJ8WBS" class="modal-dialog" role="document" style="top:50%;transform:translateY(-70%)">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel" style="color:black">Dodaj pole</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">×</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form>
-                                                <div class="form-group">
 
-                                                    <label for="addFieldSelect" style="color:black">Wybierz pole</label>
-                                                    <select class="form-control mt-2" id="addFieldModal" wire:model="type">
-                                                        <option value="input">Input</option>
-                                                        <option value="textarea">Textarea</option>
-                                                        <option value="checkbox">Checkbox</option>
-                                                        <option value="radio">Radio</option>
-                                                    </select>
-                                                </div>
-                                                <div class="form-group mt-3">
-                                                    <label for="addNameModal" style="color:black">Nazwa</label>
-                                                    <input type="text" class="form-control mt-2" id="addNameModal" wire:model="title">
-                                                </div>
-                                                <div class="form-group mt-3" id="last-field">
-                                                    <label for="addOrderModal" style="color:black">Wybierz pole</label>
-                                                    <input type="number" class="form-control mt-2" id="addOrderModal" wire:model="order">
-                                                </div>
-
-                                            </form>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn1" data-dismiss="modal" wire:click="addNewFields">Add</button>
-                                        </div>
-                                    </div>
-                                </div>
 
 
 

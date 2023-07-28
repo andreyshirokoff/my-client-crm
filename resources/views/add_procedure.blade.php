@@ -26,9 +26,9 @@
 
                             <div class="boxinbox-titlebar">
                                 <div class="icon">
-                                    <i class="fa-solid fa-pen-to-square"></i>
+                                    <i class="fa-solid fa-list"></i>
                                 </div>
-                                <div style="margin-left:20px;"><h3>Edycja karty zabiegowej</h3></div>
+                                <div style="margin-left:20px;"><h3>Karty zabiegowej</h3></div>
                             </div>
 
                             <div class="boxinbox" style="background-color: rgb(240, 241, 241);">

@@ -1,4 +1,5 @@
 <?php return array (
+  'add-client-procedure-index' => 'App\\Http\\Livewire\\AddClientProcedureIndex',
   'client-index' => 'App\\Http\\Livewire\\ClientIndex',
   'client-procedure-index' => 'App\\Http\\Livewire\\ClientProcedureIndex',
   'clients.client-page' => 'App\\Http\\Livewire\\Clients\\ClientPage',

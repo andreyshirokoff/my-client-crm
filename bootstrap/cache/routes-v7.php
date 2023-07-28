@@ -41,7 +41,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::BJ87p99UmKI1K8Xh',
+            '_route' => 'generated::kBLznvobuxIMfYNM',
           ),
           1 => NULL,
           2 => 
@@ -151,7 +151,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::64QzLTqHv2fGxFKf',
+            '_route' => 'generated::JZ8OJdmYyOEPOHej',
           ),
           1 => NULL,
           2 => 
@@ -208,7 +208,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::LxcMOVGq67C9cJZ1',
+            '_route' => 'generated::op13AI1yjOmrKWgs',
           ),
           1 => NULL,
           2 => 
@@ -264,7 +264,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::GG6Iq0RYwyZNDNfa',
+            '_route' => 'nova.api.generated::sdzoU3rpnYQNaqqs',
           ),
           1 => NULL,
           2 => 
@@ -284,7 +284,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::jBjmqGi0bvSY1udW',
+            '_route' => 'nova.api.generated::TKfbHE5Nu6wITAkn',
           ),
           1 => NULL,
           2 => 
@@ -300,7 +300,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::ulpb3wy0WFV3sfj0',
+            '_route' => 'nova.api.generated::qjEYzIUQhivkWyC8',
           ),
           1 => NULL,
           2 => 
@@ -319,7 +319,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::xQguzNcLpbrQi9bO',
+            '_route' => 'nova.api.generated::4tbKxYGeLFsT56Yt',
           ),
           1 => NULL,
           2 => 
@@ -339,7 +339,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::k9rL37XU9lxhtVaR',
+            '_route' => 'nova.api.generated::xN1UE3sowAfaC7Fc',
           ),
           1 => NULL,
           2 => 
@@ -397,7 +397,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::Lkk6KVDG3PpeY9X3',
+            '_route' => 'generated::huN4oJmQLipHpxul',
           ),
           1 => NULL,
           2 => 
@@ -417,7 +417,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::6VmxlDwi40YiIHjR',
+            '_route' => 'generated::9PBE3EsS99xDsq74',
           ),
           1 => NULL,
           2 => 
@@ -690,7 +690,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::LrUhSZvnbclOpkEO',
+            '_route' => 'generated::nOmKJxJVAhh3MwQA',
           ),
           1 => NULL,
           2 => 
@@ -710,7 +710,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::W6x00f3jhNiETmdS',
+            '_route' => 'generated::Wm4LXXXi6QBeQj7k',
           ),
           1 => NULL,
           2 => 
@@ -979,13 +979,33 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/dashboard/edit-procedure' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'edit.procedure',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
       '/functions/usrimage' => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'generated::OwEJGNXu45f8qaWU',
+            '_route' => 'generated::7T6a4LROZ8yoyQoQ',
           ),
           1 => NULL,
           2 => 
@@ -1005,7 +1025,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::ULKT3e4NAfel7Hwd',
+            '_route' => 'generated::xT7BwTpyn79UYJoA',
           ),
           1 => NULL,
           2 => 
@@ -1025,7 +1045,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::uuo4LgYmc2SC9AlH',
+            '_route' => 'generated::hCTAGj4c1DWQvOO7',
           ),
           1 => NULL,
           2 => 
@@ -1045,7 +1065,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::bPGADZVQhqGSNvEh',
+            '_route' => 'generated::S9LFyg9DrywKq0js',
           ),
           1 => NULL,
           2 => 
@@ -1065,7 +1085,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::B01dQtn613bqEbwr',
+            '_route' => 'generated::AO5Qet5EnE56Nelf',
           ),
           1 => NULL,
           2 => 
@@ -1085,7 +1105,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::o0CqSnuFabTUP3A7',
+            '_route' => 'generated::jZzrxOHcplpfsvl2',
           ),
           1 => NULL,
           2 => 
@@ -1105,7 +1125,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::2zZFYLGyuByZZjKM',
+            '_route' => 'generated::00OxKPfKhOHB3Dag',
           ),
           1 => NULL,
           2 => 
@@ -1145,7 +1165,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::n7ux7sbeVQQoopVH',
+            '_route' => 'generated::RIralLXZv9AHkrtB',
           ),
           1 => NULL,
           2 => 
@@ -1218,7 +1238,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::2SXX04uiFqU3nthS',
+            '_route' => 'nova.api.generated::89DHqspSLZSv6Fe6',
           ),
           1 => 
           array (
@@ -1241,7 +1261,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::bLIlgOMGFsyDdixv',
+            '_route' => 'nova.api.generated::zpqzO32e8t0TDe1v',
           ),
           1 => 
           array (
@@ -1265,7 +1285,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::h2HRyfk548j7zTiy',
+            '_route' => 'nova.api.generated::6ljMpnXiN2i0fzAC',
           ),
           1 => 
           array (
@@ -1288,7 +1308,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::CGreibloheiMpks6',
+            '_route' => 'nova.api.generated::c4ngOKjyVzTZoNpV',
           ),
           1 => 
           array (
@@ -1308,7 +1328,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::2siY4CYViPqiZi83',
+            '_route' => 'nova.api.generated::7diZanKMjNiCQ4qc',
           ),
           1 => 
           array (
@@ -1331,7 +1351,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::HHF2jNSkju1y4XOw',
+            '_route' => 'nova.api.generated::b08nzOHArOLkEabB',
           ),
           1 => 
           array (
@@ -1355,7 +1375,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::InOZW3E2OQxt5hcZ',
+            '_route' => 'nova.api.generated::QsJz1n3S1GNzup8R',
           ),
           1 => 
           array (
@@ -1379,7 +1399,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::ghBvtRLO9yjSuoQc',
+            '_route' => 'nova.api.generated::KGX39zkWL6OE2noq',
           ),
           1 => 
           array (
@@ -1402,7 +1422,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::k30xR9pt4gphrBIB',
+            '_route' => 'nova.api.generated::ftmMuxFzvDPxjCHd',
           ),
           1 => 
           array (
@@ -1426,7 +1446,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::7LFH1wscoV3dMyrs',
+            '_route' => 'nova.api.generated::Q95UFhHMd42jtqDM',
           ),
           1 => 
           array (
@@ -1452,7 +1472,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::spIvOTfOdJhDHP2j',
+            '_route' => 'nova.api.generated::j7ETtwydWL1TSoNf',
           ),
           1 => 
           array (
@@ -1477,7 +1497,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::1VI2fJJTY641AvZ4',
+            '_route' => 'nova.api.generated::OK3SXfo9bW6KBYm8',
           ),
           1 => 
           array (
@@ -1499,7 +1519,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::CbYhFwEUjWC7720Z',
+            '_route' => 'nova.api.generated::0dMjJ6eGgTQklp0Z',
           ),
           1 => 
           array (
@@ -1522,7 +1542,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::sGimUJ7NRuWxI2WC',
+            '_route' => 'nova.api.generated::KDOt1l08EyYhHw2n',
           ),
           1 => 
           array (
@@ -1547,7 +1567,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::XFhVkS2yjUBPhTLI',
+            '_route' => 'nova.api.generated::M6bTitlJ2QPyLoyz',
           ),
           1 => 
           array (
@@ -1571,7 +1591,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::X57FxmdlGrW574od',
+            '_route' => 'nova.api.generated::9cgKw5zo9pdFiB8N',
           ),
           1 => 
           array (
@@ -1596,7 +1616,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::8Xr91FHjl2q7MuLY',
+            '_route' => 'nova.api.generated::MrOaChEUeNSgb6Au',
           ),
           1 => 
           array (
@@ -1620,7 +1640,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::4xNzWROWC88s4IOT',
+            '_route' => 'nova.api.generated::Q8sZhchsaz8DrVOy',
           ),
           1 => 
           array (
@@ -1646,7 +1666,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::dlBr18OtI9JDCg1C',
+            '_route' => 'nova.api.generated::xvkBuDxh4BAPmVUX',
           ),
           1 => 
           array (
@@ -1669,7 +1689,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::m4cuKEIoJ7jMbzD1',
+            '_route' => 'nova.api.generated::h33dO5IlXRY47snC',
           ),
           1 => 
           array (
@@ -1692,7 +1712,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::8VfieUBPxkTg7brh',
+            '_route' => 'nova.api.generated::rHHIgaqpOZSIqFaP',
           ),
           1 => 
           array (
@@ -1714,7 +1734,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::sZlzZpmT2G9JF52A',
+            '_route' => 'nova.api.generated::0vE3vN5NhWxDGUzv',
           ),
           1 => 
           array (
@@ -1736,7 +1756,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::zNrGNmOLdsyNIudc',
+            '_route' => 'nova.api.generated::0gOpmejcmD2yhLfT',
           ),
           1 => 
           array (
@@ -1759,7 +1779,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::Ld3hT9uM3myEo3An',
+            '_route' => 'nova.api.generated::6YODrkvT3pfPIPV0',
           ),
           1 => 
           array (
@@ -1778,7 +1798,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::FSrrOd6Rtiunx3F3',
+            '_route' => 'nova.api.generated::R4AeEoY3TFlIMzcn',
           ),
           1 => 
           array (
@@ -1800,7 +1820,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::VE1FWUZ5VQkEBlu5',
+            '_route' => 'nova.api.generated::9zVdBnsNiFvNKvmK',
           ),
           1 => 
           array (
@@ -1823,7 +1843,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::Gwry3smUHknsChdZ',
+            '_route' => 'nova.api.generated::YYqUnQYkGLva398a',
           ),
           1 => 
           array (
@@ -1846,7 +1866,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::IpEF7pLRc6rPeitd',
+            '_route' => 'nova.api.generated::kmJFWql4U8C6DKyU',
           ),
           1 => 
           array (
@@ -1870,7 +1890,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::KNOBbcGdzzf6L6zA',
+            '_route' => 'nova.api.generated::Q7OW4HuMOrGwCgVJ',
           ),
           1 => 
           array (
@@ -1894,7 +1914,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::WSZkpY6KjyWAShkg',
+            '_route' => 'nova.api.generated::2LJG8bG8up5Qy5mV',
           ),
           1 => 
           array (
@@ -1917,7 +1937,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::yM2cmxZF7DrJHYYW',
+            '_route' => 'nova.api.generated::W6XWN7MTqQdu9vYI',
           ),
           1 => 
           array (
@@ -1941,7 +1961,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::Pei4SmNpBwLgmj12',
+            '_route' => 'nova.api.generated::kyC6Vs0anXLuK054',
           ),
           1 => 
           array (
@@ -1964,7 +1984,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::h6U1DkxGkvcbxeN9',
+            '_route' => 'nova.api.generated::9DX10gdWreLz7s8x',
           ),
           1 => 
           array (
@@ -1988,7 +2008,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::ziaN1MGGascftD2X',
+            '_route' => 'nova.api.generated::kIXxvz9XwAzSXhhm',
           ),
           1 => 
           array (
@@ -2008,7 +2028,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::caZZ5PZaLtHjXklO',
+            '_route' => 'nova.api.generated::v5vsfkoZmdukxDbd',
           ),
           1 => 
           array (
@@ -2031,7 +2051,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::eblP9c5TcEpefHEw',
+            '_route' => 'nova.api.generated::zf496dXJk1TdhrFK',
           ),
           1 => 
           array (
@@ -2054,7 +2074,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::jSSExgn8swrSVbLK',
+            '_route' => 'nova.api.generated::J17gnoLXdj1a5UwX',
           ),
           1 => 
           array (
@@ -2077,7 +2097,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::9KRCW9PPUe8Ki1HK',
+            '_route' => 'nova.api.generated::CLlWYnDwOP7XzNW6',
           ),
           1 => 
           array (
@@ -2100,7 +2120,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::kf1Fod7mpCIfcq4J',
+            '_route' => 'nova.api.generated::Dpq2MjTcd0s5kTjR',
           ),
           1 => 
           array (
@@ -2124,7 +2144,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::Ph792PMIlgaSxvsg',
+            '_route' => 'nova.api.generated::9jlB5kKYbwXroZyU',
           ),
           1 => 
           array (
@@ -2149,7 +2169,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::Gd4GDzHKsw0EnxRV',
+            '_route' => 'nova.api.generated::KJMA6V05vIJi6VcB',
           ),
           1 => 
           array (
@@ -2173,7 +2193,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::dwkJln70Vqu9QoRU',
+            '_route' => 'nova.api.generated::B9bzxMHZ1hgD6uOj',
           ),
           1 => 
           array (
@@ -2198,7 +2218,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::zh8S80HT9xVrzwD1',
+            '_route' => 'nova.api.generated::hWq1YNEoukCDRNLE',
           ),
           1 => 
           array (
@@ -2222,7 +2242,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::V5FGhaMX4lT0o0xT',
+            '_route' => 'nova.api.generated::YLneb3PVYAk6ozuT',
           ),
           1 => 
           array (
@@ -2245,7 +2265,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::bkXag4wgYAbNDjEu',
+            '_route' => 'nova.api.generated::xhJSlR1uv6fZk5wH',
           ),
           1 => 
           array (
@@ -2268,7 +2288,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::aQvVSHMzUMOa3E7t',
+            '_route' => 'nova.api.generated::vTVaacbSPiR39txQ',
           ),
           1 => 
           array (
@@ -2291,7 +2311,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::PfxEhAT4rNjXOZtw',
+            '_route' => 'nova.api.generated::kei1B1QPjhhL7mPf',
           ),
           1 => 
           array (
@@ -2313,7 +2333,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::PSVzykcgx5789zjL',
+            '_route' => 'nova.api.generated::OCHZMETR0b7Z1W6n',
           ),
           1 => 
           array (
@@ -2336,7 +2356,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::SrIEWS4kYFuIvAXN',
+            '_route' => 'nova.api.generated::yVLkI89v5gI3qo8m',
           ),
           1 => 
           array (
@@ -2359,7 +2379,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::NW0vPHTvfcC4D4sF',
+            '_route' => 'nova.api.generated::1p5kOhPhzQ7U46dG',
           ),
           1 => 
           array (
@@ -2381,7 +2401,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::BsdZ4fRyethDwuOV',
+            '_route' => 'nova.api.generated::6JwzCwa4wY91nGEN',
           ),
           1 => 
           array (
@@ -2403,7 +2423,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::vowjk7FLZlpLLn3W',
+            '_route' => 'nova.api.generated::V8OkbEhbZkGBqbLj',
           ),
           1 => 
           array (
@@ -2427,7 +2447,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::VDNj6cLD3gvCj4IY',
+            '_route' => 'nova.api.generated::RfbtS6N7R1788tVM',
           ),
           1 => 
           array (
@@ -2451,7 +2471,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::Jc9IVbjAzUcABp1f',
+            '_route' => 'nova.api.generated::PREF3NRyO9Dl1Mw8',
           ),
           1 => 
           array (
@@ -2475,7 +2495,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::WaafD6MSPvLCxRX7',
+            '_route' => 'nova.api.generated::UzxEiOQkd602COLp',
           ),
           1 => 
           array (
@@ -2498,7 +2518,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::G44xQ5LfLeYHIhMG',
+            '_route' => 'nova.api.generated::b91usZw97KtK6R3Y',
           ),
           1 => 
           array (
@@ -2522,7 +2542,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::Jfrau5a2xpnmhaoY',
+            '_route' => 'nova.api.generated::GIguBqoeJR2KQ6Tc',
           ),
           1 => 
           array (
@@ -2547,7 +2567,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::lPPXH8IQNbiK59L9',
+            '_route' => 'nova.api.generated::rx7GWEhyo48QIFUs',
           ),
           1 => 
           array (
@@ -2571,7 +2591,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::5AH1i2j5U3YACo2o',
+            '_route' => 'nova.api.generated::cNKMGj06iZJfQWtJ',
           ),
           1 => 
           array (
@@ -2595,7 +2615,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::9LLpdOw7fLZSyrwl',
+            '_route' => 'nova.api.generated::nJkQQ8VZHnPuoOzF',
           ),
           1 => 
           array (
@@ -2619,7 +2639,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::67oltE516abjsyFw',
+            '_route' => 'nova.api.generated::yw3SpYbcyCy3H63S',
           ),
           1 => 
           array (
@@ -2644,7 +2664,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::lJ6f2Gm5QbIFjV2D',
+            '_route' => 'nova.api.generated::YDXAoTH6ZuWWR6DH',
           ),
           1 => 
           array (
@@ -2664,7 +2684,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::j0EFTzE4JvCHuKJw',
+            '_route' => 'nova.api.generated::00R4xUyGw8P1rQuH',
           ),
           1 => 
           array (
@@ -2683,7 +2703,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'nova.api.generated::TwSu6iFm42LS6kH9',
+            '_route' => 'nova.api.generated::Sqde2mArU2N8sNca',
           ),
           1 => 
           array (
@@ -3083,7 +3103,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::BJ87p99UmKI1K8Xh' => 
+    'generated::kBLznvobuxIMfYNM' => 
     array (
       'methods' => 
       array (
@@ -3106,7 +3126,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::BJ87p99UmKI1K8Xh',
+        'as' => 'generated::kBLznvobuxIMfYNM',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3352,7 +3372,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::64QzLTqHv2fGxFKf' => 
+    'generated::JZ8OJdmYyOEPOHej' => 
     array (
       'methods' => 
       array (
@@ -3374,7 +3394,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::64QzLTqHv2fGxFKf',
+        'as' => 'generated::JZ8OJdmYyOEPOHej',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3466,7 +3486,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::LxcMOVGq67C9cJZ1' => 
+    'generated::op13AI1yjOmrKWgs' => 
     array (
       'methods' => 
       array (
@@ -3489,7 +3509,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::LxcMOVGq67C9cJZ1',
+        'as' => 'generated::op13AI1yjOmrKWgs',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3625,7 +3645,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::2SXX04uiFqU3nthS' => 
+    'nova.api.generated::89DHqspSLZSv6Fe6' => 
     array (
       'methods' => 
       array (
@@ -3647,7 +3667,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\StyleController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\StyleController',
-        'as' => 'nova.api.generated::2SXX04uiFqU3nthS',
+        'as' => 'nova.api.generated::89DHqspSLZSv6Fe6',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -3668,7 +3688,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::GG6Iq0RYwyZNDNfa' => 
+    'nova.api.generated::sdzoU3rpnYQNaqqs' => 
     array (
       'methods' => 
       array (
@@ -3686,7 +3706,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\SearchController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\SearchController',
-        'as' => 'nova.api.generated::GG6Iq0RYwyZNDNfa',
+        'as' => 'nova.api.generated::sdzoU3rpnYQNaqqs',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -3707,7 +3727,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::jBjmqGi0bvSY1udW' => 
+    'nova.api.generated::TKfbHE5Nu6wITAkn' => 
     array (
       'methods' => 
       array (
@@ -3724,7 +3744,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\ImpersonateController@startImpersonating',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\ImpersonateController@startImpersonating',
-        'as' => 'nova.api.generated::jBjmqGi0bvSY1udW',
+        'as' => 'nova.api.generated::TKfbHE5Nu6wITAkn',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -3745,7 +3765,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::ulpb3wy0WFV3sfj0' => 
+    'nova.api.generated::qjEYzIUQhivkWyC8' => 
     array (
       'methods' => 
       array (
@@ -3762,7 +3782,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\ImpersonateController@stopImpersonating',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\ImpersonateController@stopImpersonating',
-        'as' => 'nova.api.generated::ulpb3wy0WFV3sfj0',
+        'as' => 'nova.api.generated::qjEYzIUQhivkWyC8',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -3783,7 +3803,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::bLIlgOMGFsyDdixv' => 
+    'nova.api.generated::zpqzO32e8t0TDe1v' => 
     array (
       'methods' => 
       array (
@@ -3801,7 +3821,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\FieldController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\FieldController',
-        'as' => 'nova.api.generated::bLIlgOMGFsyDdixv',
+        'as' => 'nova.api.generated::zpqzO32e8t0TDe1v',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -3822,7 +3842,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::h2HRyfk548j7zTiy' => 
+    'nova.api.generated::6ljMpnXiN2i0fzAC' => 
     array (
       'methods' => 
       array (
@@ -3839,7 +3859,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\FieldPreviewController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\FieldPreviewController',
-        'as' => 'nova.api.generated::h2HRyfk548j7zTiy',
+        'as' => 'nova.api.generated::6ljMpnXiN2i0fzAC',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -3860,7 +3880,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::CGreibloheiMpks6' => 
+    'nova.api.generated::c4ngOKjyVzTZoNpV' => 
     array (
       'methods' => 
       array (
@@ -3877,7 +3897,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\FieldAttachmentController@store',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\FieldAttachmentController@store',
-        'as' => 'nova.api.generated::CGreibloheiMpks6',
+        'as' => 'nova.api.generated::c4ngOKjyVzTZoNpV',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -3898,7 +3918,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::2siY4CYViPqiZi83' => 
+    'nova.api.generated::7diZanKMjNiCQ4qc' => 
     array (
       'methods' => 
       array (
@@ -3915,7 +3935,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\FieldAttachmentController@destroyAttachment',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\FieldAttachmentController@destroyAttachment',
-        'as' => 'nova.api.generated::2siY4CYViPqiZi83',
+        'as' => 'nova.api.generated::7diZanKMjNiCQ4qc',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -3936,7 +3956,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::HHF2jNSkju1y4XOw' => 
+    'nova.api.generated::b08nzOHArOLkEabB' => 
     array (
       'methods' => 
       array (
@@ -3954,7 +3974,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\FieldAttachmentController@draftId',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\FieldAttachmentController@draftId',
-        'as' => 'nova.api.generated::HHF2jNSkju1y4XOw',
+        'as' => 'nova.api.generated::b08nzOHArOLkEabB',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -3975,7 +3995,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::InOZW3E2OQxt5hcZ' => 
+    'nova.api.generated::QsJz1n3S1GNzup8R' => 
     array (
       'methods' => 
       array (
@@ -3992,7 +4012,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\FieldAttachmentController@destroyPending',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\FieldAttachmentController@destroyPending',
-        'as' => 'nova.api.generated::InOZW3E2OQxt5hcZ',
+        'as' => 'nova.api.generated::QsJz1n3S1GNzup8R',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -4013,7 +4033,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::ghBvtRLO9yjSuoQc' => 
+    'nova.api.generated::KGX39zkWL6OE2noq' => 
     array (
       'methods' => 
       array (
@@ -4031,7 +4051,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\CreationFieldController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\CreationFieldController',
-        'as' => 'nova.api.generated::ghBvtRLO9yjSuoQc',
+        'as' => 'nova.api.generated::KGX39zkWL6OE2noq',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -4052,7 +4072,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::k30xR9pt4gphrBIB' => 
+    'nova.api.generated::ftmMuxFzvDPxjCHd' => 
     array (
       'methods' => 
       array (
@@ -4070,7 +4090,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\UpdateFieldController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\UpdateFieldController',
-        'as' => 'nova.api.generated::k30xR9pt4gphrBIB',
+        'as' => 'nova.api.generated::ftmMuxFzvDPxjCHd',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -4091,7 +4111,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::spIvOTfOdJhDHP2j' => 
+    'nova.api.generated::j7ETtwydWL1TSoNf' => 
     array (
       'methods' => 
       array (
@@ -4109,7 +4129,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\CreationPivotFieldController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\CreationPivotFieldController',
-        'as' => 'nova.api.generated::spIvOTfOdJhDHP2j',
+        'as' => 'nova.api.generated::j7ETtwydWL1TSoNf',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -4130,7 +4150,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::7LFH1wscoV3dMyrs' => 
+    'nova.api.generated::Q95UFhHMd42jtqDM' => 
     array (
       'methods' => 
       array (
@@ -4148,7 +4168,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\UpdatePivotFieldController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\UpdatePivotFieldController',
-        'as' => 'nova.api.generated::7LFH1wscoV3dMyrs',
+        'as' => 'nova.api.generated::Q95UFhHMd42jtqDM',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -4169,7 +4189,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::1VI2fJJTY641AvZ4' => 
+    'nova.api.generated::OK3SXfo9bW6KBYm8' => 
     array (
       'methods' => 
       array (
@@ -4186,7 +4206,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\CreationFieldSyncController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\CreationFieldSyncController',
-        'as' => 'nova.api.generated::1VI2fJJTY641AvZ4',
+        'as' => 'nova.api.generated::OK3SXfo9bW6KBYm8',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -4207,7 +4227,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::CbYhFwEUjWC7720Z' => 
+    'nova.api.generated::0dMjJ6eGgTQklp0Z' => 
     array (
       'methods' => 
       array (
@@ -4224,7 +4244,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\UpdateFieldController@sync',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\UpdateFieldController@sync',
-        'as' => 'nova.api.generated::CbYhFwEUjWC7720Z',
+        'as' => 'nova.api.generated::0dMjJ6eGgTQklp0Z',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -4245,7 +4265,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::XFhVkS2yjUBPhTLI' => 
+    'nova.api.generated::M6bTitlJ2QPyLoyz' => 
     array (
       'methods' => 
       array (
@@ -4262,7 +4282,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\CreationPivotFieldController@sync',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\CreationPivotFieldController@sync',
-        'as' => 'nova.api.generated::XFhVkS2yjUBPhTLI',
+        'as' => 'nova.api.generated::M6bTitlJ2QPyLoyz',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -4283,7 +4303,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::sGimUJ7NRuWxI2WC' => 
+    'nova.api.generated::KDOt1l08EyYhHw2n' => 
     array (
       'methods' => 
       array (
@@ -4300,7 +4320,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\UpdatePivotFieldController@sync',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\UpdatePivotFieldController@sync',
-        'as' => 'nova.api.generated::sGimUJ7NRuWxI2WC',
+        'as' => 'nova.api.generated::KDOt1l08EyYhHw2n',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -4321,7 +4341,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::X57FxmdlGrW574od' => 
+    'nova.api.generated::9cgKw5zo9pdFiB8N' => 
     array (
       'methods' => 
       array (
@@ -4339,7 +4359,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\FieldDownloadController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\FieldDownloadController',
-        'as' => 'nova.api.generated::X57FxmdlGrW574od',
+        'as' => 'nova.api.generated::9cgKw5zo9pdFiB8N',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -4360,7 +4380,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::8Xr91FHjl2q7MuLY' => 
+    'nova.api.generated::MrOaChEUeNSgb6Au' => 
     array (
       'methods' => 
       array (
@@ -4377,7 +4397,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\FieldDestroyController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\FieldDestroyController',
-        'as' => 'nova.api.generated::8Xr91FHjl2q7MuLY',
+        'as' => 'nova.api.generated::MrOaChEUeNSgb6Au',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -4398,7 +4418,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::4xNzWROWC88s4IOT' => 
+    'nova.api.generated::Q8sZhchsaz8DrVOy' => 
     array (
       'methods' => 
       array (
@@ -4415,7 +4435,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\PivotFieldDestroyController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\PivotFieldDestroyController',
-        'as' => 'nova.api.generated::4xNzWROWC88s4IOT',
+        'as' => 'nova.api.generated::Q8sZhchsaz8DrVOy',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -4436,7 +4456,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::dlBr18OtI9JDCg1C' => 
+    'nova.api.generated::xvkBuDxh4BAPmVUX' => 
     array (
       'methods' => 
       array (
@@ -4454,7 +4474,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\DashboardController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\DashboardController',
-        'as' => 'nova.api.generated::dlBr18OtI9JDCg1C',
+        'as' => 'nova.api.generated::xvkBuDxh4BAPmVUX',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -4475,7 +4495,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::m4cuKEIoJ7jMbzD1' => 
+    'nova.api.generated::h33dO5IlXRY47snC' => 
     array (
       'methods' => 
       array (
@@ -4493,7 +4513,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\DashboardCardController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\DashboardCardController',
-        'as' => 'nova.api.generated::m4cuKEIoJ7jMbzD1',
+        'as' => 'nova.api.generated::h33dO5IlXRY47snC',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -4514,7 +4534,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::xQguzNcLpbrQi9bO' => 
+    'nova.api.generated::4tbKxYGeLFsT56Yt' => 
     array (
       'methods' => 
       array (
@@ -4532,7 +4552,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\NotificationIndexController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\NotificationIndexController',
-        'as' => 'nova.api.generated::xQguzNcLpbrQi9bO',
+        'as' => 'nova.api.generated::4tbKxYGeLFsT56Yt',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -4553,7 +4573,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::k9rL37XU9lxhtVaR' => 
+    'nova.api.generated::xN1UE3sowAfaC7Fc' => 
     array (
       'methods' => 
       array (
@@ -4570,7 +4590,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\NotificationReadAllController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\NotificationReadAllController',
-        'as' => 'nova.api.generated::k9rL37XU9lxhtVaR',
+        'as' => 'nova.api.generated::xN1UE3sowAfaC7Fc',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -4591,7 +4611,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::8VfieUBPxkTg7brh' => 
+    'nova.api.generated::rHHIgaqpOZSIqFaP' => 
     array (
       'methods' => 
       array (
@@ -4608,7 +4628,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\NotificationReadController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\NotificationReadController',
-        'as' => 'nova.api.generated::8VfieUBPxkTg7brh',
+        'as' => 'nova.api.generated::rHHIgaqpOZSIqFaP',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -4629,7 +4649,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::sZlzZpmT2G9JF52A' => 
+    'nova.api.generated::0vE3vN5NhWxDGUzv' => 
     array (
       'methods' => 
       array (
@@ -4646,7 +4666,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\NotificationDeleteController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\NotificationDeleteController',
-        'as' => 'nova.api.generated::sZlzZpmT2G9JF52A',
+        'as' => 'nova.api.generated::0vE3vN5NhWxDGUzv',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -4667,7 +4687,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::zNrGNmOLdsyNIudc' => 
+    'nova.api.generated::0gOpmejcmD2yhLfT' => 
     array (
       'methods' => 
       array (
@@ -4685,7 +4705,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\ActionController@index',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\ActionController@index',
-        'as' => 'nova.api.generated::zNrGNmOLdsyNIudc',
+        'as' => 'nova.api.generated::0gOpmejcmD2yhLfT',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -4706,7 +4726,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::Ld3hT9uM3myEo3An' => 
+    'nova.api.generated::6YODrkvT3pfPIPV0' => 
     array (
       'methods' => 
       array (
@@ -4723,7 +4743,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\ActionController@store',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\ActionController@store',
-        'as' => 'nova.api.generated::Ld3hT9uM3myEo3An',
+        'as' => 'nova.api.generated::6YODrkvT3pfPIPV0',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -4744,7 +4764,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::FSrrOd6Rtiunx3F3' => 
+    'nova.api.generated::R4AeEoY3TFlIMzcn' => 
     array (
       'methods' => 
       array (
@@ -4761,7 +4781,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\ActionController@sync',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\ActionController@sync',
-        'as' => 'nova.api.generated::FSrrOd6Rtiunx3F3',
+        'as' => 'nova.api.generated::R4AeEoY3TFlIMzcn',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -4782,7 +4802,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::VE1FWUZ5VQkEBlu5' => 
+    'nova.api.generated::9zVdBnsNiFvNKvmK' => 
     array (
       'methods' => 
       array (
@@ -4800,7 +4820,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\FilterController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\FilterController',
-        'as' => 'nova.api.generated::VE1FWUZ5VQkEBlu5',
+        'as' => 'nova.api.generated::9zVdBnsNiFvNKvmK',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -4821,7 +4841,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::Gwry3smUHknsChdZ' => 
+    'nova.api.generated::YYqUnQYkGLva398a' => 
     array (
       'methods' => 
       array (
@@ -4839,7 +4859,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\LensController@index',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\LensController@index',
-        'as' => 'nova.api.generated::Gwry3smUHknsChdZ',
+        'as' => 'nova.api.generated::YYqUnQYkGLva398a',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -4860,7 +4880,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::IpEF7pLRc6rPeitd' => 
+    'nova.api.generated::kmJFWql4U8C6DKyU' => 
     array (
       'methods' => 
       array (
@@ -4878,7 +4898,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\LensController@show',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\LensController@show',
-        'as' => 'nova.api.generated::IpEF7pLRc6rPeitd',
+        'as' => 'nova.api.generated::kmJFWql4U8C6DKyU',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -4899,7 +4919,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::KNOBbcGdzzf6L6zA' => 
+    'nova.api.generated::Q7OW4HuMOrGwCgVJ' => 
     array (
       'methods' => 
       array (
@@ -4917,7 +4937,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\LensResourceCountController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\LensResourceCountController',
-        'as' => 'nova.api.generated::KNOBbcGdzzf6L6zA',
+        'as' => 'nova.api.generated::Q7OW4HuMOrGwCgVJ',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -4938,7 +4958,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::eblP9c5TcEpefHEw' => 
+    'nova.api.generated::zf496dXJk1TdhrFK' => 
     array (
       'methods' => 
       array (
@@ -4955,7 +4975,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\LensResourceDestroyController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\LensResourceDestroyController',
-        'as' => 'nova.api.generated::eblP9c5TcEpefHEw',
+        'as' => 'nova.api.generated::zf496dXJk1TdhrFK',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -4976,7 +4996,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::WSZkpY6KjyWAShkg' => 
+    'nova.api.generated::2LJG8bG8up5Qy5mV' => 
     array (
       'methods' => 
       array (
@@ -4993,7 +5013,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\LensResourceForceDeleteController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\LensResourceForceDeleteController',
-        'as' => 'nova.api.generated::WSZkpY6KjyWAShkg',
+        'as' => 'nova.api.generated::2LJG8bG8up5Qy5mV',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -5014,7 +5034,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::Pei4SmNpBwLgmj12' => 
+    'nova.api.generated::kyC6Vs0anXLuK054' => 
     array (
       'methods' => 
       array (
@@ -5031,7 +5051,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\LensResourceRestoreController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\LensResourceRestoreController',
-        'as' => 'nova.api.generated::Pei4SmNpBwLgmj12',
+        'as' => 'nova.api.generated::kyC6Vs0anXLuK054',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -5052,7 +5072,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::h6U1DkxGkvcbxeN9' => 
+    'nova.api.generated::9DX10gdWreLz7s8x' => 
     array (
       'methods' => 
       array (
@@ -5070,7 +5090,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\LensActionController@index',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\LensActionController@index',
-        'as' => 'nova.api.generated::h6U1DkxGkvcbxeN9',
+        'as' => 'nova.api.generated::9DX10gdWreLz7s8x',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -5091,7 +5111,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::ziaN1MGGascftD2X' => 
+    'nova.api.generated::kIXxvz9XwAzSXhhm' => 
     array (
       'methods' => 
       array (
@@ -5108,7 +5128,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\LensActionController@store',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\LensActionController@store',
-        'as' => 'nova.api.generated::ziaN1MGGascftD2X',
+        'as' => 'nova.api.generated::kIXxvz9XwAzSXhhm',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -5129,7 +5149,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::caZZ5PZaLtHjXklO' => 
+    'nova.api.generated::v5vsfkoZmdukxDbd' => 
     array (
       'methods' => 
       array (
@@ -5146,7 +5166,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\LensActionController@sync',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\LensActionController@sync',
-        'as' => 'nova.api.generated::caZZ5PZaLtHjXklO',
+        'as' => 'nova.api.generated::v5vsfkoZmdukxDbd',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -5167,7 +5187,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::yM2cmxZF7DrJHYYW' => 
+    'nova.api.generated::W6XWN7MTqQdu9vYI' => 
     array (
       'methods' => 
       array (
@@ -5185,7 +5205,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\LensFilterController@index',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\LensFilterController@index',
-        'as' => 'nova.api.generated::yM2cmxZF7DrJHYYW',
+        'as' => 'nova.api.generated::W6XWN7MTqQdu9vYI',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -5206,7 +5226,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::jSSExgn8swrSVbLK' => 
+    'nova.api.generated::J17gnoLXdj1a5UwX' => 
     array (
       'methods' => 
       array (
@@ -5224,7 +5244,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\DashboardMetricController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\DashboardMetricController',
-        'as' => 'nova.api.generated::jSSExgn8swrSVbLK',
+        'as' => 'nova.api.generated::J17gnoLXdj1a5UwX',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -5245,7 +5265,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::9KRCW9PPUe8Ki1HK' => 
+    'nova.api.generated::CLlWYnDwOP7XzNW6' => 
     array (
       'methods' => 
       array (
@@ -5263,7 +5283,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\MetricController@index',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\MetricController@index',
-        'as' => 'nova.api.generated::9KRCW9PPUe8Ki1HK',
+        'as' => 'nova.api.generated::CLlWYnDwOP7XzNW6',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -5284,7 +5304,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::kf1Fod7mpCIfcq4J' => 
+    'nova.api.generated::Dpq2MjTcd0s5kTjR' => 
     array (
       'methods' => 
       array (
@@ -5302,7 +5322,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\MetricController@show',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\MetricController@show',
-        'as' => 'nova.api.generated::kf1Fod7mpCIfcq4J',
+        'as' => 'nova.api.generated::Dpq2MjTcd0s5kTjR',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -5323,7 +5343,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::Ph792PMIlgaSxvsg' => 
+    'nova.api.generated::9jlB5kKYbwXroZyU' => 
     array (
       'methods' => 
       array (
@@ -5341,7 +5361,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\DetailMetricController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\DetailMetricController',
-        'as' => 'nova.api.generated::Ph792PMIlgaSxvsg',
+        'as' => 'nova.api.generated::9jlB5kKYbwXroZyU',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -5362,7 +5382,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::Gd4GDzHKsw0EnxRV' => 
+    'nova.api.generated::KJMA6V05vIJi6VcB' => 
     array (
       'methods' => 
       array (
@@ -5380,7 +5400,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\LensMetricController@index',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\LensMetricController@index',
-        'as' => 'nova.api.generated::Gd4GDzHKsw0EnxRV',
+        'as' => 'nova.api.generated::KJMA6V05vIJi6VcB',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -5401,7 +5421,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::dwkJln70Vqu9QoRU' => 
+    'nova.api.generated::B9bzxMHZ1hgD6uOj' => 
     array (
       'methods' => 
       array (
@@ -5419,7 +5439,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\LensMetricController@show',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\LensMetricController@show',
-        'as' => 'nova.api.generated::dwkJln70Vqu9QoRU',
+        'as' => 'nova.api.generated::B9bzxMHZ1hgD6uOj',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -5440,7 +5460,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::V5FGhaMX4lT0o0xT' => 
+    'nova.api.generated::YLneb3PVYAk6ozuT' => 
     array (
       'methods' => 
       array (
@@ -5458,7 +5478,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\CardController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\CardController',
-        'as' => 'nova.api.generated::V5FGhaMX4lT0o0xT',
+        'as' => 'nova.api.generated::YLneb3PVYAk6ozuT',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -5479,7 +5499,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::zh8S80HT9xVrzwD1' => 
+    'nova.api.generated::hWq1YNEoukCDRNLE' => 
     array (
       'methods' => 
       array (
@@ -5497,7 +5517,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\LensCardController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\LensCardController',
-        'as' => 'nova.api.generated::zh8S80HT9xVrzwD1',
+        'as' => 'nova.api.generated::hWq1YNEoukCDRNLE',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -5518,7 +5538,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::aQvVSHMzUMOa3E7t' => 
+    'nova.api.generated::vTVaacbSPiR39txQ' => 
     array (
       'methods' => 
       array (
@@ -5536,7 +5556,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\RelatableAuthorizationController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\RelatableAuthorizationController',
-        'as' => 'nova.api.generated::aQvVSHMzUMOa3E7t',
+        'as' => 'nova.api.generated::vTVaacbSPiR39txQ',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -5557,7 +5577,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::PSVzykcgx5789zjL' => 
+    'nova.api.generated::OCHZMETR0b7Z1W6n' => 
     array (
       'methods' => 
       array (
@@ -5575,7 +5595,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\SoftDeleteStatusController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\SoftDeleteStatusController',
-        'as' => 'nova.api.generated::PSVzykcgx5789zjL',
+        'as' => 'nova.api.generated::OCHZMETR0b7Z1W6n',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -5596,7 +5616,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::lJ6f2Gm5QbIFjV2D' => 
+    'nova.api.generated::YDXAoTH6ZuWWR6DH' => 
     array (
       'methods' => 
       array (
@@ -5614,7 +5634,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\ResourceIndexController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\ResourceIndexController',
-        'as' => 'nova.api.generated::lJ6f2Gm5QbIFjV2D',
+        'as' => 'nova.api.generated::YDXAoTH6ZuWWR6DH',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -5635,7 +5655,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::SrIEWS4kYFuIvAXN' => 
+    'nova.api.generated::yVLkI89v5gI3qo8m' => 
     array (
       'methods' => 
       array (
@@ -5653,7 +5673,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\ResourceSearchController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\ResourceSearchController',
-        'as' => 'nova.api.generated::SrIEWS4kYFuIvAXN',
+        'as' => 'nova.api.generated::yVLkI89v5gI3qo8m',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -5674,7 +5694,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::bkXag4wgYAbNDjEu' => 
+    'nova.api.generated::xhJSlR1uv6fZk5wH' => 
     array (
       'methods' => 
       array (
@@ -5692,7 +5712,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\ResourceCountController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\ResourceCountController',
-        'as' => 'nova.api.generated::bkXag4wgYAbNDjEu',
+        'as' => 'nova.api.generated::xhJSlR1uv6fZk5wH',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -5713,7 +5733,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::NW0vPHTvfcC4D4sF' => 
+    'nova.api.generated::1p5kOhPhzQ7U46dG' => 
     array (
       'methods' => 
       array (
@@ -5730,7 +5750,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\ResourceDetachController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\ResourceDetachController',
-        'as' => 'nova.api.generated::NW0vPHTvfcC4D4sF',
+        'as' => 'nova.api.generated::1p5kOhPhzQ7U46dG',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -5751,7 +5771,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::PfxEhAT4rNjXOZtw' => 
+    'nova.api.generated::kei1B1QPjhhL7mPf' => 
     array (
       'methods' => 
       array (
@@ -5768,7 +5788,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\ResourceRestoreController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\ResourceRestoreController',
-        'as' => 'nova.api.generated::PfxEhAT4rNjXOZtw',
+        'as' => 'nova.api.generated::kei1B1QPjhhL7mPf',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -5789,7 +5809,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::BsdZ4fRyethDwuOV' => 
+    'nova.api.generated::6JwzCwa4wY91nGEN' => 
     array (
       'methods' => 
       array (
@@ -5806,7 +5826,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\ResourceForceDeleteController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\ResourceForceDeleteController',
-        'as' => 'nova.api.generated::BsdZ4fRyethDwuOV',
+        'as' => 'nova.api.generated::6JwzCwa4wY91nGEN',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -5827,7 +5847,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::vowjk7FLZlpLLn3W' => 
+    'nova.api.generated::V8OkbEhbZkGBqbLj' => 
     array (
       'methods' => 
       array (
@@ -5845,7 +5865,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\ResourceShowController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\ResourceShowController',
-        'as' => 'nova.api.generated::vowjk7FLZlpLLn3W',
+        'as' => 'nova.api.generated::V8OkbEhbZkGBqbLj',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -5866,7 +5886,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::VDNj6cLD3gvCj4IY' => 
+    'nova.api.generated::RfbtS6N7R1788tVM' => 
     array (
       'methods' => 
       array (
@@ -5884,7 +5904,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\ResourcePreviewController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\ResourcePreviewController',
-        'as' => 'nova.api.generated::VDNj6cLD3gvCj4IY',
+        'as' => 'nova.api.generated::RfbtS6N7R1788tVM',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -5905,7 +5925,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::Jc9IVbjAzUcABp1f' => 
+    'nova.api.generated::PREF3NRyO9Dl1Mw8' => 
     array (
       'methods' => 
       array (
@@ -5923,7 +5943,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\ResourcePeekController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\ResourcePeekController',
-        'as' => 'nova.api.generated::Jc9IVbjAzUcABp1f',
+        'as' => 'nova.api.generated::PREF3NRyO9Dl1Mw8',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -5944,7 +5964,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::j0EFTzE4JvCHuKJw' => 
+    'nova.api.generated::00R4xUyGw8P1rQuH' => 
     array (
       'methods' => 
       array (
@@ -5961,7 +5981,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\ResourceStoreController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\ResourceStoreController',
-        'as' => 'nova.api.generated::j0EFTzE4JvCHuKJw',
+        'as' => 'nova.api.generated::00R4xUyGw8P1rQuH',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -5982,7 +6002,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::WaafD6MSPvLCxRX7' => 
+    'nova.api.generated::UzxEiOQkd602COLp' => 
     array (
       'methods' => 
       array (
@@ -5999,7 +6019,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\ResourceUpdateController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\ResourceUpdateController',
-        'as' => 'nova.api.generated::WaafD6MSPvLCxRX7',
+        'as' => 'nova.api.generated::UzxEiOQkd602COLp',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -6020,7 +6040,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::TwSu6iFm42LS6kH9' => 
+    'nova.api.generated::Sqde2mArU2N8sNca' => 
     array (
       'methods' => 
       array (
@@ -6037,7 +6057,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\ResourceDestroyController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\ResourceDestroyController',
-        'as' => 'nova.api.generated::TwSu6iFm42LS6kH9',
+        'as' => 'nova.api.generated::Sqde2mArU2N8sNca',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -6058,7 +6078,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::G44xQ5LfLeYHIhMG' => 
+    'nova.api.generated::b91usZw97KtK6R3Y' => 
     array (
       'methods' => 
       array (
@@ -6076,7 +6096,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\AssociatableController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\AssociatableController',
-        'as' => 'nova.api.generated::G44xQ5LfLeYHIhMG',
+        'as' => 'nova.api.generated::b91usZw97KtK6R3Y',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -6097,7 +6117,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::Jfrau5a2xpnmhaoY' => 
+    'nova.api.generated::GIguBqoeJR2KQ6Tc' => 
     array (
       'methods' => 
       array (
@@ -6115,7 +6135,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\AttachableController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\AttachableController',
-        'as' => 'nova.api.generated::Jfrau5a2xpnmhaoY',
+        'as' => 'nova.api.generated::GIguBqoeJR2KQ6Tc',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -6136,7 +6156,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::lPPXH8IQNbiK59L9' => 
+    'nova.api.generated::rx7GWEhyo48QIFUs' => 
     array (
       'methods' => 
       array (
@@ -6154,7 +6174,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\MorphableController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\MorphableController',
-        'as' => 'nova.api.generated::lPPXH8IQNbiK59L9',
+        'as' => 'nova.api.generated::rx7GWEhyo48QIFUs',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -6175,7 +6195,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::5AH1i2j5U3YACo2o' => 
+    'nova.api.generated::cNKMGj06iZJfQWtJ' => 
     array (
       'methods' => 
       array (
@@ -6192,7 +6212,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\ResourceAttachController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\ResourceAttachController',
-        'as' => 'nova.api.generated::5AH1i2j5U3YACo2o',
+        'as' => 'nova.api.generated::cNKMGj06iZJfQWtJ',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -6213,7 +6233,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::67oltE516abjsyFw' => 
+    'nova.api.generated::yw3SpYbcyCy3H63S' => 
     array (
       'methods' => 
       array (
@@ -6230,7 +6250,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\AttachedResourceUpdateController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\AttachedResourceUpdateController',
-        'as' => 'nova.api.generated::67oltE516abjsyFw',
+        'as' => 'nova.api.generated::yw3SpYbcyCy3H63S',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -6251,7 +6271,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'nova.api.generated::9LLpdOw7fLZSyrwl' => 
+    'nova.api.generated::nJkQQ8VZHnPuoOzF' => 
     array (
       'methods' => 
       array (
@@ -6268,7 +6288,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'Laravel\\Nova\\Http\\Controllers\\MorphedResourceAttachController@__invoke',
         'controller' => 'Laravel\\Nova\\Http\\Controllers\\MorphedResourceAttachController',
-        'as' => 'nova.api.generated::9LLpdOw7fLZSyrwl',
+        'as' => 'nova.api.generated::nJkQQ8VZHnPuoOzF',
         'namespace' => NULL,
         'prefix' => 'nova-api',
         'where' => 
@@ -6451,7 +6471,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::Lkk6KVDG3PpeY9X3' => 
+    'generated::huN4oJmQLipHpxul' => 
     array (
       'methods' => 
       array (
@@ -6463,7 +6483,7 @@ app('router')->setCompiledRoutes(
       array (
         'uses' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@source',
         'controller' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@source',
-        'as' => 'generated::Lkk6KVDG3PpeY9X3',
+        'as' => 'generated::huN4oJmQLipHpxul',
       ),
       'fallback' => false,
       'defaults' => 
@@ -6479,7 +6499,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::6VmxlDwi40YiIHjR' => 
+    'generated::9PBE3EsS99xDsq74' => 
     array (
       'methods' => 
       array (
@@ -6491,7 +6511,7 @@ app('router')->setCompiledRoutes(
       array (
         'uses' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@maps',
         'controller' => 'Livewire\\Controllers\\LivewireJavaScriptAssets@maps',
-        'as' => 'generated::6VmxlDwi40YiIHjR',
+        'as' => 'generated::9PBE3EsS99xDsq74',
       ),
       'fallback' => false,
       'defaults' => 
@@ -7410,7 +7430,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::LrUhSZvnbclOpkEO' => 
+    'generated::nOmKJxJVAhh3MwQA' => 
     array (
       'methods' => 
       array (
@@ -7427,13 +7447,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:77:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000009900000000000000000";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000006000000000000000000";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::LrUhSZvnbclOpkEO',
+        'as' => 'generated::nOmKJxJVAhh3MwQA',
       ),
       'fallback' => false,
       'defaults' => 
@@ -7449,7 +7469,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::W6x00f3jhNiETmdS' => 
+    'generated::Wm4LXXXi6QBeQj7k' => 
     array (
       'methods' => 
       array (
@@ -7466,13 +7486,13 @@ app('router')->setCompiledRoutes(
         'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:124:"function (){
     if (\\auth()->user()) return \\redirect()->route(\'dashboard\');
     else return \\redirect()->route(\'login\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000009920000000000000000";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000006020000000000000000";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'generated::W6x00f3jhNiETmdS',
+        'as' => 'generated::Wm4LXXXi6QBeQj7k',
       ),
       'fallback' => false,
       'defaults' => 
@@ -7956,7 +7976,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:55:"function (){
         return \\view(\'client_page\');
-    }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000009a20000000000000000";}}',
+    }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000006120000000000000000";}}',
         'namespace' => NULL,
         'prefix' => '/dashboard',
         'where' => 
@@ -7995,7 +8015,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:57:"function (){
         return \\view(\'add_procedure\');
-    }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000009a40000000000000000";}}',
+    }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000006140000000000000000";}}',
         'namespace' => NULL,
         'prefix' => '/dashboard',
         'where' => 
@@ -8017,7 +8037,46 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::OwEJGNXu45f8qaWU' => 
+    'edit.procedure' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'dashboard/edit-procedure',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+        ),
+        'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:58:"function (){
+        return \\view(\'edit_procedure\');
+    }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000006170000000000000000";}}',
+        'namespace' => NULL,
+        'prefix' => '/dashboard',
+        'where' => 
+        array (
+        ),
+        'as' => 'edit.procedure',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'generated::7T6a4LROZ8yoyQoQ' => 
     array (
       'methods' => 
       array (
@@ -8034,13 +8093,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:56:"function () {
     return \\view(\'ustawienia.usrimage\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000009940000000000000000";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000006040000000000000000";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'generated::OwEJGNXu45f8qaWU',
+        'as' => 'generated::7T6a4LROZ8yoyQoQ',
       ),
       'fallback' => false,
       'defaults' => 
@@ -8056,7 +8115,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::ULKT3e4NAfel7Hwd' => 
+    'generated::xT7BwTpyn79UYJoA' => 
     array (
       'methods' => 
       array (
@@ -8073,13 +8132,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:59:"function () {
     return \\view(\'ustawienia.editaccount\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000009a70000000000000000";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000006190000000000000000";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'generated::ULKT3e4NAfel7Hwd',
+        'as' => 'generated::xT7BwTpyn79UYJoA',
       ),
       'fallback' => false,
       'defaults' => 
@@ -8095,7 +8154,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::uuo4LgYmc2SC9AlH' => 
+    'generated::hCTAGj4c1DWQvOO7' => 
     array (
       'methods' => 
       array (
@@ -8112,13 +8171,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:60:"function () {
     return \\view(\'ustawienia.usrsignature\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000009a90000000000000000";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000061b0000000000000000";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'generated::uuo4LgYmc2SC9AlH',
+        'as' => 'generated::hCTAGj4c1DWQvOO7',
       ),
       'fallback' => false,
       'defaults' => 
@@ -8134,7 +8193,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::bPGADZVQhqGSNvEh' => 
+    'generated::S9LFyg9DrywKq0js' => 
     array (
       'methods' => 
       array (
@@ -8151,13 +8210,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:57:"function () {
     return \\view(\'ustawienia.rodoreset\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000009ab0000000000000000";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000061d0000000000000000";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'generated::bPGADZVQhqGSNvEh',
+        'as' => 'generated::S9LFyg9DrywKq0js',
       ),
       'fallback' => false,
       'defaults' => 
@@ -8173,7 +8232,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::B01dQtn613bqEbwr' => 
+    'generated::AO5Qet5EnE56Nelf' => 
     array (
       'methods' => 
       array (
@@ -8190,13 +8249,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:74:"function () {
     return \\view(\'ustawienia.document_kartaklienta_edit\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000009ad0000000000000000";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000000000061f0000000000000000";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'generated::B01dQtn613bqEbwr',
+        'as' => 'generated::AO5Qet5EnE56Nelf',
       ),
       'fallback' => false,
       'defaults' => 
@@ -8212,7 +8271,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::o0CqSnuFabTUP3A7' => 
+    'generated::jZzrxOHcplpfsvl2' => 
     array (
       'methods' => 
       array (
@@ -8229,13 +8288,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:66:"function () {
     return \\view(\'ustawienia.treatment_template\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000009af0000000000000000";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000006210000000000000000";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'generated::o0CqSnuFabTUP3A7',
+        'as' => 'generated::jZzrxOHcplpfsvl2',
       ),
       'fallback' => false,
       'defaults' => 
@@ -8251,7 +8310,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::2zZFYLGyuByZZjKM' => 
+    'generated::00OxKPfKhOHB3Dag' => 
     array (
       'methods' => 
       array (
@@ -8268,13 +8327,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:64:"function () {
     return \\view(\'ustawienia.treatment_create\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000009b10000000000000000";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000006230000000000000000";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'generated::2zZFYLGyuByZZjKM',
+        'as' => 'generated::00OxKPfKhOHB3Dag',
       ),
       'fallback' => false,
       'defaults' => 
@@ -8308,7 +8367,7 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:66:"function () {
     return \\view(\'ustawienia.treatment_question\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000009b30000000000000000";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000006250000000000000000";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
@@ -8330,7 +8389,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::n7ux7sbeVQQoopVH' => 
+    'generated::RIralLXZv9AHkrtB' => 
     array (
       'methods' => 
       array (
@@ -8347,13 +8406,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:62:"function () {
     return \\view(\'ustawienia.product_create\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000009b50000000000000000";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000006270000000000000000";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'generated::n7ux7sbeVQQoopVH',
+        'as' => 'generated::RIralLXZv9AHkrtB',
       ),
       'fallback' => false,
       'defaults' => 

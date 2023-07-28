@@ -31,15 +31,15 @@
 
                             <div class="boxinbox" style="background-color: rgb(240, 241, 241);">
                                 <form>
-                                    {{--                                    @csrf--}}
+{{--                                    @csrf--}}
 
 
 
 
                                     @foreach($servicesForm as $key => $service)
-                                        {{--                                        <div class="listing-titlebar d-flex flex-column" style="margin-top:10px;">--}}
+{{--                                        <div class="listing-titlebar d-flex flex-column" style="margin-top:10px;">--}}
 
-                                        {{--                                        </div>--}}
+{{--                                        </div>--}}
                                         @foreach(json_decode($service->fields, 1) as $keyS => $f)
                                             @switch($f['type'])
                                                 @case('input')
@@ -165,12 +165,12 @@
 
 
                             <!-- Livewire Component wire-end:M9Wxq53evaYOyxxJ8WBS -->                </div>
-                        {{--                        <script>--}}
-                        {{--                            document.addEventListener('event-add-field', () => {--}}
-                        {{--                                let modalItem = new bootstrap.Modal(document.querySelector('#addField'))--}}
-                        {{--                                modalItem.show()--}}
-                        {{--                            })--}}
-                        {{--                        </script>--}}
+{{--                        <script>--}}
+{{--                            document.addEventListener('event-add-field', () => {--}}
+{{--                                let modalItem = new bootstrap.Modal(document.querySelector('#addField'))--}}
+{{--                                modalItem.show()--}}
+{{--                            })--}}
+{{--                        </script>--}}
                     </div>
                     <div class="mar"></div>
                     {{--                        <div id="heading_block3_2_dodaj_pytania">--}}
@@ -287,3 +287,4 @@
         </div>
     </div>
 </div>
+

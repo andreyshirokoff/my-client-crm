@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('content')
-    <livewire:add-client-procedure-index/>
+    <livewire:edit-client-procedure-index/>
 {{--    <link rel="stylesheet" href="{{asset('css/slider.css')}}">--}}
 {{--    <div class="box">--}}
 {{--        <div class="boxinbox__body" id="accordion">--}}

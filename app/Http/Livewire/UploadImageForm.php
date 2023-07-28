@@ -41,7 +41,7 @@ class UploadImageForm extends Component
             'image' => $path,
         ]);
         sleep(1);
-        return redirect()->to('/home');
+        return redirect(request()->header('Referer'));
     }
 
     public function render()

@@ -50,19 +50,7 @@
     </div>
 </div>
 
-<div class="listing-element">
-    <div style="width:75%" class="listing-element__width75">
-        <h6>Mała aktualizacja 1.1.4</h6>
-    </div>
-    <div style="width:15%;" class="listing-element__width15">
-        <h6>2022-05-16</h6>
-    </div>
-    <div style="width:10%;display:flex;flex-direction:row;" class="listing-element__width10">
-        <div class="iconbutton">
-            <i class="far fa-eye" onclick="location.href='{{url('functions/news_view')}}?id=10';" aria-hidden="true"></i>
-        </div>
-    </div>
-</div>
+
 
 <div class="listing-element">
     <div style="width:75%" class="listing-element__width75">

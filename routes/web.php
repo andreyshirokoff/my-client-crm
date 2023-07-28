@@ -12,36 +12,44 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-//Route::get('/login', function () {
-//    return view('login');
-//});
-
-
+Route::get('/', function (){
+    if (auth()->user()) return redirect()->route('dashboard');
+    else return redirect()->route('login');
+});
 
 Route::middleware('auth')->prefix('dashboard')->group(function (){
     Route::get('/', [\App\Http\Controllers\DashboardPageController::class, 'index'])->name('dashboard');
+
+    Route::get('/client-create', [\App\Http\Controllers\DashboardPageController::class, 'createClient'])->name('createClient');
+    Route::get('/client-search', [\App\Http\Controllers\DashboardPageController::class, 'searchClient'])->name('searchClient');
+    Route::get('/functions/document_search', [\App\Http\Controllers\DashboardPageController::class, 'documentSearch'])->name('documentSearch');
+
+    Route::prefix('ustawienia')->group(function (){
+        Route::get('/', [\App\Http\Controllers\DashboardPageController::class, 'settings'])->name('settings');
+        Route::get('/worker-create', [\App\Http\Controllers\DashboardPageController::class, 'workers'])->name('workers');
+        Route::post('/save-sign', [\App\Http\Controllers\DashboardPageController::class, 'saveSign'])->name('save.sign');
+
+    });
+    Route::prefix('ustawienia')->group(function (){
+        Route::post('/submit-visual', [\App\Http\Controllers\DashboardPageController::class, 'submitVisual'])->name('submit.visual');
+    });
+    Route::prefix('ustawienia')->group(function (){
+        Route::post('/rodo-reset', [\App\Http\Controllers\DashboardPageController::class, 'rodoReset'])->name('rodo.reset');
+    });
+
+    if(Schema::hasTable('news')){
+        Route::get('/news/{slug}', [\App\Http\Controllers\NewsPageController::class, 'index'])->name('news');
+    }
+    Route::prefix('functions')->group(function (){
+        Route::post('/treatment-create-add', [\App\Http\Controllers\DashboardPageController::class, 'treatmentCreate'])->name('treatment.create.add');
+    });
+
+    Route::get('/clients', function (){
+        return view('client_page');
+    })->name('clients');
+
 });
 
-
-//functions
-Route::get('/functions/client_create', function () {
-    return view('client_create');
-})->middleware(['auth']);
-Route::get('/functions/client_search', function () {
-    return view('client_search');
-})->middleware(['auth']);
-Route::get('/functions/document_search', function () {
-    return view('document_search');
-})->middleware(['auth']);
-Route::get('/functions/news_view', function () {
-    return view('news_view');
-})->middleware(['auth']);
-
-//settings
-Route::get('/ustawienia', function () {
-    return view('ustawienia');
-})->middleware(['auth']);
 
 //ustawienia
 Route::get('/functions/usrimage', function () {
@@ -53,9 +61,9 @@ Route::get('/functions/editaccount', function () {
 Route::get('/functions/usrsignature', function () {
     return view('ustawienia.usrsignature');
 })->middleware(['auth']);
-Route::get('/functions/usrpin', function () {
-    return view('ustawienia.usrpin');
-})->middleware(['auth']);
+//Route::get('/functions/usrpin', function () {
+//    return view('ustawienia.usrpin');
+//})->middleware(['auth']);
 Route::get('/functions/rodoreset', function () {
     return view('ustawienia.rodoreset');
 })->middleware(['auth']);
@@ -63,15 +71,17 @@ Route::get('/functions/rodoreset', function () {
 Route::get('/functions/document_kartaklienta_edit', function () {
     return view('ustawienia.document_kartaklienta_edit');
 })->middleware(['auth']);
-Route::get('/functions/worker_create', function () {
-    return view('ustawienia.worker_create');
-})->middleware(['auth']);
+
 Route::get('/functions/treatment_template', function () {
     return view('ustawienia.treatment_template');
 })->middleware(['auth']);
 Route::get('/functions/treatment_create', function () {
     return view('ustawienia.treatment_create');
 })->middleware(['auth']);
+Route::get('/functions/treatment_question/', function () {
+    return view('ustawienia.treatment_question');
+})->middleware(['auth', 'check.getParameters'])
+    ->name('treatment.question');
 Route::get('/functions/product_create', function () {
     return view('ustawienia.product_create');
 })->middleware(['auth']);

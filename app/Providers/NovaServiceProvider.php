@@ -2,9 +2,13 @@
 
 namespace App\Providers;
 
+use App\Nova\AdminsResource;
 use App\Nova\Dashboards\Main;
+use App\Nova\GroupTarifsResource;
+use App\Nova\NewsResource;
 use App\Nova\User;
 use App\Nova\Role;
+use App\Nova\UserGroupResource;
 use Illuminate\Support\Facades\Gate;
 
 use Illuminate\Support\Facades\Route;
@@ -24,23 +28,23 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     {
         parent::boot();
 
-//        $this->getCustomMenu();
-
         Nova::mainMenu(function ($request) {
             return [
                 MenuSection::dashboard(Main::class)->icon('chart-bar'),
 
-                MenuSection::make('Praca z użytkownikami', [
+                MenuSection::make('Пользователи', [
                     MenuItem::resource(User::class),
-                    MenuItem::resource(Role::class),
-                ])->icon('user-group')->collapsable(),
+                    MenuItem::resource(UserGroupResource::class),
+                    MenuItem::resource(GroupTarifsResource::class),
+                    MenuItem::resource(AdminsResource::class),
 
-                MenuSection::make('Produkty', [
-                ])->icon('briefcase')->collapsable(),
+                ])->collapsable()->icon('users'),
 
-                MenuSection::make('Ustawienia produktu', [
-                ])->icon('clipboard')->collapsable(),
-//
+                MenuSection::make('Контент', [
+                    MenuItem::resource(NewsResource::class),
+                ])->collapsable()->icon('newspaper'),
+
+
 //                MenuSection::make('Программы', [
 //                    MenuItem::resource(Program::class),
 //                    MenuItem::resource(Level::class),
@@ -79,9 +83,8 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     protected function gate()
     {
         Gate::define('viewNova', function ($user) {
-            return in_array($user->status, [
-                'active',
-            ]);
+            if ($user->status !== 'ban') return true;
+            else return false;
         });
     }
 

@@ -14,15 +14,53 @@
             <h6>Pokaż</h6>
         </div>
     </div>
+    <livewire:client-index>
+{{--    <div>--}}
+
+{{--            <div class="listing-element">--}}
+{{--                <div style="width:40%;">--}}
+{{--                    <h6>Имя</h6>--}}
+{{--                </div>--}}
+{{--                <div style="width:40%;">--}}
+{{--                    <h6>Имейл</h6>--}}
+{{--                </div>--}}
+{{--                <div style="width:10%;">--}}
+{{--                    <h6>Телефон</h6>--}}
+{{--                </div>--}}
+{{--                <div style="width:10%;display:flex;justify-content:flex-end;" class="width-10">--}}
+{{--                    <h6>Pokaż</h6>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+
+{{--        <div class="pagination-wrap mt-3"></div>--}}
+
+
+
+{{--    </div>--}}
+
+{{--    <div class="listing-element">--}}
+{{--        <div style="width:40%;">--}}
+{{--            <h6>Imię i Nazwisko</h6>--}}
+{{--        </div>--}}
+{{--        <div style="width:40%;">--}}
+{{--            <h6>E-Mail</h6>--}}
+{{--        </div>--}}
+{{--        <div style="width:10%;">--}}
+{{--            <h6>Tel</h6>--}}
+{{--        </div>--}}
+{{--        <div style="width:10%;display:flex;justify-content:flex-end;" class="width-10">--}}
+{{--            <h6>Pokaż</h6>--}}
+{{--        </div>--}}
+{{--    </div>--}}
 
 
     <!-- Wczytanie klientów z bazy i ich listing -->
 
-    <div class="pagination-wrap">
+{{--    <div class="pagination-wrap mt-3">--}}
 
 
 
-    </div>
+{{--    </div>--}}
     <!-- Wrzucenie footera -->
     <!--Beauty plany start -->
 {{--    <script src="/functions/beautyplans/lib/jquery-3.6.2.min.js"></script>--}}

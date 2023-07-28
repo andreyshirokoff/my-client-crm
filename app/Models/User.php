@@ -3,18 +3,18 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
-use App\Models\Role;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Auth;
+use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
-    use HasApiTokens, HasFactory, Notifiable, HasRoles;
+    use HasApiTokens, HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -22,13 +22,17 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array<int, string>
      */
     protected $fillable = [
+        'id',
         'name',
+        'last_name',
+        'fullname',
+        'avatar',
         'email',
         'password',
         'email_verified_at',
         'phone',
-        'image',
         'is_phone_confirm',
+        'theme_id'
     ];
 
     /**
@@ -51,10 +55,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'phone' => 'string'
     ];
 
-    public function role()
-    {
-        return $this->belongsTo(Role::class);
-    }
+    protected $table = 'users';
 
     public static function getRequisites()
     {
@@ -73,5 +74,10 @@ class User extends Authenticatable implements MustVerifyEmail
         return $phone;
     }
 
+
+    public function getUserGroup()
+    {
+        return $this->belongsTo(UserGroup::class, 'group_id', 'id');
+    }
 
 }

@@ -42,15 +42,15 @@
             ])
         @endif
         <div class="mar"></div>
-        @if(view()->exists('blocks.block3'))
-            @include('blocks.block3', [
-                'block3_icon' => 'fas fa-user-friends',
-                'block3_title' => 'Pracownicy',
-                'block3_content_class' => 'block3_pracownicy',
-                'block3_content' => 'blocks_content.block3_pracownicy',
-                'block3_heading' => 'heading_block3_pracownicy'
-            ])
-        @endif
+            @if(view()->exists('blocks.block3'))
+                @include('blocks.block3', [
+                    'block3_icon' => 'fas fa-user-friends',
+                    'block3_title' => 'Pracownicy',
+                    'block3_content_class' => 'block3_pracownicy',
+                    'block3_content' => 'blocks_content.block3_pracownicy',
+                    'block3_heading' => 'heading_block3_pracownicy'
+                ])
+            @endif
         <div class="mar"></div>
         @if(view()->exists('blocks.block3'))
             @include('blocks.block3', [

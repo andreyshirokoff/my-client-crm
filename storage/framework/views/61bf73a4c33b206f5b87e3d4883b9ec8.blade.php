@@ -1,0 +1,1 @@
+<p class="text-center"><a class="link-default" target="_blank" href="/">ManekiNeko</a> · v{!! $version !!}</p>

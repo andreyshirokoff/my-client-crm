@@ -5,28 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9be1317-6be4-4290-9727-b2bf61f43604" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/storage/FcRU8DQ826Zhx8o2LOWvMsrZ2zCFKdkocz93w9ZU.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DashboardPageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DashboardPageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Clients/ClientPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Clients/ClientPage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/RodoIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/RodoIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/clients/client-page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/clients/client-page.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/rodo-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/rodo-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/public/0LDbfq2G9g4hqkSk.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/public/6wCqKrW622fa02Sc.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/public/AvkvFTSHhlSriF4CFUH0g3W01UkHka18WPtFweRJ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/public/IJsThG4giertGVox.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/public/YIcVpWNaoznWdRB9Q0REhe4tcAf6D0TAUzQlMzyF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/public/ZXMbFygXURwfvxIfIQzSY28SUPZJhQDW3TgEfFwO.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/public/Zl5HrutILQWNvYNZzwphtSUqTEtbluUH6FabtQD0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/public/c0mk7uxtQV0m2TfZXPIwlEuzXoEXURoBh66jtgNS.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/public/eo0Pku2Qkk5xLduHl93f9Qom0C37x022fFkdE14q.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/public/gbF52S5qwNS28ve2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/public/nNV6iwYahz8I5BhbqUZbYThggcXSpGs8aTzGtAqV.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/public/q7IR8OuhchoUzUty.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/public/tTNhHLTXJTNNCgNn.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/public/uH5AC1qDrn7c8WSOdcoW7s4f6Agyn1s63W9csppp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1690516070011</updated>
-      <workItem from="1690516071752" duration="4911000" />
+      <workItem from="1690516071752" duration="5893000" />
     </task>
     <servers />
   </component>

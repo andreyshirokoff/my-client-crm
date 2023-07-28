@@ -17,7 +17,7 @@
 
 
                 <div>
-                    <div wire:id="Q5Tyh2hCfm48zlvWGXH5">
+                    <div>
                         <div id="heading_block3_2_edycja_karty_zabiegowej">
 
 
@@ -30,17 +30,17 @@
                             </div>
 
                             <div class="boxinbox" style="background-color: rgb(240, 241, 241);">
-                                <form action="{{route('send.answers')}}" method="POST">
-                                    @csrf
+                                <form>
+{{--                                    @csrf--}}
 
 
 
 
-                                    @foreach(\App\Models\ServicesForm::where('service_id', $_GET['serviceId'])->get() as $key => $service)
-                                        <div class="listing-titlebar d-flex flex-column" style="margin-top:10px;">
+                                    @foreach($servicesForm as $key => $service)
+{{--                                        <div class="listing-titlebar d-flex flex-column" style="margin-top:10px;">--}}
 
-                                        </div>
-                                        @foreach(json_decode($service->fields, 1) as $f)
+{{--                                        </div>--}}
+                                        @foreach(json_decode($service->fields, 1) as $keyS => $f)
                                             @switch($f['type'])
                                                 @case('input')
 
@@ -48,7 +48,7 @@
                                                         <h6>{{$f['title']}}</h6>
                                                         <div class="d-flex gap-3 align-items-center w-100" style="">
                                                             <input type="hidden" name="title_{{$key}}" value="{{$f['title']}}">
-                                                            <input class="formularz" name="UF_{{$key}}" data-order="{{$f['order']}}" id="" type="" value="" maxlength="40">
+                                                            <input class="formularz" name="{{$key}}" data-order="{{$f['order']}}" id="" type="" maxlength="40" wire:model.defer="arrayToDb.{{$key}}.{{$keyS}}">
                                                             {{--                                                        <i class="fa-solid fa-trash" style="cursor:pointer;color:black;font-size: 22px;" wire:click="deleteConfirm('{{$key}}')"></i>--}}
                                                         </div>
                                                     </div>
@@ -56,9 +56,8 @@
                                                 @case('textarea')
                                                     <div class="listing-element service-block">
                                                         <h6>{{$f['title']}}</h6>
-                                                        <div class="d-flex gap-3 align-items-center w-100" style="">
-                                                            <input type="hidden" name="title_{{$key}}" value="{{$f['title']}}">
-                                                            <textarea class="formularz" name="UF_{{$key}}" data-order="{{$f['order']}}" id="" cols="30" rows="10"></textarea>
+                                                        <div class="d-flex gap-3 align-items-center w-100" style="">                                                            =
+                                                            <textarea class="formularz" name="{{$key}}" data-order="{{$f['order']}}" id="" cols="30" rows="10" wire:model.defer="arrayToDb.{{$key}}.{{$keyS}}"></textarea>
                                                             {{--                                                        <i class="fa-solid fa-trash" style="cursor:pointer;color:black;font-size: 22px;" wire:click="deleteConfirm('{{$key}}')"></i>--}}
                                                         </div>
                                                     </div>
@@ -71,7 +70,7 @@
                                                                 <p>{{$ff}}</p>
                                                                 <div class="d-flex gap-3 align-items-center" style="">
                                                                     <label class="switch">
-                                                                        <input type="checkbox" name="UF_{{$keyff}}" id="use_pin" value="1">
+                                                                        <input type="checkbox" name="{{$keyff}}" id="use_pin" value="1" wire:model.defer="arrayToDb.{{$key}}.{{$keyS}}.{{$keyff}}">
                                                                         <span class="slider round"></span>
                                                                     </label>
                                                                     {{--                                                                <i class="fa-solid fa-trash" style="cursor:pointer;color:black;font-size: 22px;" wire:click="deleteConfirm('{{$key}}', '{{$keyff}}')"></i>--}}
@@ -89,14 +88,14 @@
                                                         {{--                                    @endphp--}}
                                                         @php
                                                             $i = 0;
-                                                            $radioName = uniqid();
+                                                            //$radioName = uniqid();
                                                         @endphp
                                                         @foreach($f['fields'] as $keyff => $ff)
 
                                                             <div class="d-flex justify-content-between w-100 flex-wrap @if($i != 0) mt-2 @endif">
                                                                 <p>{{$ff}}</p>
                                                                 <div class="d-flex gap-3 align-items-center" style="">
-                                                                    <input type="radio" id="tak2" value="{{$ff}}" name="UF_{{$radioName}}" @if($i == 0) checked @endif>
+                                                                    <input type="radio" id="tak2" value="{{$ff}}" name="{{$keyff}}" @if($i == 0) checked @endif wire:model.defer="arrayToDb.{{$key}}.{{$keyS}}.{{$keyff}}">
                                                                     {{--                                                                <i class="fa-solid fa-trash" style="cursor:pointer;color:black;font-size: 22px;" wire:click="deleteConfirm('{{$key}}', '{{$keyff}}')"></i>--}}
                                                                 </div>
                                                             </div>
@@ -111,7 +110,7 @@
                                         @endforeach
 
                                         <div class="listing-actionbar">
-                                            <button type="sumbit" class="btn1" style="margin-left:10px;" ><i class="fa-solid fa-share" aria-hidden="true" style="color:white"></i> Wysłać</button>
+                                            <button wire:click.prevent="submitForm"  type="button" class="btn1" style="margin-left:10px;" ><i class="fa-solid fa-share" aria-hidden="true" style="color:white"></i> Wysłać</button>
                                         </div>
                                 </form>
 
@@ -166,12 +165,12 @@
 
 
                             <!-- Livewire Component wire-end:M9Wxq53evaYOyxxJ8WBS -->                </div>
-                        <script>
-                            document.addEventListener('event-add-field', () => {
-                                let modalItem = new bootstrap.Modal(document.querySelector('#addField'))
-                                modalItem.show()
-                            })
-                        </script>
+{{--                        <script>--}}
+{{--                            document.addEventListener('event-add-field', () => {--}}
+{{--                                let modalItem = new bootstrap.Modal(document.querySelector('#addField'))--}}
+{{--                                modalItem.show()--}}
+{{--                            })--}}
+{{--                        </script>--}}
                     </div>
                     <div class="mar"></div>
                     {{--                        <div id="heading_block3_2_dodaj_pytania">--}}
@@ -288,4 +287,4 @@
         </div>
     </div>
 </div>
-</div>
+

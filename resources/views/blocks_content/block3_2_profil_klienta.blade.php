@@ -135,7 +135,7 @@
             )
             {
                 //console.log(`/dashboard/add_procedure?serviceId=${value}`)
-                window.location.href = `/dashboard/add-procedure?serviceId=${value}`;
+                window.location.href = `/dashboard/add-procedure?serviceId=${value}&clientId=${<?=$_GET['clientId']?>}`;
             }
         })
 

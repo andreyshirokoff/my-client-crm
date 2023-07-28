@@ -1,5 +1,15 @@
 <form action="{{route('submit.visual')}}" method="POST" enctype="multipart/form-data">
     @csrf
+    @if($sign)
+        <div class="listing-element row-with-input">
+            <div style="width:70%;">
+                Aktualny podpis
+            </div>
+            <div style="width:30%;" class="input-in">
+                <img src="{{url($sign)}}" alt="" style="height: 100px">
+            </div>
+        </div>
+    @endif
     <div class="listing-element row-with-input">
         <div style="width:70%;">
             Nazwa salonu

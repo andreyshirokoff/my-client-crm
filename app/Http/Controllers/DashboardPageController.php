@@ -61,7 +61,7 @@ class DashboardPageController extends Controller
         return redirect('/dashboard/ustawienia');
 
     }
-    
+
        public function workers()
     {
         return view('ustawienia.worker_create');
@@ -151,7 +151,7 @@ class DashboardPageController extends Controller
     {
         return view('document_search');
     }
-    
+
     private function base64ToImage($base64String)
     {
         // Удаляем возможные префиксы base64, если они есть
@@ -161,12 +161,13 @@ class DashboardPageController extends Controller
         $imageData = base64_decode($base64String);
         return $imageData;
     }
-    
+
     public function saveSign(Request $request)
     {
         $decode = $this->base64ToImage($request->input('sign-value'));
         $fileName = $this->generateRandomCode().'.jpg';
-        Storage::put('storage/sign/'.$fileName, $decode);
+        Storage::put('/storage/sign/'.$fileName, $decode);
+        //$storedFile = $decode->storePubliclyAs('sign', $fileName, 'public');
 
         $groupTariff = GroupTariff::where('owner_id', Auth::user()->id)->first();
         $groupTariff->update([

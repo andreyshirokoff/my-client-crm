@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\GroupTariff;
 use App\Models\Theme;
 use App\Models\UserGroup;
 use Illuminate\Support\Facades\Auth;
@@ -13,6 +14,7 @@ class RodoIndex extends Component
 
     public ?string $salonTitle = '';
     public $image;
+    public $sign;
 
     public ?string $footer = '';
     public ?string $nonMedical = '';
@@ -39,6 +41,7 @@ class RodoIndex extends Component
 
     public function render()
     {
+        $this->sign = 'storage/sign/'.GroupTariff::where('owner_id', Auth::user()->id)->first()->sign_path;
         return view('livewire.rodo-index');
     }
 

@@ -93,8 +93,14 @@
 
 
     <div class="listing-actionbar">
+        <select class="input-control w-100" id="select_service">
+            @foreach(\App\Models\Service::get() as $service)
+                <option value="{{$service->id}}">{{$service->name}}</option>
+            @endforeach
+        </select>
         {{--        <a href=""><button type="button" class="btn1" style="margin-left:10px;"><i class="fas fa-id-card-alt" aria-hidden="true"></i> Karta klienta</button></a>--}}
-        <a href="{{route('dobav.zabiegKlient')}}"><button type="button" class="btn1" style="margin-left:10px;" id="add-zabieg-klient"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Dodaj zabieg</button></a>
+
+        <a id="add-zabieg-klient"><button type="button" class="btn1" style="margin-left:10px;" ><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Dodaj zabieg</button></a>
     </div>
     <div class="modal fade" id="zabieg-klient" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -115,12 +121,24 @@
             </div>
         </div>
     </div>
-    @include('blocks_content.modals-dodaj')
+
     <script>
-        // document.querySelector('#add-zabieg-klient').addEventListener('click', () => {
-        //     let modalItem = new bootstrap.Modal(document.querySelector('#zabieg-klient'))
-        //     modalItem.show()
-        // })
+        $('#select_service').trigger('change')
+        let value = $('#select_service').val()
+        $('#select_service').change((e) => {
+            value = $(e.target).val()
+        })
+        $(document).click((e) => {
+            if(
+                $(e.target).is('#add-zabieg-klient')
+                || $(e.target).closest('#add-zabieg-klient').length > 0
+            )
+            {
+                //console.log(`/dashboard/add_procedure?serviceId=${value}`)
+                window.location.href = `/dashboard/add-procedure?serviceId=${value}`;
+            }
+        })
+
     </script>
 </div>
 

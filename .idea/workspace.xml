@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9be1317-6be4-4290-9727-b2bf61f43604" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/blocks_content/modals-dodaj.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/add_procedure.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/CheckGetParametersMiddleware.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckGetParametersMiddleware.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/add_procedure.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/blocks_content/block3_2_profil_klienta.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blocks_content/block3_2_profil_klienta.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/clients/client-page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/clients/client-page.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/clients/client-procedure-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/clients/client-procedure-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/8rdRClLLKgtRFWtmhTMjBQmPtzdV4BWTwRgIlUqR" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/BTCq7b1oFcasytEPsa6xplB06yiHG46uauDKAqNM" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/EF0Nh3lCuJtPyBtPK2Vxd1FYxYOkweRF9WIRex3h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/mOJ5ODmweVDY9HNy7VVeEfDVGAmVCYIpZ0eLB7bz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1690516070011</updated>
-      <workItem from="1690516071752" duration="8561000" />
+      <workItem from="1690516071752" duration="11083000" />
     </task>
     <servers />
   </component>

@@ -31,7 +31,7 @@
 
 {{--                    <input type="hidden" value="" wire:model="idService">--}}
 
-                    <a href="http://myclientcrm/functions/treatment_create?type=edit&amp;id=1"><i class="fa-solid fa-pen-to-square i-black"></i></a>
+                    <a href=""><i class="fa-solid fa-pen-to-square i-black"></i></a>
 
 {{--                    <a style="cursor: pointer" wire:click.prevent="copy('1', 'asdsadsadsa')"><i class="fa-solid fa-copy i-black"></i></a>--}}
 {{--                    <a href="" wire:click.prevent="delete('1')" id="delete-service"><i class="fa-solid fa-trash i-black"></i></a>--}}
@@ -41,4 +41,6 @@
             </div>
         @endforeach
     </div>
+
 </div>
+

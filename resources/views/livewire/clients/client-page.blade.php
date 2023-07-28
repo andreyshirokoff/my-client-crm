@@ -98,6 +98,14 @@
 
     <div class="listing-actionbar">
 {{--        <a href=""><button type="button" class="btn1" style="margin-left:10px;"><i class="fas fa-id-card-alt" aria-hidden="true"></i> Karta klienta</button></a>--}}
-        <a href=""><button type="button" class="btn1" style="margin-left:10px;"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Dodaj zabieg</button></a>
+        <a href=""><button type="button" class="btn1" style="margin-left:10px;" id="add-zabieg-klient"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Dodaj zabieg</button></a>
     </div>
+    @include('blocks_content.modals-dodaj')
+    <script>
+        document.querySelector('#add-zabieg-klient').addEventListener('click', () => {
+            let modalItem = new bootstrap.Modal(document.querySelector('#zabieg-klient'))
+            modalItem.show()
+        })
+    </script>
 </div>
+

@@ -51,7 +51,7 @@ Route::middleware('auth')->prefix('dashboard')->group(function (){
         return view('client_page');
     })->name('clients');
 
-    Route::get('/add-procedure', function (){
+    Route::get('/edit_procedure', function (){
         return view('add_procedure');
     })->name('dobav.zabiegKlient');
 

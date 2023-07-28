@@ -49,6 +49,7 @@
                                                 <div class="listing-element service-block">
                                                     <h6>{{$f['title']}}</h6>
                                                     <div class="d-flex gap-3 align-items-center w-100" style="">
+                                                        <input type="hidden" name="title_{{$key}}" value="{{$f['title']}}">
                                                         <input class="formularz" name="UF_{{$key}}" data-order="{{$f['order']}}" id="" type="" value="" maxlength="40">
 {{--                                                        <i class="fa-solid fa-trash" style="cursor:pointer;color:black;font-size: 22px;" wire:click="deleteConfirm('{{$key}}')"></i>--}}
                                                     </div>
@@ -58,6 +59,7 @@
                                                 <div class="listing-element service-block">
                                                     <h6>{{$f['title']}}</h6>
                                                     <div class="d-flex gap-3 align-items-center w-100" style="">
+                                                        <input type="hidden" name="title_{{$key}}" value="{{$f['title']}}">
                                                         <textarea class="formularz" name="UF_{{$key}}" data-order="{{$f['order']}}" id="" cols="30" rows="10"></textarea>
 {{--                                                        <i class="fa-solid fa-trash" style="cursor:pointer;color:black;font-size: 22px;" wire:click="deleteConfirm('{{$key}}')"></i>--}}
                                                     </div>

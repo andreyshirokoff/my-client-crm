@@ -180,6 +180,6 @@ class DashboardPageController extends Controller
 
     public function sendAnswers(Request $request)
     {
-        dd($request->input());
+        dd($request->input('UF_64c2b7b1283c8'));
     }
 }

@@ -14,29 +14,31 @@
         </div>
     </div>
     <div class="listing-element service-block justify-content-between" data-id="1">
-        <div style="width:50%">
-            <h6>asdsadsadsa</h6>
-        </div>
-        <div style="width:10%">
+        @foreach($clientServices as $cs)
 
-            <a href="http://myclientcrm/functions/treatment_question?type=karta&amp;idservice=1"><i class="fa-solid fa-pen-to-square"></i> </a>
-        </div>
-        <div style="width:10%">
+            <div style="width:50%">
+                <h6>{{$cs->name}}</h6>
+            </div>
+            <div style="width:10%">
 
-            12.06.2022
-        </div>
-        <div style="width:10%">
-            <form class="d-flex gap-3" style="font-size:20px;position:relative;top:-5px">
+            </div>
+            <div style="width:10%">
 
-                <input type="hidden" value="" wire:model="idService">
+                {{$cs->created_at}}
+            </div>
+            <div style="width:10%">
+                <form class="d-flex gap-3" style="font-size:20px;position:relative;top:-5px">
 
-                <a href="http://myclientcrm/functions/treatment_create?type=edit&amp;id=1"><i class="fa-solid fa-pen-to-square i-black"></i></a>
+{{--                    <input type="hidden" value="" wire:model="idService">--}}
 
-                <a style="cursor: pointer" wire:click.prevent="copy('1', 'asdsadsadsa')"><i class="fa-solid fa-copy i-black"></i></a>
-                <a href="" wire:click.prevent="delete('1')" id="delete-service"><i class="fa-solid fa-trash i-black"></i></a>
-                <input type="hidden" wire:model="fieldName" value="">
+                    <a href="http://myclientcrm/functions/treatment_create?type=edit&amp;id=1"><i class="fa-solid fa-pen-to-square i-black"></i></a>
 
-            </form>
-        </div>
+{{--                    <a style="cursor: pointer" wire:click.prevent="copy('1', 'asdsadsadsa')"><i class="fa-solid fa-copy i-black"></i></a>--}}
+{{--                    <a href="" wire:click.prevent="delete('1')" id="delete-service"><i class="fa-solid fa-trash i-black"></i></a>--}}
+{{--                    <input type="hidden" wire:model="fieldName" value="">--}}
+
+                </form>
+            </div>
+        @endforeach
     </div>
 </div>

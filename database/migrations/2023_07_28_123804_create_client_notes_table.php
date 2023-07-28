@@ -7,20 +7,19 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration {
     public function up()
     {
-        Schema::create('client_services', function (Blueprint $table) {
+        Schema::create('client_notes', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
             $table->unsignedBigInteger('client_id');
             $table->foreign('client_id')->references('id')->on('clients');
             $table->unsignedBigInteger('service_id');
             $table->foreign('service_id')->references('id')->on('services');
-            $table->unsignedBigInteger('note_id')->default(0);
+            $table->longText('note');
             $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('client_services');
+        Schema::dropIfExists('client_notes');
     }
 };

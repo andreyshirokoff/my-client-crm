@@ -1,6 +1,7 @@
 @extends('layout.app')
 
 @section('content')
+    <link rel="stylesheet" href="{{asset('css/slider.css')}}">
     <div class="box">
         <div class="boxinbox__body" id="accordion">
 
@@ -47,7 +48,7 @@
                                                     <h6>{{$f['title']}}</h6>
                                                     <div class="d-flex gap-3 align-items-center w-100" style="">
                                                         <input class="formularz" name="UF_{{$key}}" data-order="{{$f['order']}}" id="" type="" value="" maxlength="40">
-                                                        <i class="fa-solid fa-trash" style="cursor:pointer;color:black;font-size: 22px;" wire:click="deleteConfirm('{{$key}}')"></i>
+{{--                                                        <i class="fa-solid fa-trash" style="cursor:pointer;color:black;font-size: 22px;" wire:click="deleteConfirm('{{$key}}')"></i>--}}
                                                     </div>
                                                 </div>
                                                 @break
@@ -56,7 +57,7 @@
                                                     <h6>{{$f['title']}}</h6>
                                                     <div class="d-flex gap-3 align-items-center w-100" style="">
                                                         <textarea class="formularz" name="UF_{{$key}}" data-order="{{$f['order']}}" id="" cols="30" rows="10"></textarea>
-                                                        <i class="fa-solid fa-trash" style="cursor:pointer;color:black;font-size: 22px;" wire:click="deleteConfirm('{{$key}}')"></i>
+{{--                                                        <i class="fa-solid fa-trash" style="cursor:pointer;color:black;font-size: 22px;" wire:click="deleteConfirm('{{$key}}')"></i>--}}
                                                     </div>
                                                 </div>
                                                 @break
@@ -64,14 +65,14 @@
                                                 <div class="listing-element service-block">
                                                     <h6 class="mb-3">{{$f['title']}}</h6>
                                                     @foreach($f['fields'] as $keyff => $ff)
-                                                        <div class="d-flex justify-content-between w-100 flex-wrap @if($key != 0) mt-2 @endif">
+                                                        <div class="d-flex justify-content-between w-100 flex-wrap @if($keyff != 0) mt-2 @endif">
                                                             <p>{{$ff}}</p>
                                                             <div class="d-flex gap-3 align-items-center" style="">
                                                                 <label class="switch">
                                                                     <input type="checkbox" name="UF_{{$key}}" id="use_pin" value="1">
                                                                     <span class="slider round"></span>
                                                                 </label>
-                                                                <i class="fa-solid fa-trash" style="cursor:pointer;color:black;font-size: 22px;" wire:click="deleteConfirm('{{$key}}', '{{$keyff}}')"></i>
+{{--                                                                <i class="fa-solid fa-trash" style="cursor:pointer;color:black;font-size: 22px;" wire:click="deleteConfirm('{{$key}}', '{{$keyff}}')"></i>--}}
                                                             </div>
                                                         </div>
                                                     @endforeach
@@ -93,7 +94,7 @@
                                                             <p>{{$ff}}</p>
                                                             <div class="d-flex gap-3 align-items-center" style="">
                                                                 <input type="radio" id="tak2" value="{{$ff}}" name="UF_{{$key}}" @if($i == 0) checked @endif>
-                                                                <i class="fa-solid fa-trash" style="cursor:pointer;color:black;font-size: 22px;" wire:click="deleteConfirm('{{$key}}', '{{$keyff}}')"></i>
+{{--                                                                <i class="fa-solid fa-trash" style="cursor:pointer;color:black;font-size: 22px;" wire:click="deleteConfirm('{{$key}}', '{{$keyff}}')"></i>--}}
                                                             </div>
                                                         </div>
                                                         @php

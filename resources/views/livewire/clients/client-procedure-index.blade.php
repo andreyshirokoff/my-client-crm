@@ -19,7 +19,8 @@
             </div>
             <div style="width:10%">
 
-                {{$cs->created_at}}
+
+                {{$cs->formatDate}}
             </div>
             <div style="width:10%">
                 <form class="d-flex gap-3" style="font-size:20px;position:relative;top:-5px">

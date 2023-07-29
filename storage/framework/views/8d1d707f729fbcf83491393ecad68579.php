@@ -1,1 +1,0 @@
-<p class="text-center"><a class="link-default" target="_blank" href="/">ManekiNeko</a> · v<?php echo $version; ?></p><?php /**PATH D:\Projects\my-client-crm\storage\framework\views/61bf73a4c33b206f5b87e3d4883b9ec8.blade.php ENDPATH**/ ?>

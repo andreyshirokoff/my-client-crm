@@ -9,7 +9,7 @@
         </div>
         <div class="listing-element row-with-input">
             <div style="width:100%;">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus eligendi eos et exercitationem necessitatibus optio perferendis, placeat quaerat quis suscipit. Dolorem dolores, dolorum eius illum molestias qui sunt veniam voluptate!
+                {{\App\Models\Client::where('id', $_GET['clientId'])->first()->description}}
             </div>
         </div>
 </div>

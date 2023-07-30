@@ -19,4 +19,21 @@ class Service extends Model
         'recommendation',
         'amount'
     ];
+
+//    public static function userGroups()
+//    {
+//        $groups = [];
+//        $groupObject = UserGroup::all();
+//        foreach($groupObject as $item)
+//        {
+//            $groups[$item->id] = $item->name;
+//        }
+//
+//        return $groups;
+//    }
+
+    public function groupId()
+    {
+        return $this->belongsTo(UserGroup::class, 'group_id');
+    }
 }

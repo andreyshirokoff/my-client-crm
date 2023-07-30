@@ -4,6 +4,7 @@ namespace App\Nova;
 
 use App\Models\ServicesForm;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
@@ -18,16 +19,21 @@ class ServiceFormResource extends Resource
         'id'
     ];
 
+    public static function label()
+    {
+        return 'Вопросы для лечения';
+    }
+
     public function fields(Request $request): array
     {
         return [
             ID::make()->sortable(),
 
-            Number::make('Service Id')
+            BelongsTo::make('Название лечения', 'serviceId', ServiceResource::class)
                 ->sortable()
                 ->rules('required', 'integer'),
 
-            Text::make('Fields')
+            Text::make('Поля', 'fields')
                 ->sortable()
                 ->rules('nullable'),
         ];

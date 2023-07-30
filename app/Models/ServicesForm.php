@@ -13,4 +13,9 @@ class ServicesForm extends Model
         'service_id',
         'fields',
     ];
+
+    public function serviceId()
+    {
+        return $this->belongsTo(Service::class, 'service_id');
+    }
 }

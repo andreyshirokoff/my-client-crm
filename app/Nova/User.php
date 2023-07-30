@@ -2,9 +2,11 @@
 
 namespace App\Nova;
 
+use App\Models\Theme;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rules;
 use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\BelongsToMany;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Email;
 use Laravel\Nova\Fields\Gravatar;
@@ -63,7 +65,7 @@ class User extends Resource
                 Image::make('Аватар', 'avatar')->disk('public')->nullable(),
                 Text::make('Имя', 'fullname')->required(),
                 Email::make('E-mail', 'email')->required(),
-                Password::make('Пароль', 'password')->required()->rules('min:8'),
+                //Password::make('Пароль', 'password')->required()->rules('min:8'),
                 Text::make('Телефон', 'phone')->rules('min:8')->required(),
             ]),
 
@@ -84,9 +86,17 @@ class User extends Resource
             Panel::make('Доп. параметры', [
                 BelongsTo::make('Группа пользователя', 'getUserGroup', UserGroupResource::class)->searchable(),
 
-                Select::make('Тема', 'theme_id')->options([
-                    1 => 'По умолчанию',
-                ])->default(1),
+                //BelongsTo::make('Тема для сайта', 'getTheme', ThemeResource::class)->searchable(),
+
+//                BelongsTo::make('Тема', 'ThemeResource', 'App\Models\Theme')
+//                    ->sortable()
+//                    ->displayUsing(function($theme){
+//                        return $theme->name;
+//                    }),
+
+
+                //Select::make('Тема', 'theme_id')->options(\App\Models\User::themes())->default(1),
+                BelongsTo::make('Тема', 'themeId', ThemeResource::class)
             ]),
         ];
     }

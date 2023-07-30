@@ -3,9 +3,12 @@
 namespace App\Nova;
 
 use App\Models\Service;
+use App\Models\UserGroup;
+use Laravel\Nova\Fields\BelongsTo;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
+use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 
 class ServiceResource extends Resource
@@ -18,40 +21,41 @@ class ServiceResource extends Resource
         'id', 'name'
     ];
 
+    public static function label()
+    {
+        return 'Список лечения';
+    }
+
     public function fields(Request $request): array
     {
         return [
             ID::make()->sortable(),
 
-            Number::make('Group Id')
+            BelongsTo::make('Группа пользователя', 'groupId', UserGroupResource::class)
                 ->sortable()
                 ->rules('required', 'integer'),
 
-            Text::make('Name')
+            Text::make('Название', 'name')
                 ->sortable()
                 ->rules('required'),
 
-            Text::make('Description')
+            Text::make('Описание', 'description')
                 ->sortable()
                 ->rules('nullable'),
 
-            Text::make('Description Text')
+            Text::make('Противопоказания', 'contraindications')
                 ->sortable()
                 ->rules('nullable'),
 
-            Text::make('Contraindications')
+            Text::make('Показания', 'indicators')
                 ->sortable()
                 ->rules('nullable'),
 
-            Text::make('Indicators')
+            Text::make('Рекомендации', 'recommendation')
                 ->sortable()
                 ->rules('nullable'),
 
-            Text::make('Recommendation')
-                ->sortable()
-                ->rules('nullable'),
-
-            Number::make('Amount')
+            Number::make('Рекомендуемая сумма', 'amount')
                 ->sortable()
                 ->rules('required', 'integer'),
         ];

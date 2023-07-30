@@ -5,13 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9be1317-6be4-4290-9727-b2bf61f43604" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Nova/ClientResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Nova/InformationGroupResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Nova/ServiceFormResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Nova/ServiceResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Nova/ServiceTemplateResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Service.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Service.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/ServicesForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ServicesForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Nova/ServiceFormResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/ServiceFormResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Nova/ServiceResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/ServiceResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Nova/ThemeResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/ThemeResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Nova/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/NovaServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/NovaServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_07_25_102027_create_services_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_07_25_102027_create_services_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +233,10 @@
       <workItem from="1690569477626" duration="5422000" />
       <workItem from="1690638176634" duration="5640000" />
       <workItem from="1690713987622" duration="933000" />
-      <workItem from="1690720867236" duration="2117000" />
+      <workItem from="1690720867236" duration="3464000" />
+      <workItem from="1690725335336" duration="1491000" />
+      <workItem from="1690727476055" duration="5031000" />
+      <workItem from="1690733980254" duration="1722000" />
     </task>
     <servers />
   </component>

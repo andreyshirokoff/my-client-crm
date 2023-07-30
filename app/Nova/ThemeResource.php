@@ -17,6 +17,11 @@ class ThemeResource extends Resource
         'id', 'name', 'path'
     ];
 
+    public static function label()
+    {
+        return 'Темы';
+    }
+
     public function fields(Request $request): array
     {
         return [

@@ -77,7 +77,12 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function getUserGroup()
     {
-        return $this->belongsTo(UserGroup::class, 'group_id', 'id');
+        return $this->belongsTo(UserGroup::class, 'group_id');
+    }
+
+    public function themeId()
+    {
+        return $this->belongsTo(Theme::class, 'theme_id');
     }
 
 }

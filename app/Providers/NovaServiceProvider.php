@@ -2,10 +2,14 @@
 
 namespace App\Providers;
 
+use App\Models\Service;
 use App\Nova\AdminsResource;
 use App\Nova\Dashboards\Main;
 use App\Nova\GroupTarifsResource;
 use App\Nova\NewsResource;
+use App\Nova\ServiceFormResource;
+use App\Nova\ServiceResource;
+use App\Nova\ThemeResource;
 use App\Nova\User;
 use App\Nova\Role;
 use App\Nova\UserGroupResource;
@@ -42,6 +46,8 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
 
                 MenuSection::make('Контент', [
                     MenuItem::resource(NewsResource::class),
+                    MenuItem::resource(ServiceResource::class),
+                    MenuItem::resource(ServiceFormResource::class),
                 ])->collapsable()->icon('newspaper'),
 
 

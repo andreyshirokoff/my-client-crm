@@ -5,100 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9be1317-6be4-4290-9727-b2bf61f43604" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Nova/ClientResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Nova/InformationGroupResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Nova/ServiceFormResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Nova/ServiceResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Nova/ServiceTemplateResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/ClientProcedureIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/ClientProcedureIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/cache/config.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/cache/routes-v7.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/blocks_content/block3_2_klienta_notatka.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blocks_content/block3_2_klienta_notatka.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/clients/client-procedure-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/clients/client-procedure-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/070d5c06fbb175bc3ec2a3da5614253e.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/08418a18fda9d7343646d3bcf40dc43e.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/0952bfca103d5070cd2da732bf10fa6f.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/16266e835b5caaf029caeb04ec587a34.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/1d169e1d5cb10b10107dd1fbf78cc57c.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/1e0aee24c373f8139a4503b76d8f87fc.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/232eba892c054163a4cf377879838d83.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/2aa2bf8641e4d228733b65008df511c0.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/2d031dd829e5c74e3fb547eb7d6472af.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/2d6f97f73f614b9016f736d77fbdf352.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/2ddf4079a28f2f099704de4aa0b91913.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/339fdcbf18917f7b1be8628947b09cad.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/36654846a43cc076221ce882eb4050b3.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/3d5d0b7f375872137f2edcbbc49ce58e.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/41b69cd80688d7cce60dee9f39339ad1.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/4376917257b9dac7cfab0fbd82614fd7.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/44c850d95cf4ca4046fdf5e6288cf419.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/478bcded5ef7401313797b8ae8899df4.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/49e648717512c8fd9146f5e518a3dbf9.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/4a5d83969144eb241ff567abff9ae8c6.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/4b90acff2e8726f612ba4b88cfcc9ef3.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/4bae0aec745dfe16eaf25eabc9da144a.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/4e8e5bfa058c4724a022636b9de4dd06.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/5654ebbdb18fc57eb9ddbbd137a36876.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/5a2a8f91ebf735085a9c5192f7880228.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/5a5b29cdfbd363b712c4c6c7bc93fb6f.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/5a6b30e1509d1cdb828388f590b8bb39.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/5c9b9c342b501ff27091ee70725a9f74.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/5f03b861d577e58f4f11482cc6047471.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/61bf73a4c33b206f5b87e3d4883b9ec8.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/62c19d5f0bb284aaf55235029feb411c.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/644b168503affb2dc3220116325fdd75.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/65d106dd9cd50fe9d319d19febaf0ae1.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/675c7a9996bfb642890d0bd3db8ca3dd.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/71124e449eb68e3fc85b572b4f58639f.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/7432c2612f49f27f01f41f496ef1877c.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/7478dbaf9de990823915b1627ca18841.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/7721ddc92a4a2fc9a9176a1e6f9031dc.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/7c5324e2cef4139f2a7a40f161e4c877.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/840696226648e150698002fe6681025c.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/895adae80c74d1b2c764432c5d476ac2.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/8c9184fb66562b836caf60fefd510e90.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/8d1d707f729fbcf83491393ecad68579.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/8f13fe24e51e728048b0ceaf8390640d.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/8f574ee8c99dcef4bad659aa8a0e5e22.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/8ffc469ecacc4c18ff80f9a86f821f7a.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/90df15fe9356184ef6b343fce04150b6.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/93fbcceb779b6daf55877451cb12efe0.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/9547371de57e2106ae9d109f57425d5c.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/95f0d9a33583e9dadbfe4b12cc7588ce.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/9a284a05d8da1a6cf021af610732bf71.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/9a3736535a8455d9badd3bcfe17df0d4.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/9ae9af115d9a278a2ec81e703e8f0f2d.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/9ffe224590a79bcd21c188575fe5a57c.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/a71dda6b24862a793bc2fb9985ab6c8d.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/a720e5ef4b12b1be5e3232be340ffccd.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/a831b8ba676cbfc983b39455224eac15.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/ab224d7f980e599a045fc1cec1f86b15.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/ae0c962bfc7b900aa5e75a0cbedf6d60.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/b394545bcb8b3e48d0e261a3f5f9227e.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/b5ec3bf6f2617627f5c65b833d2fbc72.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/bbec2a0451213955da9c436678909ddb.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/bc6636abebcc6209c91907f47662ea80.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/bd5c176dc00c1fdd5ca0bd2dba5e503d.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/c6a453821489377d424cb9285a2bcf2b.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/cbc510a8ee16cd2d81e15629e57f0453.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/cbe4529fabd0f6724e3a29d94fde0718.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/cbecc345f676c9511e95e1e8779cf251.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/cbf7b24e5e4386e9165de3f8b423f984.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/ccdfc5cbd54c6060ea6eeda0385af6f5.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/d5f9f9565d0a9296c07dd742ff56a2ce.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/d7cca00916c06e304e8c21535a8dc26b.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/d80c834a64ae6868d6db2d1442469c83.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/db3168aabd71be84a0eb56957f6c54ad.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/db668ea0a470de3e2c99f2e0a440a770.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/dc3a3e79e9aafe68e77a6a5e3e4ff41c.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/dec60a346817b6a9b26c48feb5f15ce4.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/e1fbee18d153858740c7a15fff2d2d57.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/eaaf906819b238608c44248a9cf65237.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/eb585e98fdc6f43a642432e52bd7a986.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/eeae8de37e27b6d94d4fc70929b6f07a.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/ef055c30886a687f003f233bd63537a1.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/f3b824ebbba9ab71c982a432884502fa.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/f3e05d9a25d56f8d41d5b097a065099a.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/f698296ea3b63510ab177066d219a730.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/f8bfd3ff5544fb4042f3c43a62de4eff.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/fa7a80d224398f22e1c54b8bda43962d.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -314,7 +227,9 @@
       <workItem from="1690565231760" duration="2400000" />
       <workItem from="1690569068947" duration="160000" />
       <workItem from="1690569477626" duration="5422000" />
-      <workItem from="1690638176634" duration="4488000" />
+      <workItem from="1690638176634" duration="5640000" />
+      <workItem from="1690713987622" duration="933000" />
+      <workItem from="1690720867236" duration="2117000" />
     </task>
     <servers />
   </component>

@@ -57,15 +57,17 @@
                     'block3_2_heading' => 'heading_block3_2_rodoreset'
                 ])
         @elseif($block3_3_content_class == 'aktualna_karta_klienta')
-            @include('blocks.block3_dock', [
-                    'block3_2_icon' => 'fas fa-id-card-alt',
-                    'block3_2_title' => 'Aktualna karta klienta',
-                    'block3_2_content_class' => 'block3_2_aktualna_karta_klienta',
-                    'block3_2_content' => $block3_3_content_class,
-                    'block3_2_heading' => 'heading_block3_2_aktualna_karta_klienta',
-                    'block3_doc_map_array' => $block3_doc_map_array
-                ])
-            <div class="mar"></div>
+            <livewire:actual-card-index/>
+{{--            @include('blocks.block3_dock', [--}}
+{{--                    'block3_2_icon' => 'fas fa-id-card-alt',--}}
+{{--                    'block3_2_title' => 'Aktualna karta klienta',--}}
+{{--                    'block3_2_content_class' => 'block3_2_aktualna_karta_klienta',--}}
+{{--                    'block3_2_content' => $block3_3_content_class,--}}
+{{--                    'block3_2_heading' => 'heading_block3_2_aktualna_karta_klienta',--}}
+{{--                    'block3_doc_map_array' => $block3_doc_map_array--}}
+{{--                ])--}}
+{{--            <div class="mar"></div>--}}
+
             @include('blocks.block3_dock', [
                     'block3_2_icon' => 'fas fa-id-card-alt',
                     'block3_2_title' => 'Dodaj pytania',

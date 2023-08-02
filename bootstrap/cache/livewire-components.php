@@ -1,4 +1,5 @@
 <?php return array (
+  'actual-card-index' => 'App\\Http\\Livewire\\ActualCardIndex',
   'add-client-procedure-index' => 'App\\Http\\Livewire\\AddClientProcedureIndex',
   'client-index' => 'App\\Http\\Livewire\\ClientIndex',
   'client-procedure-index' => 'App\\Http\\Livewire\\ClientProcedureIndex',

@@ -68,14 +68,14 @@
 {{--                ])--}}
 {{--            <div class="mar"></div>--}}
 
-            @include('blocks.block3_dock', [
-                    'block3_2_icon' => 'fas fa-id-card-alt',
-                    'block3_2_title' => 'Dodaj pytania',
-                    'block3_2_content_class' => 'block3_2_pytania',
-                    'block3_2_content' => $block3_3_content_class_1,
-                    'block3_2_heading' => 'heading_block3_2_pytania',
-                    'block3_doc_pytania_array' => $block3_doc_pytania_array
-                ])
+{{--            @include('blocks.block3_dock', [--}}
+{{--                    'block3_2_icon' => 'fas fa-id-card-alt',--}}
+{{--                    'block3_2_title' => 'Dodaj pytania',--}}
+{{--                    'block3_2_content_class' => 'block3_2_pytania',--}}
+{{--                    'block3_2_content' => $block3_3_content_class_1,--}}
+{{--                    'block3_2_heading' => 'heading_block3_2_pytania',--}}
+{{--                    'block3_doc_pytania_array' => $block3_doc_pytania_array--}}
+{{--                ])--}}
         @elseif($block3_3_content_class == 'block3_2_dodaj_pracownika')
             @include('blocks.block3_2', [
                     'block3_2_icon' => 'fas fa-user-friends',

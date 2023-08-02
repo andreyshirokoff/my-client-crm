@@ -12,7 +12,7 @@
         Twoja aktualna karta klienta (edytuj lub usuń).
     </div>
     <div style="display:flex;justify-content:center;flex-wrap: wrap;gap:15px" class="btns">
-        <button type="button" onclick="location.href='{{url('functions/document_kartaklienta_edit')}}?id=10408&amp;idkarty=10408&amp;id_dokumentu=10408';" class="btn1" style="color:white"><i class="fas fa-plus-circle" aria-hidden="true"></i> Edytuj</button>
+        <button type="button" onclick="location.href='{{url('functions/document_kartaklienta_edit')}}?groupId={{Auth::user()->group_id}}';" class="btn1" style="color:white"><i class="fas fa-plus-circle" aria-hidden="true"></i> Edytuj</button>
         <button type="button" onclick="location.href='{{url('functions/document_kartaklienta_delete')}}?id=10408'" class="btn1" style="color:white"><i class="fas fa-trash" aria-hidden="true"></i> Usuń</button>
 
     </div>

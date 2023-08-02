@@ -111,16 +111,6 @@
         <div class="boxinbox" style="background-color: rgb(240, 241, 241);">
             <div class="listing-titlebar d-flex flex-column" style="margin-top:10px;">
                 <button class="btn1 w-100 mb-1" style="color:white" id="add-field-in-question" wire:click.prevent="showAddModal">Dodaj pole</button>
-    {{--                <button class="btn1 w-100 mb-1" style="color:white" wire:click.prevent="addNewFields('input')">Input</button>--}}
-
-    {{--                <button class="btn1 w-100 mb-1" style="color:white;" wire:click.prevent="addNewFields('textarea')">Textarea</button>--}}
-
-
-    {{--                <button class="btn1 w-100 mb-1" style="color:white;" wire:click.prevent="addNewFields('checkbox')">Checkbox</button>--}}
-
-
-    {{--                <button class="btn1 w-100 mb-1" style="color:white;" wire:click.prevent="addNewFields('radio')">Radio</button>--}}
-
             </div>
             @if(count($fieldsArr) > 0)
 

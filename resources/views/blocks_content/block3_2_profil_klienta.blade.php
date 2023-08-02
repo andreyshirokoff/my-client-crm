@@ -23,7 +23,7 @@
             </div>
             <div style="display: flex; flex-direction: row; justify-content:flex-end;align-items:center;margin-top: 10px;">
                 <div class="iconround" style="margin-right: 10px;"><i class="fas fa-envelope" aria-hidden="true"></i></div>
-                {{\App\Models\Client::where('id', $_GET['clientId'])->first()->first()->email}}
+                {{\App\Models\Client::where('id', $_GET['clientId'])->first()->email}}
                 {{--                sas@sas.kz--}}
             </div>
         </div>
@@ -92,15 +92,15 @@
 
 
 
-    <div class="listing-actionbar justify-content-between">
-        <select class="input-control w-100" id="select_service" style="width:50%!important;">
-            @foreach(\App\Models\Service::get() as $service)
-                <option value="{{$service->id}}">{{$service->name}}</option>
-            @endforeach
-        </select>
-        {{--        <a href=""><button type="button" class="btn1" style="margin-left:10px;"><i class="fas fa-id-card-alt" aria-hidden="true"></i> Karta klienta</button></a>--}}
+    <div class="listing-actionbar justify-content-right flex-wrap gap-2">
+{{--        <select class="input-control w-100" id="select_service" style="width:50%!important;">--}}
+{{--            @foreach(\App\Models\Service::get() as $service)--}}
+{{--                <option value="{{$service->id}}">{{$service->name}}</option>--}}
+{{--            @endforeach--}}
+{{--        </select>--}}
+        <a id="answer-klient"><button type="button" class="btn1" style="margin-left:10px;"><i class="fas fa-id-card-alt" aria-hidden="true"></i> Karta klienta</button></a>
 
-        <a id="add-zabieg-klient"><button type="button" class="btn1" style="margin-left:10px;" ><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Dodaj zabieg</button></a>
+        <a id="add-zabieg-klient-modal"><button type="button" class="btn1" style="margin-left:10px;" ><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Dodaj zabieg</button></a>
     </div>
     <div class="modal fade" id="zabieg-klient" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -112,11 +112,15 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <select class="form-select w-100" id="select_service" style="">
+                        @foreach(\App\Models\Service::get() as $service)
+                            <option value="{{$service->id}}">{{$service->name}}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+{{--                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>--}}
+                    <button id="add-zabieg-klient" type="button" class="btn1" style="color:white"><i class="fa-solid fa-circle-chevron-right" style="color:white;margin-right:15px"></i>Kontynuować</button>
                 </div>
             </div>
         </div>
@@ -129,6 +133,16 @@
             value = $(e.target).val()
         })
         $(document).click((e) => {
+
+            if(
+                $(e.target).is('#add-zabieg-klient-modal')
+                || $(e.target).closest('#add-zabieg-klient-modal').length > 0
+            )
+            {
+                let modalItem = new bootstrap.Modal(document.querySelector('#zabieg-klient'))
+                modalItem.show()
+            }
+
             if(
                 $(e.target).is('#add-zabieg-klient')
                 || $(e.target).closest('#add-zabieg-klient').length > 0
@@ -136,6 +150,16 @@
             {
                 //console.log(`/dashboard/add_procedure?serviceId=${value}`)
                 window.location.href = `/dashboard/add-procedure?serviceId=${value}&clientId=${<?=$_GET['clientId']?>}`;
+            }
+
+            if(
+                $(e.target).is('#answer-klient')
+                || $(e.target).closest('#answer-klient').length > 0
+            )
+            {
+                let groupId = {{\App\Models\Client::where('id', $_GET['clientId'])->first()->group_id}}
+                //console.log(`/dashboard/add_procedure?serviceId=${value}`)
+                window.location.href = `/dashboard/add-answer-to-karta?groupId=${groupId}&clientId=${<?=$_GET['clientId']?>}`;
             }
         })
 

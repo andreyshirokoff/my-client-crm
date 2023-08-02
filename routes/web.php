@@ -55,6 +55,10 @@ Route::middleware('auth')->prefix('dashboard')->group(function (){
         return view('add_procedure');
     })->name('dobav.zabiegKlient');
 
+    Route::get('/add-answer-to-karta', function (){
+        return view('add_answer_to_karta');
+    })->name('add.answerToKarta');
+
     Route::get('/edit-procedure', function (){
         return view('edit_procedure');
     })->name('edit.procedure');

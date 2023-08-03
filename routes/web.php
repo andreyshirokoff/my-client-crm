@@ -97,8 +97,11 @@ Route::get('/functions/treatment_question/', function () {
     return view('ustawienia.treatment_question');
 })->middleware(['auth', 'check.getParameters'])
     ->name('treatment.question');
-Route::get('/functions/product_create', function () {
+Route::get('/functions/product-create', function () {
     return view('ustawienia.product_create');
+})->middleware(['auth']);
+Route::get('/functions/product-edit', function () {
+    return view('ustawienia.product_edit');
 })->middleware(['auth']);
 
 

@@ -24,12 +24,12 @@
                 });
 
                 handleSubmit()
-                // function setContentToEditor(className, content) {
-                //     if(content.length > 0) className.setContents(JSON.parse(content));
-                // }
-                // setTimeout(() => {
-                //     setContentToEditor(quillDescription, document.querySelector('#descriptionDb').value);
-                // }, 0)
+                function setContentToEditor(className, content) {
+                    if(content.length > 0) className.setContents(JSON.parse(content));
+                }
+                setTimeout(() => {
+                    setContentToEditor(quillDescription, document.querySelector('#descriptionDb').value);
+                }, 0)
 
 
                 function handleSubmit(event) {

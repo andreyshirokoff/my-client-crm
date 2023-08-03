@@ -13,6 +13,7 @@
   'modal-fields-add' => 'App\\Http\\Livewire\\ModalFieldsAdd',
   'product-create-desc-index' => 'App\\Http\\Livewire\\ProductCreateDescIndex',
   'product-create-index' => 'App\\Http\\Livewire\\ProductCreateIndex',
+  'product-edit-index' => 'App\\Http\\Livewire\\ProductEditIndex',
   'rodo-index' => 'App\\Http\\Livewire\\RodoIndex',
   'treatment-create-index' => 'App\\Http\\Livewire\\TreatmentCreateIndex',
   'treatment-list-index' => 'App\\Http\\Livewire\\TreatmentListIndex',

@@ -6,13 +6,15 @@ use App\Models\GroupBoot;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
-class ProductCreateIndex extends Component
+class ProductEditIndex extends Component
 {
     use WithFileUploads;
     public $image;
+    public $imageFromDb;
 
-    public $queryString = ['groupId'];
+    public $queryString = ['groupId', 'productId'];
     public $groupId;
+    public $productId;
 
     public ?string $name = '';
     public ?int $price = 0;
@@ -21,9 +23,16 @@ class ProductCreateIndex extends Component
 
     public function render()
     {
-        return view('livewire.product-create-index');
-    }
+        $groupBoot = GroupBoot::where('id', $this->productId)->first();
 
+        $this->name = $groupBoot->name;
+        $this->price = $groupBoot->price;
+        $this->dayOff = $groupBoot->day_off;
+        $this->description = $groupBoot->description;
+        $this->imageFromDb = $groupBoot->photo;
+
+        return view('livewire.product-edit-index');
+    }
 
     public function submitForm()
     {
@@ -32,7 +41,7 @@ class ProductCreateIndex extends Component
             'name' => 'string|min:3|required',
             'price' => 'numeric|min:0',
             'dayOff' => 'integer|min:0',
-            //'description' => 'string|min:3|nullable',
+            'description' => 'string|min:3|nullable',
         ]);
 
         $array = [
@@ -48,11 +57,11 @@ class ProductCreateIndex extends Component
             $array['photo'] = str_replace("storage/product/", "", $path);
         }
 
-        $ss = GroupBoot::create($array);
+
+        GroupBoot::where('id', $this->productId)
+            ->update($array);
 
         return redirect('/dashboard/ustawienia');
 
     }
-
-
 }

@@ -5,17 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9be1317-6be4-4290-9727-b2bf61f43604" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/ProductCreateDescIndex.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/ProductCreateIndex.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/GroupBoot.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Nova/GroupBootResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2023_08_03_122954_create_group_boots_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/product-create-desc-index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/product-create-index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/ProductEditIndex.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/blocks_content/block3_2_product_edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/product-edit-index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/ustawienia/product_edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/ProductCreateIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/ProductCreateIndex.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bootstrap/cache/livewire-components.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/cache/livewire-components.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/blocks_content/block3_2_product_create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blocks_content/block3_2_product_create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blocks/block2_2.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blocks/block2_2.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blocks/block3_2.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blocks/block3_2.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/blocks_content/block3_produkty.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blocks_content/block3_produkty.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/product-create-desc-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/product-create-desc-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/product-create-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/product-create-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -185,27 +187,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/OpenServer/domains/my-client-crm/resources/views&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/OpenServer/domains/my-client-crm/resources/views/blocks_content",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\domains\my-client-crm\resources\views\blocks_content" />
+      <recent name="C:\OpenServer\domains\my-client-crm\resources\views\ustawienia" />
       <recent name="C:\OpenServer\domains\my-client-crm\resources\views" />
       <recent name="C:\OpenServer\domains\my-client-crm\public\storage" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\OpenServer\domains\my-client-crm\public\storage\sign" />
+      <recent name="C:\OpenServer\domains\my-client-crm\public\storage" />
+      <recent name="C:\OpenServer\domains\my-client-crm\storage" />
       <recent name="C:\OpenServer\domains\my-client-crm\storage\app" />
+      <recent name="C:\OpenServer\domains\my-client-crm\public\storage\sign" />
     </key>
   </component>
   <component name="RunManager">
@@ -244,7 +250,7 @@
       <workItem from="1690803818638" duration="3000" />
       <workItem from="1690999097167" duration="9686000" />
       <workItem from="1691039191825" duration="2568000" />
-      <workItem from="1691085666068" duration="11736000" />
+      <workItem from="1691085666068" duration="15950000" />
     </task>
     <servers />
   </component>

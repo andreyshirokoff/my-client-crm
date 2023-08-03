@@ -110,10 +110,18 @@
         @elseif($block3_3_content_class == 'block3_2_product_create')
             @include('blocks.block3_2', [
                     'block3_2_icon' => 'fas fa-user-friends',
-                    'block3_2_title' => 'Dodaj zabieg',
+                    'block3_2_title' => 'Dodaj produkt',
                     'block3_3_content_class' => 'block3_2_product_create',
                     'block3_2_content' => $block3_3_content_class,
                     'block3_2_heading' => 'heading_block3_2_product_create',
+                ])
+        @elseif($block3_3_content_class == 'block3_2_product_edit')
+            @include('blocks.block3_2', [
+                    'block3_2_icon' => 'fas fa-user-friends',
+                    'block3_2_title' => 'Edytuj produkt',
+                    'block3_3_content_class' => 'block3_2_product_edit',
+                    'block3_2_content' => $block3_3_content_class,
+                    'block3_2_heading' => 'heading_block3_2_product_edit',
                 ])
         @elseif($block3_3_content_class == 'block3_2_profil_klienta')
             @include('blocks.block3_2', [

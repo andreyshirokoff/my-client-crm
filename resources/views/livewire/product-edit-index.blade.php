@@ -59,8 +59,8 @@
             @enderror
         </div>
         <livewire:product-create-desc-index/>
-        <input type="hidden" id="descriptionDb" name="description-text">
-{{--        <input type="hidden" id="quil-description-submit" name="description" wire:model="description">--}}
+        <input type="hidden" id="descriptionDb" name="description-text" wire:model="description">
+        {{--        <input type="hidden" id="quil-description-submit" name="description" wire:model="description">--}}
 
 
         <div class="listing-element row-with-input">
@@ -68,7 +68,10 @@
                 Zdjęcie produktu
             </div>
             <div style="width:60%;" class="sec-div">
-                <input type="file" name="plik" class="formularz" minlength="3" maxlength="45" value="" wire:model.defer="image">
+                @if($imageFromDb)
+                <img src="/storage/product/{{$imageFromDb}}" style="height:200px" alt="">
+                @endif
+                <input src="/storage/product/{{$imageFromDb}}" type="file" name="plik" class="formularz" minlength="3" maxlength="45" value="" wire:model.defer="image">
             </div>
             @error('image')
             <span class="is-invalid" role="alert" style="color:black">
@@ -89,29 +92,29 @@
             <button type="submit" id="submit-product" class="btn1" style="margin-left:10px;"><i class="fas fa-check-circle" aria-hidden="true"></i> Dodaj</button>
         </div>
     </form>
-{{--    @section('addit_js')--}}
-        <script>
+    {{--    @section('addit_js')--}}
+    <script>
 
-                {{--$(document).click((e) => {--}}
-                {{--    if(--}}
-                {{--        $(e.target).is('#submit-product')--}}
-                {{--        || $(e.target).closest('#submit-product').length > 0--}}
-                {{--    )--}}
-                {{--    {--}}
-                {{--        e.preventDefault()--}}
-                {{--        @this.set('description', document.querySelector('#quil-description-input').value)--}}
-                {{--        //document.getElementById('create-product-form').submit();--}}
-                {{--        Livewire.emit('submitForm');--}}
-                {{--    }--}}
-                {{--})--}}
+        {{--$(document).click((e) => {--}}
+        {{--    if(--}}
+        {{--        $(e.target).is('#submit-product')--}}
+        {{--        || $(e.target).closest('#submit-product').length > 0--}}
+        {{--    )--}}
+        {{--    {--}}
+        {{--        e.preventDefault()--}}
+        {{--        @this.set('description', document.querySelector('#quil-description-input').value)--}}
+        {{--        //document.getElementById('create-product-form').submit();--}}
+        {{--        Livewire.emit('submitForm');--}}
+        {{--    }--}}
+        {{--})--}}
 
-                document.querySelector('#create-product-form').addEventListener('submit', (e) => {
-                    e.preventDefault()
-                    @this.set('description', document.querySelector('#quil-description-input').value)
+        document.querySelector('#create-product-form').addEventListener('submit', (e) => {
+            e.preventDefault()
+            @this.set('description', document.querySelector('#quil-description-input').value)
 
-                    Livewire.emit('submitForm');
-                })
+            Livewire.emit('submitForm');
+        })
 
-        </script>
-{{--    @endsection--}}
+    </script>
+    {{--    @endsection--}}
 </div>

@@ -8,7 +8,8 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::table('clients', function (Blueprint $table) {
-            $table->unsignedBigInteger('group_id')->after('id');
+            $table->unsignedBigInteger('group_id')->after('id')
+                ->default(0);
             $table->foreign('group_id')->references('id')->on('clients');
         });
     }

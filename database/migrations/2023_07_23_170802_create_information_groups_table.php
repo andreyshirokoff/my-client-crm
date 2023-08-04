@@ -9,7 +9,7 @@ return new class extends Migration {
     {
         Schema::create('information_groups', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('group_id');
+            $table->unsignedBigInteger('group_id')->default(0);
             $table->foreign('group_id')->references('id')->on('user_groups');
             $table->enum('type', ['sms', 'email'])->nullable();
             $table->unsignedBigInteger('user_id');

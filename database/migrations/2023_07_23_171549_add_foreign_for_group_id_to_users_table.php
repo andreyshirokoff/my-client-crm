@@ -8,7 +8,8 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->unsignedBigInteger('group_id')->after('is_main');
+            $table->unsignedBigInteger('group_id')->after('is_main')
+                ->default(0);
             $table->foreign('group_id')->references('id')->on('user_groups');
         });
     }

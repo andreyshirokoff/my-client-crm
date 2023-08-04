@@ -9,7 +9,7 @@ return new class extends Migration {
     {
         Schema::create('services', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('group_id');
+            $table->unsignedBigInteger('group_id')->default(0);
             $table->foreign('group_id')->references('id')->on('user_groups');
             $table->boolean('is_med')->default(0);;
             $table->string('name');

@@ -11,7 +11,8 @@ return new class extends Migration {
             $table->id();
             $table->string('name');
             $table->decimal('price')->default(0);
-            $table->unsignedBigInteger('group_id');
+            $table->unsignedBigInteger('group_id')
+                ->default(0);
             $table->foreign('group_id')->references('id')->on('user_groups');
             $table->unsignedBigInteger('day_off')->default(0);
             $table->longText('description')->nullable();

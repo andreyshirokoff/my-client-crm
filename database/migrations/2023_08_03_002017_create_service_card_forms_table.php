@@ -9,7 +9,8 @@ return new class extends Migration {
     {
         Schema::create('service_card_forms', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('group_id');
+            $table->unsignedBigInteger('group_id')
+                ->default(0);
             $table->foreign('group_id')->references('id')->on('user_groups');
             $table->longText('fields');
             $table->timestamps();

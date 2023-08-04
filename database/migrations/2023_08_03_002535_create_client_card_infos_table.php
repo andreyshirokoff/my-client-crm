@@ -9,7 +9,8 @@ return new class extends Migration {
     {
         Schema::create('client_card_infos', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('group_id');
+            $table->unsignedBigInteger('group_id')
+                ->default(0);
             $table->foreign('group_id')->references('id')->on('user_groups');
             $table->unsignedBigInteger('client_id');
             $table->foreign('client_id')->references('id')->on('clients');

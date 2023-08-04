@@ -103,5 +103,8 @@ Route::get('/functions/product-create', function () {
 Route::get('/functions/product-edit', function () {
     return view('ustawienia.product_edit');
 })->middleware(['auth']);
+Route::get('/functions/product-delete', function () {
+    return view('ustawienia.product_delete');
+})->middleware(['auth']);
 
 

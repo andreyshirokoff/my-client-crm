@@ -5,18 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9be1317-6be4-4290-9727-b2bf61f43604" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/ProductEditIndex.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/blocks_content/block3_2_product_edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/product-edit-index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/ustawienia/product_edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/ProductDeleteIndex.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/blocks_content/block3_2_product_delete.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/product-delete-index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/ustawienia/product_delete.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/ProductCreateIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/ProductCreateIndex.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bootstrap/cache/livewire-components.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/cache/livewire-components.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/blocks/block2_2.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blocks/block2_2.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/blocks/block3_2.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blocks/block3_2.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/blocks_content/block3_produkty.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blocks_content/block3_produkty.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/product-create-desc-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/product-create-desc-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/product-create-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/product-create-index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
     </list>
@@ -191,7 +188,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/OpenServer/domains/my-client-crm/resources/views/blocks_content",
+    "last_opened_file_path": "C:/OpenServer/domains/my-client-crm/resources/views/ustawienia",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -202,8 +199,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\OpenServer\domains\my-client-crm\resources\views\blocks_content" />
       <recent name="C:\OpenServer\domains\my-client-crm\resources\views\ustawienia" />
+      <recent name="C:\OpenServer\domains\my-client-crm\resources\views\blocks_content" />
       <recent name="C:\OpenServer\domains\my-client-crm\resources\views" />
       <recent name="C:\OpenServer\domains\my-client-crm\public\storage" />
     </key>
@@ -251,6 +248,8 @@
       <workItem from="1690999097167" duration="9686000" />
       <workItem from="1691039191825" duration="2568000" />
       <workItem from="1691085666068" duration="15950000" />
+      <workItem from="1691126659278" duration="2040000" />
+      <workItem from="1691177916684" duration="2935000" />
     </task>
     <servers />
   </component>

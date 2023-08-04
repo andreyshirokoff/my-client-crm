@@ -41,7 +41,7 @@
             <a href="{{url('/functions/product-edit')}}?groupId={{\Illuminate\Support\Facades\Auth::user()->group_id}}&productId={{$product->id}}"><i class="fa-solid fa-pen-to-square i-black"></i></a>
             {{--                            @livewire('treatment-list-index', ['idService' => '123'])--}}
 {{--            <a href="" style="cursor: pointer"><i class="fa-solid fa-copy i-black"></i></a>--}}
-            <a href="" id="delete-service"><i class="fa-solid fa-trash i-black"></i></a>
+            <a href="{{url('/functions/product-delete')}}?productId={{$product->id}}" id="delete-service"><i class="fa-solid fa-trash i-black"></i></a>
         </div>
     </div>
 @endforeach

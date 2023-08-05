@@ -5,18 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9be1317-6be4-4290-9727-b2bf61f43604" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Tariff.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/UserTariff.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Nova/TariffResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Nova/UserTariffResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2023_08_05_153848_create_tariffs_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2023_08_05_154427_create_user_tariffs_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2023_07_23_161354_create_group_tariffs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_07_23_161354_create_group_tariffs_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2023_07_23_170802_create_information_groups_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_07_23_170802_create_information_groups_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2023_07_23_171549_add_foreign_for_group_id_to_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_07_23_171549_add_foreign_for_group_id_to_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2023_07_23_172031_add_foreign_for_group_id_to_clients_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_07_23_172031_add_foreign_for_group_id_to_clients_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2023_07_25_102027_create_services_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_07_25_102027_create_services_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2023_08_03_002017_create_service_card_forms_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_08_03_002017_create_service_card_forms_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2023_08_03_002535_create_client_card_infos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_08_03_002535_create_client_card_infos_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2023_08_03_122954_create_group_boots_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_08_03_122954_create_group_boots_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,19 +180,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/OpenServer/domains/my-client-crm/app/Http/Controllers",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/OpenServer/domains/my-client-crm/app/Http/Controllers&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\OpenServer\domains\my-client-crm\app\Http\Controllers" />
@@ -251,7 +246,8 @@
       <workItem from="1691039191825" duration="2568000" />
       <workItem from="1691085666068" duration="15950000" />
       <workItem from="1691126659278" duration="2040000" />
-      <workItem from="1691177916684" duration="5602000" />
+      <workItem from="1691177916684" duration="5660000" />
+      <workItem from="1691227483867" duration="1419000" />
     </task>
     <servers />
   </component>

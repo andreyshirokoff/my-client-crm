@@ -126,17 +126,32 @@ class ApiController extends Controller
 
                 case 'tariff.firstOrNew':
                     $fields = json_decode($request->input('fields'), 1);
-                    if($fields)
+                    if(isset($fields['xml_id']))
                     {
-                        $tariffCreate = Tariff::firstOrNew($fields);
-                        $tariffCreate->save();
-                        if($tariffCreate->id)
+                        $tariff = Tariff::firstOrNew(['xml_id' => $fields['xml_id']]);
+
+                        if(isset($tariff->xml_id))
                         {
-                            $statusRequest = $this->statusRequest('OK', 'The tariff is successfully added or updated', ['ID' => $tariffCreate->id]);
+                            if(isset($fields['title'])) $tariff->title = $fields['title'];
+                            if(isset($fields['price'])) $tariff->price = $fields['price'];
+                            if(isset($fields['trial'])) $tariff->trial = $fields['trial'];
+                            if(isset($fields['is_test'])) $tariff->is_test = $fields['is_test'];
+                            if(isset($fields['is_actual'])) $tariff->is_actual = $fields['is_actual'];
+
+                            $tariff->save();
+                            if(isset($tariff->id))
+                            {
+                                $statusRequest = $this->statusRequest('OK', 'The tariff is successfully updated or added', ['ID' => $tariff->id]);
+                            }
+                            else
+                            {
+                                $statusRequest = $this->statusRequest('ERROR', 'The row id did not get');
+                            }
+
                         }
                         else
                         {
-                            $statusRequest = $this->statusRequest('ERROR', 'Check the fields');
+                            $statusRequest = $this->statusRequest('ERROR', 'Something went wrong');
                         }
                     }
                     else
@@ -148,17 +163,49 @@ class ApiController extends Controller
 
                 case 'userTariff.firstOrNew':
                     $fields = json_decode($request->input('fields'), 1);
-                    if($fields)
+                    if(isset($fields['xml_id']))
                     {
-                        $userTariffCreate = UserTariff::firstOrNew($fields);
-                        $userTariffCreate->save();
-                        if($userTariffCreate->id)
+                        $userTariff = UserTariff::firstOrNew(['xml_id' => $fields['xml_id']]);
+                        if(isset($userTariff->xml_id))
                         {
-                            $statusRequest = $this->statusRequest('OK', 'The user tariff is successfully added or updated', ['ID' => $userTariffCreate->id]);
+                            if(isset($fields['user_id'])) $userTariff->user_id = $fields['user_id'];
+                            if(isset($fields['user_xml_id']))
+                            {
+                                $userTariff->user_xml_id = $fields['user_xml_id'];
+                                if(!isset($fields['user_id']))
+                                {
+                                    $user = User::where('xml_id', $fields['user_xml_id'])->first();
+                                    $userTariff->user_id = $user->id;
+                                }
+                            }
+                            if(isset($fields['tariff_id'])) $userTariff->tariff_id = $fields['tariff_id'];
+                            if(isset($fields['tariff_xml_id']))
+                            {
+                                $userTariff->tariff_xml_id = $fields['tariff_xml_id'];
+                                if(!isset($fields['tariff_id']))
+                                {
+                                    $tariff = Tariff::where('id', $fields['tariff_xml_id'])->first();
+                                    $userTariff->tariff_id = $tariff->id;
+                                }
+                            }
+                            if(isset($fields['date_start'])) $userTariff->date_start = $fields['date_start'];
+                            if(isset($fields['date_end'])) $userTariff->date_end = $fields['date_end'];
+                            if(isset($fields['is_active'])) $userTariff->is_active = $fields['is_active'];
+
+                            $userTariff->save();
+                            if(isset($user->id))
+                            {
+                                $statusRequest = $this->statusRequest('OK', 'The user tariff is successfully updated or added', ['ID' => $user->id]);
+                            }
+                            else
+                            {
+                                $statusRequest = $this->statusRequest('ERROR', 'The row id did not get');
+                            }
+
                         }
                         else
                         {
-                            $statusRequest = $this->statusRequest('ERROR', 'Check the fields');
+                            $statusRequest = $this->statusRequest('ERROR', 'Something went wrong');
                         }
                     }
                     else
@@ -209,39 +256,62 @@ class ApiController extends Controller
 
                 case 'user.firstOrNew':
                     $fields = json_decode($request->input('fields'), 1);
-                    if($fields)
+                    if(
+                        isset($fields['xml_id'])
+                    )
                     {
-                        $userCreate = User::firstOrNew($fields);
-                        $userCreate->save();
-                        if($userCreate->id)
+                        $user = User::firstOrNew(['xml_id' => $fields['xml_id']]);
+
+                        if(isset($user->xml_id))
                         {
-                            $statusRequest = $this->statusRequest('OK', 'The user is successfully added or updated', ['ID' => $userCreate->id]);
+                            if(isset($fields['name'])) $user->name = $fields['name'];
+                            if(isset($fields['last_name'])) $user->last_name = $fields['last_name'];
+                            if(isset($fields['fullname'])) $user->fullname = $fields['fullname'];
+                            if(isset($fields['avatar'])) $user->avatar = $fields['avatar'];
+                            if(isset($fields['password'])) $user->password = $fields['password'];
+                            if(isset($fields['email'])) $user->email = $fields['email'];
+                            if(isset($fields['phone'])) $user->phone = $fields['phone'];
+                            if(isset($fields['is_main'])) $user->is_main = $fields['is_main'];
+                            if(isset($fields['group_id'])) $user->group_id = $fields['group_id'];
+                            if(isset($fields['roles'])) $user->roles = $fields['roles'];
+                            if(isset($fields['status'])) $user->status = $fields['status'];
+                            if(isset($fields['theme_id'])) $user->theme_id = $fields['theme_id'];
+
+                            $user->save();
+                            if(isset($user->id))
+                            {
+                                $statusRequest = $this->statusRequest('OK', 'The user is successfully updated or added', ['ID' => $user->id]);
+                            }
+                            else
+                            {
+                                $statusRequest = $this->statusRequest('ERROR', 'The row id did not get');
+                            }
+
                         }
                         else
                         {
-                            $statusRequest = $this->statusRequest('ERROR', 'Check the fields');
+                            $statusRequest = $this->statusRequest('ERROR', 'Something went wrong');
                         }
                     }
                     else
                     {
-                        $statusRequest = $this->statusRequest('ERROR', 'The "fields" field is empty');
+                        $statusRequest = $this->statusRequest('ERROR', 'Pass the "fields" json-array field which has required keys: "xml_id"');
                     }
 
                     break;
 
-                case 'userGroup.firstOrNew':
+                case 'userGroup.create':
                     $fields = json_decode($request->input('fields'), 1);
-                    if($fields)
+                    if(count($fields) > 0)
                     {
-                        $userGroupCreate = UserGroup::firstOrNew($fields);
-                        $userGroupCreate->save();
-                        if($userGroupCreate->id)
+                        $userGroup = UserGroup::create($fields);
+                        if($userGroup->id)
                         {
-                            $statusRequest = $this->statusRequest('OK', 'The user group is successfully added or updated', ['ID' => $userGroupCreate->id]);
+                            $statusRequest = $this->statusRequest('OK', 'The user is successfully updated or added', ['ID' => $userGroup->id]);
                         }
                         else
                         {
-                            $statusRequest = $this->statusRequest('ERROR', 'Check the fields');
+                            $statusRequest = $this->statusRequest('ERROR', 'Something went wrong');
                         }
                     }
                     else

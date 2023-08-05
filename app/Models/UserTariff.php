@@ -15,8 +15,9 @@ class UserTariff extends Model
 
     protected $fillable = [
         'id',
-        'user_xml_id',
-        'tariff_xml_id',
+        'xml_id',
+        'user_id',
+        'tariff_id',
         'date_start',
         'date_end',
         'is_active',

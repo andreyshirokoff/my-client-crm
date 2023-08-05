@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9be1317-6be4-4290-9727-b2bf61f43604" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Models/Tariff.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/UserTariff.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Nova/TariffResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Nova/UserTariffResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2023_08_05_153848_create_tariffs_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2023_08_05_154427_create_user_tariffs_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/UserTariff.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserTariff.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_08_05_154427_create_user_tariffs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_08_05_154427_create_user_tariffs_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +245,7 @@
       <workItem from="1691085666068" duration="15950000" />
       <workItem from="1691126659278" duration="2040000" />
       <workItem from="1691177916684" duration="5660000" />
-      <workItem from="1691227483867" duration="1419000" />
+      <workItem from="1691227483867" duration="2401000" />
     </task>
     <servers />
   </component>

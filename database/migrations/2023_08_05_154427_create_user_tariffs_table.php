@@ -9,10 +9,15 @@ return new class extends Migration {
     {
         Schema::create('user_tariffs', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_xml_id');
-            $table->foreign('user_xml_id')->references('xml_id')->on('users');
+            $table->unsignedBigInteger('xml_id');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->bigInteger('user_xml_id');
+            //$table->foreign('user_xml_id')->references('xml_id')->on('users');
+            $table->unsignedBigInteger('tariff_id');
+            $table->foreign('tariff_id')->references('id')->on('tariffs');
             $table->unsignedBigInteger('tariff_xml_id');
-            $table->foreign('tariff_xml_id')->references('xml_id')->on('tariffs');
+            //$table->foreign('tariff_xml_id')->references('xml_id')->on('tariffs');
             $table->dateTime('date_start');
             $table->dateTime('date_end');
             $table->boolean('is_active');

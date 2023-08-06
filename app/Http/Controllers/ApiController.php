@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\GroupTariff;
 use App\Models\Packet;
 use App\Models\Tariff;
 use App\Models\User;
@@ -48,188 +49,178 @@ class ApiController extends Controller
 
                     break;
 
-                case 'tariff.list':
-                    $tariffs = Tariff::all();
 
-                    if($tariffs !== false)
-                    {
-                        $statusRequest = $this->statusRequest('OK', 'The tariffs are successfully returned', $tariffs->toArray());
-                    }
-                    else
-                    {
-                        $statusRequest = $this->statusRequest('ERROR', 'This table is not available');
-                    }
-
-
-                    break;
-
-                case 'userTariff.list':
-                    $userTariffs = Tariff::all();
-
-                    if($userTariffs !== false)
-                    {
-                        $statusRequest = $this->statusRequest('OK', 'The user_tariffs are successfully returned', $userTariffs->toArray());
-                    }
-                    else
-                    {
-                        $statusRequest = $this->statusRequest('ERROR', 'This table is not available');
-                    }
-
-
-                    break;
-
-                case 'tariff.get':
-                    $id = $request->input('ID');
-
-                    if($id)
-                    {
-                        $tariff = Tariff::where('id', $id)->first()->toArray();
-
-                        if(count($tariff) > 0)
-                        {
-                            $statusRequest = $this->statusRequest('OK', 'The tariff is successfully returned', $tariff);
-                        }
-                        else
-                        {
-                            $statusRequest = $this->statusRequest('ERROR', 'This tariff does not exist');
-                        }
-                    }
-                    else
-                    {
-                        $statusRequest = $this->statusRequest('ERROR', 'The ID field is empty');
-                    }
-
-                    break;
-
-                case 'userTariff.get':
-                    $id = $request->input('ID');
-
-                    if($id)
-                    {
-                        $tariff = UserTariff::where('id', $id)->first()->toArray();
-
-                        if(count($tariff) > 0)
-                        {
-                            $statusRequest = $this->statusRequest('OK', 'The user_tariff is successfully returned', $tariff);
-                        }
-                        else
-                        {
-                            $statusRequest = $this->statusRequest('ERROR', 'This user_tariff does not exist');
-                        }
-                    }
-                    else
-                    {
-                        $statusRequest = $this->statusRequest('ERROR', 'The ID field is empty');
-                    }
-
-                    break;
-
-                case 'tariff.firstOrNew':
-                    $fields = json_decode($request->input('fields'), 1);
-                    if(isset($fields['xml_id']))
-                    {
-                        $tariff = Tariff::firstOrNew(['xml_id' => $fields['xml_id']]);
-
-                        if(isset($tariff->xml_id))
-                        {
-                            if(isset($fields['title'])) $tariff->title = $fields['title'];
-                            if(isset($fields['price'])) $tariff->price = $fields['price'];
-                            if(isset($fields['trial'])) $tariff->trial = $fields['trial'];
-                            if(isset($fields['is_test'])) $tariff->is_test = $fields['is_test'];
-                            if(isset($fields['is_actual'])) $tariff->is_actual = $fields['is_actual'];
-
-                            $tariff->save();
-                            if(isset($tariff->id))
-                            {
-                                $statusRequest = $this->statusRequest('OK', 'The tariff is successfully updated or added', ['ID' => $tariff->id]);
-                            }
-                            else
-                            {
-                                $statusRequest = $this->statusRequest('ERROR', 'The row id did not get');
-                            }
-
-                        }
-                        else
-                        {
-                            $statusRequest = $this->statusRequest('ERROR', 'Something went wrong');
-                        }
-                    }
-                    else
-                    {
-                        $statusRequest = $this->statusRequest('ERROR', 'The "fields" field is empty');
-                    }
-
-                    break;
-
-                case 'userTariff.firstOrNew':
-                    $fields = json_decode($request->input('fields'), 1);
-                    if(isset($fields['xml_id']))
-                    {
-                        $userTariff = UserTariff::firstOrNew(['xml_id' => $fields['xml_id']]);
-                        if(isset($userTariff->xml_id))
-                        {
-                            if(isset($fields['user_id'])) $userTariff->user_id = $fields['user_id'];
-                            if(isset($fields['user_xml_id']))
-                            {
-                                $userTariff->user_xml_id = $fields['user_xml_id'];
-                                if(!isset($fields['user_id']))
-                                {
-                                    $user = User::where('xml_id', $fields['user_xml_id'])->first();
-                                    $userTariff->user_id = $user->id;
-                                }
-                            }
-                            if(isset($fields['tariff_id'])) $userTariff->tariff_id = $fields['tariff_id'];
-                            if(isset($fields['tariff_xml_id']))
-                            {
-                                $userTariff->tariff_xml_id = $fields['tariff_xml_id'];
-                                if(!isset($fields['tariff_id']))
-                                {
-                                    $tariff = Tariff::where('id', $fields['tariff_xml_id'])->first();
-                                    $userTariff->tariff_id = $tariff->id;
-                                }
-                            }
-                            if(isset($fields['date_start'])) $userTariff->date_start = $fields['date_start'];
-                            if(isset($fields['date_end'])) $userTariff->date_end = $fields['date_end'];
-                            if(isset($fields['is_active'])) $userTariff->is_active = $fields['is_active'];
-
-                            $userTariff->save();
-                            if(isset($user->id))
-                            {
-                                $statusRequest = $this->statusRequest('OK', 'The user tariff is successfully updated or added', ['ID' => $user->id]);
-                            }
-                            else
-                            {
-                                $statusRequest = $this->statusRequest('ERROR', 'The row id did not get');
-                            }
-
-                        }
-                        else
-                        {
-                            $statusRequest = $this->statusRequest('ERROR', 'Something went wrong');
-                        }
-                    }
-                    else
-                    {
-                        $statusRequest = $this->statusRequest('ERROR', 'The "fields" field is empty');
-                    }
-
-                    break;
-
-
-
-//                case 'packet.list':
-//                    $packets = Packet::all();
+//                case 'tariff.get':
+//                    $id = $request->input('ID');
 //
-//                    if($packets !== false)
+//                    if($id)
 //                    {
-//                        $statusRequest = $this->statusRequest('OK', 'The packets are successfully returned', $packets->toArray());
+//                        $tariff = Tariff::where('id', $id)->first()->toArray();
+//
+//                        if(count($tariff) > 0)
+//                        {
+//                            $statusRequest = $this->statusRequest('OK', 'The tariff is successfully returned', $tariff);
+//                        }
+//                        else
+//                        {
+//                            $statusRequest = $this->statusRequest('ERROR', 'This tariff does not exist');
+//                        }
 //                    }
 //                    else
 //                    {
-//                        $statusRequest = $this->statusRequest('ERROR', 'This table is not available');
+//                        $statusRequest = $this->statusRequest('ERROR', 'The ID field is empty');
 //                    }
 //
 //                    break;
+//
+//                case 'userTariff.get':
+//                    $id = $request->input('ID');
+//
+//                    if($id)
+//                    {
+//                        $tariff = UserTariff::where('id', $id)->first()->toArray();
+//
+//                        if(count($tariff) > 0)
+//                        {
+//                            $statusRequest = $this->statusRequest('OK', 'The user_tariff is successfully returned', $tariff);
+//                        }
+//                        else
+//                        {
+//                            $statusRequest = $this->statusRequest('ERROR', 'This user_tariff does not exist');
+//                        }
+//                    }
+//                    else
+//                    {
+//                        $statusRequest = $this->statusRequest('ERROR', 'The ID field is empty');
+//                    }
+//
+//                    break;
+//
+//                case 'tariff.firstOrNew':
+//                    $fields = json_decode($request->input('fields'), 1);
+//                    if(isset($fields['xml_id']))
+//                    {
+//                        $tariff = Tariff::firstOrNew(['xml_id' => $fields['xml_id']]);
+//
+//                        if(isset($tariff->xml_id))
+//                        {
+//                            if(isset($fields['title'])) $tariff->title = $fields['title'];
+//                            if(isset($fields['price'])) $tariff->price = $fields['price'];
+//                            if(isset($fields['trial'])) $tariff->trial = $fields['trial'];
+//                            if(isset($fields['is_test'])) $tariff->is_test = $fields['is_test'];
+//                            if(isset($fields['is_actual'])) $tariff->is_actual = $fields['is_actual'];
+//
+//                            $tariff->save();
+//                            if(isset($tariff->id))
+//                            {
+//                                $statusRequest = $this->statusRequest('OK', 'The tariff is successfully updated or added', ['ID' => $tariff->id]);
+//                            }
+//                            else
+//                            {
+//                                $statusRequest = $this->statusRequest('ERROR', 'The row id did not get');
+//                            }
+//
+//                        }
+//                        else
+//                        {
+//                            $statusRequest = $this->statusRequest('ERROR', 'Something went wrong');
+//                        }
+//                    }
+//                    else
+//                    {
+//                        $statusRequest = $this->statusRequest('ERROR', 'The "fields" field is empty');
+//                    }
+//
+//                    break;
+//
+//                case 'userTariff.firstOrNew':
+//                    $fields = json_decode($request->input('fields'), 1);
+//                    if(isset($fields['xml_id']))
+//                    {
+//                        $userTariff = UserTariff::firstOrNew(['xml_id' => $fields['xml_id']]);
+//                        if(isset($userTariff->xml_id))
+//                        {
+//                            if(isset($fields['user_id'])) $userTariff->user_id = $fields['user_id'];
+//                            if(isset($fields['user_xml_id']))
+//                            {
+//                                $userTariff->user_xml_id = $fields['user_xml_id'];
+//                                if(!isset($fields['user_id']))
+//                                {
+//                                    $user = User::where('xml_id', $fields['user_xml_id'])->first();
+//                                    $userTariff->user_id = $user->id;
+//                                }
+//                            }
+//                            if(isset($fields['tariff_id'])) $userTariff->tariff_id = $fields['tariff_id'];
+//                            if(isset($fields['tariff_xml_id']))
+//                            {
+//                                $userTariff->tariff_xml_id = $fields['tariff_xml_id'];
+//                                if(!isset($fields['tariff_id']))
+//                                {
+//                                    $tariff = Tariff::where('id', $fields['tariff_xml_id'])->first();
+//                                    $userTariff->tariff_id = $tariff->id;
+//                                }
+//                            }
+//                            if(isset($fields['date_start'])) $userTariff->date_start = $fields['date_start'];
+//                            if(isset($fields['date_end'])) $userTariff->date_end = $fields['date_end'];
+//                            if(isset($fields['is_active'])) $userTariff->is_active = $fields['is_active'];
+//
+//                            $userTariff->save();
+//                            if(isset($user->id))
+//                            {
+//                                $statusRequest = $this->statusRequest('OK', 'The user tariff is successfully updated or added', ['ID' => $user->id]);
+//                            }
+//                            else
+//                            {
+//                                $statusRequest = $this->statusRequest('ERROR', 'The row id did not get');
+//                            }
+//
+//                        }
+//                        else
+//                        {
+//                            $statusRequest = $this->statusRequest('ERROR', 'Something went wrong');
+//                        }
+//                    }
+//                    else
+//                    {
+//                        $statusRequest = $this->statusRequest('ERROR', 'The "fields" field is empty');
+//                    }
+//
+//                    break;
+
+                case 'groupTariff.add':
+                    $fields = json_decode($request->input('fields'), 1);
+                    if(isset($fields['xml_id']))
+                    {
+                        $groupTariff = GroupTariff::firstOrNew(['xml_id' => $fields['xml_id']]);
+                        if(isset($groupTariff->xml_id))
+                        {
+                            if(isset($fields['owner_id'])) $groupTariff->owner_id = $fields['owner_id'];
+                            if(isset($fields['name'])) $groupTariff->name = $fields['name'];
+                            if(isset($fields['group_id'])) $groupTariff->group_id = $fields['group_id'];
+                            if(isset($fields['active_to'])) $groupTariff->active_to = $fields['active_to'];
+                            if(isset($fields['sign_path'])) $groupTariff->sign_path = $fields['sign_path'];
+                            if(isset($fields['base64'])) $groupTariff->base64 = $fields['base64'];
+
+                            $groupTariff->save();
+                            if(isset($groupTariff->id))
+                            {
+                                $statusRequest = $this->statusRequest('OK', 'The group tariff is successfully updated or added', ['ID' => $groupTariff->id]);
+                            }
+                            else
+                            {
+                                $statusRequest = $this->statusRequest('ERROR', 'The row id did not get');
+                            }
+                        }
+                        {
+                            $statusRequest = $this->statusRequest('ERROR', 'Something went wrong');
+                        }
+                    }
+                    else
+                    {
+                        $statusRequest = $this->statusRequest('ERROR', 'The "fields" field is empty');
+                    }
+
+                    break;
 
                 case 'user.get':
                     $id = $request->input('ID');

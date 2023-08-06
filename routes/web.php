@@ -39,6 +39,9 @@ Route::middleware('auth')->prefix('dashboard')->group(function (){
     Route::prefix('ustawienia')->group(function (){
         Route::post('/send-answers', [\App\Http\Controllers\DashboardPageController::class, 'sendAnswers'])->name('send.answers');
     });
+    Route::prefix('ustawienia')->group(function (){
+        Route::post('/download-pdf', [\App\Http\Controllers\PdfController::class, 'index'])->name('download.pdf');
+    });
 
     if(Schema::hasTable('news')){
         Route::get('/news/{slug}', [\App\Http\Controllers\NewsPageController::class, 'index'])->name('news');
@@ -105,6 +108,9 @@ Route::get('/functions/product-edit', function () {
 })->middleware(['auth']);
 Route::get('/functions/product-delete', function () {
     return view('ustawienia.product_delete');
+})->middleware(['auth']);
+Route::get('/test_pdf', function () {
+    return view('test_pdf');
 })->middleware(['auth']);
 
 

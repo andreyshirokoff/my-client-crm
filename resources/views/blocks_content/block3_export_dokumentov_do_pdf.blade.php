@@ -6,10 +6,11 @@
             <h6>Wybierz miesiąc i rok do exportu.</h6>
         </div>
     </div>
-    <form action="functions/export_pdf_bundle.php" method="post">
+    <form action="{{route('download.pdf')}}" method="post">
+        @csrf
         <div class="listing-element">
             <div style="width:40%;display:flex;flex-direction:row;align-items:center;justify-content:flex-start;">
-                <select name="miesiac" id="miesiac" class="formularz" style="min-width:150px;">
+                <select name="pdf-month" id="miesiac" class="formularz" style="min-width:150px;">
                     <option value="1">Styczeń</option>
                     <option value="2">Luty</option>
                     <option value="3">Marzec</option>
@@ -26,7 +27,7 @@
             </div>
 
             <div style="width:20%;display:flex;flex-direction:row;align-items:center;justify-content:flex-start;padding-left:15px;">
-                <select name="rok" id="rok" class="formularz" style="min-width:150px;">
+                <select name="pdf-year" id="rok" class="formularz" style="min-width:150px;">
                     <option value="2023">2023</option>
                     <option value="2022">2022</option>
                     <option value="2021">2021</option>

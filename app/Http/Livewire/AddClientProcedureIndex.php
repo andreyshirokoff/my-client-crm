@@ -27,57 +27,6 @@ class AddClientProcedureIndex extends Component
 //        dd($this->arrayToDb);
         $serviceForm = $this->servicesForm->toArray();
         $arrayToDb = $this->arrayToDb;
-        $resultToDb = [];
-
-//        foreach($arrayToDb as $key => $item)
-//        {
-//
-//            foreach($item as $keyS => $itemS)
-//            {
-//                $row = json_decode($serviceForm[$key]['fields'], 1)[$keyS];
-//                $resultToDb[$key][$keyS] = [
-//                    'type' => $row['type'],
-//                    'title' => $row['title'],
-//                    'order' => $row['order'],
-//                ];
-//                //dd($row);
-//
-//                if(is_array($itemS))
-//                {
-//                    $resultToDb[$key][$keyS]['fields'] =  $arrayToDb[$key][$keyS];
-//                    foreach($resultToDb[$key][$keyS]['fields'] as $keyff => $itemff)
-//                    {
-//                        $resultToDb[$key][$keyS]['fields'][$keyff] = [
-//                            'title' => $row['fields'][$keyff],
-//                            'value' => $itemff,
-//                        ];
-//                    }
-//                }
-//                else
-//                {
-//                    $row = json_decode($serviceForm[$key]['fields'], 1)[$keyS];
-//                    $resultToDb[$key][$keyS] = [
-//                        'type' => $row['type'],
-//                        'title' => $row['title'],
-//                        'order' => $row['order'],
-//                        'value' => $arrayToDb[$key][$keyS],
-//                    ];
-//                }
-//            }
-//        }
-        //dd(json_encode($resultToDb));        //$resultToDbJson = json_encode($resultToDb);
-
-//         ClientNote::where('client_id', $this->clientId)->get();
-//            ->where('client_id', $this->clientId)
-
-//        ClientNote::create([
-//            'note' => json_encode($resultToDb),
-//        ]);
-//        ClientNote::where('service_id', $this->serviceId)
-//            ->where('client_id', $this->clientId)
-//            ->update([
-//                'note' => json_encode($resultToDb),
-//            ]);
 
         $clientNoteCreate = ClientNote::create([
             'client_id' => $this->clientId,
@@ -95,7 +44,6 @@ class AddClientProcedureIndex extends Component
             'note_id' => $clientNoteId,
         ]);
 
-        //return redirect(request()->header('Referer'));
         return redirect('dashboard/edit-procedure?clientServiceId='.$ClientService->id);
     }
 

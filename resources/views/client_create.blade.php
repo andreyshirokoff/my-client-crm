@@ -15,5 +15,10 @@
                 'success'
             )
         })
+        document.addEventListener("DOMContentLoaded", function () {
+            var phoneMask = IMask(document.getElementById('tel-client'), {
+                mask: '+{48} (000) 000-00-00'
+            })
+        })
     </script>
 @endsection

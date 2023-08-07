@@ -33,7 +33,8 @@
 <script src="https://kit.fontawesome.com/3c6f321247.js" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/b675a8d36a.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>--}}
+<script src="https://unpkg.com/imask"></script>
 <script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="{{asset('js/script.js')}}"></script>

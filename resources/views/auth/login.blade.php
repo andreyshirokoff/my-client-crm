@@ -7,12 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+{{--    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />--}}
     <link rel="stylesheet" href="{{asset('css/themes/myClient.css')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
-    <link rel="stylesheet" href="{{asset('css/themes/beautyCheck.css')}}">
+{{--    <link rel="stylesheet" href="{{asset('css/themes/beautyCheck.css')}}">--}}
     <link rel="stylesheet" href="{{asset('css/login.css')}}">
     <link rel="stylesheet" href="{{asset('css/slider.css')}}">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="crossorigin="anonymous"></script>
     <style>
         .icona-bc{
@@ -108,23 +109,23 @@
                     <div class="loginfield-icon">
                         <i class="fas fa-envelope" aria-hidden="true"></i>
                     </div>
-                    <input type="text" name="email" class="loginfield-field" placeholder="e-mail">
-                    @error('email')
-                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                    @enderror
+                    <input type="email" id="email" name="email" class="loginfield-field" placeholder="e-mail">
+{{--                    @error('email')--}}
+{{--                    <span class="invalid-feedback" role="alert">--}}
+{{--                                        <strong>{{ $message }}</strong>--}}
+{{--                                    </span>--}}
+{{--                    @enderror--}}
                 </div>
                 <div style="display:flex; flex-direction:row;margin:0px;padding:0px;justify-content:center;align-items:center;margin:10px 0px;">
                     <div class="loginfield-icon">
                         <i class="fas fa-key" aria-hidden="true"></i>
                     </div>
-                    <input type="password" name="password" class="loginfield-field" placeholder="hasło">
-                    @error('password')
-                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                    @enderror
+                    <input type="password" id="password" name="password" class="loginfield-field" placeholder="hasło">
+{{--                    @error('password')--}}
+{{--                    <span class="invalid-feedback" role="alert">--}}
+{{--                                        <strong>{{ $message }}</strong>--}}
+{{--                                    </span>--}}
+{{--                    @enderror--}}
                 </div>
 
                 <button type="submit" value="Zaloguj" class="btn-login">Zaloguj</button>
@@ -181,17 +182,17 @@
 </script>
 <!-- Wrzucenie footera -->
 <!--Beauty plany start -->
-<script src="/functions/beautyplans/lib/jquery-3.6.2.min.js"></script>
+{{--<script src="/functions/beautyplans/lib/jquery-3.6.2.min.js"></script>--}}
 <!--script to deal with ajax-->
-<script src="/functions/beautyplans/assets/js/beautyplans.js"></script>
+{{--<script src="/functions/beautyplans/assets/js/beautyplans.js"></script>--}}
 <!--additional css-->
-<link rel="stylesheet" href="/functions/beautyplans/assets/css/beautyplans.css">
-<script src="/lib/select2/js/select2.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $('.area_choose.select2').select2();
-    });
-</script>
+{{--<link rel="stylesheet" href="/functions/beautyplans/assets/css/beautyplans.css">--}}
+{{--<script src="/lib/select2/js/select2.min.js"></script>--}}
+{{--<script>--}}
+{{--    $(document).ready(function() {--}}
+{{--        $('.area_choose.select2').select2();--}}
+{{--    });--}}
+{{--</script>--}}
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script><script>
     $(".switch-content").click(function(){
@@ -224,7 +225,18 @@
     });
 
 </script>
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+<script src="{{asset('js/script.js')}}"></script>
+@error('email')
+<script>
+    script.callToast('error', "{{$message}}")
+</script>
+@enderror
+@error('password')
+<script>
+    script.callToast('error', "{{$message}}")
+</script>
+@enderror
 
 
 </body>

@@ -20,7 +20,8 @@
                     Imię
                 </div>
                 <div style="width:60%;">
-                    <input type="text" wire:model="client.firstname" name="imie" class="formularz" minlength="3" maxlength="20" value="" required="" pattern="[-a-zA-ZÀ-ž\s]+">
+                    <input type="text" wire:model="client.firstname" name="imie" class="formularz" minlength="3" maxlength="20" value="" required="" >
+{{--                    pattern="[-a-zA-ZÀ-ž\s]+"--}}
                 </div>
             </div>
 
@@ -29,7 +30,8 @@
                     Nazwisko
                 </div>
                 <div style="width:60%;">
-                    <input type="text" name="nazwisko" wire:model="client.lastname" class="formularz" minlength="3" maxlength="30" value="" required="" pattern="[-a-zA-ZÀ-ž\s]+">
+                    <input type="text" name="nazwisko" wire:model="client.lastname" class="formularz" minlength="3" maxlength="30" value="" required="">
+                    {{--                    pattern="[-a-zA-ZÀ-ž\s]+"--}}
                 </div>
             </div>
 
@@ -48,7 +50,10 @@
                     (same cyfry bez spacji i myślników)
                 </div>
                 <div style="width:60%;">
-                    <input type="tel" name="tel" id="tel" wire:model="client.phone" class="formularz" placeholder="np. 123456789" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" value="">
+                    <input type="tel" name="tel" id="tel-client" wire:model.lazy="client.phone" class="formularz" placeholder="+48 (___) ___-__-__" value="">
+{{--                    <input type="text" x-data="{ phone: '{{$client['phone']}}' }" x-init="IMask($refs.input, { mask: '+{48}(000)000-00-00' }).on('accept', function() { phone = $refs.input.value })" x-ref="input">--}}
+{{--                    pattern="\+48 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}"--}}
+{{--                    pattern="[0-9]{3}[0-9]{3}[0-9]{3}"--}}
                 </div>
             </div>
 
@@ -68,4 +73,26 @@
             </div>
         </form>
     </div>
+
+{{--    @section('addit_js')--}}
+{{--        <script>--}}
+{{--            document.addEventListener("DOMContentLoaded", function () {--}}
+{{--                var phoneMask = IMask(document.getElementById('tel-client'), {--}}
+{{--                    mask: '+{48} (000) 000-00-00'--}}
+{{--                })--}}
+{{--            })--}}
+{{--        </script>--}}
+{{--        <script>--}}
+{{--            $(document).ready(() => {--}}
+{{--                console.log($('#tel-client').inputmask({--}}
+{{--                    mask: '+48 (999) 999-99-99'--}}
+{{--                }))--}}
+{{--                $('#tel-client').inputmask({--}}
+{{--                    mask: '+48 (999) 999-99-99'--}}
+{{--                })--}}
+
+
+{{--            })--}}
+{{--        </script>--}}
+{{--    @endsection--}}
 </div>

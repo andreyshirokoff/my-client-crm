@@ -30,7 +30,7 @@
                             <div class="boxseparator1procent"></div>
                             <div style="width:32%; display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-start;">
                                 Tel:<br>
-                                <input type="tel" name="tel" id="phone" class="formularz" value="" wire:model="phone">
+                                <input type="tel" name="tel" placeholder="+48 (___) ___-__-__" id="phone-client-search" class="formularz" value="" wire:model.lazy="phone">
                             </div>
                         </div>
                     </form>
@@ -78,4 +78,26 @@
             </div>
         </div>
     </div>
+    @section('addit_js')
+        <script>
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter') {
+                    var activeElement = document.activeElement;
+                    var searchButton = document.getElementById('search-client-btn');
+                    if (
+                        (activeElement === document.getElementById('fullname') && searchButton)
+                        || (activeElement === document.getElementById('email') && searchButton)
+                        || (activeElement === document.getElementById('phone-client-search') && searchButton)
+                    ) {
+                        searchButton.click();
+                    }
+                }
+            });
+            document.addEventListener("DOMContentLoaded", function () {
+                var phoneMask = IMask(document.getElementById('tel-client'), {
+                    mask: '+{48} (000) 000-00-00'
+                })
+            })
+        </script>
+    @endsection
 </div>

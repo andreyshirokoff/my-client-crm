@@ -46,6 +46,7 @@
 
 <div class="listing-actionbar justify-content-between flex-wrap" style="margin-top:10px;gap: 20px;">
     <span style="">Chcesz doładować konto? Zrobisz to przez - my-client.pl</span>
+{{--    link--}}
     <a href="https://beautycheck.pl/moje-konto/" style="width:300px" class=""><button style="width: 100%" type="button" class="btn-glow">DOŁADUJ PRZEZ WWW</button></a>
 </div>
 

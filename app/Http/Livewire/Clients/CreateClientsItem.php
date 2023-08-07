@@ -21,6 +21,7 @@ class CreateClientsItem extends Component
 
     public function createClient()
     {
+        $this->client->phone = '+'.preg_replace('/\D/', '', $this->client->phone);
         $this->validate();
         $this->client->fullname = $this->client->firstname . ' '. $this->client->lastname;
         $this->client->group_id = \Auth::user()->group_id;

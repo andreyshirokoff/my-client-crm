@@ -288,7 +288,13 @@ script = {
 
     phoneMask: function(element)
     {
-        $(element).inputmask('+48 (999) 999-99-99')
+        let item = document.querySelector(element)
+        if(item)
+        {
+            item.toString()
+            item.inputmask('+48 (999) 999-99-99')
+        }
+
     },
 
     decodeSign: function dataURLToFile(dataURL, fileName) {

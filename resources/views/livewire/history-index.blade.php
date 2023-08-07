@@ -24,34 +24,34 @@
 </div>
 <div class="listing-titlebar" style="margin-top:10px;flex-direction:column;">
     <h3 style="width:100%;margin-bottom:30px;">Ostatnie 10 wysłanych smsów:</h3>
-    <div style="display:flex;flex-direction:row;width:100%;" class="pac-body">
-        <div style="width:15%">
+    <div style="display:flex;flex-direction:row;width:100%;gap: 20px;" class="pac-body">
+        <div style="width:25%">
             <h6>Data</h6>
         </div>
-        <div style="width:15%">
+        <div style="width:25%">
             <h6>Nr tel.</h6>
         </div>
-        <div style="width:15%">
+        <div style="width:25%">
             <h6>Ilość sms</h6>
         </div>
-        <div style="width:55%">
+        <div style="width:25%">
             <h6>Typ sms</h6>
         </div>
     </div>
 </div>
 @foreach($infoGroup as $item)
 <div class="listing-element" style="margin-top:10px;flex-direction:column;">
-    <div style="display:flex;flex-direction:row;width:100%;" class="pac-body">
-        <div style="width:15%">
+    <div style="display:flex;flex-direction:row;width:100%;gap: 20px;" class="pac-body">
+        <div style="width:25%">
             <h6>{{$item->date}}</h6>
         </div>
-        <div style="width:15%">
+        <div style="width:25%">
             <h6>{{$item->phone}}</h6>
         </div>
-        <div style="width:15%">
+        <div style="width:25%">
             <h6>{{$item->sms_count}}</h6>
         </div>
-        <div style="width:55%">
+        <div style="width:25%">
             <h6>{{$item->type}}</h6>
         </div>
     </div>

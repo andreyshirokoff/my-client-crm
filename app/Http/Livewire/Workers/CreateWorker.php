@@ -33,6 +33,7 @@ class CreateWorker extends Component
 
     public function createUser()
     {
+        $this->user->phone = '+'.preg_replace('/\D/', '', $this->user->phone);
         $this->validate();
         $this->user->password = bcrypt($this->password);
         $this->user->group_id = auth()->user()->group_id;

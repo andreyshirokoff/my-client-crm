@@ -40,7 +40,7 @@
             </div>
             <div style="width:60%;" class="sec-div">
                 <label class="switch">
-                    <input type="checkbox" name="is_med" wire:model.defer="wireIsMed">
+                    <input type="checkbox" name="is_med" value="1" wire:model.defer="wireIsMed">
                     <span class="slider round"></span>
                 </label>
             </div>
@@ -136,7 +136,8 @@
 
                 handleSubmit()
                 function setContentToEditor(className, content) {
-                    if(content.length > 0) className.setContents(JSON.parse(content));
+                    if(content.length > 0 && JSON.parse(content) !== null) className.setContents(JSON.parse(content));
+                    else className.setContents(JSON.parse('{"ops":[{"insert":"' + content + '\n"}]}'));
 
 
                 }

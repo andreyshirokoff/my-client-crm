@@ -64,6 +64,22 @@
                     'block3_2_content' => $block3_3_content_class,
                     'block3_2_heading' => 'heading_block3_2_product_delete'
                 ])
+        @elseif($block3_3_content_class == 'block3_2_card_client_delete')
+            @include('blocks.block3_2', [
+                    'block3_2_icon' => 'fas fa-trash',
+                    'block3_2_title' => 'Potwierdź operację',
+                    'block3_2_content_class' => 'block3_2_card_client_delete',
+                    'block3_2_content' => $block3_3_content_class,
+                    'block3_2_heading' => 'heading_block3_2_card_client_delete'
+                ])
+        @elseif($block3_3_content_class == 'block3_2_card_client_delete')
+            @include('blocks.block3_2', [
+                    'block3_2_icon' => 'fas fa-trash',
+                    'block3_2_title' => 'Potwierdź operację',
+                    'block3_2_content_class' => 'block3_2_card_client_delete',
+                    'block3_2_content' => $block3_3_content_class,
+                    'block3_2_heading' => 'heading_block3_2_client_card_delete'
+                ])
         @elseif($block3_3_content_class == 'aktualna_karta_klienta')
             <livewire:actual-card-index/>
 {{--            @include('blocks.block3_dock', [--}}

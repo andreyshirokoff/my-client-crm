@@ -51,15 +51,18 @@
                     'block3_heading' => 'heading_block3_pracownicy'
                 ])
             @endif
-        <div class="mar"></div>
+
         @if(view()->exists('blocks.block3'))
-            @include('blocks.block3', [
-                'block3_icon' => 'fas fa-id-card-alt',
-                'block3_title' => 'Ogólna karta klienta',
-                'block3_content_class' => 'block3_ogolna_karta_klienta',
-                'block3_content' => 'blocks_content.block3_ogolna_karta_klienta',
-                'block3_heading' => 'heading_block3_ogolna_karta_klienta'
-            ])
+            @if(\Illuminate\Support\Facades\Auth::user()->roles == 'administrator')
+                <div class="mar"></div>
+                @include('blocks.block3', [
+                    'block3_icon' => 'fas fa-id-card-alt',
+                    'block3_title' => 'Ogólna karta klienta',
+                    'block3_content_class' => 'block3_ogolna_karta_klienta',
+                    'block3_content' => 'blocks_content.block3_ogolna_karta_klienta',
+                    'block3_heading' => 'heading_block3_ogolna_karta_klienta'
+                ])
+            @endif
         @endif
         <div class="mar"></div>
         @if(view()->exists('blocks.block3'))

@@ -9,6 +9,7 @@ use App\Nova\GroupTarifsResource;
 use App\Nova\NewsResource;
 use App\Nova\ServiceFormResource;
 use App\Nova\ServiceResource;
+use App\Nova\ServiceTemplateResource;
 use App\Nova\ThemeResource;
 use App\Nova\User;
 use App\Nova\Role;
@@ -47,6 +48,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                 MenuSection::make('Контент', [
                     MenuItem::resource(NewsResource::class),
                     MenuItem::resource(ServiceResource::class),
+                    MenuItem::resource(ServiceTemplateResource::class),
                     MenuItem::resource(ServiceFormResource::class),
                 ])->collapsable()->icon('newspaper'),
 

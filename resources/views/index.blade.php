@@ -22,13 +22,13 @@
 
         <div class="boxseparator1procent"></div>
 
-        <div onclick="location.href='dashboard/document_search';" class="colorbox33">
-            <div class="whiteboxiconbox">
-                <i class="far fa-file" aria-hidden="true"></i>
-            </div>
-            <h3>Baza dokumentów</h3>
-            <span>Przeglądaj dokumenty podpisane przez klientów.</span>
-        </div>
+{{--        <div onclick="location.href='dashboard/document_search';" class="colorbox33">--}}
+{{--            <div class="whiteboxiconbox">--}}
+{{--                <i class="far fa-file" aria-hidden="true"></i>--}}
+{{--            </div>--}}
+{{--            <h3>Baza dokumentów</h3>--}}
+{{--            <span>Przeglądaj dokumenty podpisane przez klientów.</span>--}}
+{{--        </div>--}}
 
     </div>
     @include('blocks.block1', [

@@ -17,6 +17,10 @@ class ServiceTemplateResource extends Resource
     public static $search = [
         'id', 'is_med', 'name'
     ];
+    public static function label()
+    {
+        return "Шаблоны для вопросов";
+    }
 
     public function fields(Request $request): array
     {

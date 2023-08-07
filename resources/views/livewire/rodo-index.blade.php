@@ -75,7 +75,7 @@
         </div>
         <div style="width:30%;display:flex;justify-content:flex-end;" class="input-in check">
             <label class="switch">
-                <input type="checkbox" value="1" wire:model="checkBoxShowPhone" name="checkBoxShowPhone">
+                <input type="checkbox" value="1" wire:model.defer="checkBoxShowPhone" name="checkBoxShowPhone">
                 <span class="slider round"></span>
             </label>
         </div>
@@ -86,7 +86,7 @@
         </div>
         <div style="width:30%;display:flex;justify-content:flex-end;" class="input-in check">
             <label class="switch">
-                <input type="checkbox" value="1" wire:model="checkBoxCanEditCard" name="checkBoxCanEditCard">
+                <input type="checkbox" value="1" wire:model.defer="checkBoxCanEditCard" name="checkBoxCanEditCard">
                 <span class="slider round"></span>
             </label>
         </div>
@@ -97,7 +97,7 @@
         </div>
         <div style="width:30%;display:flex;justify-content:flex-end;" class="input-in check">
             <label class="switch">
-                <input type="checkbox" value="1" wire:model="checkBoxCanEditControl" name="checkBoxCanEditControl">
+                <input type="checkbox" value="1" wire:model.defer="checkBoxCanEditControl" name="checkBoxCanEditControl">
                 <span class="slider round"></span>
             </label>
         </div>
@@ -108,7 +108,7 @@
         </div>
         <div style="width:30%;display:flex;justify-content:flex-end;" class="input-in check">
             <label class="switch">
-                <input type="checkbox" value="1" wire:model="checkBoxCanRemoveSignedDocs" name="checkBoxCanRemoveSignedDocs">
+                <input type="checkbox" value="1" wire:model.defer="checkBoxCanRemoveSignedDocs" name="checkBoxCanRemoveSignedDocs">
                 <span class="slider round"></span>
             </label>
         </div>
@@ -249,7 +249,7 @@
             {
 
                 const editorText = className.getContents();
-                if(document.querySelector(element).value.length > 0) document.querySelector(element).value = JSON.stringify(editorText)
+                document.querySelector(element).value = JSON.stringify(editorText)
             }
             {{--function updateLivewire(documentElement, value)--}}
             {{--{--}}

@@ -5,7 +5,7 @@
 
             <h3> UWAGA! </h3><br>
             <div>
-                Czy na pewno chcesz usunąć produkt o nazwie „nazwa”?
+                Czy na pewno chcesz usunąć produkt o nazwie „{{$title}}”?
             </div>
         </div>
         <div class="listing-actionbar bottom-buttons">

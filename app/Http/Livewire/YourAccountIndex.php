@@ -19,7 +19,7 @@ class YourAccountIndex extends Component
     {
         $this->user = Auth::user();
         $this->maskedPhone = $this->applyPhoneMask(Auth::user()->phone);
-        $this->groupTariff = GroupTariff::where('owner_id', Auth::user()->id)->first();
+        $this->groupTariff = GroupTariff::where('group_id', Auth::user()->group_id)->first();
         $this->activeTo = $this->applyDateFormat($this->groupTariff->active_to);
         $this->remainDays = $this->getRemain($this->groupTariff->active_to);
 

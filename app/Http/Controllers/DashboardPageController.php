@@ -31,7 +31,6 @@ class DashboardPageController extends Controller
 
     public function submitVisual(Request $request)
     {
-        //dd($request->input('selectedThemeId'));
         if($request->hasFile('logofile'))
         {
             $file = $request->file('logofile');

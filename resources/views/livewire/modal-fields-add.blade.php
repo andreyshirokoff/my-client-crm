@@ -2,8 +2,8 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel" style="color:black">Dodaj pole</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border:none;background:none">
+                        <span aria-hidden="true" style="font-size: 20px">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
@@ -22,6 +22,7 @@
                             <label for="addNameModal" style="color:black">Nazwa</label>
                             <input type="text" class="form-control mt-2" id="addNameModal" wire:model="title">
                         </div>
+                        <div class="isError "></div>
                         @error('title')
                             <span class="is-invalid" role="alert" style="color:black">
                                     <strong>{{ $message }}</strong>
@@ -51,10 +52,34 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn1" data-dismiss="modal" wire:click="addNewFields">Add</button>
+{{--                    <a type="button" class="btn1" style="text-decoration: none" id="modal-ok" data-dismiss="modal" wire:click="addNewFields">Add</a>--}}
+                    <button type="button" class="btn1" id="modal-ok">Add</button>
+{{--                    data-dismiss="modal"--}}
                 </div>
             </div>
-        </div>
+
+
+    <script>
+        document.querySelector('#modal-ok').addEventListener('click', function(){
+            @this.call('customValidation');
+        })
+        document.querySelector('#addField').addEventListener('modal-error', function(){
+            @if(count($errors->all()) === 0)
+            $('.close').trigger('click')
+            @this.call('addNewFields');
+            @endif
+        })
+    </script>
+
+
+
+
+
+
+
+
+
+</div>
 
 
 

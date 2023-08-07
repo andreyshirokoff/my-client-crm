@@ -385,7 +385,8 @@ display: block;
 .colorbox33 {
     display: flex;
     flex-direction: column;
-    width: 32%;
+    /*width: 32%;*/
+    width: 50%;
     height: 100%;
     justify-content: flex-start;
     align-items: flex-start;
@@ -435,6 +436,15 @@ display: block;
     margin-top: 100px;
 }
 
+
+@media(max-width: 1370px)
+{
+    .block3_pracownicy .listing-titlebar .pac-body,
+    .block3_pracownicy .listing-element .pac-body{
+        flex-direction: column!important;
+        gap:20px
+    }
+}
 @media(min-width: 992px){
     .listing-element.container{
         max-width: none;
@@ -508,7 +518,9 @@ display: block;
     .block1_wyniki .listing-titlebar,
     .block1_wyniki .listing-element,
     .block3_pakiet_sms_i_historia .pac-body,
-    .block3_pakiet_sms_i_historia .pac-body-2{
+    .block3_pakiet_sms_i_historia .pac-body-2,
+    .block3_3_editaccount .listing-actionbar,
+    .block1_dobaj_klienta .listing-actionbar{
         flex-direction: column!important;
     }
     .block3_pakiet_sms_i_historia .pac-body-2{
@@ -519,7 +531,9 @@ display: block;
     {
         margin-left:0!important;
     }
-    .block1_twoje_ostatnie_5_zabiegow .listing-titlebar div{
+    .block1_twoje_ostatnie_5_zabiegow .listing-titlebar div,
+    .block3_3_editaccount .listing-actionbar button,
+    .block1_dobaj_klienta .listing-actionbar button{
         width: 100% !important;
     }
     .block1_wyniki .listing-titlebar div:last-child{

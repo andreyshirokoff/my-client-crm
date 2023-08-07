@@ -41,7 +41,7 @@ class RodoIndex extends Component
 
     public function render()
     {
-        $this->sign = 'storage/sign/'.GroupTariff::where('owner_id', Auth::user()->id)->first()->sign_path;
+        $this->sign = 'storage/sign/'.GroupTariff::where('group_id', Auth::user()->group_id)->first()->sign_path;
         return view('livewire.rodo-index');
     }
 

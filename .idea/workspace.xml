@@ -5,8 +5,74 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9be1317-6be4-4290-9727-b2bf61f43604" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/CardClientDeleteIndex.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/blocks_content/block3_2_card_client_delete.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/card-client-delete-index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/ustawienia/card_client_delete.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/history-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/history-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DashboardPageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DashboardPageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/EditAccountIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/EditAccountIndex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/ModalFieldsAdd.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/ModalFieldsAdd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/ProductDeleteIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/ProductDeleteIndex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/RodoIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/RodoIndex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Workers/CreateWorker.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Workers/CreateWorker.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/YourAccountIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/YourAccountIndex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Nova/ServiceTemplateResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/ServiceTemplateResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/NovaServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/NovaServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/cache/livewire-components.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/cache/livewire-components.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_07_26_011118_create_services_forms_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_07_26_011118_create_services_forms_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/0LDbfq2G9g4hqkSk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/6wCqKrW622fa02Sc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/AvkvFTSHhlSriF4CFUH0g3W01UkHka18WPtFweRJ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/FcRU8DQ826Zhx8o2LOWvMsrZ2zCFKdkocz93w9ZU.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/IJsThG4giertGVox.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/YIcVpWNaoznWdRB9Q0REhe4tcAf6D0TAUzQlMzyF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/ZXMbFygXURwfvxIfIQzSY28SUPZJhQDW3TgEfFwO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/Zl5HrutILQWNvYNZzwphtSUqTEtbluUH6FabtQD0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/eo0Pku2Qkk5xLduHl93f9Qom0C37x022fFkdE14q.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/gbF52S5qwNS28ve2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/nNV6iwYahz8I5BhbqUZbYThggcXSpGs8aTzGtAqV.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/product/501zU2C5t5QVyFNexQLiLTjfvhyxxGsjQ6XT0qrq.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/product/5nuqHaTXXq2qFD1iKYdY7vhOqOGRHFzGlVzcK07g.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/product/9eBXQadaF0jG3kXuFa5IlcU16UCJzjpGlKYAa7a1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/product/FjdLgEfk2q5BBlIfYa8pfvKcVBR5trf5HuDNSVOK.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/product/Jav2JwWvRTQFXEQ8R31vXOrPoudKkqrjxMezBO4V.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/product/LtmBXg4d8JxvB6fE1RdrbyFeeOfjokFo77YQyB5M.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/product/OPDxChcFJ1rCivup5fRly0B7FfzZTu9vFMybcKdv.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/product/Ps0UqX6RVOMdwzeeLMZ4jxGWZyIexIIV81XbdnqC.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/product/RKl6cCNZB0GwmLE4JqVgnN6uWgYkXQgZhUlCURC7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/product/XkL6X2x4rYFGdARYuLEKMRLv4yIiYgL68EMjARzf.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/product/iuv3fjDkAJsd6Qvr60DAEb7CdWWUqWKRi7TC9rbl.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/product/pGP62Uq13dSn2iemnvRtmaXJGiDyaU7jvHqUGh3C.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/product/sMNVt04SlY4a7iBScMek9pRUSQ3L0TUGpIt0dRkx.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/product/udrplySt2I1zJYsNv2zrVLRJjVNZvBYUlFCVPj3E.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/product/zuXdlapRdWo5venerWROJb8n7JlXRVneHdx92CSs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/q7IR8OuhchoUzUty.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/sign/6irKSuZMWrtB5Zov.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/sign/KEmaoEOINgWMKkOS.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/sign/PdYe6jiy8xAZ0mLh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/sign/Wj1LKXG3rOqLV9RN.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/sign/Z6e0ino6ypWDqdNP.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/sign/mcz6CbZyVw88I2Nt.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/tTNhHLTXJTNNCgNn.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/storage/uH5AC1qDrn7c8WSOdcoW7s4f6Agyn1s63W9csppp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blocks/block2.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blocks/block2.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blocks/block2_2.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blocks/block2_2.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blocks/block3_2.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blocks/block3_2.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blocks_content/block3_ogolna_karta_klienta.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blocks_content/block3_ogolna_karta_klienta.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blocks_content/block3_pracownicy.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blocks_content/block3_pracownicy.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/clients/create-clients-item.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/clients/create-clients-item.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/edit-account-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/edit-account-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/modal-fields-add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/modal-fields-add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/product-delete-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/product-delete-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/rodo-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/rodo-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/settings/treatment-create-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/settings/treatment-create-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/user-data-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/user-data-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/workers/create-worker.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/workers/create-worker.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,11 +234,11 @@
       <path value="$PROJECT_DIR$/vendor/nunomaduro/termwind" />
       <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
       <path value="$PROJECT_DIR$/vendor/bacon/bacon-qr-code" />
-      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf" />
-      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
-      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
-      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
       <path value="$PROJECT_DIR$/vendor/masterminds/html5" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
       <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
     </include_path>
   </component>
@@ -181,27 +247,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/OpenServer/domains/my-client-crm/app/Http/Controllers&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2023.1.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/OpenServer/domains/my-client-crm/resources/views/livewire",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2023.1.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\OpenServer\domains\my-client-crm\app\Http\Controllers" />
-      <recent name="C:\OpenServer\domains\my-client-crm\resources\views\ustawienia" />
+      <recent name="C:\OpenServer\domains\my-client-crm\resources\views\livewire" />
       <recent name="C:\OpenServer\domains\my-client-crm\resources\views\blocks_content" />
+      <recent name="C:\OpenServer\domains\my-client-crm\resources\views\ustawienia" />
+      <recent name="C:\OpenServer\domains\my-client-crm\app\Http\Controllers" />
       <recent name="C:\OpenServer\domains\my-client-crm\resources\views" />
-      <recent name="C:\OpenServer\domains\my-client-crm\public\storage" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\OpenServer\domains\my-client-crm\public\storage" />

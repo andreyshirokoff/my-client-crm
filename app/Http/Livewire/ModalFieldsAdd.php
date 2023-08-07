@@ -32,10 +32,16 @@ class ModalFieldsAdd extends Component
         return view('livewire.modal-fields-add');
     }
 
+    public function customValidation()
+    {
+        $this->validate();
+        $this->dispatchBrowserEvent('modal-error');
+    }
+
     public function addNewFields()
     {
 
-        $this->validate();
+//        $this->validate();
 //        try {
 //            $this->validate();
 //
@@ -47,14 +53,14 @@ class ModalFieldsAdd extends Component
 //            dd($errors);
 //        }
 
-        if(count($this->fieldsArr) > 0)
-        {
-            $this->validate([
-                'fieldsArr.*' => 'required|string|min:3|max:50'
-            ]);
-        }
+//        if(count($this->fieldsArr) > 0)
+//        {
+//            $this->validate([
+//                'fieldsArr.*' => 'required|string|min:3|max:50'
+//            ]);
+//        }
 
-//        $this->dispatchBrowserEvent('close-modal');
+
 
         $this->emitUp('addNewFields', ['title' => $this->title, 'order' => $this->order, 'type' => $this->type, 'fields' => json_encode($this->fieldsArr)]);
         $this->title = '';

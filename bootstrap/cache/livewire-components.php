@@ -2,6 +2,7 @@
   'actual-card-index' => 'App\\Http\\Livewire\\ActualCardIndex',
   'add-answer-to-karta-index' => 'App\\Http\\Livewire\\AddAnswerToKartaIndex',
   'add-client-procedure-index' => 'App\\Http\\Livewire\\AddClientProcedureIndex',
+  'card-client-delete-index' => 'App\\Http\\Livewire\\CardClientDeleteIndex',
   'client-index' => 'App\\Http\\Livewire\\ClientIndex',
   'client-procedure-index' => 'App\\Http\\Livewire\\ClientProcedureIndex',
   'clients.client-page' => 'App\\Http\\Livewire\\Clients\\ClientPage',

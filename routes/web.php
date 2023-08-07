@@ -109,6 +109,9 @@ Route::get('/functions/product-edit', function () {
 Route::get('/functions/product-delete', function () {
     return view('ustawienia.product_delete');
 })->middleware(['auth']);
+Route::get('/functions/card-client-delete', function () {
+    return view('ustawienia.card_client_delete');
+})->middleware(['auth']);
 Route::get('/test_pdf', function () {
     return view('test_pdf');
 })->middleware(['auth']);

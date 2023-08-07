@@ -7,7 +7,7 @@
             <h3>Dodaj klienta</h3>
         </div>
     </div>
-    <div class="boxinbox block1_dobaj_klienta">
+    <div class="boxinbox block1_dobaj_klienta" style="background: #f0f1f1">
         <form wire:submit.prevent="createClient" method="post">
             <div class="listing-titlebar" style="margin-top:10px;">
                 <div style="width:100%">
@@ -68,8 +68,9 @@
             </div>
 
             <div class="listing-ending"></div>
-            <div class="listing-actionbar">
-                <button type="submit" class="btn1" style="margin-left:10px;width:200px;"><i class="fas fa-check-circle" aria-hidden="true"></i> Zarejestruj</button>
+            <div class="listing-actionbar" style="gap:20px">
+                <button type="button" onclick="location.href = 'http://myclientcrm/dashboard/ustawienia'" id="cancel-product" class="btn1" style=""><i class="fa-solid fa-circle-left" aria-hidden="true" style="color:white"></i> Wstecz</button>
+                <button type="submit" class="btn1" style="width:200px;"><i class="fas fa-check-circle" aria-hidden="true"></i> Zarejestruj</button>
             </div>
         </form>
     </div>

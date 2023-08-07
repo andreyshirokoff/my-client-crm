@@ -30,6 +30,7 @@ class EditAccountIndex extends Component
 
     public function submitForm()
     {
+        $this->phone = '+'.preg_replace('/\D/', '', $this->phone);
         Auth::user()->update([
             'name' => $this->name,
             'last_name' => $this->lastName,

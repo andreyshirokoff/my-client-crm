@@ -1,6 +1,9 @@
 @extends('layout.app')
 
-
+@section('additional_css')
+    <link rel="stylesheet" href="{{asset('css/application.css')}}">
+    <link rel="stylesheet" href="{{asset('css/slider.css')}}">
+@endsection
 
 @section('content')
     <div class="box">

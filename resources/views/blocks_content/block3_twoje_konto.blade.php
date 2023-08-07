@@ -1,4 +1,4 @@
-<livewire:your-account-index>
+<livewire:your-account-index/>
 
 {{--<div class="boxinbox-inside">--}}
 

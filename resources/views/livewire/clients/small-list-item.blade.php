@@ -1,11 +1,11 @@
 <div class="listing-element">
-    <div style="width:40%;">
+    <div style="width:30%;">
         <h6>{{$client->fullname}}</h6>
     </div>
-    <div style="width:40%;">
+    <div style="width:30%;">
         <h6>{{$client->email}}</h6>
     </div>
-    <div style="width:10%;">
+    <div style="width:30%;">
         @if($show)
             <h6>{{$client->phone}}</h6>
         @else

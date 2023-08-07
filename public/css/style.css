@@ -617,7 +617,20 @@ display: block;
         width: 100% !important;
     }
 
+    #heading_block3_2_zabiegi_klienta .listing-titlebar{
+        flex-direction: column!important;
+        gap: 20px;
+    }
+    #heading_block3_2_zabiegi_klienta .listing-element .items{
+        flex-direction: column !important;
+    }
 
+}
+
+@media(max-width: 625px){
+    #heading_block3_2_profil_klienta .listing-actionbar{
+        justify-content: center!important;
+    }
 }
 
 @media(min-width: 576px){

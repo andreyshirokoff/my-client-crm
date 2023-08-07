@@ -14,7 +14,9 @@ class ClientProcedureIndex extends Component
 
     public function render()
     {
-        $this->clientServices = ClientService::where('client_id', $this->clientId)->get();
+        $this->clientServices = ClientService::where('client_id', $this->clientId)
+            ->orderBy('id', 'desc')
+            ->get();
         foreach($this->clientServices as $cs)
         {
             $cs->formatDate = $this->applyDateFormat($cs->created_at);

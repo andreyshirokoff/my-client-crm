@@ -9,7 +9,7 @@
             @endif
         </div>
         <div style="width: 40%;margin-left:10px;" class="boxinbox-inside__item">
-            {{$user->role}}<br>
+            {{$user->roles}}<br>
             <h3>{{$user->fullname}}</h3>
         </div>
         <div style="width:45%; display: flex; flex-direction: column; justify-content:center;align-items:flex-start;" class="boxinbox-inside__item">

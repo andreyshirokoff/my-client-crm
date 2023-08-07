@@ -22,7 +22,7 @@ Route::middleware('auth')->prefix('dashboard')->group(function (){
 
     Route::get('/client-create', [\App\Http\Controllers\DashboardPageController::class, 'createClient'])->name('createClient');
     Route::get('/client-search', [\App\Http\Controllers\DashboardPageController::class, 'searchClient'])->name('searchClient');
-    Route::get('/functions/document_search', [\App\Http\Controllers\DashboardPageController::class, 'documentSearch'])->name('documentSearch');
+    Route::get('/document_search', [\App\Http\Controllers\DashboardPageController::class, 'documentSearch'])->name('documentSearch');
 
     Route::prefix('ustawienia')->group(function (){
         Route::get('/', [\App\Http\Controllers\DashboardPageController::class, 'settings'])->name('settings');

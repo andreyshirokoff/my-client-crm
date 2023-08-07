@@ -22,7 +22,7 @@
 
         <div class="boxseparator1procent"></div>
 
-        <div onclick="location.href='/functions/document_search';" class="colorbox33">
+        <div onclick="location.href='dashboard/document_search';" class="colorbox33">
             <div class="whiteboxiconbox">
                 <i class="far fa-file" aria-hidden="true"></i>
             </div>

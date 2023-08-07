@@ -57,13 +57,13 @@
             </div>
             <div class="boxinbox block1_wyniki" style="background: #f0f1f1">
                 <div class="listing-titlebar">
-                    <div style="width:40%;">
+                    <div style="width:30%;">
                         <h6>Imię i Nazwisko</h6>
                     </div>
-                    <div style="width:40%;">
+                    <div style="width:30%;">
                         <h6>E-Mail</h6>
                     </div>
-                    <div style="width:10%;">
+                    <div style="width:30%;">
                         <h6>Tel</h6>
                     </div>
                     <div style="width:10%;display:flex;justify-content:flex-end;">
@@ -94,7 +94,7 @@
                 }
             });
             document.addEventListener("DOMContentLoaded", function () {
-                var phoneMask = IMask(document.getElementById('tel-client'), {
+                var phoneMask = IMask(document.getElementById('phone-client-search'), {
                     mask: '+{48} (000) 000-00-00'
                 })
             })

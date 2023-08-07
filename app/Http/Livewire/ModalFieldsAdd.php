@@ -50,7 +50,7 @@ class ModalFieldsAdd extends Component
         if(count($this->fieldsArr) > 0)
         {
             $this->validate([
-                'fields.*' => 'required|string|min:3|max:50'
+                'fieldsArr.*' => 'required|string|min:3|max:50'
             ]);
         }
 

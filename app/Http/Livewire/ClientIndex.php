@@ -40,6 +40,7 @@ class ClientIndex extends Component
         }
         if($this->phone != '' || $this->phone != null)
         {
+            $this->phone = '+'.preg_replace('/\D/', '', $this->phone);
             $findClient = $findClient->where('phone', '=', $this->phone);
         }
 

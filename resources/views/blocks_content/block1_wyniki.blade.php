@@ -14,7 +14,7 @@
             <h6>Pokaż</h6>
         </div>
     </div>
-    <livewire:client-index>
+{{--    <livewire:client-index/>--}}
 {{--    <div>--}}
 
 {{--            <div class="listing-element">--}}

@@ -10,6 +10,7 @@ use Livewire\Component;
 class HistoryIndex extends Component
 {
     public $infoGroup;
+    public $userGroups;
     public function render()
     {
         $this->infoGroup = InformationGroup::where('user_id', Auth::user()->id)
@@ -17,6 +18,8 @@ class HistoryIndex extends Component
             ->orderByDesc('id')
             ->take(10)
             ->get();
+
+        //$this->userGroups = UserGroup::where()
 
         foreach ($this->infoGroup as $key => $item)
         {

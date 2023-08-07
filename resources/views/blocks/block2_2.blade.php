@@ -137,7 +137,7 @@
                     'block3_2_title' => 'Inicjały',
                     'block3_3_content_class' => 'block3_2_profil_klienta',
                     'block3_3_content' => $block3_3_content_class,
-                    'block3_2_heading' => 'heading_block3_2_block3_2_profil_klienta',
+                    'block3_2_heading' => 'heading_block3_2_profil_klienta',
                 ])
             <div class="mar"></div>
             @include('blocks.block3_2', [
@@ -145,7 +145,7 @@
                     'block3_2_title' => 'Notatka',
                     'block3_3_content_class' => 'block3_2_klienta_notatka',
                     'block3_3_content' => 'block3_2_klienta_notatka',
-                    'block3_2_heading' => 'heading_block3_2_block3_2_klienta_notatka',
+                    'block3_2_heading' => 'heading_block3_2_klienta_notatka',
                 ])
             <div class="mar"></div>
 {{--            @include('blocks.block3_2', [--}}

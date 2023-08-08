@@ -32,6 +32,10 @@ h6, .h6{
 .mar{
     height: 10px;
 }
+#navbarL p a{
+    text-decoration: none;
+    color:white;
+}
 input[type="checkbox"] {
     -ms-transform: scale(2);
     -webkit-transform: scale(2);

@@ -179,6 +179,14 @@
                     'block3_3_content' => 'block3_2_zabiegi_klienta',
                     'block3_2_heading' => 'heading_block3_2_zabiegi_klienta',
                 ])
+{{--            <div class="mar"></div>--}}
+{{--            @include('blocks.block3_2', [--}}
+{{--                    'block3_2_icon' => 'fas fa-hand-holding-heart',--}}
+{{--                    'block3_2_title' => 'Zabiegi klienta',--}}
+{{--                    'block3_3_content_class' => 'block3_2_zabiegi_klienta',--}}
+{{--                    'block3_3_content' => 'block3_2_zabiegi_klienta',--}}
+{{--                    'block3_2_heading' => 'heading_block3_2_zabiegi_klienta',--}}
+{{--                ])--}}
         @endif
     </div>
 </div>

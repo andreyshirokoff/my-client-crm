@@ -22,10 +22,6 @@ class TreatmentListIndex extends Component
     public function mount()
     {
         $this->services = Service::where('group_id', Auth::user()->group_id)->get();
-
-
-
-
     }
 
     public function copy($id, $name)
@@ -34,6 +30,15 @@ class TreatmentListIndex extends Component
         $newRecord = $originalRecord->replicate();
         $newRecord->name = $name.' (COPY)';
         $newRecord->save();
+
+        $originalRecords = ServicesForm::where('service_id', $id)->get();
+
+        $clonedRecords = $originalRecords->map(function ($record) use ($newRecord) {
+            $clone = $record->replicate(); // Создаем копию записи
+            $clone->service_id = $newRecord->id; // Меняем значение поля, если необходимо
+            $clone->save(); // Сохраняем копию записи
+            return $clone;
+        });
 
         return redirect(request()->header('Referer'));
     }

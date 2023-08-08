@@ -35,7 +35,7 @@
                 Cena (opcjonalnie)
             </div>
             <div style="width:60%;" class="sec-div">
-                <input type="number" name="nazwa" class="formularz" minlength="3" maxlength="45" value="" wire:model.defer="price">
+                <input type="number" name="nazwa" class="formularz" minlength="3" maxlength="45" value="" wire:model.defer="price" step="0.01">
             </div>
             @error('price')
             <span class="is-invalid" role="alert" style="color:black">

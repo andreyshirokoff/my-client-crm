@@ -27,7 +27,7 @@
 
     {{--                    <input type="hidden" value="" wire:model="idService">--}}
 
-                        <a href="{{route('edit.procedure')}}?clientServiceId={{$cs->id}}"><i class="fa-solid fa-pen-to-square i-black"></i></a>
+                        <a href="{{route('edit.procedure')}}?clientServiceId={{$cs->id}}&clientId={{$_GET['clientId']}}"><i class="fa-solid fa-pen-to-square i-black"></i></a>
 
 
     {{--                    <a style="cursor: pointer" wire:click.prevent="copy('1', 'asdsadsadsa')"><i class="fa-solid fa-copy i-black"></i></a>--}}

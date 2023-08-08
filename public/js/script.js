@@ -29,6 +29,19 @@ script = {
                 $(identify).addClass('active')
             }
 
+            //редактировать дескрипшн клиента
+            if($(e.target).is('#notatka-edit-btn'))
+            {
+                //let text = $('.notatka-text span').text()
+                $('.notatka-text').addClass('d-none')
+                $('.notatka-textarea').removeClass('d-none')
+                $('.notatka-actionbar').removeClass('d-none')
+                //$('.notatka-textarea').text(text)
+
+
+
+            }
+
             // if($(e.target).is('#add-field-in-question'))
             // {
             //

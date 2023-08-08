@@ -4,6 +4,7 @@
   'add-client-procedure-index' => 'App\\Http\\Livewire\\AddClientProcedureIndex',
   'card-client-delete-index' => 'App\\Http\\Livewire\\CardClientDeleteIndex',
   'client-index' => 'App\\Http\\Livewire\\ClientIndex',
+  'client-notatka-index' => 'App\\Http\\Livewire\\ClientNotatkaIndex',
   'client-procedure-index' => 'App\\Http\\Livewire\\ClientProcedureIndex',
   'clients.client-page' => 'App\\Http\\Livewire\\Clients\\ClientPage',
   'clients.create-clients-item' => 'App\\Http\\Livewire\\Clients\\CreateClientsItem',

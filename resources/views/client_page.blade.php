@@ -1,5 +1,13 @@
 @extends('layout.app')
 
+@section('page')
+    <a href="{{url('dashboard')}}">Strona główna</a>
+    <span style="font-weight: 500;">&nbsp;&gt;&nbsp;</span>
+    <a href="{{url('dashboard/client-search')}}">Znajdź klienta</a>
+    <span style="font-weight: 500;">&nbsp;&gt;&nbsp;</span>
+    <a href="{{url('dashboard/clients')}}?clientId={{$_GET['clientId']}}">Profil klienta</a>
+@endsection
+
 @section('content')
     <div class="box">
         @include('blocks.block2_2', [
@@ -9,3 +17,9 @@
         ])
     </div>
 @endsection
+
+{{--@section('addit_js')--}}
+{{--    <script>--}}
+{{--        --}}
+{{--    </script>--}}
+{{--@endsection--}}

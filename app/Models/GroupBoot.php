@@ -17,4 +17,8 @@ class GroupBoot extends Model
         'day_off',
         'photo',
     ];
+
+    protected $casts = [
+        'price' => 'decimal:2',
+    ];
 }

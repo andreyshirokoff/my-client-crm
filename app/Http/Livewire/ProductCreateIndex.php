@@ -15,7 +15,7 @@ class ProductCreateIndex extends Component
     public $groupId;
 
     public ?string $name = '';
-    public ?int $price = 0;
+    public ?float $price = 0;
     public ?int $dayOff = 0;
     public ?string $description = '';
 
@@ -30,7 +30,7 @@ class ProductCreateIndex extends Component
         $validatedData = $this->validate([
             'image' => 'image|mimes:jpeg,jpg,png,gif|max:5120|nullable',
             'name' => 'string|min:3|required',
-            'price' => 'numeric|min:0',
+            'price' => 'decimal:2|min:0',
             'dayOff' => 'integer|min:0',
             //'description' => 'string|min:3|nullable',
         ]);

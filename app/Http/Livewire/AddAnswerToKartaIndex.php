@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\ClientCardInfo;
+use App\Models\ServiceCardForm;
 use Livewire\Component;
 
 class AddAnswerToKartaIndex extends Component
@@ -17,14 +18,16 @@ class AddAnswerToKartaIndex extends Component
     {
 
         $clientService = ClientCardInfo::where('client_id', $this->clientId)->first();
-        $this->servicesForm = \App\Models\ServiceCardForm::where('group_id', $this->groupId)->get();
+        $this->servicesForm = \App\Models\ServiceCardForm::where('group_id', $this->groupId)
+            ->where('is_active', 1)
+            ->get();
         //$serviceForm = $this->servicesForm->toArray();
 
         //$arrayFromDb = json_decode($clientService->fields);
         //$note = ClientNote::where('id', $clientService->note_id)->first();
 
         $arrayFromDb = json_decode($clientService->fields,1);
-        
+
         $this->arrayToDb = $arrayFromDb;
 
         //$this->servicesForm = \App\Models\ServiceCardForm::where('group_id', $this->groupId)->get();
@@ -48,12 +51,15 @@ class AddAnswerToKartaIndex extends Component
 //        $clientNoteId = $clientNoteCreate->id;
 
         //$service = Service::where('id', $this->serviceId)->first();
+        $cardForm = ServiceCardForm::where('is_active', 1)->first();
         $ClientService = ClientCardInfo::firstOrNew([
             'client_id' => $this->clientId,
+            'is_active' => 1,
 //            'group_id' => $this->groupId,
 //            'fields' => json_encode($arrayToDb),
         ]);
         $ClientService->group_id = $this->groupId;
+        $ClientService->form_id = $cardForm->id;
         $ClientService->fields = json_encode($arrayToDb);
         $ClientService->save();
 

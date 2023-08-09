@@ -10,6 +10,7 @@ script = {
             if(
                 $(e.target).is('#burger')
                 || $(e.target).closest('#burger').length > 0
+                || $(e.target).is('#close-burger')
             )
             {
 

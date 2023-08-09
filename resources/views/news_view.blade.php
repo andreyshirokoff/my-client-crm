@@ -1,5 +1,11 @@
 @extends('layout.app')
 
+@section('page')
+    <a href="{{route('dashboard')}}">Strona główna</a>
+    <span style="font-weight: 500;">&nbsp;&gt;&nbsp;</span>
+    <a href="javascript:void(0)">{{$news?->name}}</a>
+@endsection
+
 @section('content')
     <div class="box">
         <div class="boxinbox__body">

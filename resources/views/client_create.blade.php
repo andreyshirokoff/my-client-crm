@@ -3,7 +3,7 @@
 @section('page')
     <a href="{{url('dashboard')}}">Strona główna</a>
     <span style="font-weight: 500;">&nbsp;&gt;&nbsp;</span>
-    <a href="{{url('dashboard/client-create')}}">Dodaj klienta</a>
+    <a href="javascript:void(0)">Dodaj klienta</a>
 @endsection
 
 @section('content')

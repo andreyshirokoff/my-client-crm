@@ -13,7 +13,9 @@
     </div>
     <div style="display:flex;justify-content:center;flex-wrap: wrap;gap:15px" class="btns">
         <button type="button" onclick="location.href='{{url('functions/document_kartaklienta_edit')}}?groupId={{Auth::user()->group_id}}';" class="btn1" style="color:white"><i class="fas fa-plus-circle" aria-hidden="true"></i> Edytuj</button>
-        @if(\App\Models\ServiceCardForm::where('group_id', \Illuminate\Support\Facades\Auth::user()->group_id)->first())
+        @if(\App\Models\ServiceCardForm::where('group_id', \Illuminate\Support\Facades\Auth::user()->group_id)
+            ->where('is_active', 1)
+            ->first())
             <button type="button" onclick="location.href='{{url('functions/card-client-delete')}}'" class="btn1" style="color:white"><i class="fas fa-trash" aria-hidden="true"></i> Usuń</button>
         @endif
     </div>

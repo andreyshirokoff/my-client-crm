@@ -12,5 +12,6 @@ class ServiceCardForm extends Model
         'id',
         'group_id',
         'fields',
+        'is_active',
     ];
 }

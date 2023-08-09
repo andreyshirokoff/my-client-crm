@@ -18,6 +18,7 @@ return new class extends Migration {
             $table->string('phone')->nullable();
             $table->string('avatar')->nullable();
             $table->text('description')->nullable();
+            $table->string('sign_path')->nullable();
             $table->timestamps();
         });
     }

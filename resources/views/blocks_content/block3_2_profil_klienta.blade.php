@@ -98,6 +98,9 @@
 {{--                <option value="{{$service->id}}">{{$service->name}}</option>--}}
 {{--            @endforeach--}}
 {{--        </select>--}}
+        @if(\App\Models\ServiceCardForm::where('is_active', 0 )->first())
+        <a id="answer-old-klient"><button type="button" class="btn1" style="margin-left:10px;"><i class="fas fa-id-card-alt" aria-hidden="true"></i> Stare karty klienta</button></a>
+        @endif
         <a id="answer-klient"><button type="button" class="btn1" style="margin-left:10px;"><i class="fas fa-id-card-alt" aria-hidden="true"></i> Karta klienta</button></a>
 
         <a id="add-zabieg-klient-modal"><button type="button" class="btn1" style="margin-left:10px;" ><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Dodaj zabieg</button></a>
@@ -160,6 +163,16 @@
                 let groupId = {{\App\Models\Client::where('id', $_GET['clientId'])->first()->group_id}}
                 //console.log(`/dashboard/add_procedure?serviceId=${value}`)
                 window.location.href = `/dashboard/add-answer-to-karta?groupId=${groupId}&clientId=${<?=$_GET['clientId']?>}`;
+            }
+
+            if(
+                $(e.target).is('#answer-old-klient')
+                || $(e.target).closest('#answer-old-klient').length > 0
+            )
+            {
+                //let clientId = {{\App\Models\Client::where('id', $_GET['clientId'])->first()->id}}
+                //console.log(`/dashboard/add_procedure?serviceId=${value}`)
+                window.location.href = `/dashboard/old-client-cards?clientId=${<?=$_GET['clientId']?>}`;
             }
         })
 

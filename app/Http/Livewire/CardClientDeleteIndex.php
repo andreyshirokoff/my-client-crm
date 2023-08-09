@@ -15,7 +15,11 @@ class CardClientDeleteIndex extends Component
 
     public function submitForm()
     {
-        ServiceCardForm::where('group_id', \Auth::user()->group_id)->delete();
+        ServiceCardForm::where('group_id', \Auth::user()->group_id)
+            ->where('is_active', 1)
+            ->update([
+                'is_active' => 0
+            ]);
 
         return redirect('/dashboard/ustawienia');
     }

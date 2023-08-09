@@ -2,16 +2,23 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Client;
 use App\Models\ClientNote;
 use App\Models\ClientService;
+use App\Models\Service;
+use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
 
 class EditClientProcedureIndex extends Component
 {
     public $servicesForm;
-    public $queryString = ['clientServiceId'];
+    public $queryString = ['clientServiceId', 'clientId'];
     public $arrayToDb = [];
     public $clientServiceId;
+
+    public $clientId;
+    public $signPath;
+
 
 
 
@@ -62,7 +69,36 @@ class EditClientProcedureIndex extends Component
 //            }
 //        }
 
+        $this->signPath = Client::where('id', $this->clientId)->first()->sign_path;
+
 
         return view('livewire.edit-client-procedure-index');
+    }
+
+    public function submit()
+    {
+        $serviceForm = $this->servicesForm->toArray();
+        $arrayToDb = $this->arrayToDb;
+
+        $serviceNoteId = ClientService::where('id', $this->clientServiceId)->first()->note_id;
+
+        $clientNoteCreate = ClientNote::where('id', $serviceNoteId)->update([
+//            'client_id' => $this->clientId,
+//            'service_id' => $this->clientId,
+//            'group_id' => \Auth::user()->group_id,
+            'note' => json_encode($arrayToDb),
+        ]);
+
+//        $clientNoteId = $clientNoteCreate->id;
+//
+//        $service = Service::where('id', $this->serviceId)->first();
+//        $ClientService = ClientService::where('id', $this->clientServiceId)->update([
+//            'name' => $service->name,
+//            'client_id' => $this->clientId,
+//            'service_id' => $this->serviceId,
+//            'note_id' => $clientNoteId,
+//        ]);
+
+        return redirect('dashboard/edit-procedure?clientServiceId='.$this->clientServiceId.'&clientId='.$this->clientId);
     }
 }

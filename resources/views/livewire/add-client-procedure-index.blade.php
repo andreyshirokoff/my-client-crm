@@ -30,7 +30,7 @@
                             </div>
 
                             <div class="boxinbox" style="background-color: rgb(240, 241, 241);">
-                                <form>
+                                <form wire:submit.prevent="submit" id="add-client-procedure-form">
 {{--                                    @csrf--}}
 
 
@@ -153,8 +153,43 @@
                                 {{--                                    </div>--}}
                                 {{--                                </div>--}}
                                 @endforeach
+                                    @if($signPath === null || $signPath == '')
+                                    <div class="listing-element service-block" style="justify-content: center;">
+{{--                                        <h6>Iniputy</h6>--}}
+{{--                                        <div class="d-flex gap-3 align-items-center w-100" style="">--}}
+                                            <div class="wrapper" style="display:flex;flex-direction:column;align-items:center;font-size:24px;margin-top:30px;">
+                                                <span style="margin-bottom:1px;"><b>Złóż podpis:</b></span>
+                                                <span style="font-size:18px;margin-bottom:15px;">W miarę możliwości wykorzystaj całą wielkość ramki.</span>
+                                                <canvas id="signature-pad" class="signature-pad" style="border: 1px solid rgb(176, 176, 176); touch-action: none;" width="800" height="500">
+                                                </canvas>
+{{--                                                <input type="hidden" name="sign-value" id="sign-value" wire:model="signPath">--}}
+                                                <button class="btn" style="margin-top:10px;" type="button" onclick="signaturePad.clear()">Wyczyść podpis</button>
+{{--                                            </div>--}}
+                                            </div>
+
+                                    </div>
+                                    @else
+                                        <div class="listing-element service-block" style="justify-content: center;">
+                                            {{--                                        <h6>Iniputy</h6>--}}
+                                            {{--                                        <div class="d-flex gap-3 align-items-center w-100" style="">--}}
+                                            <div class="wrapper" style="display:flex;flex-direction:row;justify-content:space-between;width: 100%;align-items:center;font-size:24px;">
+                                                <div style="width:70%;">
+                                                    Aktualny podpis
+                                                </div>
+                                                <div style="width:30%;" class="input-in">
+{{--                                                    {{url($signPath)}}--}}
+                                                    <img src="{{url($signPath)}}" alt="" style="height: 100px">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    @endif
                                     <div class="listing-actionbar">
-                                        <button wire:click.prevent="submitForm"  type="button" class="btn1" style="margin-left:10px;" ><i class="fa-solid fa-share" aria-hidden="true" style="color:white"></i> Wysłać</button>
+                                        @if($signPath === null || $signPath == '')
+                                        <button type="submit" class="btn1" onclick="zapiszpodpis(event) || event.preventDefault();" style="margin-left:10px;" ><i class="fa-solid fa-share" aria-hidden="true" style="color:white"></i> Wysłać</button>
+                                        @else
+                                            <button type="submit" class="btn1" style="margin-left:10px;" ><i class="fa-solid fa-share" aria-hidden="true" style="color:white"></i> Wysłać</button>
+                                        @endif
                                     </div>
                                 </form>
 
@@ -287,5 +322,64 @@
                 <!-- Livewire Component wire-end:Q5Tyh2hCfm48zlvWGXH5 -->            </div>
         </div>
     </div>
+    @if($signPath === null || $signPath == '')
+    <script>
+        function addHidden(theForm, key, value) {
+            // Create a hidden input element, and append it to the form:
+            var input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = key; // 'the key/name of the attribute/field that is sent to the server
+            input.value = value;
+            theForm.appendChild(input);
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+    <script>
+
+        var canvas = document.querySelector("canvas");
+
+        var signaturePad = new SignaturePad(canvas, {
+            backgroundColor: "rgb(255, 255, 255)"
+        });
+
+
+
+        //Funkcja wykonujaca formularz
+        function zapiszpodpis(event){
+            event.preventDefault()
+            if (signaturePad.isEmpty()) {
+                alert("Musisz złożyć podpis aby zapisać zmiany.");
+            } else {
+                var dataURL = signaturePad.toDataURL("image/jpeg");
+                @this.set('signPath', dataURL)
+                //document.querySelector('#sign-value').value = dataURL
+                //console.log(dataURL);
+                Livewire.emit('submit');
+                // let myForm = document.getElementById('save-sign-form');
+                // myForm.submit();
+                // addHidden(theForm, 'kluczobrazu', dataURL);
+                // document.theForm.submit();
+                // console.log("Formularz poprawny.");
+            }
+        }
+
+        // document.getElementById('add-client-procedure-form').addEventListener('submit', function (event) {
+        //     event.preventDefault(); // Предотвращаем стандартное поведение формы
+        //     if (signaturePad.isEmpty()) {
+        //         alert("Musisz złożyć podpis aby zapisać zmiany.");
+        //     } else {
+        //         var dataURL = signaturePad.toDataURL("image/jpeg");
+        //         document.querySelector('#sign-value').value = dataURL
+        //         //console.log(dataURL);
+        //         Livewire.emit('submit');
+        //         // addHidden(theForm, 'kluczobrazu', dataURL);
+        //         // document.theForm.submit();
+        //         // console.log("Formularz poprawny.");
+        //     }
+        //      // Вызываем событие Livewire submit
+        // });
+
+    </script>
+    @endif
 </div>
 

@@ -22,7 +22,8 @@ Route::middleware('auth')->prefix('dashboard')->group(function (){
 
     Route::get('/client-create', [\App\Http\Controllers\DashboardPageController::class, 'createClient'])->name('createClient');
     Route::get('/client-search', [\App\Http\Controllers\DashboardPageController::class, 'searchClient'])->name('searchClient');
-    Route::get('/document_search', [\App\Http\Controllers\DashboardPageController::class, 'documentSearch'])->name('documentSearch');
+    //Route::get('/document_search', [\App\Http\Controllers\DashboardPageController::class, 'documentSearch'])->name('documentSearch');
+    Route::get('/client-base', function (){return view('document_search');})->name('documentSearch');
 
     Route::prefix('ustawienia')->group(function (){
         Route::get('/', [\App\Http\Controllers\DashboardPageController::class, 'settings'])->name('settings');
@@ -57,6 +58,10 @@ Route::middleware('auth')->prefix('dashboard')->group(function (){
     Route::get('/add-procedure', function (){
         return view('add_procedure');
     })->name('dobav.zabiegKlient');
+
+    Route::get('/old-client-cards', function (){
+        return view('old_client_cards');
+    })->name('old.kartaKlient');
 
     Route::get('/add-answer-to-karta', function (){
         return view('add_answer_to_karta');

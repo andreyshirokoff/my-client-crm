@@ -13,5 +13,6 @@ class ClientCardInfo extends Model
         'group_id',
         'client_id',
         'fields',
+        'is_active',
     ];
 }

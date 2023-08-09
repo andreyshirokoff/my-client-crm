@@ -32,11 +32,26 @@ class ActualCardIndex extends Component
 
     public function submitForm()
     {
-        $ServicesFormSave = ServiceCardForm::firstOrNew([
-            'group_id' => $this->groupId,
-            'fields' => json_encode($this->fieldsArr),
-        ]);
-        $ServicesFormSave->save();
+        $isSCF = ServiceCardForm::where('group_id', $this->groupId)
+            ->where('is_active', 1)
+            ->first();
+        if(isset($isSCF->id))
+        {
+            $ServicesFormSave = ServiceCardForm::where('id', $isSCF->id)->update([
+                //'group_id' => $this->groupId,
+                'fields' => json_encode($this->fieldsArr),
+            ]);
+        }
+        else
+        {
+            $ServicesFormSave = ServiceCardForm::create([
+                'is_active' => 1,
+                'group_id' => $this->groupId,
+                'fields' => json_encode($this->fieldsArr),
+            ]);
+        }
+
+//        $ServicesFormSave->save();
         return redirect(request()->header('Referer'));
     }
 
@@ -226,7 +241,9 @@ class ActualCardIndex extends Component
 
     public function mount()
     {
-        $ServicesForm = ServiceCardForm::where('group_id', $this->groupId)->get();
+        $ServicesForm = ServiceCardForm::where('group_id', $this->groupId)
+            ->where('is_active', 1)
+            ->get();
 //        dd($ServicesForm);
 //        $this->returnFields = $ServicesForm->pluck('fields')->toArray();
 

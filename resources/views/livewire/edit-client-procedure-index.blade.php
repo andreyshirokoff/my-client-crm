@@ -109,10 +109,7 @@
 
                                         @endforeach
 
-                                        <div class="listing-actionbar">
-                                            <button wire:click.prevent="submitForm"  type="button" class="btn1" style="margin-left:10px;" ><i class="fa-solid fa-share" aria-hidden="true" style="color:white"></i> Wysłać</button>
-                                        </div>
-                                </form>
+
 
 
 
@@ -156,6 +153,24 @@
                                 {{--                                    </div>--}}
                                 {{--                                </div>--}}
                                 @endforeach
+                                    <div class="listing-element service-block" style="justify-content: center;">
+                                        {{--                                        <h6>Iniputy</h6>--}}
+                                        {{--                                        <div class="d-flex gap-3 align-items-center w-100" style="">--}}
+                                        <div class="wrapper" style="display:flex;flex-direction:row;justify-content:space-between;width: 100%;align-items:center;font-size:24px;">
+                                            <div style="width:70%;">
+                                                Aktualny podpis
+                                            </div>
+                                            <div style="width:30%;" class="input-in">
+                                                {{--                                                    {{url($signPath)}}--}}
+                                                <img src="{{url($signPath)}}" alt="" style="height: 100px">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="listing-actionbar">
+                                        <button wire:click.prevent="submit"  type="button" class="btn1" style="margin-left:10px;" ><i class="fa-solid fa-share" aria-hidden="true" style="color:white"></i> Wysłać</button>
+                                    </div>
+                                </form>
 
 
                             </div>

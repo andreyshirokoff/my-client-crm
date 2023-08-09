@@ -1,5 +1,9 @@
 @extends('layout.app')
 
+@section('page')
+    <a href="{{url('dashboard')}}">Strona główna</a>
+@endsection
+
 @section('content')
     <div class="whitebox-listing head-links">
         <div onclick="location.href='{{route('createClient')}}';" class="colorbox33">
@@ -22,22 +26,72 @@
 
         <div class="boxseparator1procent"></div>
 
-{{--        <div onclick="location.href='dashboard/document_search';" class="colorbox33">--}}
-{{--            <div class="whiteboxiconbox">--}}
-{{--                <i class="far fa-file" aria-hidden="true"></i>--}}
-{{--            </div>--}}
-{{--            <h3>Baza dokumentów</h3>--}}
-{{--            <span>Przeglądaj dokumenty podpisane przez klientów.</span>--}}
-{{--        </div>--}}
+        <div onclick="location.href='dashboard/client-base';" class="colorbox33">
+            <div class="whiteboxiconbox">
+                <i class="far fa-file" aria-hidden="true"></i>
+            </div>
+            <h3>Baza dokumentów</h3>
+            <span>Przeglądaj dokumenty podpisane przez klientów.</span>
+        </div>
 
     </div>
-    @include('blocks.block1', [
+    {{--@include('blocks.block1', [
         'block1_icon' => 'fas fa-hand-holding-heart',
         'block1_title' => 'Twoje ostatnie 5 zabiegów:',
         'block1_content_class' => 'block1_twoje_ostatnie_5_zabiegow',
         'block1_content' => 'blocks_content.block1_twoje_ostatnie_5_zabiegow',
-    ])
+    ])--}}
+    <div class="boxinbox__body">
+        <div class="boxinbox-titlebar" style="margin-top:10px;">
+            <div class="icon">
+                <i class="fas fa-hand-holding-heart" aria-hidden="true"></i>
+            </div>
+            <div style="margin-left:20px;">
+                <h3>Twoje ostatnie 5 zabiegów:</h3>
+            </div>
+        </div>
+        <div class="boxinbox block1_nowosci_w_beautycheck">
+            <div class="listing-titlebar">
+                <div style="width:28%">
+                    <h6>Nazwa zabiegu</h6>
+                </div>
+                <div style="width:44%">
+                    <h6>Imię i nazwisko klienta, notatka</h6>
+                </div>
+                <div style="width:15%;">
+                    <h6>Data</h6>
+                </div>
+                <div style="width:7%;">
+                    <h6>Karta</h6>
+                </div>
+                <div style="width:6%;">
+                    <h6>Akcje</h6>
+                </div>
+            </div>
 
+            @if(count($lastServices) > 0)
+                @foreach($lastServices as $lastService)
+                    <div class="listing-element">
+                        <div style="width:28%">
+                            <h6>{{\App\Models\Service::find($lastService->service_id)?->name}}</h6>
+                        </div>
+                        <div style="width:44%">
+                            <h6>{{\App\Models\Client::find($lastService->client_id)?->fullname}}</h6>
+                        </div>
+                        <div style="width:15%;">
+                            <h6>{{\Carbon\Carbon::parse($lastService->created_at)->format('d.m.Y')}}</h6>
+                        </div>
+                        <div style="width:7%;">
+                            <h6><a href="{{route('edit.procedure')}}?clientServiceId={{$lastService->id}}&clientId={{$lastService->client_id}}"><i class="fa-solid fa-pen-to-square i-black"></i></a></h6>
+                        </div>
+                        <div style="width:6%;">
+                            <h6><a href="{{route('clients')}}?clientId={{$lastService->client_id}}"><i class="far fa-eye"></i></a></h6>
+                        </div>
+                    </div>
+                @endforeach
+            @endif
+        </div>
+    </div>
 
     <div class="boxinbox__body">
         <div class="boxinbox-titlebar" style="margin-top:10px;">

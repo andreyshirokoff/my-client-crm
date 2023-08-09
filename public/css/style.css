@@ -389,8 +389,8 @@ display: block;
 .colorbox33 {
     display: flex;
     flex-direction: column;
-    /*width: 32%;*/
-    width: 50%;
+    width: 32%;
+    /*width: 50%;*/
     height: 100%;
     justify-content: flex-start;
     align-items: flex-start;

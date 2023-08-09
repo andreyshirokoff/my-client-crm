@@ -13,6 +13,7 @@ return new class extends Migration {
                 ->default(0);
             $table->foreign('group_id')->references('id')->on('user_groups');
             $table->longText('fields');
+            $table->boolean('is_active');
             $table->timestamps();
         });
     }

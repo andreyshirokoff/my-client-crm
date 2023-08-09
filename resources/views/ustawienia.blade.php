@@ -4,6 +4,11 @@
     <link rel="stylesheet" href="{{asset('css/slider.css')}}">
 @endsection
 
+@section('page')
+    <a href="{{route('dashboard')}}">Strona główna</a>
+    <span style="font-weight: 500;">&nbsp;&gt;&nbsp;</span>
+    <a href="javascript:void(0)">Ustawienia</a>
+@endsection
 
 @section('content')
     <div class="box">

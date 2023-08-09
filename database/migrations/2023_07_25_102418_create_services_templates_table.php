@@ -16,7 +16,8 @@ return new class extends Migration {
             $table->longText('contraindications')->nullable();
             $table->longText('indicators')->nullable();
             $table->longText('recommendation')->nullable();
-            $table->unsignedBigInteger('amount')->default();
+            $table->longText('user_card')->nullable();
+            $table->unsignedBigInteger('amount')->default(0);
             $table->timestamps();
         });
     }

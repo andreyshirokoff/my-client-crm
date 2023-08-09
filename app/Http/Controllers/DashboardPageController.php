@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Client;
+use App\Models\ClientService;
 use App\Models\GroupTariff;
 use App\Models\News;
 use App\Models\Service;
@@ -16,7 +18,8 @@ class DashboardPageController extends Controller
     public function index()
     {
         $news = News::orderBy('created_at')->paginate(5);
-        return view('index', compact('news'));
+        $lastServices = ClientService::where('group_id', Auth::user()->group_id)->limit(5)->orderBy('created_at', 'desc')->get();
+        return view('index', compact('news', 'lastServices'));
     }
 
     public function searchClient()
@@ -181,6 +184,13 @@ class DashboardPageController extends Controller
     {
         dd($request->input('UF_64c2b7b1283c8'));
     }
+
+//    public function klienciPage()
+//    {
+//        return view('document_search', [
+//            'clients' => Client::orderBy('id', 'asc')->paginate(10)
+//        ]);
+//    }
 
 
 }

@@ -9,6 +9,7 @@ class ModalFieldsAdd extends Component
 {
     protected $listeners = ['showForm' => 'showFormItem'];
 
+    public $isRequired;
     public $title;
     public $type = 'input';
     public $order = 0;
@@ -61,8 +62,8 @@ class ModalFieldsAdd extends Component
 //        }
 
 
-
-        $this->emitUp('addNewFields', ['title' => $this->title, 'order' => $this->order, 'type' => $this->type, 'fields' => json_encode($this->fieldsArr)]);
+        //$title = ($this->isRequired === true) ? '<span style="color:red">* </span>'.$this->title : $this->title;
+        $this->emitUp('addNewFields', ['title' => $this->title, 'order' => $this->order, 'type' => $this->type, 'fields' => json_encode($this->fieldsArr), 'is_required' => $this->isRequired]);
         $this->title = '';
         $this->order = 0;
         $this->type = 'input';

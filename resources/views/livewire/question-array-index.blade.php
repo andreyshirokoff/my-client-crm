@@ -136,7 +136,7 @@
                         @case('input')
 
                             <div class="listing-element service-block">
-                                <h6>{{$f['title']}}</h6>
+                                <h6>@if($f['is_required'] === true)<span style="color:red">* </span>@endif{{$f['title']}}</h6>
                                 <div class="d-flex gap-3 align-items-center w-100" style="">
                                     <input class="formularz" name="UF_{{$key}}" data-order="{{$f['order']}}" id="" type="" value="" maxlength="40">
                                     <i class="fa-solid fa-trash" style="cursor:pointer;color:black;font-size: 22px;" wire:click="deleteFromPage('{{$key}}')"></i>
@@ -145,7 +145,7 @@
                             @break
                         @case('textarea')
                             <div class="listing-element service-block">
-                                <h6>{{$f['title']}}</h6>
+                                <h6>@if($f['is_required'] === true)<span style="color:red">* </span>@endif{{$f['title']}}</h6>
                                 <div class="d-flex gap-3 align-items-center w-100" style="">
                                     <textarea class="formularz" name="UF_{{$key}}" data-order="{{$f['order']}}" id="" cols="30" rows="10"></textarea>
                                     <i class="fa-solid fa-trash" style="cursor:pointer;color:black;font-size: 22px;" wire:click="deleteFromPage('{{$key}}')"></i>
@@ -154,7 +154,7 @@
                             @break
                         @case('checkbox')
                             <div class="listing-element service-block">
-                                <h6 class="mb-3">{{$f['title']}}</h6>
+                                <h6 class="mb-3">@if($f['is_required'] === true)<span style="color:red">* </span>@endif{{$f['title']}}</h6>
                                 @foreach($f['fields'] as $keyff => $ff)
                                     <div class="d-flex justify-content-between w-100 flex-wrap @if($key != 0) mt-2 @endif">
                                         <p>{{$ff}}</p>
@@ -171,7 +171,7 @@
                             @break
                         @case('radio')
                             <div class="listing-element service-block">
-                                <h6 class="mb-3">{{$f['title']}}</h6>
+                                <h6 class="mb-3">@if($f['is_required'] === true)<span style="color:red">* </span>@endif{{$f['title']}}</h6>
                                 {{--                                    @php--}}
                                 {{--                                        $bytes = random_bytes(16);--}}
                                 {{--                                        $randCode = substr(str_replace(['/', '+', '='], '', base64_encode($bytes)), 0, 16);--}}

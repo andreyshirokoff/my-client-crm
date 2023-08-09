@@ -9,6 +9,7 @@ use App\Models\ServicesForm;
 use App\Models\UserGroup;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PdfController extends Controller
 {
@@ -18,6 +19,16 @@ class PdfController extends Controller
         $year = $request->input('pdf-year');
         $date0 = $this->getTwoDates($request->input('pdf-month'), $request->input('pdf-year'))[0];
         $date1 = $this->getTwoDates($request->input('pdf-month'), $request->input('pdf-year'))[1];
+
+        $src = UserGroup::where('id', \Auth::user()->group_id)->first()->logo_path;
+        //$img = $_SERVER['DOCUMENT_ROOT'].'/storage/app/logos/'.$src;
+        $img = Storage::path('logos/'.$src);
+
+
+        //$base64 = base64_encode(file_get_contents(Storage::path('logos/'.$src)));
+        $extension = pathinfo($img, PATHINFO_EXTENSION);
+        $base64 = base64_encode(file_get_contents($img));
+        $pathImg = 'data:image/' . $extension . ';base64,' . $base64;
 
         $data = <<<HTML
             <meta charset="utf-8">
@@ -47,7 +58,10 @@ class PdfController extends Controller
                 }
             </style>
             <div style="position: relative;">
-                <h1 style="position: absolute;top:40%;text-align:center;width: 100%;">Raport o usługach za {$month} {$year} roku</h1>
+                <div style="position: absolute;top:20%;text-align:center;width: 100%;">
+                    <img src="{$pathImg}" alt="" style="height: 300px;">
+                    <h1 style="">Raport o usługach za {$month} {$year} roku</h1>
+                </div>
             </div>
 
 HTML;
@@ -69,12 +83,13 @@ HTML;
                     ->get();
 
                 $formArray = [];
-                foreach($servicesForm as $sFrom)
+                foreach($servicesForm as $key0 => $sFrom)
                 {
                     $fields = json_decode($sFrom->fields, 1);
 
                     foreach($fields as $key => $field)
                     {
+
                         switch($field['type'])
                         {
                             case 'input':
@@ -82,8 +97,15 @@ HTML;
                                 $formArray[$key]['title'] = $field['title'];
                                 foreach($clientService as $item)
                                 {
-                                    $notes = json_decode(ClientNote::where('id', $item->note_id)->first(), 1);
-                                    if(isset($notes[$key])) $formArray[$key]['answer'] = $notes[$key];
+                                    $notes = json_decode(ClientNote::where('id', $item->note_id)->first()->note, 1);
+                                    if(isset($notes[$key0][$key])){
+                                        $formArray[$key]['answer'] = $notes[$key0][$key];
+                                        //dump($notes[$key0][$key]);
+                                    }
+
+
+
+
                                 }
 
                                 break;
@@ -155,6 +177,7 @@ HTML;
 HTML;
 
             }
+            //dd('стоп');
 
             $data .= <<<HTML
 
@@ -173,7 +196,7 @@ HTML;
 
 
 //        $pdf = Pdf::loadView('test_pdf');
-        Pdf::setOption(['dpi' => 150, 'defaultFont' => 'sans-serif']);
+        Pdf::setOption(['dpi' => 150, 'defaultFont' => 'sans-serif', 'isHTML5ParserEnabled' => true]);
         $pdf = Pdf::loadHTML($data);
 
         return $pdf->download('invoice.pdf');

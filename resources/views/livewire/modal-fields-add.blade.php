@@ -28,6 +28,14 @@
                                     <strong>{{ $message }}</strong>
                                 </span>
                         @enderror
+                        <div class="form-group mt-3 d-flex justify-content-between align-items-center" id="last-field">
+                            <label for="addOrderModal" style="color:black">Obowiązkowy</label>
+                            <label class="switch">
+                                <input type="checkbox" class="form-control mt-2" id="addRequiredModal" wire:model="isRequired">
+                                <span class="slider round"></span>
+                            </label>
+
+                        </div>
                         <div class="form-group mt-3" id="last-field">
                             <label for="addOrderModal" style="color:black">Wybierz pole</label>
                             <input type="number" class="form-control mt-2" id="addOrderModal" wire:model="order">

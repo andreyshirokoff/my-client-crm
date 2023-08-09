@@ -73,6 +73,7 @@ class QuestionArrayIndex extends Component
         $key = uniqid();
         $fields1 = [];
         if(isset($props['fields'])) $fields1 = json_decode($props['fields'], 1);
+        $isRequired = $props['is_required']; //here
 
         switch($type)
         {
@@ -81,6 +82,7 @@ class QuestionArrayIndex extends Component
                     'type' => $type,
                     'title' => $title,
                     'order' => $order,
+                    'is_required' => $isRequired, //here
                 ];
                 break;
 
@@ -89,6 +91,7 @@ class QuestionArrayIndex extends Component
                     'type' => $type,
                     'title' => $title,
                     'order' => $order,
+                    'is_required' => $isRequired, //here
                 ];
                 break;
 
@@ -98,6 +101,7 @@ class QuestionArrayIndex extends Component
                     'title' => $title,
                     'order' => $order,
                     'fields' => $fields1,
+                    'is_required' => $isRequired, //here
                 ];
                 break;
 
@@ -107,6 +111,7 @@ class QuestionArrayIndex extends Component
                     'title' => $title,
                     'order' => $order,
                     'fields' => $fields1,
+                    'is_required' => $isRequired, //here
                 ];
                 break;
         }

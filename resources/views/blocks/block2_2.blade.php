@@ -82,6 +82,8 @@
                 ])
         @elseif($block3_3_content_class == 'aktualna_karta_klienta')
             <livewire:actual-card-index/>
+        @elseif($block3_3_content_class == 'question_array')
+            <livewire:question-array-index/>
 {{--            @include('blocks.block3_dock', [--}}
 {{--                    'block3_2_icon' => 'fas fa-id-card-alt',--}}
 {{--                    'block3_2_title' => 'Aktualna karta klienta',--}}

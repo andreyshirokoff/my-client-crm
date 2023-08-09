@@ -1,3 +1,3 @@
-<livewire:old-client-card/>
+<livewire:old-client-card-index/>
 
 

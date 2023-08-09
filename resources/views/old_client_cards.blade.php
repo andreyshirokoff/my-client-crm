@@ -20,12 +20,13 @@
 {{--        ])--}}
 {{--    </div>--}}
     <div class="box">
-        @include('blocks.block1', [
-            'block1_icon' => 'fas fa-user-friends',
-            'block1_title' => ' Stare karty klienta',
-            'block1_content_class' => 'block1_old_client_cards',
-            'block1_content' => 'blocks_content.block1_old_client_cards',
-        ])
+        <livewire:old-client-card-index/>
+{{--        @include('blocks.block1', [--}}
+{{--            'block1_icon' => 'fas fa-user-friends',--}}
+{{--            'block1_title' => ' Stare karty klienta',--}}
+{{--            'block1_content_class' => 'block1_old_client_cards',--}}
+{{--            'block1_content' => 'blocks_content.block1_old_client_cards',--}}
+{{--        ])--}}
     </div>
 @endsection
 

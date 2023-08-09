@@ -94,6 +94,9 @@ Route::get('/functions/rodoreset', function () {
 Route::get('/functions/document_kartaklienta_edit', function () {
     return view('ustawienia.document_kartaklienta_edit');
 })->middleware(['auth']);
+Route::get('/creators/question-array', function () {
+    return view('question_array');
+})->middleware(['auth']);
 
 Route::get('/functions/treatment_template', function () {
     return view('ustawienia.treatment_template');

@@ -6,16 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e9be1317-6be4-4290-9727-b2bf61f43604" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PdfController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PdfController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/ActualCardIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/ActualCardIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/ModalFieldsAdd.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/ModalFieldsAdd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/QuestionArrayIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/QuestionArrayIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/TreatmentQuestionIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/TreatmentQuestionIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/actual-card-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/actual-card-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/modal-fields-add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/modal-fields-add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/question-array-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/question-array-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/settings/treatment-question-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/settings/treatment-question-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/document_search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/document_search.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
     </list>
     <list id="431e2dce-d2b1-4612-9646-bdfd5db379ab" name="Changes by Artur" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -281,7 +273,11 @@
       <workItem from="1691570804702" duration="1042000" />
       <workItem from="1691572849108" duration="2027000" />
       <workItem from="1691579466126" duration="4193000" />
-      <workItem from="1691586402406" duration="9758000" />
+      <workItem from="1691586402406" duration="10364000" />
+      <workItem from="1691667934613" duration="91000" />
+      <workItem from="1691684799906" duration="56000" />
+      <workItem from="1691685745069" duration="3000" />
+      <workItem from="1691689749062" duration="301000" />
     </task>
     <servers />
   </component>

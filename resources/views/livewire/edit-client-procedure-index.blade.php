@@ -70,7 +70,7 @@
                                                                 <p>{{$ff}}</p>
                                                                 <div class="d-flex gap-3 align-items-center" style="">
                                                                     <label class="switch">
-                                                                        <input type="checkbox" name="{{$keyff}}" id="use_pin" value="1" wire:model.defer="arrayToDb.{{$key}}.{{$keyS}}.{{$keyff}}">
+                                                                        <input type="checkbox" name="{{$keyff}}" id="" value="1" wire:model.defer="arrayToDb.{{$key}}.{{$keyS}}.{{$keyff}}">
                                                                         <span class="slider round"></span>
                                                                     </label>
                                                                     {{--                                                                <i class="fa-solid fa-trash" style="cursor:pointer;color:black;font-size: 22px;" wire:click="deleteConfirm('{{$key}}', '{{$keyff}}')"></i>--}}
@@ -95,7 +95,7 @@
                                                             <div class="d-flex justify-content-between w-100 flex-wrap @if($i != 0) mt-2 @endif">
                                                                 <p>{{$ff}}</p>
                                                                 <div class="d-flex gap-3 align-items-center" style="">
-                                                                    <input type="radio" id="tak2" value="{{$ff}}" name="{{$keyff}}" @if($i == 0) checked @endif wire:model.defer="arrayToDb.{{$key}}.{{$keyS}}.{{$keyff}}">
+                                                                    <input type="radio" id="" value="{{$ff}}" name="{{$keyff}}" @if($i == 0) checked @endif wire:model.defer="arrayToDb.{{$key}}.{{$keyS}}.{{$keyff}}">
                                                                     {{--                                                                <i class="fa-solid fa-trash" style="cursor:pointer;color:black;font-size: 22px;" wire:click="deleteConfirm('{{$key}}', '{{$keyff}}')"></i>--}}
                                                                 </div>
                                                             </div>

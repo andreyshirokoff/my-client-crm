@@ -6,8 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="e9be1317-6be4-4290-9727-b2bf61f43604" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/document_search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/document_search.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/actual-card-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/actual-card-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/add-answer-to-karta-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/add-answer-to-karta-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/add-client-procedure-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/add-client-procedure-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/edit-client-procedure-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/edit-client-procedure-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/question-array-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/question-array-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/settings/treatment-quest-result-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/settings/treatment-quest-result-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/settings/treatment-question-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/settings/treatment-question-index.blade.php" afterDir="false" />
     </list>
     <list id="431e2dce-d2b1-4612-9646-bdfd5db379ab" name="Changes by Artur" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -277,7 +282,9 @@
       <workItem from="1691667934613" duration="91000" />
       <workItem from="1691684799906" duration="56000" />
       <workItem from="1691685745069" duration="3000" />
-      <workItem from="1691689749062" duration="301000" />
+      <workItem from="1691689749062" duration="903000" />
+      <workItem from="1691740552331" duration="87000" />
+      <workItem from="1691793221242" duration="2371000" />
     </task>
     <servers />
   </component>

@@ -49,7 +49,7 @@
                                         <p>{{$ff}}</p>
                                         <div class="d-flex gap-3 align-items-center" style="">
                                             <label class="switch">
-                                                <input type="checkbox" name="UF_{{$key}}" id="use_pin" value="1">
+                                                <input type="checkbox" name="UF_{{$key}}" id="" value="1">
                                                 <span class="slider round"></span>
                                             </label>
                                             <i class="fa-solid fa-trash" style="cursor:pointer;color:black;font-size: 22px;" wire:click="deleteConfirm('{{$key}}', '{{$keyff}}')"></i>
@@ -74,7 +74,7 @@
                                     <div class="d-flex justify-content-between w-100 flex-wrap @if($i != 0) mt-2 @endif">
                                         <p>{{$ff}}</p>
                                         <div class="d-flex gap-3 align-items-center" style="">
-                                            <input type="radio" id="tak2" value="{{$ff}}" name="UF_{{$key}}" @if($i == 0) checked @endif>
+                                            <input type="radio" id="" value="{{$ff}}" name="UF_{{$key}}" @if($i == 0) checked @endif>
                                             <i class="fa-solid fa-trash" style="cursor:pointer;color:black;font-size: 22px;" wire:click="deleteConfirm('{{$key}}', '{{$keyff}}')"></i>
                                         </div>
                                     </div>
@@ -148,7 +148,7 @@
                                         <p>{{$ff}}</p>
                                         <div class="d-flex gap-3 align-items-center" style="">
                                             <label class="switch">
-                                                <input type="checkbox" name="UF_{{$key}}" id="use_pin" value="1">
+                                                <input type="checkbox" name="UF_{{$key}}" id="" value="1">
                                                 <span class="slider round"></span>
                                             </label>
                                             <i class="fa-solid fa-trash" style="cursor:pointer;color:black;font-size: 22px;" wire:click="deleteFromPage('{{$key}}', '{{$keyff}}')"></i>
@@ -171,7 +171,7 @@
                                     <div class="d-flex justify-content-between w-100 flex-wrap @if($i != 0) mt-2 @endif">
                                         <p>{{$ff}}</p>
                                         <div class="d-flex gap-3 align-items-center" style="">
-                                            <input type="radio" id="tak2" value="{{$ff}}" name="UF_{{$key}}" @if($i == 0) checked @endif>
+                                            <input type="radio" id="" value="{{$ff}}" name="UF_{{$key}}" @if($i == 0) checked @endif>
                                             <i class="fa-solid fa-trash" style="cursor:pointer;color:black;font-size: 22px;" wire:click="deleteFromPage('{{$key}}', '{{$keyff}}')"></i>
                                         </div>
                                     </div>

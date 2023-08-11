@@ -37,7 +37,7 @@
                                 <div class="d-flex justify-content-between w-100 flex-wrap @if($key != 0) mt-2 @endif">
                                     <p>{{$ff}}</p>
                                     <label class="switch">
-                                        <input type="checkbox" name="UF_{{$key}}" id="use_pin" value="1">
+                                        <input type="checkbox" name="UF_{{$key}}" id="" value="1">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -54,7 +54,7 @@
                             @foreach($f['fields'] as $key => $ff)
                                 <div class="d-flex justify-content-between w-100 flex-wrap @if($key != 0) mt-2 @endif">
                                     <p>{{$ff}}</p>
-                                    <input type="radio" id="tak2" value="{{$ff}}" name="UF_{{$randCode}}" @if($key == 0) checked @endif>
+                                    <input type="radio" id="" value="{{$ff}}" name="UF_{{$randCode}}" @if($key == 0) checked @endif>
                                 </div>
                             @endforeach
                         </div>

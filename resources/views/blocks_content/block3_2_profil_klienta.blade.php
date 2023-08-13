@@ -98,9 +98,9 @@
 {{--                <option value="{{$service->id}}">{{$service->name}}</option>--}}
 {{--            @endforeach--}}
 {{--        </select>--}}
-        @if(\App\Models\ServiceCardForm::where('is_active', 0 )->first())
+{{--        @if(\App\Models\ServiceCardForm::where('is_active', 0 )->first())--}}
         <a id="answer-old-klient"><button type="button" class="btn1" style="margin-left:10px;"><i class="fas fa-id-card-alt" aria-hidden="true"></i> Stare karty klienta</button></a>
-        @endif
+{{--        @endif--}}
         <a id="answer-klient"><button type="button" class="btn1" style="margin-left:10px;"><i class="fas fa-id-card-alt" aria-hidden="true"></i> Karta klienta</button></a>
 
         <a id="add-zabieg-klient-modal"><button type="button" class="btn1" style="margin-left:10px;" ><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Dodaj zabieg</button></a>

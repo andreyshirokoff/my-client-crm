@@ -17,6 +17,9 @@ class Client extends Model
         'email',
         'phone',
         'avatar',
-        'description'
+        'description',
+        'date_birth',
+        'sign_path',
+        'sign_base_64',
     ];
 }

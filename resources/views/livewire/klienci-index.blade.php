@@ -1,39 +1,45 @@
 <div>
     <div class="listing-titlebar">
-        <div style="width:30%;">
-            <h6>Imię i Nazwisko</h6>
+        <div style="width:50%;">
+            <h6>Nazwa</h6>
         </div>
-        <div style="width:30%;">
-            <h6>E-Mail</h6>
-        </div>
-        <div style="width:30%;">
-            <h6>Tel</h6>
-        </div>
-        <div style="width:10%;display:flex;justify-content:flex-end;">
+        <div style="width:50%;display:flex;">
             <h6>Pokaż</h6>
         </div>
     </div>
-    @foreach($clients as $client)
+    @foreach($docs as $doc)
         <div class="listing-element">
-            <div style="width:30%;">
-                <h6>{{$client->fullname}}</h6>
+            {{--                    <input class="inp-hid" type="hidden" value="{{$card->id}}">--}}
+            <div style="width:50%;">
+                <h6>{{$doc->name}}</h6>
             </div>
-            <div style="width:30%;">
-                <h6>{{$client->email}}</h6>
-            </div>
-            <div style="width:30%;">
-                @if($show)
-                    <h6>{{$client->phone}}</h6>
-                @else
-                    <h6 wire:click.prevent="showsPhone">***********</h6>
+            <div style="width:50%;">
+                @if($doc->path)
+                    <i class="fa-solid fa-download download-btn" wire:click="downloadFile('storage/docs/{{$doc->path}}')" style="cursor:pointer"></i>
                 @endif
             </div>
-            <div style="width:10%;display:flex;justify-content:flex-end;" class="width-10">
-                <a href="{{route('clients')}}?clientId={{$client->id}}"><button class="btn1" style="color:white">Więcej</button></a>
-            </div>
         </div>
+{{--        <div class="listing-element">--}}
+{{--            <div style="width:30%;">--}}
+{{--                <h6>{{$client->fullname}}</h6>--}}
+{{--            </div>--}}
+{{--            <div style="width:30%;">--}}
+{{--                <h6>{{$client->email}}</h6>--}}
+{{--            </div>--}}
+{{--            <div style="width:30%;">--}}
+{{--                {{$show[$client->id]}}--}}
+{{--                @if($show[$client->id] === 'true')--}}
+{{--                    <h6>{{$client->phone}}</h6>--}}
+{{--                @else--}}
+{{--                    <h6 wire:click="showsPhone({{$client->id}})">***********</h6>--}}
+{{--                @endif--}}
+{{--            </div>--}}
+{{--            <div style="width:10%;display:flex;justify-content:flex-end;" class="width-10">--}}
+{{--                <a href="{{route('clients')}}?clientId={{$client->id}}"><button class="btn1" style="color:white">Więcej</button></a>--}}
+{{--            </div>--}}
+{{--        </div>--}}
     @endforeach
-    {{$clients->links()}}
+    {{$docs->links()}}
     <!--script to deal with ajax-->
     <script src="/functions/beautyplans/assets/js/beautyplans.js"></script>
     <!--additional css-->

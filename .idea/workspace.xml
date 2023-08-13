@@ -5,14 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9be1317-6be4-4290-9727-b2bf61f43604" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Models/DocumentTemplate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Nova/DocumentTemplateResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2023_08_13_053544_create_document_templates_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/storage/docs/2023_sierpień_my-client-crm_zabiegi.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/actual-card-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/actual-card-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DashboardPageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DashboardPageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PdfController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PdfController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/AddAnswerToKartaIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/AddAnswerToKartaIndex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/AddClientProcedureIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/AddClientProcedureIndex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/KlienciIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/KlienciIndex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Client.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_07_22_023053_create_clients_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_07_22_023053_create_clients_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_08_03_002535_create_client_card_infos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_08_03_002535_create_client_card_infos_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/add_answer_to_karta.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/add_answer_to_karta.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blocks_content/block3_2_profil_klienta.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blocks_content/block3_2_profil_klienta.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/document_search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/document_search.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/add-answer-to-karta-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/add-answer-to-karta-index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/add-client-procedure-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/add-client-procedure-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/edit-client-procedure-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/edit-client-procedure-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/question-array-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/question-array-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/settings/treatment-quest-result-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/settings/treatment-quest-result-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/settings/treatment-question-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/settings/treatment-question-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/klienci-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/klienci-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/usr-signature-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/usr-signature-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
     </list>
     <list id="431e2dce-d2b1-4612-9646-bdfd5db379ab" name="Changes by Artur" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -188,30 +204,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;branch-after-update&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/OpenServer/domains/my-client-crm/public/storage/old_cards&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2023.1.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "branch-after-update",
+    "last_opened_file_path": "C:/OpenServer/domains/my-client-crm/public/storage",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2023.1.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\domains\my-client-crm\public\storage" />
       <recent name="C:\OpenServer\domains\my-client-crm\public\storage\old_cards" />
       <recent name="C:\OpenServer\domains\my-client-crm\resources\views" />
       <recent name="C:\OpenServer\domains\my-client-crm\resources\views\blocks_content" />
       <recent name="C:\OpenServer\domains\my-client-crm\resources\views\livewire" />
-      <recent name="C:\OpenServer\domains\my-client-crm\resources\views\ustawienia" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\OpenServer\domains\my-client-crm\public\storage" />
@@ -284,7 +300,9 @@
       <workItem from="1691685745069" duration="3000" />
       <workItem from="1691689749062" duration="903000" />
       <workItem from="1691740552331" duration="87000" />
-      <workItem from="1691793221242" duration="2371000" />
+      <workItem from="1691793221242" duration="4412000" />
+      <workItem from="1691833414434" duration="682000" />
+      <workItem from="1691853689260" duration="27520000" />
     </task>
     <servers />
   </component>

@@ -14,10 +14,10 @@ return new class extends Migration {
             $table->foreign('group_id')->references('id')->on('user_groups');
             $table->unsignedBigInteger('client_id');
             $table->foreign('client_id')->references('id')->on('clients');
-            $table->longText('fields');
+            $table->longText('fields')->nullable();
             $table->boolean('is_active');
-            $table->unsignedBigInteger('form_id');
-            $table->foreign('form_id')->references('id')->on('service_card_forms');
+//            $table->unsignedBigInteger('form_id');
+//            $table->foreign('form_id')->references('id')->on('service_card_forms');
             $table->timestamps();
         });
     }

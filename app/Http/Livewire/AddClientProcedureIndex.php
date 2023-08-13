@@ -53,7 +53,9 @@ class AddClientProcedureIndex extends Component
         $fileName = $this->generateRandomCode().'.jpg';
         Storage::put('/storage/sign/'.$fileName, $decode);
         Client::where('id', $this->clientId)->update([
-            'sign_path' => $fileName
+            'sign_path' => $fileName,
+            'sign_base_64' => $this->signPath,
+
         ]);
 
         return redirect('dashboard/edit-procedure?clientServiceId='.$ClientService->id.'&clientId='.$this->clientId);

@@ -174,6 +174,7 @@ class DashboardPageController extends Controller
         $groupTariff = GroupTariff::where('owner_id', Auth::user()->id)->first();
         $groupTariff->update([
             'sign_path' => $fileName,
+            'sign_base_64' => $request->input('sign-value'),
         ]);
 
         return redirect('/functions/usrsignature');

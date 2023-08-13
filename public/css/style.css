@@ -386,6 +386,10 @@ display: block;
     gap:10px;
 }
 
+.pagination{
+    margin-top: 1rem;
+}
+
 .colorbox33 {
     display: flex;
     flex-direction: column;

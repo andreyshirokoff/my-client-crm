@@ -14,11 +14,13 @@ return new class extends Migration {
             $table->string('firstname')->nullable();
             $table->string('lastname')->nullable();
             $table->string('fullname')->nullable();
+            $table->date('date_birth')->nullable();
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
             $table->string('avatar')->nullable();
             $table->text('description')->nullable();
             $table->string('sign_path')->nullable();
+            $table->longText('sign_base_64')->nullable();
             $table->timestamps();
         });
     }

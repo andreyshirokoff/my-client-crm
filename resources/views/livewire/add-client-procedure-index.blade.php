@@ -350,7 +350,7 @@
             if (signaturePad.isEmpty()) {
                 alert("Musisz złożyć podpis aby zapisać zmiany.");
             } else {
-                var dataURL = signaturePad.toDataURL("image/jpeg");
+                var dataURL = signaturePad.toDataURL("image/svg+xml");
                 @this.set('signPath', dataURL)
                 //document.querySelector('#sign-value').value = dataURL
                 //console.log(dataURL);

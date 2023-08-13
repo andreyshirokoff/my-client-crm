@@ -9,6 +9,7 @@ use App\Models\ServicesForm;
 use App\Models\UserGroup;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class PdfController extends Controller
@@ -73,95 +74,90 @@ HTML;
 
             $services = Service::where('group_id', $client->group_id)->get();
             $serviceData = '';
-            foreach($services as $service)
+
+            $clientServices = ClientService::where('client_id', $client->id)
+                ->orderBy('id', 'asc')
+                ->whereBetween('created_at', [$date0, $date1])
+                ->get();
+
+            foreach($clientServices as $clientService)
             {
-                $servicesForm = ServicesForm::where('service_id', $service->id)->get();
-                $clientService = ClientService::where('client_id', $client->id)
-                    ->where('service_id', $service->id)
-                    ->whereBetween('created_at', [$date0, $date1])
-                    ->orderBy('id', 'asc')
-                    ->get();
-
                 $formArray = [];
-                foreach($servicesForm as $key0 => $sFrom)
+                $service = Service::where('id', $clientService->service_id)->first();
+
+                $noteses = json_decode(ClientNote::where('id', $clientService->note_id)->first()->note,1);
+                if(count($noteses) > 0)
                 {
-                    $fields = json_decode($sFrom->fields, 1);
-
-                    foreach($fields as $key => $field)
+                    foreach($noteses as $notes)
                     {
-
-                        switch($field['type'])
+                        foreach($notes as $key => $note)
                         {
-                            case 'input':
-                            case 'textarea':
-                                $formArray[$key]['title'] = $field['title'];
-                                foreach($clientService as $item)
+                            $servicesForms = ServicesForm::where('service_id', $clientService->service_id)->get();
+                            foreach($servicesForms as $servicesForm)
+                            {
+                                $servicesForm = json_decode($servicesForm->fields,1);
+                                if(isset($servicesForm[$key]))
                                 {
-                                    $notes = json_decode(ClientNote::where('id', $item->note_id)->first()->note, 1);
-                                    if(isset($notes[$key0][$key])){
-                                        $formArray[$key]['answer'] = $notes[$key0][$key];
-                                        //dump($notes[$key0][$key]);
-                                    }
 
 
-
-
-                                }
-
-                                break;
-
-                            case 'checkbox':
-                            case 'radio':
-
-                                $formArray[$key]['title'] = $field['title'];
-                                foreach($clientService as $item)
-                                {
-                                    $notesModel = ClientNote::where('id', $item->note_id)->first();
-                                    $notes = json_decode($notesModel->note, 1);
-
-                                    foreach($notes as $note)
+                                    switch($servicesForm[$key]['type'])
                                     {
-                                        if(isset($note[$key]))
-                                        {
-                                            foreach($note[$key] as $key1 => $item)
+                                        case 'input':
+                                        case 'textarea':
+                                            $formArray[$key]['title'] = $servicesForm[$key]['title'];
+                                            $formArray[$key]['answer'] = $note;
+
+                                            break;
+
+                                        case 'checkbox':
+                                        case 'radio':
+
+                                            $formArray[$key]['title'] = $servicesForm[$key]['title'];
+                                            $answerArray = [];
+                                            foreach($note as $key1 => $item)
                                             {
-                                                if($item == '1')
-                                                    $formArray[$key]['fields'][$key1] = $field['fields'][$key1];
+                                                if(isset($servicesForm[$key]['fields'][$key1]))
+                                                {
+                                                    $answerArray[] = $servicesForm[$key]['fields'][$key1];
+                                                }
                                             }
-                                        }
+                                            $formArray[$key]['answer'] = implode(', ', $answerArray);
+
+                                            break;
                                     }
                                 }
+                            }
 
-                                break;
                         }
+
                     }
                 }
-                $trs = '';
-                $formArray = array_values($formArray);
-                foreach($formArray as $key => $item)
+
+
+                if(count($formArray) > 0)
                 {
-                    $order = $key + 1;
-                    $td = '<td></td>';
-                    if(isset($item['answer']))
+                    $formArray = array_values($formArray);
+                    $trs = '';
+                    foreach ($formArray as $order => $item)
                     {
-                        $td = '<td>'.$item['answer'].'</td>';
-                    }
-                    if(isset($item['fields']))
-                    {
-                        $td = '<td>'.implode(', ', $item['fields']).'</td>';
-                    }
-                    $trs .= <<<HTML
+                        $td = '<td></td>';
+                        if(isset($item['answer']))
+                        {
+                            $td = '<td>'.$item['answer'].'</td>';
+                        }
+                        $trs .= <<<HTML
                         <tr>
                             <th scope="row">{$order}</th>
                             <td>{$item['title']}</td>
                             {$td}
                         </tr>
-HTML;
-                }
-                if(!strlen($trs) > 0) $trs = '<tr><th></th><td></td><td></td></tr>';
+                        HTML;
+                    }
 
-                $serviceData .= <<<HTML
-                    <h3 style="margin-top:5rem"><b>Praca: </b>{$service->name}</h3>
+                    if(strlen($trs) > 0)
+                    {
+                        $serviceData .= <<<HTML
+                    <h3><b>Praca: </b>{$service->name}, <b>Data: </b>{$clientService->created_at}</h3>
                     <table class="table">
                         <thead>
                         <tr>
@@ -175,11 +171,128 @@ HTML;
                         </tbody>
                     </table>
 HTML;
+                    }
+                }
 
             }
-            //dd('стоп');
 
-            $data .= <<<HTML
+
+
+
+
+
+
+
+
+
+//            foreach($services as $service)
+//            {
+//                $servicesForm = ServicesForm::where('service_id', $service->id)->get();
+//                $clientService = ClientService::where('client_id', $client->id)
+//                    ->where('service_id', $service->id)
+//                    ->whereBetween('created_at', [$date0, $date1])
+//                    ->orderBy('id', 'asc')
+//                    ->get();
+//
+//                $formArray = [];
+//                foreach($servicesForm as $key0 => $sFrom)
+//                {
+//                    $fields = json_decode($sFrom->fields, 1);
+//
+//                    foreach($fields as $key => $field)
+//                    {
+//
+//                        switch($field['type'])
+//                        {
+//                            case 'input':
+//                            case 'textarea':
+//                                $formArray[$key]['title'] = $field['title'];
+//                                foreach($clientService as $item)
+//                                {
+//                                    $notes = json_decode(ClientNote::where('id', $item->note_id)->first()->note, 1);
+//                                    if(isset($notes[$key0][$key])){
+//                                        $formArray[$key]['answer'] = $notes[$key0][$key];
+//                                        //dump($notes[$key0][$key]);
+//                                    }
+//
+//
+//
+//
+//                                }
+//
+//                                break;
+//
+//                            case 'checkbox':
+//                            case 'radio':
+//
+//                                $formArray[$key]['title'] = $field['title'];
+//                                foreach($clientService as $item)
+//                                {
+//                                    $notesModel = ClientNote::where('id', $item->note_id)->first();
+//                                    $notes = json_decode($notesModel->note, 1);
+//
+//                                    foreach($notes as $note)
+//                                    {
+//                                        if(isset($note[$key]))
+//                                        {
+//                                            foreach($note[$key] as $key1 => $item)
+//                                            {
+//                                                if($item == '1')
+//                                                    $formArray[$key]['fields'][$key1] = $field['fields'][$key1];
+//                                            }
+//                                        }
+//                                    }
+//                                }
+//
+//                                break;
+//                        }
+//                    }
+//                }
+//                $trs = '';
+//                $formArray = array_values($formArray);
+//                foreach($formArray as $key => $item)
+//                {
+//                    $order = $key + 1;
+//                    $td = '<td></td>';
+//                    if(isset($item['answer']))
+//                    {
+//                        $td = '<td>'.$item['answer'].'</td>';
+//                    }
+//                    if(isset($item['fields']))
+//                    {
+//                        $td = '<td>'.implode(', ', $item['fields']).'</td>';
+//                    }
+//                    $trs .= <<<HTML
+//                        <tr>
+//                            <th scope="row">{$order}</th>
+//                            <td>{$item['title']}</td>
+//                            {$td}
+//                        </tr>
+//HTML;
+//                }
+//                if(!strlen($trs) > 0) $trs = '<tr><th></th><td></td><td></td></tr>';
+//
+//                $serviceData .= <<<HTML
+//                    <h3 style="margin-top:5rem"><b>Praca: </b>{$service->name}</h3>
+//                    <table class="table">
+//                        <thead>
+//                        <tr>
+//                            <th scope="col">#</th>
+//                            <th scope="col">Pytanie</th>
+//                            <th scope="col">Odpowiedź</th>
+//                        </tr>
+//                        </thead>
+//                        <tbody>
+//                            {$trs}
+//                        </tbody>
+//                    </table>
+//HTML;
+//
+//            }
+            //dd('стоп');
+            if(strlen($serviceData) > 0)
+            {
+                $data .= <<<HTML
 
                 <div class="page-break"></div>
                 <div style="margin:10px 15px">
@@ -191,6 +304,8 @@ HTML;
                     {$serviceData}
                 </div>
 HTML;
+            }
+
 
         }
 
@@ -198,8 +313,16 @@ HTML;
 //        $pdf = Pdf::loadView('test_pdf');
         Pdf::setOption(['dpi' => 150, 'defaultFont' => 'sans-serif', 'isHTML5ParserEnabled' => true]);
         $pdf = Pdf::loadHTML($data);
+        $group = UserGroup::where('id', Auth::user()->group_id)->first();
 
-        return $pdf->download('invoice.pdf');
+        return $pdf->download($year.'_'.$month.'_'.$group->name.'_'.'zabiegi'.'.pdf');
+    }
+
+    public function getMedCard($data)
+    {
+        Pdf::setOption(['dpi' => 150, 'defaultFont' => 'sans-serif', 'isHTML5ParserEnabled' => true]);
+        $pdf = Pdf::loadHTML($data);
+        $pdf->download('invoice.pdf');
     }
 
     protected function getMonth($num)

@@ -26,12 +26,12 @@
 
         <div class="boxseparator1procent"></div>
 
-        <div onclick="location.href='dashboard/client-base';" class="colorbox33">
+        <div onclick="location.href='dashboard/doc-base';" class="colorbox33">
             <div class="whiteboxiconbox">
-                <i class="fa-solid fa-user" aria-hidden="true"></i>
+                <i class="far fa-file" aria-hidden="true"></i>
             </div>
-            <h3>Baza klientów</h3>
-            <span>Wyświetl wszystkich klientów</span>
+            <h3>Baza dokumentów</h3>
+            <span>Przeglądaj dokumenty podpisane przez klientów.</span>
         </div>
 
     </div>

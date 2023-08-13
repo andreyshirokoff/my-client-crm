@@ -7,7 +7,7 @@
     <span style="font-weight: 500;">&nbsp;&gt;&nbsp;</span>
     <a href="{{url('dashboard/clients')}}?clientId={{$_GET['clientId']}}">Profil klienta</a>
     <span style="font-weight: 500;">&nbsp;&gt;&nbsp;</span>
-    <a href="javascript:void(0)">Karty zabiegowej</a>
+    <a href="javascript:void(0)">Wypełnienie karty klienta</a>
 @endsection
 
 @section('content')

@@ -140,6 +140,7 @@ HTML;
                     $trs = '';
                     foreach ($formArray as $order => $item)
                     {
+                        $order1 = $order + 1;
                         $td = '<td></td>';
                         if(isset($item['answer']))
                         {
@@ -147,7 +148,7 @@ HTML;
                         }
                         $trs .= <<<HTML
                         <tr>
-                            <th scope="row">{$order}</th>
+                            <th scope="row">{$order1}</th>
                             <td>{$item['title']}</td>
                             {$td}
                         </tr>

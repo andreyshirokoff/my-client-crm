@@ -3,22 +3,22 @@
     <div class="box">
         <div class="boxinbox__body" id="accordion">
 
-            <div class="boxinbox-titlebar" style="margin-top:10px;">
-                <div class="icon">
-                    <i class="fas fa-cog" aria-hidden="true"></i>
-                </div>
-                <div style="margin-left:20px;">
-                    <h3>Ustawienia</h3>
-                </div>
-            </div>
+{{--            <div class="boxinbox-titlebar" style="margin-top:10px;">--}}
+{{--                <div class="icon">--}}
+{{--                    <i class="fas fa-cog" aria-hidden="true"></i>--}}
+{{--                </div>--}}
+{{--                <div style="margin-left:20px;">--}}
+{{--                    <h3>Ustawienia</h3>--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
-            <div class="box-content" style="background: #fff">
+{{--            <div class="box-content" style="background: #fff">--}}
 
 
 
-                <div>
-                    <div>
-                        <div id="heading_block3_2_edycja_karty_zabiegowej">
+{{--                <div>--}}
+{{--                    <div>--}}
+{{--                        <div id="heading_block3_2_edycja_karty_zabiegowej">--}}
 
 
 
@@ -200,14 +200,15 @@
 
 
 
-                            <!-- Livewire Component wire-end:M9Wxq53evaYOyxxJ8WBS -->                </div>
+                            <!-- Livewire Component wire-end:M9Wxq53evaYOyxxJ8WBS -->
+{{--                        </div>--}}
 {{--                        <script>--}}
 {{--                            document.addEventListener('event-add-field', () => {--}}
 {{--                                let modalItem = new bootstrap.Modal(document.querySelector('#addField'))--}}
 {{--                                modalItem.show()--}}
 {{--                            })--}}
 {{--                        </script>--}}
-                    </div>
+{{--                    </div>--}}
                     <div class="mar"></div>
                     {{--                        <div id="heading_block3_2_dodaj_pytania">--}}
 
@@ -317,10 +318,11 @@
                     {{--                            </script>--}}
                     {{--                        </div>--}}
 
-                </div>
+{{--                </div>--}}
 
-                <!-- Livewire Component wire-end:Q5Tyh2hCfm48zlvWGXH5 -->            </div>
-        </div>
+                <!-- Livewire Component wire-end:Q5Tyh2hCfm48zlvWGXH5 -->
+{{--            </div>--}}
+{{--        </div>--}}
     </div>
     @if($signPath === null || $signPath == '')
     <script>

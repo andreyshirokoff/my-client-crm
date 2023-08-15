@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e9be1317-6be4-4290-9727-b2bf61f43604" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PdfController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PdfController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/add-client-procedure-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/add-client-procedure-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/edit-client-procedure-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/edit-client-procedure-index.blade.php" afterDir="false" />
     </list>
     <list id="431e2dce-d2b1-4612-9646-bdfd5db379ab" name="Changes by Artur" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -285,7 +286,10 @@
       <workItem from="1691932056476" duration="5000" />
       <workItem from="1691932066696" duration="7000" />
       <workItem from="1692000163984" duration="607000" />
-      <workItem from="1692033643336" duration="464000" />
+      <workItem from="1692033643336" duration="1027000" />
+      <workItem from="1692116158215" duration="606000" />
+      <workItem from="1692117052083" duration="3000" />
+      <workItem from="1692126349649" duration="487000" />
     </task>
     <servers />
   </component>
